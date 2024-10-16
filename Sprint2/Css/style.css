@@ -13,17 +13,29 @@ tipos de etiquetas y como reconocerla
     text-decoration: none;
 }
 
+/* Estilos para todas las etiquetas a */
+a{
+    background-color: transparent;
+}
+
+/* Estilo para todas las etiquetas li */
+li{
+    background-color: transparent;
+} 
+
 /* Estilos para la barra superior (logo y botones) */
 /* Estilos para la etiqueta nav */
 nav{
     display: flex; /* Estilo para que el contenido de la etiqueta nav este uno junto al otro */
     position: fixed; /* Estilo para fijar la posicion de nav al hacer scroll*/
+    background-color: transparent; /* Estilo para darle color a la etiqueta en si */
 }
 
 /* Estilos para la etiqueta div con la clase "botones" */
 .botones{
     display: flex;
     margin-top: 1.8vw;
+    background-color: transparent;
 }
 
 /* Estilos para las etiquetas a con la clase "boton"*/
@@ -35,7 +47,6 @@ nav{
     text-align: center; /* Estilo para ajustar el texto en el centro de la etiqueta (horizontalmente) */
     border-radius: 4em; /* Estilo para redondear las esquinas de la etiqueta */
     margin-left: 1.5vw;   /* Estilo para desplazar desde izquierda a derecha sin afectar el tamaño de la etiqueta */
-    background-color: red;  /* Estilo para darle color a la etiqueta en si */
     color: white;   /* Estilo para darle color a la letra dentro la etiqueta */
     font-size: 1.2vw;  /* Estilo para darle tamaño a la letra dentro de la etiqueta */
 }
@@ -63,6 +74,7 @@ nav{
     border-radius: 10em;
     margin-top: 1.5vw;
     margin-left: 1.5vw;
+    background-color: transparent;
 }
 
 /* Estilos para la etiqueta a con un id "btn1" */
@@ -161,4 +173,12 @@ nav{
 #btn5:hover{
     background-color: #7a0a73;
     border: #31072e solid 0.2em;
+}
+
+/* Estilos para el slider */
+/* Estilos para la etiqueta div con la clase "container_slider" */
+.container_slider{
+    background-color: #003881;
+    width: 100vw;
+    height: 50vw;
 }
