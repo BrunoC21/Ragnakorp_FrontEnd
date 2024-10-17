@@ -11,6 +11,11 @@ tipos de etiquetas y como reconocerla
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     list-style: none;
     text-decoration: none;
+    margin: 0;
+}
+
+body{
+   height: 100vw; 
 }
 
 /* Estilos para todas las etiquetas a */
@@ -28,6 +33,7 @@ li{
 nav{
     display: flex; /* Estilo para que el contenido de la etiqueta nav este uno junto al otro */
     position: fixed; /* Estilo para fijar la posicion de nav al hacer scroll*/
+    z-index: 5;
     background-color: transparent; /* Estilo para darle color a la etiqueta en si */
 }
 
@@ -79,7 +85,7 @@ nav{
 
 /* Estilos para la etiqueta a con un id "btn1" */
 #btn1{
-    margin-left: -0.3vw;
+    margin-left: -1.5vw;
     background-color: #004AAD;
     border: #0A3876 solid 0.2em;    /* Estilos para crearle bordes a una etiqueta (color, estilo de borde, grosor) */
 }
@@ -179,6 +185,54 @@ nav{
 /* Estilos para la etiqueta div con la clase "container_slider" */
 .container_slider{
     background-color: #003881;
+    position: relative;
+    display: flex;
     width: 100vw;
-    height: 50vw;
+    height: 25vw;
+    top: 15vw;
+}
+
+.Slider{
+    width: 55vw;
+    height: 23vw;
+    margin-top: 1vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.itemsCarrusel{
+    height: 23vw;
+    border: black solid 2px;
+    position: relative;
+    width: 55vw;
+}
+
+.tarjetaCarrusel{
+    background-color: #008d60;
+    height: 100%;
+}
+
+.flechasCarrusel{
+    background-color: transparent;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1vw;
+}
+
+#tarjetaCarrusel_1{
+    background-color: blue;
+}
+
+#tarjetaCarrusel_2{
+    background-color: red;
+}
+
+#tarjetaCarrusel_3{
+    background-color: purple;
 }
