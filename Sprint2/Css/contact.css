@@ -1,0 +1,174 @@
+*{
+    background-color: #E0ECFA;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+}
+
+body{
+   height: 100vw; 
+}
+
+/* Estilos para todas las etiquetas a */
+a{
+    background-color: transparent;
+}
+
+/* Estilo para todas las etiquetas li */
+li{
+    background-color: transparent;
+} 
+
+/* Estilos para la barra superior (logo y botones) */
+/* Estilos para la etiqueta nav */
+nav{
+    display: flex; /* Estilo para que el contenido de la etiqueta nav este uno junto al otro */
+    position: fixed; /* Estilo para fijar la posicion de nav al hacer scroll*/
+    z-index: 5;
+    background-color: transparent; /* Estilo para darle color a la etiqueta en si */
+}
+
+/* Estilos para la etiqueta div con la clase "botones" */
+.botones{
+    display: flex;
+    margin-top: 1.8vw;
+    background-color: transparent;
+}
+
+/* Estilos para las etiquetas a con la clase "boton"*/
+.boton{
+    display: flex;
+    padding: 5px 15px;  /* Estilo para darle mas espacio 5px hacias arriba/abajo y 15px hacia la derecha/izquierda */
+    width: 14vw;    /* Estilo para establecer el ancho de la etiqueta */
+    height: 3.3vw;  /* Estilo para establecer el alto de la etiqueta */
+    text-align: center; /* Estilo para ajustar el texto en el centro de la etiqueta (horizontalmente) */
+    border-radius: 4em; /* Estilo para redondear las esquinas de la etiqueta */
+    margin-left: 1.5vw;   /* Estilo para desplazar desde izquierda a derecha sin afectar el tamaño de la etiqueta */
+    color: white;   /* Estilo para darle color a la letra dentro la etiqueta */
+    font-size: 1.2vw;  /* Estilo para darle tamaño a la letra dentro de la etiqueta */
+}
+
+/* Estilos para las etiquetas i dentro de las etiquetas a con la clase "boton" */
+.boton i{
+    width: 3vw; 
+    height: 3vw;
+    font-size: 1.7vw; 
+    border-radius: 5em;
+    line-height: 3vw;   /* Estilo para ajustar el texto en el centro de la etiqueta (verticalmente) */
+    margin-left: -0.4vw;
+}
+
+/* Estilos para las etiquetas span dentro de las etiquetas a con las clase "boton" */
+.boton span{
+    width: 10vw;
+    line-height: 3vw;
+    background-color: transparent;
+}
+
+/* Estilos para la etiqueta img con la clase "logo" */
+.logo{
+    height: 5vw;
+    border-radius: 10em;
+    margin-top: 1.5vw;
+    margin-left: 1.5vw;
+    background-color: transparent;
+}
+
+/* Estilos para la etiqueta a con un id "btn1" */
+#btn1{
+    margin-left: -1.5vw;
+    background-color: #004AAD;
+    border: #0A3876 solid 0.2em;    /* Estilos para crearle bordes a una etiqueta (color, estilo de borde, grosor) */
+}
+
+/* Estilos para la etiqueta i con un id "logo_btn1" */
+#logo_btn1{
+    background-color: #0A3876;
+    border: #052a5a solid 0.1em;
+}
+
+/* Estilos para la animacion de la etiqueta a con un id "btn1" */
+#btn1:hover{
+    background-color: #003881;
+    border: #011631 solid 0.2em;
+}
+
+/* Estilos para la etiqueta a con un id "btn2" */
+#btn2{
+    background-color: #FF0000;
+    border: #B70000 solid 0.2em;
+}
+
+/* Estilos para la etiqueta i con un id "logo_btn2" */
+#logo_btn2{
+    background-color: #B70000;
+    border: #8d0000 solid 0.1em;
+}
+
+/* Estilos para la animacion de la etiqueta a con un id "btn2" */
+#btn2:hover{
+    background-color: #ad0000;
+    border:  #680000 solid 0.2em;
+}
+
+/* Estilos para la etiqueta a con un id "btn3" */
+#btn3{
+    background-color: #1A929A;
+    border: #17676C solid 0.2em;
+    text-align: center;
+}
+
+/* Estilos para la etiqueta span dentro de la etiqueta a con un id "btn3" */
+#btn3 span{
+    line-height: 1.7vw;
+    font-size: 1.1vw;
+}
+
+/* Estilos para la etiqueta i con un id "logo_btn3" */
+#logo_btn3{
+    background-color: #17676C;
+    border: #0a585e solid 0.1em;
+}
+
+/* Estilos para la animacion de la etiqueta a con un id "btn3" */
+#btn3:hover{
+    background-color: #077179;
+    border: #013135 solid 0.2em;
+}
+
+/* Estilos para la etiqueta a con un id "btn4" */
+#btn4{
+    background-color: #00BF83;
+    border: #29735B solid 0.2em;
+}
+
+/* Estilos para la etiqueta i con un id "logo_btn4" */
+#logo_btn4{
+    background-color: #29735B;
+    border: #14523e solid 0.1em;
+}
+
+/* Estilos para la animacion de la etiqueta a con un id "btn4" */
+#btn4:hover{
+    background-color: #008d60;
+    border: #093527 solid 0.2em;
+}
+
+/* Estilos para la etiqueta a con un id "btn5" */
+#btn5{
+    background-color: #9B4195;
+    border: #7B3076 solid 0.2em;
+}
+
+/* Estilos para la etiqueta i con un id "logo_btn5" */
+#logo_btn5{
+    background-color: #7B3076;
+    border: #53164f solid 0.1em;
+}
+
+/* Estilos para la animacion de la etiqueta a con un id "btn5" */
+#btn5:hover{
+    background-color: #7a0a73;
+    border: #31072e solid 0.2em;
+}
