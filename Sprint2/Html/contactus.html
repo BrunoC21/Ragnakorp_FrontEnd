@@ -24,22 +24,33 @@
         </nav>
     </header>
 
-    <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/mvgoojbj" method="POST">
-        <label for="name">Nombre:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-        
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
 
-        <label for="title">Titulo:</label><br>
-        <input type="text" id="title" name="title" required><br><br>
-        
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" required></textarea><br><br>
-        
-        <input type="submit" value="Send">
-    </form>
+    <div class="form-container">
+        <h2>Formulario de contacto</h2>
+        <form>
+            <div class="input-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+            </div>
+
+            <div class="input-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
 
 </body>
 </html>

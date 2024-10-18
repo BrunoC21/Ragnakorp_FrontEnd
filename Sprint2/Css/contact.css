@@ -7,7 +7,7 @@
 }
 
 body{
-   height: 100vw; 
+   height: 100vw;
 }
 
 /* Estilos para todas las etiquetas a */
@@ -173,3 +173,64 @@ nav{
     border: #31072e solid 0.2em;
 }
 
+.form-container {
+    background-color: #142850;
+    padding: 20px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.form-container h2 {
+    text-align: center;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.input-group input[type="text"], 
+.input-group input[type="email"] {
+    height: 40px;
+}
+
+.input-group textarea {
+    resize: none;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ccc;
+}
