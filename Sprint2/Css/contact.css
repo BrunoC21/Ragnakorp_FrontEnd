@@ -178,7 +178,7 @@ nav{
 
 /* Estilos para el formulario */
 .form-container {
-    position: relative;
+    position: fixed;
     top: 8vw;
     left: 15vw;
     width: 70vw;
