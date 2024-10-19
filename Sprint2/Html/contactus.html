@@ -28,27 +28,16 @@
     <div class="form-container">
         <h2>Formulario de contacto</h2>
         <form>
-            <div class="input-group">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-            
-            <div class="input-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            
-            <div class="input-group">
-                <label for="titulo">Título:</label>
-                <input type="text" id="titulo" name="titulo" required>
-            </div>
+            <label for="nombre" class="form_labels" id="label_nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>    
+            <label for="email" class="form_labels" id="label_email">Email:</label>
+            <input type="email" id="email" name="email" required>        
+            <label for="titulo" class="form_labels" id="label_titulo">Asunto:</label>
+            <input type="text" id="titulo" name="titulo" required>
+            <label for="mensaje" class="form_labels" id="label_mensaje">Texto:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
 
-            <div class="input-group">
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-            </div>
-
-            <button type="submit">Enviar</button>
+            <button type="submit" id="boton">Enviar</button>
         </form>
     </div>
 
