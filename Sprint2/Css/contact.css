@@ -21,9 +21,17 @@ li{
 nav{
     display: flex; /* Estilo para que el contenido de la etiqueta nav este uno junto al otro */
     position: fixed; /* Estilo para fijar la posicion de nav al hacer scroll*/
+    width: 100vw;
+    height: 11vh;
     z-index: 5;
     background-color: transparent; /* Estilo para darle color a la etiqueta en si */
+    transition: all 0.5s ease;
 }
+
+.nav.active{
+    background-color: #003274d1;
+}
+
 
 /* Estilos para la etiqueta div con la clase "botones" */
 .botones{
@@ -60,8 +68,8 @@ nav{
 
 /* Estilos para las etiquetas span dentro de las etiquetas a con las clase "boton" */
 .boton span{
-    width: 10vw;
-    line-height: 3vw;
+    width: 12vw;
+    line-height: 6vh;
     background-color: transparent;
 }
 
@@ -69,7 +77,7 @@ nav{
 .logo{
     height: 9vh;
     border-radius: 10em;
-    margin-top: 1.5vh;
+    margin-top: 1vh;
     margin-left: 1.5vw;
     background-color: transparent;
 }
@@ -118,12 +126,6 @@ nav{
     background-color: #1A929A;
     border: #17676C solid 0.2em;
     text-align: center;
-}
-
-/* Estilos para la etiqueta span dentro de la etiqueta a con un id "btn3" */
-#btn3 span{
-    line-height: 1.7vw;
-    font-size: 1.1vw;
 }
 
 /* Estilos para la etiqueta i con un id "logo_btn3" */
@@ -176,14 +178,49 @@ nav{
     border: #31072e solid 0.2em;
 }
 
+/* Estilos para el titulo */
+.titulo_seccion{
+    position: relative;
+    top: 13vh;
+    width: 20vw;
+    height: 9vh;
+    line-height: 9vh;
+    margin-left: -0.2em;
+    border-radius: 0em 3em 3em 0em;
+    border: #7B3076 solid 0.2em;
+    background-color: #9B4195;
+    color: white;
+}
+
+.titulo_seccion span{
+    position: relative;
+    height: 8vh;
+    line-height: 8vh;
+    left: 2vw;
+    font-size: 1.8vw;
+    background-color: transparent;
+}
+
+#logo_titulo{
+    position: relative;
+    width: 3vw;
+    height: 3vw;
+    line-height: 3vw;
+    text-align: center;
+    left: 6vw;
+    top: 0.25vh;
+    border-radius: 5em;
+    border: solid #53164f 0.5vh;
+    background-color:#7B3076;
+}
 
 /* Estilos para el formulario */
 .form-container {
     position: absolute;
-    top: 8vw;
+    top: 26vh;
     left: 15vw;
     width: 69vw;
-    height: 38vw;
+    height: 68vh;
     border-radius: 3em;
     background-color: #142850;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -192,11 +229,11 @@ nav{
 
 .form-container h2 {
     width: 27.5vw;
-    height: 3.5vw;
+    height: 6.5vh;
     position: relative;
-    top: 2.5vw;
+    top: 3.5vh;
     left: 2.5vw;
-    line-height: 3.5vw;
+    line-height: 6.5vh;
     text-align: center;
     font-size: 2vw;
     border-radius: 5em;
@@ -208,7 +245,7 @@ nav{
 form{
     position: relative;
     width: 60vw;
-    height: 20vw;
+    height: 20vh;
     background-color: transparent;
 }
 
@@ -222,16 +259,16 @@ form{
 }
 
 #label_nombre{
-    top: 3vw;
+    top: 3vh;
     left: 3vw;
 }
 
 #nombre{
     position: relative;
-    top: 4vw;
+    top: 4vh;
     left: 2.5vw;
     width: 25vw;
-    height: 2.5vw;
+    height: 4.5vh;
     border-radius: 4em;
     border: none;
     font-size: 1.2vw;
@@ -241,16 +278,16 @@ form{
 }
 
 #label_email{
-    top: 5.5vw;
+    top: 7.5vh;
     left: 3vw;
 }
 
 #email{
     position: relative;
-    top: 6.5vw;
+    top: 8.5vh;
     left: 2.5vw;
     width: 25vw;
-    height: 2.5vw;
+    height: 4.5vh;
     border-radius: 4em;
     border: none;
     font-size: 1.2vw;
@@ -260,16 +297,16 @@ form{
 }
 
 #label_titulo{
-    top: 8vw;
+    top: 12vh;
     left: 3vw;
 }
 
 #titulo{
     position: relative;
-    top: 9vw;
+    top: 13vh;
     left: 2.5vw;
     width: 25vw;
-    height: 2.5vw;
+    height: 4.5vh;
     border-radius: 4em;
     border: none;
     font-size: 1.2vw;
@@ -280,7 +317,7 @@ form{
 
 #label_mensaje{
     position: relative;
-    top: -13vw;
+    top: -26vh;
     left: 35vw;
 }
 
@@ -289,7 +326,7 @@ form{
     top: -12.3vw;
     left: 34.5vw;
     width: 29.5vw;
-    height: 23vw;
+    height: 43vh;
     border-radius: 1.2em;
     border: none;
     font-size: 1.2vw;
@@ -305,9 +342,9 @@ form{
     display: block;
     position: relative;
     width: 10vw;
-    height: 2.8vw;
-    top: -14vw;
-    left: 11.5vw;
+    height: 5vh;
+    top: -32vh;
+    left: 11vw;
     border-radius: 1em;
     border: none;
     background-color: white;
@@ -323,8 +360,11 @@ button:hover {
 footer{
     position: absolute;
     z-index: -1;
-    bottom: -12vh;
-    height: 10vh;
+    height: 40vh;
     width: 100vw;
-    background-color: #003881;
+    background-color: #1C405F;
+}
+
+.separador{
+    height: 50vw;
 }
