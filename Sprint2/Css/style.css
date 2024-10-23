@@ -88,6 +88,7 @@ nav{
     z-index: -3;  
 }
 
+/*no eliminar, es necesaria para submenu aunque este vacia*/
 .dos:hover{
     
 }
