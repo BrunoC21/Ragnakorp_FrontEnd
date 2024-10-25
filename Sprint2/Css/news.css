@@ -43,6 +43,62 @@ nav{
 }
 
 /* Estilos para las etiquetas a con la clase "boton"*/
+.submenu{
+    position: absolute;
+    display: none;
+    width: 13.2vw;
+    height: 26vh;
+    z-index: -1;
+    top: 0vh;
+    left: 20.8vw;
+    transition: 0.5s;
+    border-radius: 3em;
+    background-color:coral;
+}
+
+.submenu li span{
+    display: inline-block;
+    width: 14vw;
+    height: 5.5vh;
+    line-height: 5.5vh;
+    text-align: center;
+    margin-left: -1.4vw;
+    font-size: 1.2vw;
+    color: white;
+    background-color: transparent;
+}
+
+.submenu li span:hover{
+    width: 14vw;
+    left: 0.1vw;
+    border-radius: 4em;
+    background-color: #bd4b00;
+}
+
+#primero{
+    margin-top: 8vh;
+}
+
+.dos:hover .submenu{
+    display: initial;
+}
+
+.dos{
+    background-color: transparent; 
+    z-index: -3;  
+}
+
+/*no eliminar, es necesaria para submenu aunque este vacia*/
+.dos:hover{
+    
+}
+.botones{
+    position: relative;
+    display: flex;
+    top: 1.5vh;
+    background-color: transparent;
+}
+
 .boton{
     position: absolute;
     display: flex;
