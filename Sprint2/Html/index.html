@@ -11,14 +11,21 @@
 
 <body>
     <header>
-        <nav>
+        <nav class="nav">
             <a href="index.html"><img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="Logo" class="logo"></a>
 
             <ul class="botones">
                 <li><a href="aboutme.html" class="boton" id="btn1"><i class='bx bxs-analyse' id="logo_btn1"></i> <span>¿Quienes somos?</span></a></li>
-                <li><a href="#" class="boton" id="btn2"><i class='bx bx-task' style='color:#ffffff' id="logo_btn2"></i><span>Componentes</span></a></li>
-                <li><a href="#" class="boton" id="btn3"><i class='bx bx-street-view' id="logo_btn3"></i><span>Vinculación con el <br> medio</span></a></li>
-                <li><a href="#" class="boton" id="btn4"><i class='bx bx-news' style='color:#ffffff' id="logo_btn4"></i><span>Noticias</span></a></li>
+                <ul class="dos"><a href="components.html" class="boton"  id="btn2">
+                    <i class='bx bx-task' style='color:#ffffff' id="logo_btn2"></i><span>Componentes</span></a>
+                    <ul class="submenu">
+                        <li id="primero"><a href="component1.html"><span>Componente 1</span></a></li>
+                        <li><a href="component2.html"><span>Componente 2</span></a></li>
+                        <li><a href="component3.html"><span>Componente 3</span></a></li>
+                    </ul>
+                </ul>
+                <li><a href="link.html" class="boton" id="btn3"><i class='bx bx-street-view' id="logo_btn3"></i><span>Vinculación</span></a></li>
+                <li><a href="news.html" class="boton" id="btn4"><i class='bx bx-news' style='color:#ffffff' id="logo_btn4"></i><span>Noticias</span></a></li>
                 <li><a href="contactus.html" class="boton" id="btn5"><i class='bx bxs-contact' style='color:#ffffff' id="logo_btn5"></i><span>Contactanos</span></a></li>
             </ul>
         </nav>
@@ -73,5 +80,47 @@
         <a href=""><i class='bx bx-radio-circle' style='color:#ffffff' ></i></a>
     </div>
 
+    <h2 class="titulo_news"><span>Ultimas noticias</span><i class='bx bx-news' style='color:#ffffff' id="logo_titulo"></i></h2>
+    <div class="cont_ult_news">
+        <a href="">
+            <div class="noticias">
+                <div class="text_news">
+                    <h3>Noticia1</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam id eum dolor quasi ad eos, magnam ea ut ipsum sed culpa nam Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab nihil autem iure accusamus aspernatur quam rerum ea recusandae nobis impedit molestias laboriosam consequuntur quae odio inventore deserunt, necessitatibus quia dolorem.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum similique eum numquam nemo deleniti doloribus ducimus animi laborum?</p>
+                    <img src="/Sprint2/Images/imagen_1.jpg" alt="">
+                </div>
+            </div>
+        </a>
+        <a href="">
+            <div class="noticias">
+                <div class="text_news">
+                    <h3>Noticia2</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam id eum dolor quasi ad eos, magnam ea ut ipsum sed Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, reprehenderit iusto maiores consectetur repellat eum voluptate ullam consequatur accusantium. Iusto magnam natus rerum, non dolore error repellendus! Beatae, impedit labore?
+                        culpa nam facere expedita, quidem, amet animi aspernatur consectetur quibusdam?</p>
+                    <img src="/Sprint2/Images/imagen_2.jpg" alt="">
+                </div>
+            </div>
+        </a>
+        <a href="">
+            <div class="noticias">
+                <div class="text_news">
+                    <h3>Noticia3</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam id eum dolor quasi ad eos, magnam ea ut ipsum sed Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem repellat, placeat alias temporibus repudiandae libero doloribus id sequi. Vel perferendis quam quod maxime tempore ad optio, non temporibus! Eaque, harum? Lorem ipsum dolor 
+                        sit amet consectetur, adipisicing elit. Aperiam quae culpa nam facere expedita, quidem, amet animi aspernatur consectetur quibusdam?</p>
+                    <img src="/Sprint2/Images/imagen_3.jpg" alt="">
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="separador">
+        
+    </div>
+    <footer>
+
+    </footer>
+
+    <script src="/Sprint2/Js/barnav.js"></script>
 </body>
 </html>

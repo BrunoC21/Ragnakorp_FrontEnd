@@ -1,13 +1,9 @@
 *{
     background-color: #E0ECFA;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     list-style: none;
     text-decoration: none;
     margin: 0;
-}
-
-body{
-   height: 100vw; 
 }
 
 /* Estilos para todas las etiquetas a */
@@ -25,23 +21,88 @@ li{
 nav{
     display: flex; /* Estilo para que el contenido de la etiqueta nav este uno junto al otro */
     position: fixed; /* Estilo para fijar la posicion de nav al hacer scroll*/
+    width: 100vw;
+    height: 11vh;
     z-index: 5;
     background-color: transparent; /* Estilo para darle color a la etiqueta en si */
+    transition: all 0.5s ease;
 }
+
+.nav.active{
+    background-color: #003274d1;
+}
+
 
 /* Estilos para la etiqueta div con la clase "botones" */
 .botones{
+    position: relative;
     display: flex;
-    margin-top: 1.8vw;
+    top: 1.5vh;
     background-color: transparent;
 }
 
 /* Estilos para las etiquetas a con la clase "boton"*/
+.submenu{
+    position: absolute;
+    display: none;
+    width: 13.2vw;
+    height: 26vh;
+    z-index: -1;
+    top: 0vh;
+    left: 20.8vw;
+    transition: 0.5s;
+    border-radius: 3em;
+    background-color:coral;
+}
+
+.submenu li span{
+    display: inline-block;
+    width: 14vw;
+    height: 5.5vh;
+    line-height: 5.5vh;
+    text-align: center;
+    margin-left: -1.4vw;
+    font-size: 1.2vw;
+    color: white;
+    background-color: transparent;
+}
+
+.submenu li span:hover{
+    width: 14vw;
+    left: 0.1vw;
+    border-radius: 4em;
+    background-color: #bd4b00;
+}
+
+#primero{
+    margin-top: 8vh;
+}
+
+.dos:hover .submenu{
+    display: initial;
+}
+
+.dos{
+    background-color: transparent; 
+    z-index: -3;  
+}
+
+/*no eliminar, es necesaria para submenu aunque este vacia*/
+.dos:hover{
+    
+}
+.botones{
+    position: relative;
+    display: flex;
+    top: 1.5vh;
+    background-color: transparent;
+} 
 .boton{
+    position: absolute;
     display: flex;
     padding: 5px 15px;  /* Estilo para darle mas espacio 5px hacias arriba/abajo y 15px hacia la derecha/izquierda */
     width: 14vw;    /* Estilo para establecer el ancho de la etiqueta */
-    height: 3.3vw;  /* Estilo para establecer el alto de la etiqueta */
+    height: 6vh;  /* Estilo para establecer el alto de la etiqueta */
     text-align: center; /* Estilo para ajustar el texto en el centro de la etiqueta (horizontalmente) */
     border-radius: 4em; /* Estilo para redondear las esquinas de la etiqueta */
     margin-left: 1.5vw;   /* Estilo para desplazar desde izquierda a derecha sin afectar el tamaño de la etiqueta */
@@ -51,33 +112,34 @@ nav{
 
 /* Estilos para las etiquetas i dentro de las etiquetas a con la clase "boton" */
 .boton i{
-    width: 3vw; 
-    height: 3vw;
+    width: 2.8vw; 
+    height: 5.5vh;
     font-size: 1.7vw; 
     border-radius: 5em;
-    line-height: 3vw;   /* Estilo para ajustar el texto en el centro de la etiqueta (verticalmente) */
+    align-items: center;
+    line-height: 5.5vh;   /* Estilo para ajustar el texto en el centro de la etiqueta (verticalmente) */
     margin-left: -0.4vw;
 }
 
 /* Estilos para las etiquetas span dentro de las etiquetas a con las clase "boton" */
 .boton span{
-    width: 10vw;
-    line-height: 3vw;
+    width: 12vw;
+    line-height: 6vh;
     background-color: transparent;
 }
 
 /* Estilos para la etiqueta img con la clase "logo" */
 .logo{
-    height: 5vw;
+    height: 9vh;
     border-radius: 10em;
-    margin-top: 1.5vw;
+    margin-top: 1vh;
     margin-left: 1.5vw;
     background-color: transparent;
 }
 
 /* Estilos para la etiqueta a con un id "btn1" */
 #btn1{
-    margin-left: -1.5vw;
+    left: 1vw;
     background-color: #004AAD;
     border: #0A3876 solid 0.2em;    /* Estilos para crearle bordes a una etiqueta (color, estilo de borde, grosor) */
 }
@@ -96,6 +158,7 @@ nav{
 
 /* Estilos para la etiqueta a con un id "btn2" */
 #btn2{
+    left: 19vw;
     background-color: #FF0000;
     border: #B70000 solid 0.2em;
 }
@@ -114,15 +177,10 @@ nav{
 
 /* Estilos para la etiqueta a con un id "btn3" */
 #btn3{
+    left: 37vw;
     background-color: #1A929A;
     border: #17676C solid 0.2em;
     text-align: center;
-}
-
-/* Estilos para la etiqueta span dentro de la etiqueta a con un id "btn3" */
-#btn3 span{
-    line-height: 1.7vw;
-    font-size: 1.1vw;
 }
 
 /* Estilos para la etiqueta i con un id "logo_btn3" */
@@ -139,6 +197,7 @@ nav{
 
 /* Estilos para la etiqueta a con un id "btn4" */
 #btn4{
+    left: 55vw;
     background-color: #00BF83;
     border: #29735B solid 0.2em;
 }
@@ -157,6 +216,7 @@ nav{
 
 /* Estilos para la etiqueta a con un id "btn5" */
 #btn5{
+    left: 73vw;
     background-color: #9B4195;
     border: #7B3076 solid 0.2em;
 }
@@ -171,4 +231,195 @@ nav{
 #btn5:hover{
     background-color: #7a0a73;
     border: #31072e solid 0.2em;
+}
+
+/* Estilos para el titulo */
+.titulo_seccion{
+    position: relative;
+    top: 13vh;
+    width: 20vw;
+    height: 9vh;
+    line-height: 9vh;
+    margin-left: -0.2em;
+    border-radius: 0em 3em 3em 0em;
+    border: #7B3076 solid 0.2em;
+    background-color: #9B4195;
+    color: white;
+}
+
+.titulo_seccion span{
+    position: relative;
+    height: 8vh;
+    line-height: 8vh;
+    left: 2vw;
+    font-size: 1.8vw;
+    background-color: transparent;
+}
+
+#logo_titulo{
+    position: relative;
+    width: 3vw;
+    height: 3vw;
+    line-height: 3vw;
+    text-align: center;
+    left: 6vw;
+    top: 0.25vh;
+    border-radius: 5em;
+    border: solid #53164f 0.5vh;
+    background-color:#7B3076;
+}
+
+/* Estilos para el formulario */
+.form-container {
+    position: absolute;
+    top: 26vh;
+    left: 15vw;
+    width: 69vw;
+    height: 68vh;
+    border-radius: 3em;
+    background-color: #142850;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.form-container h2 {
+    width: 27.5vw;
+    height: 6.5vh;
+    position: relative;
+    top: 3.5vh;
+    left: 2.5vw;
+    line-height: 6.5vh;
+    text-align: center;
+    font-size: 2vw;
+    border-radius: 5em;
+    margin-bottom: 2vw;
+    background-color: white;
+    color: black;
+}
+
+form{
+    position: relative;
+    width: 60vw;
+    height: 20vh;
+    background-color: transparent;
+}
+
+.form_labels {
+    display: block;
+    position: relative;
+    width: 25vw;
+    height: 2vw;
+    font-size: 1.5vw;
+    background-color: transparent;
+}
+
+#label_nombre{
+    top: 3vh;
+    left: 3vw;
+}
+
+#nombre{
+    position: relative;
+    top: 4vh;
+    left: 2.5vw;
+    width: 25vw;
+    height: 4.5vh;
+    border-radius: 4em;
+    border: none;
+    font-size: 1.2vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    background-color: white;
+}
+
+#label_email{
+    top: 7.5vh;
+    left: 3vw;
+}
+
+#email{
+    position: relative;
+    top: 8.5vh;
+    left: 2.5vw;
+    width: 25vw;
+    height: 4.5vh;
+    border-radius: 4em;
+    border: none;
+    font-size: 1.2vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    background-color: white;
+}
+
+#label_titulo{
+    top: 12vh;
+    left: 3vw;
+}
+
+#titulo{
+    position: relative;
+    top: 13vh;
+    left: 2.5vw;
+    width: 25vw;
+    height: 4.5vh;
+    border-radius: 4em;
+    border: none;
+    font-size: 1.2vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    background-color: white;
+}
+
+#label_mensaje{
+    position: relative;
+    top: -26vh;
+    left: 35vw;
+}
+
+#mensaje{
+    position: relative;
+    top: -12.3vw;
+    left: 34.5vw;
+    width: 29.5vw;
+    height: 43vh;
+    border-radius: 1.2em;
+    border: none;
+    font-size: 1.2vw;
+    resize: none;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    background-color: white;
+}
+
+#boton{
+    display: block;
+    position: relative;
+    width: 10vw;
+    height: 5vh;
+    top: -32vh;
+    left: 11vw;
+    border-radius: 1em;
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ccc;
+}
+
+footer{
+    position: absolute;
+    z-index: -1;
+    height: 40vh;
+    width: 100vw;
+    background-color: #1C405F;
+}
+
+.separador{
+    height: 50vw;
 }

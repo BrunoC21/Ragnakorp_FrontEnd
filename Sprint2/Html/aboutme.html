@@ -4,23 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polo de salud</title>
-    <link rel="stylesheet" href="/Sprint2/Css/style.css">
+    <link rel="stylesheet" href="/Sprint2/Css/aboutme.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="nav">
             <a href="index.html"><img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="Logo" class="logo"></a>
 
             <ul class="botones">
                 <li><a href="aboutme.html" class="boton" id="btn1"><i class='bx bxs-analyse' id="logo_btn1"></i> <span>¿Quienes somos?</span></a></li>
-                <li><a href="#" class="boton" id="btn2"><i class='bx bx-task' style='color:#ffffff' id="logo_btn2"></i><span>Componentes</span></a></li>
-                <li><a href="#" class="boton" id="btn3"><i class='bx bx-street-view' id="logo_btn3"></i><span>Vinculación con el <br> medio</span></a></li>
-                <li><a href="#" class="boton" id="btn4"><i class='bx bx-news' style='color:#ffffff' id="logo_btn4"></i><span>Noticias</span></a></li>
+                <ul class="dos"><a href="components.html" class="boton"  id="btn2">
+                    <i class='bx bx-task' style='color:#ffffff' id="logo_btn2"></i><span>Componentes</span></a>
+                    <ul class="submenu">
+                        <li id="primero"><a href="component1.html"><span>Componente 1</span></a></li>
+                        <li><a href="component2.html"><span>Componente 2</span></a></li>
+                        <li><a href="component3.html"><span>Componente 3</span></a></li>
+                    </ul>
+                </ul>
+                <li><a href="link.html" class="boton" id="btn3"><i class='bx bx-street-view' id="logo_btn3"></i><span>Vinculación</span></a></li>
+                <li><a href="news.html" class="boton" id="btn4"><i class='bx bx-news' style='color:#ffffff' id="logo_btn4"></i><span>Noticias</span></a></li>
                 <li><a href="contactus.html" class="boton" id="btn5"><i class='bx bxs-contact' style='color:#ffffff' id="logo_btn5"></i><span>Contactanos</span></a></li>
             </ul>
         </nav>
     </header>
+
+    <h1 class="titulo_polo"><span>Polo de salud</span><i class='bx bx-plus-medical' id="logo_crus"></i></h1>
+    <div class="cont_about">
+        <h2><span>Titulo 1</span></h2>
+        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, debitis molestias? Maxime similique alias voluptatum ad animi autem reiciendis ipsum iste ut libero beatae ullam tempori
+            bus ea hic, quaerat voluptatem? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora qui suscipit neque doloribus? Voluptates debitis vero harum, ipsum aperiam sapiente commodi!
+             Ducimus ex voluptates temporibus saepe. Eligendi ab consequuntur accusantium?</span></p>
+    </div>
+
+    <h1 class="titulo_miembros"><span>¿Quienes somos?</span><i class='bx bxs-user' id="logo_quienes_somos"></i></h1>
     
+    <div class="cont_miembros">
+        <div class="primera_linea">
+            <div class="miembros">
+                <i class='bx bxs-user-circle' ></i>
+                <h3>miembro1</h3>
+                <h4>cargo1</h4>
+                <h5>correo electronico1</h5>
+            </div>
+            <div class="miembros">
+                <i class='bx bxs-user-circle' ></i>
+                <h3>miembro2</h3>
+                <h4>cargo2</h4>
+                <h5>correo electronico2</h5>
+            </div>
+            <div class="miembros">
+                <i class='bx bxs-user-circle' ></i>
+                <h3>miembro3</h3>
+                <h4>cargo3</h4>
+                <h5>correo electronico3</h5>
+            </div>
+            <div class="miembros">
+                <i class='bx bxs-user-circle' ></i>
+                <h3>miembro4</h3>
+                <h4>cargo4</h4>
+                <h5>correo electronico4</h5>
+            </div>
+        </div>
+        <div class="segunda_linea">
+            <div class="miembros">
+                <i class='bx bxs-user-circle' ></i>
+                <h3>miembro5</h3>
+                <h4>cargo5</h4>
+                <h5>correo electronico5</h5>
+            </div>
+            <div class="miembros">
+                <i class='bx bxs-user-circle' ></i>
+                <h3>miembro6</h3>
+                <h4>cargo6</h4>
+                <h5>correo electronico6</h5>
+            </div>
+            <div class="miembros">
+                <i class='bx bxs-user-circle' ></i>
+                <h3>miembro7</h3>
+                <h4>cargo7</h4>
+                <h5>correo electronico7</h5>
+            </div>
+            <div class="miembros">
+                <i class='bx bxs-user-circle' ></i>
+                <h3>miembro8</h3>
+                <h4>cargo8</h4>
+                <h5>correo electronico8</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="cont_ubicanos">
+        <h2><i class='bx bx-map' style='color:#ffffff' ></i><span>Ubicanos</span></h2>
+        <div class="cont_mapa">
+            <img src="/Sprint2/Images/Nuble.png" alt="">
+            <a href="#info_map1" class="btn_map" id="btn1_map"><i class='bx bxs-map' id="logo_btn1_map"></i></a>
+            <a href="#info_map2" class="btn_map" id="btn2_map"><i class='bx bxs-map' id="logo_btn2_map"></i></a>
+            <a href="#info_map3" class="btn_map" id="btn3_map"><i class='bx bxs-map' id="logo_btn3_map"></i></a>
+        </div>
+        <div class="cont_info"></div>
+        <h3><i class='bx bxs-buildings'></i><span>Imagenes de sucursales</span></h3>
+        <div class="cont_lista">
+            
+        </div>
+
+        <div class="cont_all" id="info_map1">
+            <div class="popup">
+                <div class="imagen"><img src="/Sprint2/Images/CS1.jpg" alt=""></div>
+                <div class="container_text">
+                    <h5>Centro de salud 1</h5>
+                    <p>Direccion: xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                    <p>Horario: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                    <p>fono: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                </div>
+                <a href="#Lista_Imagenes1">Ver Imagenes</a>
+            </div>
+        </div>
+
+        <div class="cont_all" id="info_map2">
+            <div class="popup">
+                <div class="imagen"><img src="/Sprint2/Images/CS2.jpg" alt=""></div>
+                <div class="container_text">
+                    <h5>Centro de salud 2</h5>
+                    <p>Direccion: xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                    <p>Horario: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                    <p>fono: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cont_all" id="info_map3">
+            <div class="popup">
+                <div class="imagen"><img src="/Sprint2/Images/CS3.jpg" alt=""></div>
+                <div class="container_text">
+                    <h5>Centro de salud 3</h5>
+                    <p>Direccion: xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                    <p>Horario: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                    <p>fono: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cont_imagenes" id="Lista_Imagenes1">
+            <a href="">
+                <img src="/Sprint2/Images/IL1.jpg" alt="">
+            </a>
+            <a href="">
+                <img src="/Sprint2/Images/IL2.jpg" alt="">
+            </a>
+            <a href="">
+                <img src="/Sprint2/Images/CS3.jpg" alt="">
+            </a>
+            <a href="">
+                <img src="/Sprint2/Images/IL4.jpg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+
+    
+    <script src="/Sprint2/Js/barnav.js"></script>
 </body>
 </html>

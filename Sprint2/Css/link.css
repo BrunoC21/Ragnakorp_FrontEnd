@@ -1,10 +1,3 @@
-/* 
-tipos de etiquetas y como reconocerla
-1) las etiquetas que no empiezan con nada son etiquetas globales, los estilos se aplicaran a todas esas etiquetas.
-2) las etiquetas que empiezan por un punto son etiquetas con una clase (class), los estilos se aplicaran solo a las etiquetas que tengan esa class.
-3) las etiquetas que empiezan por un hashtak son etiquetas con una ID, los estilos se aplicaran solo a las etiquetas que tengan esa ID y las ID son unicas.
-*/
-
 /* Estilos para todo */
 *{
     background-color: #E0ECFA;
@@ -42,7 +35,14 @@ nav{
 
 
 /* Estilos para la etiqueta div con la clase "botones" */
+.botones{
+    position: relative;
+    display: flex;
+    top: 1.5vh;
+    background-color: transparent;
+}
 
+/* Estilos para las etiquetas a con la clase "boton"*/
 .submenu{
     position: absolute;
     display: none;
@@ -99,7 +99,6 @@ nav{
     background-color: transparent;
 }
 
-/* Estilos para las etiquetas a con la clase "boton"*/
 .boton{
     position: absolute;
     display: flex;
@@ -234,148 +233,6 @@ nav{
 #btn5:hover{
     background-color: #7a0a73;
     border: #31072e solid 0.2em;
-}
-
-/* Estilos para el slider */
-/* Estilos para la etiqueta div con la clase "container_slider" */
-.container_slider{
-    background-color: #003881;
-    position: relative;
-    display: flex;
-    width: 100vw;
-    height: 25vw;
-    top: 15vw;
-}
-
-.Slider{
-    width: 55vw;
-    height: 23vw;
-    margin-top: 1vw;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-.itemsCarrusel{
-    height: 23vw;
-    border: black solid 2px;
-    position: relative;
-    width: 55vw;
-}
-
-.tarjetaCarrusel{
-    background-color: #008d60;
-    height: 100%;
-}
-
-.flechasCarrusel{
-    background-color: transparent;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 1vw;
-}
-
-#tarjetaCarrusel_1{
-    background-color: blue;
-}
-
-#tarjetaCarrusel_2{
-    background-color: red;
-}
-
-#tarjetaCarrusel_3{
-    background-color: purple;
-}
-
-/* Estilos para el titulo de las ultimas noticas */
-.titulo_news{
-    position: relative;
-    top: 42vh;
-    width: 25vw;
-    height: 8vh;
-    line-height: 8vh;
-    border-radius: 0em 3em 3em 0em;
-    color: white;
-    background-color: #003881;
-}
-
-.titulo_news span{
-    margin-left: 3vw;
-    font-size: 2vw;
-    background-color: transparent;
-}
-
-#logo_titulo{
-    position: relative;
-    top: 1.2vh;
-    left: 2vw;
-    background-color: transparent;
-    font-size: 3vw;
-}
-
-/* Estilos para ultimas noticias */
-.cont_ult_news{
-    position: absolute;
-    display: flex;
-    height: 63vh;
-    width: 85vw;
-    top: 110vh;
-    margin-left: 7.5vw;
-    border-radius: 1em;
-    background-color: #d4d4d4;
-}
-
-.cont_ult_news a{
-    width: 24vw;
-    height: 55vh;
-    margin-top: 2vh;
-    margin-left: 3.25vw;
-    color: black;
-}
-
-.noticias{
-    width: 24vw;
-    height: 55vh;
-    border-radius: 2em;
-    background-color: #f3f3f3;
-}
-
-.noticias img{
-    width: 20vw;
-    height: 20vh;
-    margin-top: 4vh;
-    margin-left: 2vw;
-    object-fit: cover;
-}
-
-.text_news h3{
-    width: 22vw;
-    height: 8vh;
-    line-height: 8vh;
-    margin-left: 1vw;
-    text-align: center;
-    font-size: 1.5vw;
-    color: black;
-    background-color: transparent;
-}
-
-.text_news p{
-    width: 20vw;
-    height: 19vh;
-    margin-left: 2vw;
-    font-size: 0.85vw;
-    text-align: justify;
-    background-color: transparent;
-}
-
-.text_news{
-    margin-top: 2vh;
-    background-color: transparent;
 }
 
 footer{
