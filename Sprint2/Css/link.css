@@ -1,6 +1,6 @@
 /* Estilos para todo */
 * {
-  background-color: transparent;
+  background-color: #E0ECFA;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   list-style: none;
   text-decoration: none;
@@ -275,12 +275,14 @@ footer {
 .footer-gobierno-logo {
   width: 200px; /* Ajusta el tamaño del logo del Gobierno */
   margin-top: 5px;
+  background-color: transparent;
 }
 
 .footer-left p {
   margin: 0;
   font-size: 14px;
   text-align: left;
+  background-color: transparent;
 }
 
 .social-icons {
@@ -293,11 +295,17 @@ footer {
 .social-icons img {
   width: 45px; /* Tamaño de los íconos de redes sociales */
   filter: brightness(0) invert(1); /* Hace que los íconos sean blancos sobre el fondo oscuro */
+  background-color: transparent;
 }
 
 .footer-bottom {
   margin-top: 20px;
   font-size: 23px;
+  background-color: transparent;
+}
+
+.footer-bottom p{
+  background-color: transparent;
 }
 
 @media (max-width: 768px) {
