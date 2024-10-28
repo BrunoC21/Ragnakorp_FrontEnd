@@ -9,6 +9,7 @@
   /* Estilos para todas las etiquetas a */
 a {
     background-color: transparent;
+    color: black;
 }
   
   /* Estilo para todas las etiquetas li */
@@ -223,13 +224,30 @@ body{
     z-index: 1;   
 }
 
+#titulo_noticias{
+    position: relative;
+    top: 16vh;
+    height: 8vh;
+    width: 20vw;
+    line-height: 8vh;
+    border-radius: 0em 2em 2em 0em;
+    background-color: #2e277c;
+}
+
+#titulo_noticias span{
+    margin-left: 1.5vw;
+    font-size: 2vw;
+    color: white;
+    background-color: transparent;
+}
+
 .noticias1{
     position: relative;
     display: flex;
     width: 100vw;
     height: 40vh;
-    top: 20vh;
-    background-color: aqua;
+    top: 16vh;
+    background-color: transparent;
     z-index: 0;
 }
 
@@ -237,9 +255,9 @@ body{
     position: relative;
     display: flex;
     width: 100vw;
-    height: 40vh;
-    top: 20vh;
-    background-color: purple;
+    height: 36vh;
+    top: 10vh;
+    background-color: transparent;
     z-index: 0;
 }
 
@@ -248,12 +266,159 @@ body{
     height: 35vh;
     margin-left: 5vw;
     margin-top: 2.5vh;
-    background-color: chartreuse;
+    background-color: transparent;
 }
 
 .imagenes{
     height: 30vh;
     width: 40vw;
     margin-top: 2.5vh;
+    margin-left: 1.25vw;
+    background-color: #a3a3a3;
+}
+
+.noticia p{
+    margin-left: 2vw;
+    background-color: transparent;
+}
+
+#titulo_proyectos{
+    position: relative;
+    top: 19vh;
+    height: 8vh;
+    width: 23vw;
+    line-height: 8vh;
+    border-radius: 0em 2em 2em 0em;
     background-color: #2e277c;
 }
+
+#titulo_proyectos span{
+    margin-left: 1.5vw;
+    font-size: 2vw;
+    color: white;
+    background-color: transparent;
+}
+
+.proyectos1{
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 55vh;
+    top: 20vh;
+    background-color: transparent;
+    z-index: 0;
+}
+
+.proyectos2{
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 40vh;
+    top: -1vh;
+    background-color: transparent;
+    z-index: 0;
+}
+
+.proyecto{
+    width: 42.5vw;
+    height: 35vh;
+    margin-left: 5vw;
+    margin-top: 2.5vh;
+    background-color: transparent;
+}
+
+.proyecto p{
+    margin-left: 2vw;
+    background-color: transparent;
+}
+
+footer {
+    background-color: #27485e; /* Color azul oscuro del fondo */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-container {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-left,
+  .footer-right {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+  }
+  
+  .footer-logo {
+    width: 370px; /* Ajusta el tamaño del logo de la facultad */
+    margin-right: 10px;
+    background-color: transparent;
+  }
+  
+  .footer-logo p {
+    background-color: transparent;
+  }
+  
+  .footer-right {
+    flex-direction: row;
+    background-color: transparent;
+  }
+  
+  .footer-gobierno-logo {
+    width: 200px; /* Ajusta el tamaño del logo del Gobierno */
+    margin-top: 5px;
+    background-color: transparent;
+  }
+  
+  .footer-left p {
+    margin: 0;
+    font-size: 14px;
+    text-align: left;
+    background-color: transparent;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    background-color: transparent;
+  }
+  
+  .social-icons img {
+    width: 45px; /* Tamaño de los íconos de redes sociales */
+    filter: brightness(0) invert(1); /* Hace que los íconos sean blancos sobre el fondo oscuro */
+    background-color: transparent;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 23px;
+    background-color: transparent;
+  }
+  
+  .footer-bottom p{
+    background-color: transparent;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .footer-right {
+      margin-top: 20px;
+      background-color: transparent;
+    }
+  }
+
+  .separador {
+    height: 5vw;
+  }
+  
