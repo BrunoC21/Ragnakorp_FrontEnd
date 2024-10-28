@@ -7,7 +7,7 @@ tipos de etiquetas y como reconocerla
 
 /* Estilos para todo */
 * {
-  background-color: transparent;
+  background-color: #E0ECFA;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   list-style: none;
   text-decoration: none;
@@ -29,6 +29,7 @@ li {
 nav {
   display: flex; /* Estilo para que el contenido de la etiqueta nav este uno junto al otro */
   position: fixed; /* Estilo para fijar la posicion de nav al hacer scroll*/
+  top: 0;
   width: 100vw;
   height: 11vh;
   z-index: 5;
@@ -49,6 +50,60 @@ nav {
 }
 
 /* Estilos para las etiquetas a con la clase "boton"*/
+.submenu {
+  position: absolute;
+  display: none;
+  width: 13.2vw;
+  height: 26vh;
+  z-index: -1;
+  top: 0vh;
+  left: 20.8vw;
+  transition: 0.5s;
+  border-radius: 3em;
+  background-color: coral;
+}
+
+.submenu li span {
+  display: inline-block;
+  width: 14vw;
+  height: 5.5vh;
+  line-height: 5.5vh;
+  text-align: center;
+  margin-left: -1.4vw;
+  font-size: 1.2vw;
+  color: white;
+  background-color: transparent;
+}
+
+.submenu li span:hover {
+  width: 14vw;
+  left: 0.1vw;
+  border-radius: 4em;
+  background-color: #bd4b00;
+}
+
+#primero {
+  margin-top: 8vh;
+}
+
+.dos:hover .submenu {
+  display: initial;
+}
+
+.dos {
+  background-color: transparent;
+  z-index: -3;
+}
+
+/*no eliminar, es necesaria para submenu aunque este vacia*/
+.dos:hover {
+}
+.botones {
+  position: relative;
+  display: flex;
+  top: 1.5vh;
+  background-color: transparent;
+}
 .boton {
   position: absolute;
   display: flex;
@@ -186,65 +241,64 @@ nav {
 }
 
 /* Estilos para el slider */
-/* Estilos para la etiqueta div con la clase "container_slider" */
-.container_slider {
-  background-color: #003881;
+.container-slider{
   position: relative;
-  display: flex;
+  top: 20vh;
   width: 100vw;
-  height: 25vw;
-  top: 15vw;
+  height: 55vh;
+  background-color: #003881;
 }
 
-.Slider {
-  width: 55vw;
-  height: 23vw;
-  margin-top: 1vw;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-.itemsCarrusel {
-  height: 23vw;
-  border: black solid 2px;
+.slider-frame{
   position: relative;
-  width: 55vw;
-}
-
-.tarjetaCarrusel {
-  background-color: #008d60;
-  height: 100%;
-}
-
-.flechasCarrusel {
+  top: 2.5vh;
+  left: -19vw;
+  width: 60vw;
+  height: 50vh;
+  margin: 50px auto 0;
+  overflow-x: hidden;
   background-color: transparent;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
+}
+
+@keyframes slide{
+  0%{margin-left: 0vw;}
+  20%{margin-left: 0vw;}
+
+  25%{margin-left: -60vw;}
+  45%{margin-left: -60vw;}
+
+  50%{margin-left: -120vw;}
+  70%{margin-left: -120vw;}
+
+  75%{margin-left: -180vw;}
+  95%{margin-left: -180vw;}
+}
+
+.slider-frame ul{
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 1vw;
+  padding: 0;
+  width: 180vw;
+  animation: slide 16s infinite alternate ease-in-out;
+  background-color: transparent;
 }
 
-#tarjetaCarrusel_1 {
-  background-color: blue;
+.slider-frame li{
+  width: 60vw;
+  height: 49vh;
+  background-color: transparent;
 }
 
-#tarjetaCarrusel_2 {
-  background-color: red;
-}
-
-#tarjetaCarrusel_3 {
-  background-color: purple;
+.slider-frame img{
+  width: 60vw;
+  height: 49.5vh;
+  object-fit: cover;
+  background-color: transparent;
 }
 
 /* Estilos para el titulo de las ultimas noticas */
 .titulo_news {
   position: relative;
-  top: 42vh;
+  top: 36vh;
   width: 25vw;
   height: 8vh;
   line-height: 8vh;
@@ -369,12 +423,14 @@ footer {
 .footer-gobierno-logo {
   width: 200px; /* Ajusta el tamaño del logo del Gobierno */
   margin-top: 5px;
+  background-color: transparent;
 }
 
 .footer-left p {
   margin: 0;
   font-size: 14px;
   text-align: left;
+  background-color: transparent;
 }
 
 .social-icons {
@@ -387,11 +443,17 @@ footer {
 .social-icons img {
   width: 45px; /* Tamaño de los íconos de redes sociales */
   filter: brightness(0) invert(1); /* Hace que los íconos sean blancos sobre el fondo oscuro */
+  background-color: transparent;
 }
 
 .footer-bottom {
   margin-top: 20px;
   font-size: 23px;
+  background-color: transparent;
+}
+
+.footer-bottom p{
+  background-color: transparent;
 }
 
 @media (max-width: 768px) {
