@@ -22,7 +22,7 @@ body {
 }
 
 .container_nav {
-  position: fixed;
+  position: absolute top;
   display: flex;
   width: 100vw;
   height: 12vh;
@@ -224,39 +224,104 @@ body {
 }
 
 .form-container {
-  max-width: 600px;
-  margin: auto;
+  max-width: 70vw;
+  margin: 0.5vw auto;
   padding: 20px;
-  border: 1px solid #ccc;
   border-radius: 5px;
-  font-family: Arial, sans-serif;
+  background-color: #ffffff; /* Fondo blanco del formulario */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .form-group {
   margin-bottom: 15px;
+  background-color: #f7f9fc;
 }
+
 label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
+  background-color: #f7f9fc;
 }
+
+form {
+  background-color: #f7f9fc;
+}
+
+small {
+  background-color: #f7f9fc;
+}
+
+input {
+  background-color: #f7f9fc;
+}
+
 input[type="text"],
-textarea {
+textarea,
+select {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  background-color: #ffffff; /* Fondo blanco de las casillas */
+  color: #333;
 }
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff;
+  background-color: #ffffff; /* Fondo blanco al enfocar */
+  outline: none;
+}
+
 .multimedia-section {
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 15px;
   border-radius: 5px;
+  background-color: #f7f9fc; /* Fondo gris claro de la sección multimedia */
 }
+
 .multimedia-options {
-  margin-top: 10px;
+  background-color: #f7f9fc;
+}
+
+.multimedia-section p {
+  background-color: #f7f9fc;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
 
 footer {
-  position: absolute;
+  position: absolute bottom;
   bottom: 0;
   width: 100vw;
   background-color: #27485e; /* Color azul oscuro del fondo */
@@ -324,8 +389,8 @@ footer {
 }
 
 .footer-bottom {
-  margin-top: 20px;
-  font-size: 23px;
+  margin-top: 1vw;
+  font-size: 0, 5vw;
   background-color: transparent;
 }
 
