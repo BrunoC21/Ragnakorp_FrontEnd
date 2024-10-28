@@ -7,6 +7,10 @@
   margin: 0;
 }
 
+html{
+  height: 0;
+}
+
 /* Estilos para todas las etiquetas a */
 a {
   background-color: transparent;
@@ -108,8 +112,6 @@ nav {
   margin-left: 1.5vw; /* Estilo para desplazar desde izquierda a derecha sin afectar el tamaño de la etiqueta */
   color: white; /* Estilo para darle color a la letra dentro la etiqueta */
   font-size: 1.3vw; /* Estilo para darle tamaño a la letra dentro de la etiqueta */
-  -webkit-text-stroke-width: 0.05vw;
-  -webkit-text-stroke-color: black;
 }
 
 /* Estilos para las etiquetas i dentro de las etiquetas a con la clase "boton" */
@@ -489,19 +491,19 @@ nav {
 #btn1_map {
   position: relative;
   top: -50vh;
-  left: -20vw;
+  left: -19.65vw;
 }
 
 #btn2_map {
   position: relative;
-  top: -45.1vh;
-  left: 14.85vw;
+  top: -42.1vh;
+  left: -23.65vw;
 }
 
 #btn3_map {
   position: relative;
-  top: -30vh;
-  left: 26vw;
+  top: -29vh;
+  left: 27.7vw;
 }
 
 .cont_all {
