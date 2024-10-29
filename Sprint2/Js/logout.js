@@ -5,7 +5,7 @@ function logout() {
     })
     .then(response => {
         if (response.ok) {
-            window.location.href = '../Html/login.html';  // Redirigir al login tras el logout
+            window.location.href = '/Sprint2/Html/login.html';  // Redirigir al login tras el logout
         } else {
             console.error('Error al cerrar sesión');
         }
