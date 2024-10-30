@@ -214,6 +214,115 @@ body {
   background-color: transparent;
 }
 
+/* Estilo general para el contenedor del formulario */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.form-container h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Estilo para etiquetas y campos de entrada */
+.form-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-container input[type="text"],
+.form-container select,
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.form-container input[type="text"]:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+  border-color: #4caf50;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.4);
+}
+
+/* Estilo para el botón de enviar */
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+form {
+  background-color: #f7f9fc;
+}
+
+small {
+  background-color: #f7f9fc;
+}
+
+input {
+  background-color: #f7f9fc;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+h1 {
+  background-color: #f7f9fc;
+}
+
+textarea {
+  background-color: #f7f9fc;
+}
+
+select {
+  background-color: #f7f9fc;
+}
+
+label {
+  background-color: #f7f9fc;
+}
+
+/* Opcional: Estilo de espaciado para pantallas pequeñas */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 15px;
+  }
+
+  .form-container h1 {
+    font-size: 20px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+  }
+}
+
 footer {
   position: absolute;
   bottom: 0;
