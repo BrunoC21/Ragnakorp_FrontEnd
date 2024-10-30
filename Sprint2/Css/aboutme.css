@@ -417,7 +417,7 @@ nav {
   background-color: transparent;
 }
 
-.cont_mapa {
+.cont_map{
   position: relative;
   height: 75vh;
   width: 40vw;
@@ -426,16 +426,7 @@ nav {
   background-color: #003881;
 }
 
-.cont_mapa img {
-  position: relative;
-  width: 37.5vw;
-  height: 70vh;
-  top: 2.5vh;
-  object-fit: cover;
-  border-radius: 0em 2em 2em 0em;
-}
-
-.cont_info {
+.cont_info{
   position: relative;
   height: 75vh;
   width: 40vw;
@@ -445,89 +436,55 @@ nav {
   background-color: #003881;
 }
 
-.cont_ubicanos h3 {
+.cont_map img {
   position: relative;
-  width: 35vw;
-  height: 9vh;
-  line-height: 8vh;
-  top: -45vh;
-  font-size: 2.5vw;
-  color: white;
-  border-radius: 0em 3em 3em 0em;
-  background-color: #003881;
+  width: 37.5vw;
+  height: 70vh;
+  top: 2.5vh;
+  object-fit: cover;
+  border-radius: 0em 2em 2em 0em;
 }
 
-.cont_ubicanos h3 span {
-  height: 8vh;
-  margin-left: 1vw;
-  background-color: transparent;
-}
-
-.cont_ubicanos h3 i {
-  height: 8vh;
-  line-height: 8vh;
-  margin-left: 1.5vw;
-  background-color: transparent;
-}
-
-.cont_lista {
+.cont_derecha1{
   position: relative;
-  top: -40vh;
-  width: 100vw;
-  height: 40vh;
-  background-color: #003881;
-}
-
-/* Estilos para las pestañas emergentes */
-.btn_map {
-  background-color: transparent;
-}
-
-.btn_map i {
-  color: red;
-  background-color: transparent;
-}
-
-#btn1_map {
-  position: relative;
-  top: -50vh;
-  left: -19.65vw;
-}
-
-#btn2_map {
-  position: relative;
-  top: -42.1vh;
-  left: -23.65vw;
-}
-
-#btn3_map {
-  position: relative;
-  top: -29vh;
-  left: 27.7vw;
-}
-
-.cont_all {
-  position: relative;
-  height: 75vh;
   width: 40vw;
+  height: 75vh;
+  top: -228vh;
   left: 60vw;
-  border-radius: 2em 0em 0em 2em;
+  border-radius: 2em;
   background-color: #003881;
-  visibility: hidden;
+  transition: all 0.2s ease;
   opacity: 0;
-  transition: all 600ms;
+  visibility: hidden;
 }
 
-.cont_all:target {
-  visibility: visible;
-  opacity: 1;
+.cont_derecha2{
+  position: relative;
+  width: 40vw;
+  height: 75vh;
+  top: -303vh;
+  left: 60vw;
+  border-radius: 2em;
+  background-color: #003881;
+  transition: all 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
 }
 
-.cont_all:target .popup {
-  visibility: visible;
+.cont_derecha3{
+  position: relative;
+  width: 40vw;
+  height: 75vh;
+  top: -378vh;
+  left: 60vw;
+  border-radius: 2em;
+  background-color: #003881;
+  transition: all 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
 }
 
-.popup {
+.contenido{
   position: relative;
   top: 2.5vh;
   left: 2vw;
@@ -573,63 +530,149 @@ nav {
   background-color: transparent;
 }
 
-#info_map1 {
-  top: -187vh;
-}
-
-#info_map2 {
-  top: -262vh;
-}
-
-#info_map3 {
-  top: -337vh;
-}
-
-.cont_imagenes {
-  display: flex;
-  position: relative;
-  width: 90vw;
-  height: 50vh;
-  top: -300vh;
-  background-color: transparent;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 600ms;
-}
-
-.cont_imagenes:target {
-  visibility: visible;
+#btn1_CS:checked ~ .cont_derecha1{
   opacity: 1;
-}
-
-.cont_imagenes:target img {
   visibility: visible;
 }
 
-.cont_imagenes img {
-  width: 22.5vw;
-  height: 30vh;
-  object-fit: cover;
-  border-radius: 0.5em;
+#btn2_CS:checked ~ .cont_derecha2{
+  opacity: 1;
+  visibility: visible;
 }
 
-.cont_imagenes a {
-  width: 22.5vw;
-  height: 25vh;
-  margin-left: 2vw;
-  border-radius: 0.5em;
+#btn3_CS:checked ~ .cont_derecha3{
+  opacity: 1;
+  visibility: visible;
 }
 
-.popup a {
-  height: 6vh;
-  width: 10vw;
-  line-height: 6vh;
-  text-align: center;
-  border-radius: 2em;
-  margin-top: 2vh;
-  margin-left: 14vw;
+#btn1_CS, #btn2_CS, #btn3_CS{
+  display: none;
+}
+
+#punto1{
+  position: relative;
+  top: -50vh;
+  left: -20.02vw;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#punto2{
+  position: relative;
+  top: -30vh;
+  left: 27.35vw;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#punto3{
+  position: relative;
+  top: -50vh;
+  left: 11.5vw;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#punto1 i, #punto2 i, #punto3 i{
+  color: red;
+  font-size: 1.5vw;
+  background-color: transparent;
+}
+
+.cont_lista {
+  position: relative;
+  top: -50vh;
+  width: 100vw;
+  height: 40vh;
+  background-color: #003881;
+}
+
+#titulo_imagenes{
+  position: relative;
+  top: -55vh;
+  width: 25vw;
+  height: 10vh;
+  line-height: 8vh;
+  border-radius: 0em 3em 3em 0em;
   color: white;
-  background-color: #004aad;
+  background-color: #003881;
+}
+
+#titulo_imagenes span{
+  margin-left: 1.5vw;
+  font-size: 2vw;
+  background-color: transparent;
+}
+
+#titulo_imagenes i{
+  position: relative;
+  top: 1vh;
+}
+
+#Lista_Imagenes1{
+  position: relative;
+  top: -84vh;
+  display: flex;
+  width: 100vw;
+  height: 40vh;
+  background-color: transparent;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#Lista_Imagenes1 img{
+  width: 30vw;
+  height: 28vh;
+  margin-left: 2.5vw;
+}
+
+#btn1_CS:checked ~ #Lista_Imagenes1{
+  opacity: 1;
+  visibility: visible;
+}
+
+#Lista_Imagenes2{
+  position: relative;
+  top: -389vh;
+  display: flex;
+  width: 100vw;
+  height: 40vh;
+  background-color: transparent;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#Lista_Imagenes2 img{
+  width: 30vw;
+  height: 28vh;
+  margin-left: 2.5vw;
+}
+
+#btn2_CS:checked ~ #Lista_Imagenes2{
+  opacity: 1;
+  visibility: visible;
+}
+
+#Lista_Imagenes3{
+  position: relative;
+  top: -429vh;
+  display: flex;
+  width: 100vw;
+  height: 40vh;
+  background-color: transparent;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#Lista_Imagenes3 img{
+  width: 30vw;
+  height: 28vh;
+  margin-left: 2.5vw;
+}
+
+#btn3_CS:checked ~ #Lista_Imagenes3{
+  opacity: 1;
+  visibility: visible;
 }
 
 footer {
