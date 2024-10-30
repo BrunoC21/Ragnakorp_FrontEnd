@@ -159,7 +159,7 @@ body{
 .cont_menu{
     position: relative;
     width: 100%;
-    max-width: 25vw;
+    max-width: 22vw;
     height: 100vh;
     background-color: #27485e;
     transition: all 0.2s ease;
@@ -175,20 +175,20 @@ body{
     height: 10vw;
     border-radius: 10em;
     margin-top: 1vh;
-    margin-left: 7.5vw;
+    margin-left: 6vw;
     margin-bottom: 5vh;
 }
 
 .cont_menu nav a{
     display: block;
     height: 8vh;
-    width: 24.8vw;
+    width: 21.8vw;
     line-height: 8vh;
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: bold;
     color: white;
     background-color: transparent;
-    border-left: 0.25vw solid transparent;
+    border-left: 0.20vw solid transparent;
 }
 
 .cont_menu nav a span{
@@ -198,7 +198,7 @@ body{
 
 .cont_menu nav a:hover{
     background-color: #163549;
-    border-left: 0.25vw solid white;
+    border-left: 0.20vw solid white;
 }
 
 .cont_menu label{ 
@@ -216,10 +216,10 @@ body{
 }
 
 .miss{
-    width: 75vw;
+    width: 78vw;
     height: 100vh;
     position: fixed;
-    left: 25vw;
+    left: 22vw;
     background-color: transparent;
     z-index: 1;   
 }
