@@ -388,7 +388,7 @@ nav {
 
 .cont_ubicanos {
   width: 100vw;
-  height: 185vh;
+  height: 155vh;
   margin-top: 35vh;
 }
 
@@ -446,10 +446,10 @@ nav {
 }
 
 .cont_derecha1{
-  position: relative;
+  position: absolute;
   width: 40vw;
   height: 75vh;
-  top: -228vh;
+  top: 208vh;
   left: 60vw;
   border-radius: 2em;
   background-color: #003881;
@@ -459,10 +459,10 @@ nav {
 }
 
 .cont_derecha2{
-  position: relative;
+  position: absolute;
   width: 40vw;
   height: 75vh;
-  top: -303vh;
+  top: 208vh;
   left: 60vw;
   border-radius: 2em;
   background-color: #003881;
@@ -472,10 +472,10 @@ nav {
 }
 
 .cont_derecha3{
-  position: relative;
+  position: absolute;
   width: 40vw;
   height: 75vh;
-  top: -378vh;
+  top: 208vh;
   left: 60vw;
   border-radius: 2em;
   background-color: #003881;
@@ -580,8 +580,8 @@ nav {
 }
 
 .cont_lista {
-  position: relative;
-  top: -50vh;
+  position: absolute;
+  top: 306vh;
   width: 100vw;
   height: 40vh;
   background-color: #003881;
@@ -610,8 +610,8 @@ nav {
 }
 
 #Lista_Imagenes1{
-  position: relative;
-  top: -84vh;
+  position: absolute;
+  top: 312vh;
   display: flex;
   width: 100vw;
   height: 40vh;
@@ -632,8 +632,8 @@ nav {
 }
 
 #Lista_Imagenes2{
-  position: relative;
-  top: -389vh;
+  position: absolute;
+  top: 312vh;
   display: flex;
   width: 100vw;
   height: 40vh;
@@ -654,8 +654,8 @@ nav {
 }
 
 #Lista_Imagenes3{
-  position: relative;
-  top: -429vh;
+  position: absolute;
+  top: 312vh;
   display: flex;
   width: 100vw;
   height: 40vh;
@@ -676,6 +676,8 @@ nav {
 }
 
 footer {
+  position: relative;
+  bottom: 0;
   background-color: #27485e; /* Color azul oscuro del fondo */
   color: white;
   padding: 20px 0;
@@ -758,7 +760,4 @@ footer {
     margin-top: 20px;
     background-color: transparent;
   }
-}
-.separador {
-  height: 70vw;
 }
