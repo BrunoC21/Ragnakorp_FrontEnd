@@ -1,36 +1,49 @@
-<div class="form-container">
-  <h1>Formulario de Postulación</h1>
-  <form action="submit_postulacion.html" method="POST">
-    <label for="nombre">Nombre</label>
-    <input type="text" id="nombre" name="nombre" required />
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Css/formularioPostulacionIntranet.css">
+  <title>Document</title>
+</head>
+<body>
 
-    <label for="rut">RUT</label>
-    <input type="text" id="rut" name="rut" required />
-
-    <label for="proyecto">Proyecto al que desea postular</label>
-    <select id="proyecto" name="proyecto" required>
-      <option value="">Seleccione un proyecto</option>
-      <option value="Proyecto Cardiología Avanzada">
-        Proyecto Cardiología Avanzada
-      </option>
-      <option value="Innovación en Salud Mental">
-        Innovación en Salud Mental
-      </option>
-      <option value="Telemedicina Rural">Telemedicina Rural</option>
-      <option value="Prevención de Enfermedades Crónicas">
-        Prevención de Enfermedades Crónicas
-      </option>
-    </select>
-
-    <label for="motivo">Motivo de postulación</label>
-    <textarea
-      id="motivo"
-      name="motivo"
-      rows="4"
-      placeholder="Explique brevemente su motivo para postular"
-      required
-    ></textarea>
-
-    <button type="submit" class="submit-btn">Enviar Postulación</button>
-  </form>
-</div>
+  <div class="form-container">
+    <h1>Formulario de Postulación</h1>
+    <form action="submit_postulacion.html" method="POST">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required />
+  
+      <label for="rut">RUT</label>
+      <input type="text" id="rut" name="rut" required />
+  
+      <label for="proyecto">Proyecto al que desea postular</label>
+      <select id="proyecto" name="proyecto" required>
+        <option value="">Seleccione un proyecto</option>
+        <option value="Proyecto Cardiología Avanzada">
+          Proyecto Cardiología Avanzada
+        </option>
+        <option value="Innovación en Salud Mental">
+          Innovación en Salud Mental
+        </option>
+        <option value="Telemedicina Rural">Telemedicina Rural</option>
+        <option value="Prevención de Enfermedades Crónicas">
+          Prevención de Enfermedades Crónicas
+        </option>
+      </select>
+  
+      <label for="motivo">Motivo de postulación</label>
+      <textarea
+        id="motivo"
+        name="motivo"
+        rows="4"
+        placeholder="Explique brevemente su motivo para postular"
+        required
+      ></textarea>
+  
+      <button type="submit" class="submit-btn">Enviar Postulación</button>
+    </form>
+  </div>
+  
+</body>
+</html>
