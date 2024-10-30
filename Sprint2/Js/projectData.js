@@ -21,6 +21,7 @@ let listarProyectos = async ()=>{
                 <tr>
                     <td>${proyecto.projName}</td>
                     <td>${proyecto.projDescription}</td>
+                    <td>${proyecto.projStartDate}</td>
                     <td>${proyecto.projRequirementsPostulation}</td>
                 </tr>
             `;
