@@ -1,5 +1,5 @@
 * {
-  background-color: #e0ecfa;
+  background-color: #E0ECFA;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   list-style: none;
   text-decoration: none;
@@ -17,12 +17,12 @@ li {
   background-color: transparent;
 }
 
-body {
+body{
   z-index: -100;
 }
 
-.container_nav {
-  position: absolute top;
+.container_nav{
+  position: fixed;
   display: flex;
   width: 100vw;
   height: 12vh;
@@ -30,16 +30,16 @@ body {
   z-index: 1;
 }
 
-.btn_menu {
+.btn_menu{
   background-color: transparent;
 }
 
-.btn_menu label {
+.btn_menu label{
   cursor: pointer;
   background-color: transparent;
 }
 
-.btn_menu label i {
+.btn_menu label i{
   margin-top: 2vh;
   margin-left: 1vw;
   font-size: 4vw;
@@ -47,11 +47,11 @@ body {
   background-color: transparent;
 }
 
-.logo {
+.logo{
   background-color: transparent;
 }
 
-.logo img {
+.logo img{
   width: 10vh;
   height: 10vh;
   border-radius: 5em;
@@ -61,11 +61,11 @@ body {
   background-color: transparent;
 }
 
-#btn_menu_lateral {
+#btn_menu_lateral{
   display: none;
 }
 
-#opciones {
+#opciones{
   position: relative;
   display: flex;
   left: 75vw;
@@ -73,11 +73,12 @@ body {
   width: 10vw;
   height: 6vh;
   border-radius: 3em;
-  background-color: #48419b;
+  background-color: #48419B;
   cursor: pointer;
+  
 }
 
-#opciones i {
+#opciones i{
   background-color: transparent;
   height: 6vh;
   line-height: 6vh;
@@ -85,7 +86,7 @@ body {
   margin-left: -1.5vw;
 }
 
-#opciones span {
+#opciones span{
   height: 6vh;
   line-height: 6vh;
   margin-left: 2vw;
@@ -94,11 +95,11 @@ body {
   background-color: transparent;
 }
 
-#opciones:hover {
+#opciones:hover{
   background-color: #2e277c;
 }
 
-#submenu {
+#submenu{
   position: absolute;
   display: none;
   height: 16.5vh;
@@ -106,19 +107,19 @@ body {
   left: 0vw;
   top: 1.5vh;
   border-radius: 1em 1em 1em 1em;
-  background-color: #d9d9d9;
+  background-color: #D9D9D9;
   z-index: -3;
 }
 
-#opciones:hover #submenu {
+#opciones:hover #submenu{
   display: block;
 }
 
-#primero {
+#primero{
   margin-top: 5vh;
 }
 
-#submenu li {
+#submenu li{
   width: 12vw;
   height: 4.9vh;
   line-height: 4.9vh;
@@ -128,16 +129,16 @@ body {
   border: 0.1vh solid transparent;
 }
 
-#submenu li a {
+#submenu li a{
   color: black;
 }
 
-#submenu li:hover {
+#submenu li:hover{
   background-color: #cacaca;
   border-bottom: 0.1vh solid black;
 }
 
-.container_menu {
+.container_menu{
   position: fixed;
   top: 0;
   left: 0;
@@ -150,57 +151,57 @@ body {
   z-index: 1;
 }
 
-#btn_menu_lateral:checked ~ .container_menu {
+#btn_menu_lateral:checked ~ .container_menu{
   opacity: 1;
   visibility: visible;
 }
 
-.cont_menu {
+.cont_menu{
   position: relative;
   width: 100%;
-  max-width: 25vw;
+  max-width: 22vw;
   height: 100vh;
   background-color: #27485e;
   transition: all 0.2s ease;
 }
 
-.cont_menu nav {
+.cont_menu nav{
   transform: translateY(15%);
   background-color: transparent;
 }
 
-.cont_menu nav img {
+.cont_menu nav img{
   width: 10vw;
   height: 10vw;
   border-radius: 10em;
   margin-top: 1vh;
-  margin-left: 7.5vw;
+  margin-left: 6vw;
   margin-bottom: 5vh;
 }
 
-.cont_menu nav a {
+.cont_menu nav a{
   display: block;
   height: 8vh;
-  width: 24.8vw;
+  width: 21.8vw;
   line-height: 8vh;
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-weight: bold;
   color: white;
   background-color: transparent;
   border-left: 0.25vw solid transparent;
 }
 
-.cont_menu nav a span {
+.cont_menu nav a span{
   margin-left: 1vw;
   background-color: transparent;
 }
 
-.cont_menu nav a:hover {
+.cont_menu nav a:hover{
   background-color: #163549;
-  border-left: 0.25vw solid white;
+  border-left: 0.2vw solid white;
 }
 
-.cont_menu label {
+.cont_menu label{ 
   position: absolute;
   right: 1vw;
   top: 1vw;
@@ -208,10 +209,19 @@ body {
   background-color: transparent;
 }
 
-.cont_menu label i {
+.cont_menu label i{
   font-size: 2vw;
   color: white;
   background-color: transparent;
+}
+
+.miss{
+  width: 78vw;
+  height: 100vh;
+  position: fixed;
+  left: 22vw;
+  background-color: transparent;
+  z-index: 1;   
 }
 
 /* Estilos para la tabla */
