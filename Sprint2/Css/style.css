@@ -241,57 +241,62 @@ nav {
 }
 
 /* Estilos para el slider */
-.container-slider{
+.container{
   position: relative;
   top: 20vh;
   width: 100vw;
-  height: 55vh;
+  height: 60vh;
   background-color: #003881;
 }
 
-.slider-frame{
-  position: relative;
-  top: 2.5vh;
-  left: -19vw;
-  width: 60vw;
-  height: 50vh;
-  margin: 50px auto 0;
-  overflow-x: hidden;
+.splide__slide{
   background-color: transparent;
-}
-
-@keyframes slide{
-  0%{margin-left: 0vw;}
-  20%{margin-left: 0vw;}
-
-  25%{margin-left: -60vw;}
-  45%{margin-left: -60vw;}
-
-  50%{margin-left: -120vw;}
-  70%{margin-left: -120vw;}
-
-  75%{margin-left: -180vw;}
-  95%{margin-left: -180vw;}
-}
-
-.slider-frame ul{
   display: flex;
-  padding: 0;
-  width: 180vw;
-  animation: slide 16s infinite alternate ease-in-out;
-  background-color: transparent;
 }
 
-.slider-frame li{
-  width: 60vw;
-  height: 49vh;
-  background-color: transparent;
-}
-
-.slider-frame img{
-  width: 60vw;
-  height: 49.5vh;
+.splide__slide img{
+  width: 45%;
+  height: 56vh;
+  margin-top: 2vh;
+  margin-left: 5%;
   object-fit: cover;
+  cursor: pointer;
+  border-radius: 2em;
+  background-color: transparent;
+}
+
+.text{
+  width: 40%;
+  height: 56vh;
+  margin-top: 2vh;
+  margin-left: 2.5vw;
+  background-color: transparent;
+}
+
+.text h3{
+  width: 60%;
+  height: 6vh;
+  line-height: 6vh;
+  text-align: center;
+  margin-left: 20%;
+  border-radius: 5em;
+  background-color: #cacaca;
+}
+
+.text p{
+  margin-top: 3vh;
+  padding: 2vw;
+  border-radius: 2em;
+  height: 39vh;
+  width: 95%;
+  background-color: #cacaca;
+}
+
+.splide__track{
+  background-color: transparent;
+}
+
+.splide__list{
   background-color: transparent;
 }
 

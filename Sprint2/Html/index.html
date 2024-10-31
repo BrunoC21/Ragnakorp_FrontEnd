@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Polo de Salud</title>
     <link rel="stylesheet" href="/Sprint2/Css/style.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/Sprint2/splide-4.1.3/dist/css/splide.min.css">
+    <script src="/Sprint2/splide-4.1.3/dist/js/splide.min.js"></script>
   </head>
 
   <body>
@@ -71,15 +70,40 @@
       </nav>
     </header>
 
-    <div class="container-slider">
-      <div class="slider-frame">
-        <ul>
-          <li><img src="/Sprint2/Images/imagen_1.jpg" alt=""></li>
-          <li><img src="/Sprint2/Images/imagen_2.jpg" alt=""></li>
-          <li><img src="/Sprint2/Images/imagen_3.jpg" alt=""></li>
-          <li><img src="/Sprint2/Images/IL1.jpg" alt=""></li>
-        </ul>
-    </div>
+    <div class="container">
+      <section class="splide" aria-label="Basic Structure Example">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide" style="background-color: transparent;">
+                <img src="/Sprint2/Images/CS1.jpg" alt="">
+                <div class="text">
+                  <h3>titulo 1</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat earum, dolores aut quisquam hic non corporis molestiae aliquid ut similique, rerum eum culpa illum in temporibus odio est distinctio assumenda?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eligendi veritatis exercitationem numquam facilis? Qui nemo tenetur quis consequatur at ipsa praesentium distinctio omnis molestiae! Ad corrupti rem saepe officia.
+                  </p>
+                </div>
+              </li>
+              <li class="splide__slide" style="background-color: transparent;">
+                <img src="/Sprint2/Images/CS2.jpg" alt="">
+                <div class="text">
+                  <h3>titulo 1</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat earum, dolores aut quisquam hic non corporis molestiae aliquid ut similique, rerum eum culpa illum in temporibus odio est distinctio assumenda?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eligendi veritatis exercitationem numquam facilis? Qui nemo tenetur quis consequatur at ipsa praesentium distinctio omnis molestiae! Ad corrupti rem saepe officia.
+                  </p>
+                </div>
+              </li>
+              <li class="splide__slide" style="background-color: transparent;">
+                <img src="/Sprint2/Images/CS3.jpg" alt="">
+                <div class="text">
+                  <h3>titulo 1</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat earum, dolores aut quisquam hic non corporis molestiae aliquid ut similique, rerum eum culpa illum in temporibus odio est distinctio assumenda?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eligendi veritatis exercitationem numquam facilis? Qui nemo tenetur quis consequatur at ipsa praesentium distinctio omnis molestiae! Ad corrupti rem saepe officia.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
     </div>
 
     <h2 class="titulo_news">
@@ -179,5 +203,13 @@
     </footer>
 
     <script src="/Sprint2/Js/barnav.js"></script>
+    <script> 
+      var splide = new Splide( '.splide', {
+          type: 'loop',
+          autoplay:true,
+          inteval: '8000'
+      });
+      splide.mount();
+  </script>
   </body>
 </html>
