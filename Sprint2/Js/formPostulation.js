@@ -1,49 +1,22 @@
 window.onload = function() {
-    listarProyectos();
+    inicializarPagina();
 }
 
-let boton = document.getElementById("botonPostular");
+let inicializarPagina = async () => {
+    // Cargar los proyectos en el desplegable
+    await listarProyectos();
 
-boton.addEventListener("click", evento => {
-    registrarPostulacion();
-});
+    // Configurar el evento para el botón de postulación
+    let boton = document.getElementById("botonPostular");
+    boton.addEventListener("click", evento => {
+        evento.preventDefault(); // Previene el envío del formulario
+        registrarPostulacion();
+    });
+}
 
-let registrarPostulacion = async () => {
-    let campos = {};
-
-    campos.postulationName = document.getElementById("nombre").value;
-    campos.postulationDescription = document.getElementById("motivo").value;
-    campos.postulationProject = document.getElementById("proyecto").value;
-    campos.postulationRut = document.getElementById("rut").value;
-
+let listarProyectos = async () => {
     try {
-        const peticion = await fetch("http://localhost:8080/proyecto/postularion/create",
-            {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(campos)
-            })
-
-            if (peticion.of) {
-                window.location.href = '../Html/home_intranet.html';
-            } else {
-                const errorMsg = await peticion.text();
-                alert("error al registrar la postulacion: " + errorMsg);
-            }
-
-    } catch (error) {
-        console.error("Error al registrar la solicitud: ", error);
-        alert("Error al registrar la postulacion, por favor intente nuevament");
-    }
-
-};
-
-let listarProyectos = async ()=>{
-    const peticion = await fetch("http://localhost:8080/proyecto/project/search",
-        {
+        const peticion = await fetch("http://localhost:8080/proyecto/project/search", {
             method: "GET",
             headers: {
                 "Accept": "application/json",
@@ -52,20 +25,51 @@ let listarProyectos = async ()=>{
         });
 
         const proyectos = await peticion.json();
+        const selectProyecto = document.getElementById("proyecto");
 
-        let contenidoTabla = "";
-        for (let proyecto of proyectos) {
-            contenidoTabla += `
-                <option value="${proyecto.projName}">
-                    ${proyecto.projName}
-                </option>
-            `;
-        }
+        // Limpiar las opciones actuales y agregar la opción predeterminada
+        selectProyecto.innerHTML = '<option value="">Seleccione un proyecto</option>';
 
-        document.querySelector("#proyecto").outerHTML = contenidoTabla;
+        // Agregar las opciones obtenidas de la respuesta
+        proyectos.forEach(proyecto => {
+            const option = document.createElement("option");
+            option.value = proyecto.projName;
+            option.textContent = proyecto.projName;
+            selectProyecto.appendChild(option);
+        });
+
+    } catch (error) {
+        console.error("Error al listar proyectos: ", error);
+    }
 }
 
-// nombre
-//rut
-//seleccionar proyecto
-//motivo postulacion
+let registrarPostulacion = async () => {
+    let campos = {
+        postulationName: document.getElementById("nombre").value,
+        postulationDescription: document.getElementById("motivo").value,
+        postulationProject: document.getElementById("proyecto").value,
+        postulationRut: document.getElementById("rut").value
+    };
+
+    try {
+        const peticion = await fetch("http://localhost:8080/proyecto/postulation/create", {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(campos)
+        });
+
+        if (peticion.ok) {
+            window.location.href = '../Html/home_intranet.html';
+        } else {
+            const errorMsg = await peticion.text();
+            alert("Error al registrar la postulación: " + errorMsg);
+        }
+
+    } catch (error) {
+        console.error("Error al registrar la solicitud: ", error);
+        alert("Error al registrar la postulación, por favor intente nuevamente");
+    }
+};
