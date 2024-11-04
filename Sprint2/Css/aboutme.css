@@ -266,7 +266,7 @@ nav {
 .cont_about {
   position: relative;
   width: 80vw;
-  height: 60vh;
+  height: 80vh;
   top: 20vh;
   left: 10vw;
   border-radius: 2em;
@@ -286,7 +286,7 @@ nav {
 
 .cont_about h2 span {
   margin-left: 2vw;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   background-color: transparent;
 }
 
@@ -295,7 +295,7 @@ nav {
   top: 5vh;
   left: 1.2vw;
   width: 76vw;
-  height: 43.2vh;
+  height: 63.2vh;
   padding: 0.8vw;
   border-radius: 2em;
 }
@@ -330,8 +330,8 @@ nav {
   position: relative;
   top: 35vh;
   left: 10vw;
-  width: 80vw;
-  height: 76vh;
+  width: 84vw;
+  height: 80vh;
   border-radius: 3em;
   background-color: #d4d4d4;
 }
@@ -347,8 +347,8 @@ nav {
 }
 
 .miembros {
-  width: 17vw;
-  height: 33vh;
+  width: 18vw;
+  height: 35vh;
   margin-left: 2.25vw;
   margin-top: 3.5vh;
   border-radius: 2em;
@@ -356,8 +356,8 @@ nav {
 }
 
 .miembros i {
-  width: 17vw;
-  height: 20vh;
+  width: 19vw;
+  height: 22vh;
   font-size: 9vw;
   line-height: 20vh;
   text-align: center;
@@ -376,6 +376,7 @@ nav {
   width: 17vw;
   text-align: center;
   background-color: transparent;
+  font-size: 1.1vw;
 }
 
 .miembros h5 {
