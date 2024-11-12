@@ -1,77 +1,144 @@
-/* 
-tipos de etiquetas y como reconocerla
-1) las etiquetas que no empiezan con nada son etiquetas globales, los estilos se aplicaran a todas esas etiquetas.
-2) las etiquetas que empiezan por un punto son etiquetas con una clase (class), los estilos se aplicaran solo a las etiquetas que tengan esa class.
-3) las etiquetas que empiezan por un hashtak son etiquetas con una ID, los estilos se aplicaran solo a las etiquetas que tengan esa ID y las ID son unicas.
-*/
-
-/* Estilos para todo */
-* {
-  background-color: #E0ECFA;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  list-style: none;
-  text-decoration: none;
+*{
+  background-color: #EEF1F4;
+  padding: 0;
   margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Bree Serif", serif;
 }
 
-/* Estilos para todas las etiquetas a */
-a {
-  background-color: transparent;
-}
-
-/* Estilo para todas las etiquetas li */
-li {
-  background-color: transparent;
-}
-
-/* Estilos para la barra superior (logo y botones) */
-/* Estilos para la etiqueta nav */
-nav {
-  display: flex; /* Estilo para que el contenido de la etiqueta nav este uno junto al otro */
-  position: fixed; /* Estilo para fijar la posicion de nav al hacer scroll*/
+header{
+  position: fixed;
   top: 0;
-  width: 100vw;
-  height: 11vh;
+  width: 100%;
+  height: 4%;
+  background-color: #1B2E51;
   z-index: 5;
-  background-color: transparent; /* Estilo para darle color a la etiqueta en si */
-  transition: all 0.5s ease;
 }
 
-.nav.active {
-  background-color: #003274d1;
-}
-
-/* Estilos para la etiqueta div con la clase "botones" */
-.botones {
-  position: relative;
-  display: flex;
-  top: 1.5vh;
+header p{
+  height: 100%;
+  line-height: 220%;
+  text-align: center;
+  font-size: 0.8vw;
+  color: white;
   background-color: transparent;
 }
 
-/* Estilos para las etiquetas a con la clase "boton"*/
+nav{
+  position: fixed;
+  display: flex;
+  top: 4vh;
+  height: 10vh;
+  width: 100vw;
+  box-shadow: 0px 0.5vh 2vh black;
+  z-index: 5;
+}
+
+.container_nav{
+  display: flex;
+  width: 90vw;
+  height: 8vh;
+  margin-left: 5vw;
+  margin-top: 0.5vh;
+  border-bottom: black solid 0.2vh;
+  border-top: black solid 0.2vh;
+  z-index: 3;
+}
+
+.logo{
+  width: 4vw;
+  height: 4vw;
+  margin-left: 1vw;
+  margin-right: -2vw;
+  margin-top: 0.8vh;
+  border-radius: 1em;
+}
+
+.container_nav a{
+  width: 3.6vw;
+  height: 3.6vw;
+  background-color: transparent;
+}
+
+.botones{
+  z-index: 2;
+  display: flex;
+  width: 75vw;
+  margin-left: 2vw;
+  background-color: transparent;
+}
+
+.botones li, .dos{
+  width: 15vw;
+  height: 8vh;
+  line-height: 8vh;
+  text-align: center;
+}
+
+.boton{
+  width: 15vw;
+  height: 8vh;
+  background-color: transparent;
+}
+
+.boton span{
+  display: block;
+  width: 15vw;
+  height: 8vh;
+  font-size: 1vw;
+  color: black;
+  background-color: transparent;
+}
+
+.boton span:hover{
+  width: 15vw;
+  height: 8vh;
+  background-color: rgb(214, 214, 214);
+}
+
+.redes_sociales{
+  width: 11vw;
+
+}
+
+.redes_sociales i{
+  height: 8vh;
+  width: 3.3vw;
+  line-height: 8vh;
+  text-align: center;
+  font-size: 1.5vw;
+  color: black;
+}
+
 .submenu {
   position: absolute;
   display: none;
-  width: 13.2vw;
+  width: 15vw;
   height: 26vh;
   z-index: -1;
-  top: 0vh;
-  left: 20.8vw;
+  top: 8.7vh;
+  left: 25vw;
   transition: 0.5s;
-  border-radius: 3em;
-  background-color: coral;
+  background-color: rgb(233, 233, 233);
+}
+
+.submenu li{
+  background-color: transparent;
 }
 
 .submenu li span {
   display: inline-block;
   width: 14vw;
-  height: 5.5vh;
-  line-height: 5.5vh;
+  height: 8.5vh;
+  line-height: 8.5vh;
   text-align: center;
-  margin-left: -1.4vw;
-  font-size: 1.2vw;
-  color: white;
+  font-size: 1vw;
+  color: black;
+  background-color: transparent;
+}
+
+.submenu a{
   background-color: transparent;
 }
 
@@ -79,174 +146,40 @@ nav {
   width: 14vw;
   left: 0.1vw;
   border-radius: 4em;
-  background-color: #bd4b00;
+  background-color: rgb(199, 199, 199);
 }
 
-#primero {
-  margin-top: 8vh;
+.dos{
+  background-color: transparent;
 }
+
+.dos:hover {}
 
 .dos:hover .submenu {
   display: initial;
 }
 
-.dos {
-  background-color: transparent;
-  z-index: -3;
+#btn2 span:hover,
+.dos:hover > .boton span {
+  background-color: white;
 }
 
-/*no eliminar, es necesaria para submenu aunque este vacia*/
-.dos:hover {
-}
-.botones {
-  position: relative;
-  display: flex;
-  top: 1.5vh;
-  background-color: transparent;
-}
-.boton {
-  position: absolute;
-  display: flex;
-  padding: 5px 15px; /* Estilo para darle mas espacio 5px hacias arriba/abajo y 15px hacia la derecha/izquierda */
-  width: 14vw; /* Estilo para establecer el ancho de la etiqueta */
-  height: 6vh; /* Estilo para establecer el alto de la etiqueta */
-  text-align: center; /* Estilo para ajustar el texto en el centro de la etiqueta (horizontalmente) */
-  border-radius: 4em; /* Estilo para redondear las esquinas de la etiqueta */
-  margin-left: 1.5vw; /* Estilo para desplazar desde izquierda a derecha sin afectar el tamaño de la etiqueta */
-  color: white; /* Estilo para darle color a la letra dentro la etiqueta */
-  font-size: 1.2vw; /* Estilo para darle tamaño a la letra dentro de la etiqueta */
+.dos:hover .submenu {
+  display: block;
 }
 
-/* Estilos para las etiquetas i dentro de las etiquetas a con la clase "boton" */
-.boton i {
-  width: 2.8vw;
-  height: 5.5vh;
-  font-size: 1.7vw;
-  border-radius: 5em;
-  align-items: center;
-  line-height: 5.5vh; /* Estilo para ajustar el texto en el centro de la etiqueta (verticalmente) */
-  margin-left: -0.4vw;
+.dos:hover > .boton span {
+  background-color: white;
 }
 
-/* Estilos para las etiquetas span dentro de las etiquetas a con las clase "boton" */
-.boton span {
-  width: 12vw;
-  line-height: 6vh;
-  background-color: transparent;
-}
-
-/* Estilos para la etiqueta img con la clase "logo" */
-.logo {
-  height: 9vh;
-  border-radius: 10em;
-  margin-top: 1vh;
-  margin-left: 1.5vw;
-  background-color: transparent;
-}
-
-/* Estilos para la etiqueta a con un id "btn1" */
-#btn1 {
-  left: 1vw;
-  background-color: #004aad;
-  border: #0a3876 solid 0.2em; /* Estilos para crearle bordes a una etiqueta (color, estilo de borde, grosor) */
-}
-
-/* Estilos para la etiqueta i con un id "logo_btn1" */
-#logo_btn1 {
-  background-color: #0a3876;
-  border: #052a5a solid 0.1em;
-}
-
-/* Estilos para la animacion de la etiqueta a con un id "btn1" */
-#btn1:hover {
-  background-color: #003881;
-  border: #011631 solid 0.2em;
-}
-
-/* Estilos para la etiqueta a con un id "btn2" */
-#btn2 {
-  left: 19vw;
-  background-color: #ff0000;
-  border: #b70000 solid 0.2em;
-}
-
-/* Estilos para la etiqueta i con un id "logo_btn2" */
-#logo_btn2 {
-  background-color: #b70000;
-  border: #8d0000 solid 0.1em;
-}
-
-/* Estilos para la animacion de la etiqueta a con un id "btn2" */
-#btn2:hover {
-  background-color: #ad0000;
-  border: #680000 solid 0.2em;
-}
-
-/* Estilos para la etiqueta a con un id "btn3" */
-#btn3 {
-  left: 37vw;
-  background-color: #1a929a;
-  border: #17676c solid 0.2em;
-  text-align: center;
-}
-
-/* Estilos para la etiqueta i con un id "logo_btn3" */
-#logo_btn3 {
-  background-color: #17676c;
-  border: #0a585e solid 0.1em;
-}
-
-/* Estilos para la animacion de la etiqueta a con un id "btn3" */
-#btn3:hover {
-  background-color: #077179;
-  border: #013135 solid 0.2em;
-}
-
-/* Estilos para la etiqueta a con un id "btn4" */
-#btn4 {
-  left: 55vw;
-  background-color: #00bf83;
-  border: #29735b solid 0.2em;
-}
-
-/* Estilos para la etiqueta i con un id "logo_btn4" */
-#logo_btn4 {
-  background-color: #29735b;
-  border: #14523e solid 0.1em;
-}
-
-/* Estilos para la animacion de la etiqueta a con un id "btn4" */
-#btn4:hover {
-  background-color: #008d60;
-  border: #093527 solid 0.2em;
-}
-
-/* Estilos para la etiqueta a con un id "btn5" */
-#btn5 {
-  left: 73vw;
-  background-color: #9b4195;
-  border: #7b3076 solid 0.2em;
-}
-
-/* Estilos para la etiqueta i con un id "logo_btn5" */
-#logo_btn5 {
-  background-color: #7b3076;
-  border: #53164f solid 0.1em;
-}
-
-/* Estilos para la animacion de la etiqueta a con un id "btn5" */
-#btn5:hover {
-  background-color: #7a0a73;
-  border: #31072e solid 0.2em;
-}
-
-/* Estilos para el slider */
 .container{
   position: relative;
   top: 20vh;
-  width: 100vw;
-  height: 60vh;
-  background-color: #003881;
+  width: 90vw;
+  margin-left: 5vw;
+  height: 70vh;
+  background-color: rgb(212, 212, 212);
+  box-shadow: 0.5vw 1vh 2vh rgba(0, 0, 0, 0.459);
 }
 
 .splide__slide{
@@ -255,41 +188,13 @@ nav {
 }
 
 .splide__slide img{
-  width: 45%;
-  height: 56vh;
+  width: 95%;
+  height: 66vh;
   margin-top: 2vh;
-  margin-left: 5%;
+  margin-left: 2.5%;
   object-fit: cover;
   cursor: pointer;
-  border-radius: 2em;
   background-color: transparent;
-}
-
-.text{
-  width: 40%;
-  height: 56vh;
-  margin-top: 2vh;
-  margin-left: 2.5vw;
-  background-color: transparent;
-}
-
-.text h3{
-  width: 60%;
-  height: 6vh;
-  line-height: 6vh;
-  text-align: center;
-  margin-left: 20%;
-  border-radius: 5em;
-  background-color: #cacaca;
-}
-
-.text p{
-  margin-top: 3vh;
-  padding: 2vw;
-  border-radius: 2em;
-  height: 39vh;
-  width: 95%;
-  background-color: #cacaca;
 }
 
 .splide__track{
@@ -300,42 +205,60 @@ nav {
   background-color: transparent;
 }
 
-/* Estilos para el titulo de las ultimas noticas */
-.titulo_news {
-  position: relative;
-  top: 36vh;
-  width: 25vw;
-  height: 8vh;
+.splide__slide h3{
+  position: absolute;
+  top: 60vh;
+  left: 2.25vw;
+  height: 10vh;
   line-height: 8vh;
-  border-radius: 0em 3em 3em 0em;
+  width: 85.5vw;
+  background-color: rgba(0, 0, 0, 0.521);
+}
+
+.splide__slide span{
+  position: absolute;
+  font-size: 1.8vw;
+  left: 5vw;
   color: white;
-  background-color: #003881;
-}
-
-.titulo_news span {
-  margin-left: 3vw;
-  font-size: 2vw;
   background-color: transparent;
 }
 
-#logo_titulo {
-  position: relative;
-  top: 1.2vh;
-  left: 2vw;
-  background-color: transparent;
-  font-size: 3vw;
+/* ultimas noticias*/
+
+.cont_titulo_noticias{
+  margin-top: 10vh;
+  height: 4vh;
+  width: 19vw;
+  background-color: #1B2E51;
 }
 
-/* Estilos para ultimas noticias */
+.cont_titulo_noticias span{
+  position: absolute;
+  height: 4vh;
+  width: 18vw;
+  padding-left: 0.5vw;
+  line-height: 4vh;
+  left: 1vw;
+  background-color: #EEF1F4;
+}
+
+.linea{
+  position: absolute;
+  width: 65vw;
+  height: 0.3vh;
+  margin-top: 2vh;
+  margin-left: 20vw;
+  background-color: black;
+}
+
 .cont_ult_news {
   position: absolute;
   display: flex;
-  height: 63vh;
-  width: 85vw;
-  top: 110vh;
-  margin-left: 7.5vw;
+  height: 70vh;
+  width: 90vw;
+  top: 80vh;
   border-radius: 1em;
-  background-color: #d4d4d4;
+  background-color: transparent;
 }
 
 .cont_ult_news a {
@@ -344,13 +267,14 @@ nav {
   margin-top: 2vh;
   margin-left: 3.25vw;
   color: black;
+  background-color: transparent;
 }
 
 .noticias {
   width: 24vw;
   height: 55vh;
   border-radius: 2em;
-  background-color: #f3f3f3;
+  background-color: transparent;
 }
 
 .noticias img {
@@ -359,6 +283,7 @@ nav {
   margin-top: 4vh;
   margin-left: 2vw;
   object-fit: cover;
+  box-shadow: 0.5vh 0.5vh 1vh rgba(0, 0, 0, 0.342);
 }
 
 .text_news h3 {
@@ -386,17 +311,24 @@ nav {
   background-color: transparent;
 }
 
+.separador{
+  margin-top: 50vh;
+}
+
 footer {
-  background-color: #27485e; /* Color azul oscuro del fondo */
+  background-color: #1B2E51; /* Color azul oscuro del fondo */
   color: white;
   padding: 20px 0;
   text-align: center;
+  width: 99.2vw;
+  height: 15vh;
+  margin-left: -5vw;
+  overflow: hidden;
 }
 
 .footer-container {
   background-color: transparent;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -421,8 +353,14 @@ footer {
 }
 
 .footer-right {
+  margin-left: 60vw;
   flex-direction: row;
   background-color: transparent;
+}
+
+.footer-right img{
+  width: 14vw;
+  margin-top: 1vw;
 }
 
 .footer-gobierno-logo {
@@ -436,6 +374,11 @@ footer {
   font-size: 14px;
   text-align: left;
   background-color: transparent;
+}
+
+.footer-left img{
+  position: absolute;
+  left: -3vw;
 }
 
 .social-icons {
@@ -472,5 +415,5 @@ footer {
   }
 }
 .separador {
-  height: 70vw;
+  margin-top: 70vh;
 }

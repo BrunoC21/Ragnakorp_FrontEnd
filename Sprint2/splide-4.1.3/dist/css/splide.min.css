@@ -151,21 +151,21 @@
 .splide__arrow{
     -ms-flex-align:center;
     align-items:center;
-    background:#ccc;
+    background:white;
     border:0;
     border-radius:50%;
     cursor:pointer;
     display:-ms-flexbox;
     display:flex;
-    height:2em;
+    height:3em;
     -ms-flex-pack:center;
     justify-content:center;
-    opacity:.7;
+    opacity:.8;
     padding:0;
     position:absolute;
     top:50%;
     transform:translateY(-50%);
-    width:2em;
+    width:3em;
     z-index:1;
 }
 
@@ -212,18 +212,18 @@
     position:absolute;
     right:0;
     z-index:1;
-    background-color:#003881; 
+    background-color:transparent; 
     width: 8vw; 
     height: 3vh; 
     line-height: 3vh; 
     border-radius: 2em; 
-    left: 45.1vw; 
+    left: 41vw; 
     bottom: -7vh;
 } /* para los botones de abajo */
 
 .splide__pagination__page{
-    background:#ccc;
-    border:0;
+    background:black;
+    border: solid white 0.2vh;
     border-radius:50%;
     display:inline-block;
     height:8px;
@@ -233,14 +233,15 @@
     padding:0;
     position:relative;
     transition:transform .2s linear;
-    width:0.8vw; 
-    height: 0.8vw;
+    width:1vw; 
+    height: 1vw;
     line-height: 1vh;
 }
 
 .splide__pagination__page.is-active{
-    background:#fff;
+    background:#ccc;
     transform:scale(1.2);
+    border: solid black 0.2vh;
     z-index:1;
 }
 
