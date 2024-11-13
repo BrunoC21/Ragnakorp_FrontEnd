@@ -99,7 +99,6 @@ nav{
 
 .redes_sociales{
   width: 11vw;
-
 }
 
 .redes_sociales i{
@@ -145,11 +144,25 @@ nav{
 .submenu li span:hover {
   width: 14vw;
   left: 0.1vw;
-  border-radius: 4em;
+  border-bottom: solid rgb(90, 90, 90) 0.3vw;
   background-color: rgb(199, 199, 199);
 }
 
 .dos{
+  background-color: transparent;
+}
+
+#btn2{
+  display: flex;
+  width: 15vw;
+}
+
+#btn2 i{
+  position: absolute;
+  left: 26vw;
+  height: 8vh;
+  line-height: 8vh;
+  font-size: 1vw;
   background-color: transparent;
 }
 
@@ -161,7 +174,7 @@ nav{
 
 #btn2 span:hover,
 .dos:hover > .boton span {
-  background-color: white;
+  background-color: rgb(199, 199, 199);
 }
 
 .dos:hover .submenu {
