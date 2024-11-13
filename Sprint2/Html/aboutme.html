@@ -3,33 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Polo de salud</title>
+    <title>¿Quienes somos?</title>
     <link rel="stylesheet" href="/Sprint2/Css/aboutme.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="/Sprint2/splide-4.1.3/dist/css/splide.min.css"
+    />
   </head>
+
   <body>
     <header>
-      <nav class="nav">
-        <a href="index.html"
-          ><img
-            src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png"
-            alt="Logo"
-            class="logo"
-        /></a>
+      <p>Bienvenid@s al polo de salud Ñuble</p>
+    </header>
 
+    <nav>
+      <a href="index.html"
+        ><img
+          src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png"
+          alt="Logo"
+          class="logo"
+      /></a>
+      <div class="container_nav">
         <ul class="botones">
           <li>
             <a href="aboutme.html" class="boton" id="btn1"
-              ><i class="bx bxs-analyse" id="logo_btn1"></i>
-              <span>¿Quienes somos?</span></a
+              ><span>¿Quienes somos?</span></a
             >
           </li>
           <ul class="dos">
-            <a href="components.html" class="boton" id="btn2">
-              <i class="bx bx-task" style="color: #ffffff" id="logo_btn2"></i
+            <a href="components.html" class="boton" id="btn2"
               ><span>Componentes</span></a
             >
             <ul class="submenu">
@@ -46,248 +56,56 @@
           </ul>
           <li>
             <a href="link.html" class="boton" id="btn3"
-              ><i class="bx bx-street-view" id="logo_btn3"></i
               ><span>Vinculación</span></a
             >
           </li>
           <li>
             <a href="news.html" class="boton" id="btn4"
-              ><i class="bx bx-news" style="color: #ffffff" id="logo_btn4"></i
               ><span>Noticias</span></a
             >
           </li>
           <li>
             <a href="contactus.html" class="boton" id="btn5"
-              ><i
-                class="bx bxs-contact"
-                style="color: #ffffff"
-                id="logo_btn5"
-              ></i
               ><span>Contactanos</span></a
             >
           </li>
         </ul>
-      </nav>
-    </header>
-
-    <h1 class="titulo_polo">
-      <span>Polo de salud</span
-      ><i class="bx bx-plus-medical" id="logo_crus"></i>
-    </h1>
-    <div class="cont_about">
-      <h2><span>¿Qué es el Polo de Salud?</span></h2>
-      <p>
-        <span>
-          Los “Polos de Desarrollo” estimulan las actividades que 
-           impulsan la actividad local en un área geográfica específica, 
-           creando las condiciones para impulsar el desarrollo económico, 
-           social y tecnológico en su entorno, generando empleo, atrayendo 
-           inversiones y mejorando la calidad de vida de la población local 
-           (Furtado, 1961; Boisier, 2004).<br><br> 
-
-           Bajo este enfoque, la materialización de un Polo de Desarrollo
-           enfocado en el tema de Salud para la región de Ñuble permite una 
-           vía de solución al desarrollo del territorio en el ámbito sanitario 
-           y como tal debe incorporarse en cualquier Estrategia Regional e, 
-           incluso, debe formar parte de la agenda de todo Gobierno Regional, 
-           incorporando en su proceso la apertura de oportunidades para el 
-           desarrollo de salud de la zona.<br><br>
-
-           Para este objetivo, es relevante la asociatividad multidisciplinaria
-           de varios organismos públicos y privados. De esta manera, la Universidad 
-           del Bío-Bío a partir de sus ejes estratégicos: formación, investigación, 
-           creación y/o innovación con el medio, es capaz de liderar y mayor parte de 
-           los sectores y servicios existentes, facilitando el acceso de la ciudadanía 
-           a las prestaciones de salud en la región de Ñuble. Para este propósito 
-           ha identificado actores claves en el funcionamiento del Polo de Salud.<br><br>
-
-          <strong>Misión:</strong> Somos un Polo de desarrollo en salud, especializados 
-          en la formación de capital humano, que impulsa la investigación y la innovación 
-          con enfoque territorial, fortaleciendo la vinculación con el medio, para contribuir 
-          a mejorar la salud de la región de Ñuble.<br><br>
-          
-          <strong>Visión:</strong> Ser reconocidos por la formación, investigación
-          e innovación, mediante la articulación y coordinación del inter sector, para
-          contribuir a mejorar la salud de la población y aportar al diseño de políticas 
-          públicas<br><br>
-        </span>
-      </p>
-    </div>
-
-    <h1 class="titulo_miembros">
-      <span>¿Quienes somos?</span
-      ><i class="bx bxs-user" id="logo_quienes_somos"></i>
-    </h1>
-
-    <div class="cont_miembros">
-      <div class="primera_linea">
-        <div class="miembros">
-          <i class="bx bxs-user-circle"></i>
-          <h3>Mg. Julia Fawaz Y.</h3>
-          <h4>Directora del Polo</h4>
-          <h5>correo electronico1</h5>
-        </div>
-        <div class="miembros">
-          <i class="bx bxs-user-circle"></i>
-          <h3>Dra. Mónica Cardona V.</h3>
-          <h4>Coordinadora</h4>
-          <h5>correo electronico2</h5>
-        </div>
-        <div class="miembros">
-          <i class="bx bxs-user-circle"></i>
-          <h3>Mg. Cynthia Salinas L.</h3>
-          <h4>Conectora Líder</h4>
-          <h5>correo electronico3</h5>
-        </div>
-        <div class="miembros">
-          <i class="bx bxs-user-circle"></i>
-          <h3>miembro4</h3>
-          <h4>cargo4</h4>
-          <h5>correo electronico4</h5>
+        <div class="redes_sociales">
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+          <a href="#"><i class="bx bxl-linkedin-square"></i></a>
+          <a href="#"><i class="bx bx-user"></i></a>
         </div>
       </div>
-      <div class="segunda_linea">
-        <div class="miembros">
-          <i class="bx bxs-user-circle"></i>
-          <h3>Ing. Moisés Iturra I.</h3>
-          <h4>Gestor de Técnico Financiero</h4>
-          <h5>correo electronico5</h5>
-        </div>
-        <div class="miembros">
-          <i class="bx bxs-user-circle"></i>
-          <h3>Dra. Rosana Vallejos C.</h3>
-          <h4>Gestora de Proyectos</h4>
-          <h5>correo electronico6</h5>
-        </div>
-        <div class="miembros">
-          <i class="bx bxs-user-circle"></i>
-          <h3>Ing. Patricia Soto M.</h3>
-          <h4>Gestora de Obras y Construcciones</h4>
-          <h5>correo electronico7</h5>
-        </div>
-        <div class="miembros">
-          <i class="bx bxs-user-circle"></i>
-          <h3>miembro8</h3>
-          <h4>cargo8</h4>
-          <h5>correo electronico8</h5>
-        </div>
-      </div>
-    </div>
+    </nav>
 
-    <div class="cont_ubicanos">
-      <h2>
-        <i class="bx bx-map" style="color: #ffffff"></i><span>Ubicanos</span>
-      </h2>
-      <input type="radio" name="map" id="btn1_CS">
-      <input type="radio" name="map" id="btn2_CS">
-      <input type="radio" name="map" id="btn3_CS">
+    <img
+      src="/Sprint2/Images/aboutme_images/imagen_2024-11-05_125247139-removebg-preview 1.png"
+      class="imagen_polo"
+    />
 
-    
-    <div class="cont_map">
-        <img src="/Sprint2/Images/Nuble.png" alt="">
-
-        <label for="btn1_CS" id="punto1"><i class='bx bxs-map'></i></label>
-        <label for="btn2_CS" id="punto2"><i class='bx bxs-map'></i></label>
-        <label for="btn3_CS" id="punto3"><i class='bx bxs-map'></i></labe>
-    </div>
-
-    <div class="cont_info">
-
-    </div>
-
-    <h2 id="titulo_imagenes"><i class='bx bx-map-alt' style='color:#ffffff' ></i><span>Imagenes</span></h2>
-    <div class="cont_lista">
-
-    </div>
-
-    <div class="cont_imagenes" id="Lista_Imagenes1">
-      <img src="/Sprint2/Images/CS1.jpg" alt="">
-      <img src="/Sprint2/Images/CS2.jpg" alt="">
-      <img src="/Sprint2/Images/CS3.jpg" alt="">
-    </div>
-
-    <div class="cont_imagenes" id="Lista_Imagenes2">
-      <img src="/Sprint2/Images/IL1.jpg" alt="">
-      <img src="/Sprint2/Images/IL2.jpg" alt="">
-      <img src="/Sprint2/Images/IL4.jpg" alt="">
-    </div>
-
-    <div class="cont_imagenes" id="Lista_Imagenes3">
-      <img src="/Sprint2/Images/IL3.jpg" alt="">
-      <img src="/Sprint2/Images/imagen_1.jpg" alt="">
-      <img src="/Sprint2/Images/imagen_2.jpg" alt="">
-    </div>
-    
-
-    <div class="cont_derecha1">
-        <div class="contenido">
-            <div class="imagen"><img src="/Sprint2/Images/CS1.jpg" alt="" /></div>
-                <div class="container_text">
-                    <h5>Centro de salud 1</h5>
-                    <p>Direccion: xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                    <p>Horario: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                    <p>fono: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                </div>
-        </div>
-    </div>
-    <div class="cont_derecha2">
-        <div class="contenido">
-            <div class="imagen"><img src="/Sprint2/Images/CS2.jpg" alt="" /></div>
-                <div class="container_text">
-                    <h5>Centro de salud 2</h5>
-                    <p>Direccion: xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                    <p>Horario: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                    <p>fono: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                </div>
-        </div>
-    </div>
-    <div class="cont_derecha3">
-        <div class="contenido">
-            <div class="imagen"><img src="/Sprint2/Images/CS3.jpg" alt="" /></div>
-                <div class="container_text">
-                    <h5>Centro de salud 3</h5>
-                    <p>Direccion: xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                    <p>Horario: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                    <p>fono: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                </div>
-        </div>
-    </div>
-
-    <footer>
-      <div class="footer-container">
-        <div class="footer-left">
+    <div class="container_contenido">
+      <div class="container_contenido_quienes_somos">
+        <div class="container_contenido_quienes_somos_titulo">
           <img
-            src="/Sprint2/Images/footer_images/logos-face-ubb-02 1.png"
-            alt="Logo Facultad"
-            class="footer-logo"
+            class="iconos"
+            src="/Sprint2/Images/aboutme_images/Rectangle 9.png"
           />
+          <i class="bx bx-info-circle" style="font-size: 30px"></i>
+          <p>¿Quienes Somos?</p>
+          <img class="lineas" src="/Sprint2/Images/aboutme_images/Line 4.png" />
         </div>
-        <div class="footer-right">
-          <div class="social-icons">
-            <a href="#"
-              ><img
-                src="/Sprint2/Images/footer_images/linkedin-square-logo-24 1.png"
-                alt="LinkedIn"
-            /></a>
-
-            <a href="#"
-              ><img
-                src="/Sprint2/Images/footer_images/bxl-instagram 1.png"
-                alt="Instagram"
-            /></a>
-          </div>
-          <img
-            src="/Sprint2/Images/footer_images/Logo (1).png"
-            alt="Gobierno de Ñuble"
-            class="footer-gobierno-logo"
-          />
+        <div class="container_contenido_quienes_somos_texto">
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum."
+          </p>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy;2024 Todos los Derechos Reservados</p>
-      </div>
-    </footer>
-
-    <script src="/Sprint2/Js/barnav.js"></script>
+    </div>
   </body>
 </html>
