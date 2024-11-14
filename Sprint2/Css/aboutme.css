@@ -354,3 +354,26 @@ nav {
 }
 
 /*Seccio Donde estamos*/
+
+.container_contenido_donde_estamos_titulo {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.container_contenido_donde_estamos_contenido {
+  background-color: #90beb9;
+  width: 1396px;
+  height: 618px;
+  display: flex;
+  margin-left: 40vh;
+  border-radius: 7px;
+  border-color: #1b2e51;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.container_contenido_donde_estamos_contenido img {
+  width: 606px;
+  height: 573px;
+  background-color: transparent;
+}
