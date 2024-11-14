@@ -292,9 +292,10 @@ nav{
 /* ultimas noticias*/
 
 .cont_titulo_noticias{
-  margin-top: 25vh;
+  margin-top: 28vh;
   height: 4vh;
   width: 19vw;
+  margin-left: 10vw;
   background-color: #1B2E51;
 }
 
@@ -304,13 +305,13 @@ nav{
   width: 18vw;
   padding-left: 0.5vw;
   line-height: 4vh;
-  left: 1vw;
+  left: 11vw;
   background-color: #EEF1F4;
 }
 
 .linea{
   position: absolute;
-  width: 65vw;
+  width: 55vw;
   height: 0.3vh;
   margin-top: 2vh;
   margin-left: 20vw;
