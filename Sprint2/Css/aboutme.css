@@ -1,10 +1,13 @@
 * {
-  background-color: #eef1f4;
   padding: 0;
   margin: 0;
   text-decoration: none;
   list-style: none;
   font-family: "Bree Serif", serif;
+}
+
+body {
+  background-color: #eef1f4;
 }
 
 header {
@@ -33,6 +36,7 @@ nav {
   width: 100vw;
   box-shadow: 0px 0.5vh 2vh black;
   z-index: 5;
+  background-color: #eef1f4;
 }
 
 .container_nav {
@@ -353,7 +357,7 @@ nav {
   text-align: center;
 }
 
-/*Seccio Donde estamos*/
+/*Seccion Donde estamos*/
 
 .container_contenido_donde_estamos_titulo {
   align-items: center;
@@ -366,14 +370,162 @@ nav {
   width: 1396px;
   height: 618px;
   display: flex;
-  margin-left: 40vh;
+  margin-left: 25vh;
   border-radius: 7px;
-  border-color: #1b2e51;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+  border: 5px solid #1b2e51;
 }
 
-.container_contenido_donde_estamos_contenido img {
+.mapa {
+  margin-top: 4vh;
   width: 606px;
   height: 573px;
   background-color: transparent;
+}
+
+.fotos {
+  background-color: transparent;
+  width: 555px;
+  height: 424px;
+  margin-top: 6vh;
+  margin-left: 20vh;
+}
+
+.container_contenido_donde_estamos_contenido_lado_derecho {
+  background-color: transparent;
+}
+.container_contenido_donde_estamos_contenido_info {
+  background-color: white;
+  width: 551px;
+  height: 82px;
+  border-radius: 10px;
+  margin-left: 20vh;
+  margin-top: 0.5vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+  display: flex;
+  flex-direction: column;
+  padding-top: 2px;
+  padding-left: 2px;
+}
+
+/*Seccion Nuestro Equipo*/
+
+.container_contenido_nuestro_equipo_contenido {
+  background-image: url(/Sprint2/Images/aboutme_images/imagen_3.png);
+  background-repeat: no-repeat;
+  width: 1290px;
+  height: 735px;
+  margin-left: 30vh;
+  padding: 7vh;
+}
+
+.container_persona {
+  width: 171px;
+  height: 314px;
+  background-color: white;
+  margin-left: 15vh;
+  box-shadow: 10px 2px 10px rgba(0, 0, 0, 2);
+}
+
+.container_persona_textos {
+  padding: 2px;
+}
+
+.container_persona_textos h1 {
+  font-size: 20px;
+  margin-bottom: -2vh;
+}
+
+.container_persona_textos p {
+  font-size: 13px;
+  margin-top: 2vh;
+}
+
+.container_contenido_nuestro_equipo_contenido_fila_superior {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: -32vh;
+}
+
+.container_contenido_nuestro_equipo_contenido_fila_inferior {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: -32vh;
+  margin-top: 1vh;
+}
+
+/*Seccion gestion de conocimiento*/
+
+.container_contenido_gestion_del_conocimiento_titulo {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.container_contenifo_gestion_del_conocimiento_imagen {
+  margin-left: 26vh;
+}
+
+/*Seccion Quieres saber mas*/
+
+.container_contenido_quieres_saber_mas_titulo {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 40px;
+  margin-left: 5vh;
+}
+
+.container_contenido_quieres_saber_mas_titulo p {
+  width: 731px;
+  margin-right: -360px;
+}
+
+.lineas_fondo {
+  width: 700px;
+}
+
+.container_contenido_quieres_saber_mas_contenido {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.container_contenido_quieres_saber_mas_contenido_noticia {
+  width: 410px;
+  height: 360px;
+}
+
+.container_contenido_quieres_saber_mas_contenido_noticia p a {
+  text-decoration: none; /* Quita el subrayado */
+  color: black; /* Cambia el color del enlace */
+}
+
+/*Footer*/
+
+footer {
+  width: 100%px;
+  height: 106px;
+  background-color: #1b2e51;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10vh;
+}
+
+.footer-images {
+  display: flex;
+  gap: 50vh;
+  margin-top: 2vh;
+  margin-left: 15vh;
+}
+
+footer p {
+  margin-bottom: 2vh;
+  color: #eef1f4;
+  margin-left: 15vh;
 }
