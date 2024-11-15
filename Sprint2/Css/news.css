@@ -392,7 +392,7 @@ nav{
 }
 
 .btn_noticias{
-  width: 12vw;
+  width: 10vw;
   height: 5vh;
   margin-left: 2vw;
   border-radius: 3em;
@@ -400,6 +400,18 @@ nav{
   box-shadow: 0.1vh 0.1vh 1vh black;
   border: solid 0.3vh black;
   background-color: #ccc;
+}
+
+.suscripcion{
+  width: 10vw;
+  height: 5vh;
+  margin-left: 21vw;
+  border-radius: 3em;
+  font-size: 1.8vh;
+  color: white;
+  box-shadow: 0.1vh 0.1vh 1vh black;
+  border: solid 0.3vh black;
+  background-color:#1B2E51;
 }
 
 .seccion_noticias{
