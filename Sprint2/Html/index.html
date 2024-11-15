@@ -26,16 +26,16 @@
               <a href="aboutme.html" class="boton" id="btn1"><span>¿Quienes somos?</span></a>
             </li>
             <ul class="dos">
-              <a href="components.html" class="boton" id="btn2"><span>Componentes</span></a>
+              <a href="components.html" class="boton" id="btn2"><i class='bx bx-chevron-down'></i><span>Componentes</span></a>
               <ul class="submenu">
                 <li id="primero">
-                  <a href="component1.html"><span>Componente 1</span></a>
+                  <a href="components.html"><label for="btn_componente1"><span>Componente 1</span></label></a>
                 </li>
                 <li>
-                  <a href="component2.html"><span>Componente 2</span></a>
+                  <a href="components.html"><label for="btn_componente2"><span>Componente 2</span></label></a>
                 </li>
                 <li>
-                  <a href="component3.html"><span>Componente 3</span></a>
+                  <a href="components.html"><label for="btn_componente3"><span>Componente 3</span></label></a>
                 </li>
               </ul>
             </ul>
@@ -57,107 +57,115 @@
         </div>
     </nav>
 
-    <div class="container">
-      <section class="splide" aria-label="Basic Structure Example">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <li class="splide__slide" style="background-color: transparent;">
-                <img src="/Sprint2/Images/CS1.jpg" alt="">
-                <h3><span>titulo 1</span></h3>
-              </li>
-              <li class="splide__slide" style="background-color: transparent;">
-                <img src="/Sprint2/Images/CS2.jpg" alt="">
-                <h3><span>titulo 2</span></h3>
-              </li>
-              <li class="splide__slide" style="background-color: transparent;">
-                <img src="/Sprint2/Images/CS3.jpg" alt="">
-                <h3><span>titulo 3</span></h3>
-              </li>
-            </ul>
+    <div class="cont_slider">
+      <div class="container">
+        <section class="splide" aria-label="Basic Structure Example">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide" style="background-color: transparent;">
+                  <img src="/Sprint2/Images/CS1.jpg" alt="">
+                  <h3><span>titulo 1</span></h3>
+                </li>
+                <li class="splide__slide" style="background-color: transparent;">
+                  <img src="/Sprint2/Images/CS2.jpg" alt="">
+                  <h3><span>titulo 2</span></h3>
+                </li>
+                <li class="splide__slide" style="background-color: transparent;">
+                  <img src="/Sprint2/Images/CS3.jpg" alt="">
+                  <h3><span>titulo 3</span></h3>
+                </li>
+              </ul>
+            </div>
+        </section>
+      </div> 
+  
+      <div class="cont_noticias_extras">
+        <a href="">
+          <div class="noticia_extra">
+            <img src="/Sprint2/Images/1.PNG" alt="">
+            <h2><span>noticia 1</span></h2>
+            <h3><span>fecha 1</span></h3>
           </div>
-      </section>
+        </a>
+        <a href="">
+          <div class="noticia_extra">
+            <img src="/Sprint2/Images/3.PNG" alt="">
+            <h2><span>noticia 2</span></h2>
+            <h3><span>fecha 2</span></h3>
+          </div>
+        </a> 
+      </div>
+    </div>
+    
       
-      <div class="cont_titulo_noticias">
-        <h2><span>ULTIMAS NOTICIAS Y EVENTOS</span></h2>
-        <div class="linea">
-            <div class="line"></div>
+    <div class="cont_titulo_noticias">
+      <h2><span>ULTIMAS NOTICIAS Y EVENTOS</span></h2>
+      <div class="linea">
+          <div class="line"></div>
+      </div>
+    </div>
+      
+    <div class="cont_ult_news">
+      <a href="">
+        <div class="noticias">
+          <div class="text_news">
+            <img src="/Sprint2/Images/imagen_2.jpg" alt="" />
+            <h3>Noticia1</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
+            id eum dolor quasi ad eos, magnam ea ut ipsum sed Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Commodi,
+            reprehenderit iusto maiores consectetur repellat eum voluptate
+            ullam consequatur accusantium. Iusto magnam natus rerum, non
+            dolore error repellendus! Beatae, impedit labore? culpa nam facere
+            expedita, quidem, amet animi aspernatur consectetur quibusdam?
+          </p>
         </div>
-      </div>
-      
-      <div class="cont_ult_news">
-        <a href="">
-          <div class="noticias">
-            <div class="text_news">
-                <img src="/Sprint2/Images/imagen_1.jpg" alt="" />
-              <h3>Noticia1</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
-                id eum dolor quasi ad eos, magnam ea ut ipsum sed culpa nam Lorem
-                ipsum dolor sit amet, consectetur adipisicing elit. Ab nihil autem
-                iure accusamus aspernatur quam rerum ea recusandae nobis impedit
-                molestias laboriosam consequuntur quae odio inventore deserunt,
-                necessitatibus quia dolorem. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Voluptatum similique eum numquam
-                nemo deleniti doloribus ducimus animi laborum?
-              </p>
-            </div>
-          </div>
-        </a>
-        <a href="">
-          <div class="noticias">
-            <div class="text_news">
-                <img src="/Sprint2/Images/imagen_2.jpg" alt="" />
+        </div>
+      </a>
+      <a href="">
+        <div class="noticias">
+         <div class="text_news">
+              <img src="/Sprint2/Images/imagen_2.jpg" alt="" />
               <h3>Noticia2</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
-                id eum dolor quasi ad eos, magnam ea ut ipsum sed Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Commodi,
-                reprehenderit iusto maiores consectetur repellat eum voluptate
-                ullam consequatur accusantium. Iusto magnam natus rerum, non
-                dolore error repellendus! Beatae, impedit labore? culpa nam facere
-                expedita, quidem, amet animi aspernatur consectetur quibusdam?
-              </p>
-            </div>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
+              id eum dolor quasi ad eos, magnam ea ut ipsum sed Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Commodi,
+              reprehenderit iusto maiores consectetur repellat eum voluptate
+              ullam consequatur accusantium. Iusto magnam natus rerum, non
+              dolore error repellendus! Beatae, impedit labore? culpa nam facere
+              expedita, quidem, amet animi aspernatur consectetur quibusdam?
+            </p>
           </div>
-        </a>
-        <a href="">
-          <div class="noticias">
-            <div class="text_news">
-                <img src="/Sprint2/Images/imagen_3.jpg" alt="" />
-              <h3>Noticia3</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
-                id eum dolor quasi ad eos, magnam ea ut ipsum sed Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Voluptatem repellat,
-                placeat alias temporibus repudiandae libero doloribus id sequi.
-                Vel perferendis quam quod maxime tempore ad optio, non temporibus!
-                Eaque, harum? Lorem ipsum dolor sit amet consectetur, adipisicing
-                elit. Aperiam quae culpa nam facere expedita, quidem, amet animi
-                aspernatur consectetur quibusdam?
-              </p>
-            </div>
+        </div>
+      </a>
+      <a href="">
+        <div class="noticias">
+          <div class="text_news">
+              <img src="/Sprint2/Images/imagen_3.jpg" alt="" />
+            <h3>Noticia3</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
+              id eum dolor quasi ad eos, magnam ea ut ipsum sed Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Voluptatem repellat,
+              placeat alias temporibus repudiandae libero doloribus id sequi.
+              Vel perferendis quam quod maxime tempore ad optio, non temporibus!
+              Eaque, harum? Lorem ipsum dolor sit amet consectetur, adipisicing
+              elit. Aperiam quae culpa nam facere expedita, quidem, amet animi
+              aspernatur consectetur quibusdam?
+            </p>
           </div>
-        </a>
-      </div>
+        </div>
+      </a>
+    </div>
 
-      <div class="separador"></div>
+    <div class="separador"></div>
       
     <footer>
       <div class="footer-container">
-        <div class="footer-left">
-          <img
-            src="/Sprint2/Images/footer_images/logos-face-ubb-02 1.png"
-            alt="Logo Facultad"
-            class="footer-logo"
-          />
-        </div>
-        <div class="footer-right">
-          <img
-            src="/Sprint2/Images/footer_images/Logo (1).png"
-            alt="Gobierno de Ñuble"
-            class="footer-gobierno-logo"
-          />
-        </div>
+          <img src="/Sprint2/Images/footer_images/logos-face-ubb-02 1.png" alt="Logo Facultad" class="footer-logo"/>
+          <img src="/Sprint2/Images/footer_images/Logo (1).png" alt="Gobierno de Ñuble" class="footer-gobierno-logo"/>
       </div>
       <div class="footer-bottom">
         <p>&copy;2024 Todos los Derechos Reservados</p>

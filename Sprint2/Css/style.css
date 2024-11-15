@@ -99,7 +99,6 @@ nav{
 
 .redes_sociales{
   width: 11vw;
-
 }
 
 .redes_sociales i{
@@ -145,11 +144,25 @@ nav{
 .submenu li span:hover {
   width: 14vw;
   left: 0.1vw;
-  border-radius: 4em;
+  border-bottom: solid rgb(90, 90, 90) 0.3vw;
   background-color: rgb(199, 199, 199);
 }
 
 .dos{
+  background-color: transparent;
+}
+
+#btn2{
+  display: flex;
+  width: 15vw;
+}
+
+#btn2 i{
+  position: absolute;
+  left: 26vw;
+  height: 8vh;
+  line-height: 8vh;
+  font-size: 1vw;
   background-color: transparent;
 }
 
@@ -161,7 +174,7 @@ nav{
 
 #btn2 span:hover,
 .dos:hover > .boton span {
-  background-color: white;
+  background-color: rgb(199, 199, 199);
 }
 
 .dos:hover .submenu {
@@ -174,9 +187,9 @@ nav{
 
 .container{
   position: relative;
-  top: 20vh;
-  width: 90vw;
-  margin-left: 5vw;
+  top: 18vh;
+  width: 55vw;
+  margin-left: 1.5vw;
   height: 70vh;
   background-color: rgb(212, 212, 212);
   box-shadow: 0.5vw 1vh 2vh rgba(0, 0, 0, 0.459);
@@ -208,10 +221,10 @@ nav{
 .splide__slide h3{
   position: absolute;
   top: 60vh;
-  left: 2.25vw;
+  left: 1.35vw;
   height: 10vh;
   line-height: 8vh;
-  width: 85.5vw;
+  width: 52.3vw;
   background-color: rgba(0, 0, 0, 0.521);
 }
 
@@ -223,12 +236,66 @@ nav{
   background-color: transparent;
 }
 
+.cont_slider{
+  display: flex;
+  background-color: transparent;
+}
+
+.cont_noticias_extras{
+  position: relative;
+  top: 18vh;
+  height: 70vh;
+  width: 40vw;
+  background-color: transparent;
+}
+
+.noticia_extra{
+  height: 35vh;
+  width: 40vw;
+  background-color: transparent;
+}
+
+.noticia_extra img{
+  height: 35vh;
+  width: 39.5vw;
+  margin-left: 0.5vw;
+  object-fit:cover;
+  z-index: -3;
+}
+
+.noticia_extra h2{
+  position: absolute;
+  width: 39.5vw;
+  height: 7vh;
+  left: 0.5vw;
+  margin-top: -8.5vh;
+  color: white;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.575);
+  padding-top: 1vh;
+}
+
+.noticia_extra h3{
+  position: absolute;
+  margin-top: -4vh;
+  color: white;
+  z-index: 2;
+  background-color: transparent;
+  margin-left: 0.5vw;
+}
+
+.noticia_extra span{
+  background-color: transparent;
+  margin-left: 1vw;
+}
+
 /* ultimas noticias*/
 
 .cont_titulo_noticias{
-  margin-top: 10vh;
+  margin-top: 28vh;
   height: 4vh;
   width: 19vw;
+  margin-left: 10vw;
   background-color: #1B2E51;
 }
 
@@ -238,13 +305,13 @@ nav{
   width: 18vw;
   padding-left: 0.5vw;
   line-height: 4vh;
-  left: 1vw;
+  left: 11vw;
   background-color: #EEF1F4;
 }
 
 .linea{
   position: absolute;
-  width: 65vw;
+  width: 55vw;
   height: 0.3vh;
   margin-top: 2vh;
   margin-left: 20vw;
@@ -256,9 +323,10 @@ nav{
   display: flex;
   height: 70vh;
   width: 90vw;
-  top: 80vh;
+  top: 100vh;
   border-radius: 1em;
   background-color: transparent;
+  left: 5vw;
 }
 
 .cont_ult_news a {
@@ -320,83 +388,33 @@ footer {
   color: white;
   padding: 20px 0;
   text-align: center;
-  width: 99.2vw;
+  width: 100vw;
   height: 15vh;
-  margin-left: -5vw;
-  overflow: hidden;
+  position: relative;
+  bottom: 0;
 }
 
 .footer-container {
   background-color: transparent;
   display: flex;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.footer-left,
-.footer-right {
-  display: flex;
-  align-items: center;
-  background-color: transparent;
 }
 
 .footer-logo {
-  width: 370px; /* Ajusta el tamaño del logo de la facultad */
-  margin-right: 10px;
+  width: 20vw;
+  height: 12vh;
+  margin-left: 5vw;
   background-color: transparent;
-}
-
-.footer-logo p {
-  background-color: transparent;
-}
-
-.footer-right {
-  margin-left: 60vw;
-  flex-direction: row;
-  background-color: transparent;
-}
-
-.footer-right img{
-  width: 14vw;
-  margin-top: 1vw;
 }
 
 .footer-gobierno-logo {
-  width: 200px; /* Ajusta el tamaño del logo del Gobierno */
-  margin-top: 5px;
-  background-color: transparent;
-}
-
-.footer-left p {
-  margin: 0;
-  font-size: 14px;
-  text-align: left;
-  background-color: transparent;
-}
-
-.footer-left img{
-  position: absolute;
-  left: -3vw;
-}
-
-.social-icons {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-  background-color: transparent;
-}
-
-.social-icons img {
-  width: 45px; /* Tamaño de los íconos de redes sociales */
-  filter: brightness(0) invert(1); /* Hace que los íconos sean blancos sobre el fondo oscuro */
+  width: 15vw; /* Ajusta el tamaño del logo del Gobierno */
+  height: 12vh;
+  margin-left: 55vw;
   background-color: transparent;
 }
 
 .footer-bottom {
-  margin-top: 20px;
-  font-size: 23px;
+  font-size: 1.2vw;
   background-color: transparent;
 }
 
@@ -414,6 +432,7 @@ footer {
     background-color: transparent;
   }
 }
+
 .separador {
-  margin-top: 70vh;
+  margin-top: 80vh;
 }

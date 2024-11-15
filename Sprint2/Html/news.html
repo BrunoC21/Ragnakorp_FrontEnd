@@ -3,34 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Polo de salud</title>
+    <title>Polo de Salud</title>
     <link rel="stylesheet" href="/Sprint2/Css/news.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="/Sprint2/splide-4.1.3/dist/css/splide.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="/Sprint2/splide-4.1.3/dist/css/splide.min.css"
+    />
+    <script src="/Sprint2/splide-4.1.3/dist/js/splide.min.js"></script>
   </head>
   <body>
     <header>
-      <nav class="nav">
-        <a href="index.html"
-          ><img
-            src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png"
-            alt="Logo"
-            class="logo"
-        /></a>
+      <p>Bienvenid@s al polo de salud Ñuble</p>
+    </header>
 
+    <nav>
+      <a href="index.html"
+        ><img
+          src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png"
+          alt="Logo"
+          class="logo"
+      /></a>
+      <div class="container_nav">
         <ul class="botones">
           <li>
             <a href="aboutme.html" class="boton" id="btn1"
-              ><i class="bx bxs-analyse" id="logo_btn1"></i>
-              <span>¿Quienes somos?</span></a
+              ><span>¿Quienes somos?</span></a
             >
           </li>
           <ul class="dos">
-            <a href="components.html" class="boton" id="btn2">
-              <i class="bx bx-task" style="color: #ffffff" id="logo_btn2"></i
-              ><span>Componentes</span></a
+            <a href="components.html" class="boton" id="btn2"
+              ><i class="bx bx-chevron-down"></i><span>Componentes</span></a
             >
             <ul class="submenu">
               <li id="primero">
@@ -46,29 +62,173 @@
           </ul>
           <li>
             <a href="link.html" class="boton" id="btn3"
-              ><i class="bx bx-street-view" id="logo_btn3"></i
               ><span>Vinculación</span></a
             >
           </li>
           <li>
             <a href="news.html" class="boton" id="btn4"
-              ><i class="bx bx-news" style="color: #ffffff" id="logo_btn4"></i
               ><span>Noticias</span></a
             >
           </li>
           <li>
             <a href="contactus.html" class="boton" id="btn5"
-              ><i
-                class="bx bxs-contact"
-                style="color: #ffffff"
-                id="logo_btn5"
-              ></i
               ><span>Contactanos</span></a
             >
           </li>
         </ul>
-      </nav>
-    </header>
+        <div class="redes_sociales">
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+          <a href="#"><i class="bx bxl-linkedin-square"></i></a>
+          <a href="#"><i class="bx bx-user"></i></a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="titulo">
+      <div class="linea1"></div>
+      <h2><span>NOTICIAS</span></h2>
+      <div class="linea2"></div>
+    </div>
+
+    <div class="superior">
+      <div class="cont_slider">
+        <div class="container">
+          <section class="splide" aria-label="Basic Structure Example">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide" style="background-color: transparent">
+                  <img src="/Sprint2/Images/CS1.jpg" alt="" />
+                  <h3><span>titulo 1</span></h3>
+                </li>
+                <li class="splide__slide" style="background-color: transparent">
+                  <img src="/Sprint2/Images/CS2.jpg" alt="" />
+                  <h3><span>titulo 2</span></h3>
+                </li>
+                <li class="splide__slide" style="background-color: transparent">
+                  <img src="/Sprint2/Images/CS3.jpg" alt="" />
+                  <h3><span>titulo 3</span></h3>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="cont_destacadas">
+        <div class="cont_titulo_noticias_dest">
+          <h2><span>NOTICIAS DESTACADAS</span></h2>
+          <div class="linea"></div>
+        </div>
+
+        <div class="destacada">
+          <img src="/Sprint2/Images/IL1.jpg" alt="" />
+          <div class="text">
+            <h4>noticia destacada 1</h4>
+            <h5>fecha xx xx xxxx</h5>
+            <h5>autor: xxxxxxxxx</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+              reiciendis expedita perspiciatis deleniti sed eaque, aliquam esse
+              nihil! Praesentium ipsam tenetur quod similique corrupti nemo
+              officiis voluptates eos eius rerum.
+            </p>
+          </div>
+        </div>
+
+        <div class="destacada">
+          <img src="/Sprint2/Images/IL1.jpg" alt="" />
+          <div class="text">
+            <h4>noticia destacada 1</h4>
+            <h5>fecha xx xx xxxx</h5>
+            <h5>autor: xxxxxxxxx</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+              reiciendis expedita perspiciatis deleniti sed eaque, aliquam esse
+              nihil! Praesentium ipsam tenetur quod similique corrupti nemo
+              officiis voluptates eos eius rerum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="linea_separacion"></div>
+
+    <div class="inferior">
+      <div class="seccion_noticias">
+        <div class="botones_noticias">
+          <button class="btn_noticias">Noticias recientes</button>
+          <button class="btn_noticias">Proyectos</button>
+          <button class="btn_noticias">Externos</button>
+          <button class="suscripcion">Suscripción</button>
+        </div>
+        <div class="primera_linea_noticias">
+          <div class="noticias">
+            <a href="#">
+              <img src="/Sprint2/Images/CS1.jpg" alt="" />
+              <h4>Noticia 1</h4>
+              <h5>Autor 1</h5>
+            </a>
+          </div>
+          <div class="noticias">
+            <a href="#">
+              <img src="/Sprint2/Images/CS2.jpg" alt="" />
+              <h4>Noticia 2</h4>
+              <h5>Autor 2</h5>
+            </a>
+          </div>
+          <div class="noticias">
+            <a href="#">
+              <img src="/Sprint2/Images/CS3.jpg" alt="" />
+              <h4>Noticia 3</h4>
+              <h5>Autor 3</h5>
+            </a>
+          </div>
+        </div>
+        <div class="segunda_linea_noticias">
+          <div class="noticias">
+            <a href="#">
+              <img src="/Sprint2/Images/IL1.jpg" alt="" />
+              <h4>Noticia 4</h4>
+              <h5>Autor 4</h5>
+            </a>
+          </div>
+          <div class="noticias">
+            <a href="#">
+              <img src="/Sprint2/Images/IL2.jpg" alt="" />
+              <h4>Noticia 5</h4>
+              <h5>Autor 5</h5>
+            </a>
+          </div>
+          <div class="noticias">
+            <a href="#">
+              <img src="/Sprint2/Images/IL3.jpg" alt="" />
+              <h4>Noticia 6</h4>
+              <h5>Autor 6</h5>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="seccion_podcast">
+        <div class="cont_titulo_podcast">
+          <h2><span>PODCAST</span></h2>
+          <div class="linea_podcast"></div>
+        </div>
+
+        <div class="podcast">
+          <h4><span>Capitulo 1</span></h4>
+        </div>
+        <div class="podcast">
+          <h4><span>Capitulo 2</span></h4>
+        </div>
+        <div class="podcast">
+          <h4><span>Capitulo 3</span></h4>
+        </div>
+        <div class="podcast">
+          <h4><span>Capitulo 4</span></h4>
+        </div>
+      </div>
+    </div>
 
     <div class="separador"></div>
 
@@ -158,33 +318,16 @@
 
     <footer>
       <div class="footer-container">
-        <div class="footer-left">
-          <img
-            src="/Sprint2/Images/footer_images/logos-face-ubb-02 1.png"
-            alt="Logo Facultad"
-            class="footer-logo"
-          />
-        </div>
-        <div class="footer-right">
-          <div class="social-icons">
-            <a href="#"
-              ><img
-                src="/Sprint2/Images/footer_images/linkedin-square-logo-24 1.png"
-                alt="LinkedIn"
-            /></a>
-
-            <a href="#"
-              ><img
-                src="/Sprint2/Images/footer_images/bxl-instagram 1.png"
-                alt="Instagram"
-            /></a>
-          </div>
-          <img
-            src="/Sprint2/Images/footer_images/Logo (1).png"
-            alt="Gobierno de Ñuble"
-            class="footer-gobierno-logo"
-          />
-        </div>
+        <img
+          src="/Sprint2/Images/footer_images/logos-face-ubb-02 1.png"
+          alt="Logo Facultad"
+          class="footer-logo"
+        />
+        <img
+          src="/Sprint2/Images/footer_images/Logo (1).png"
+          alt="Gobierno de Ñuble"
+          class="footer-gobierno-logo"
+        />
       </div>
       <div class="footer-bottom">
         <p>&copy;2024 Todos los Derechos Reservados</p>
@@ -193,5 +336,13 @@
     <div class="separador_footer"></div>
 
     <script src="/Sprint2/Js/barnav.js"></script>
+    <script>
+      var splide = new Splide(".splide", {
+        type: "loop",
+        autoplay: true,
+        inteval: "5000",
+      });
+      splide.mount();
+    </script>
   </body>
 </html>

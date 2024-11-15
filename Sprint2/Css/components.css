@@ -1,305 +1,599 @@
-/* Estilos para todo */
-* {
-  background-color: #E0ECFA;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  list-style: none;
-  text-decoration: none;
+*{
+  background-color: #EEF1F4;
+  padding: 0;
   margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Bree Serif", serif;
 }
 
-/* Estilos para todas las etiquetas a */
-a {
-  background-color: transparent;
-}
-
-/* Estilo para todas las etiquetas li */
-li {
-  background-color: transparent;
-}
-
-/* Estilos para la barra superior (logo y botones) */
-/* Estilos para la etiqueta nav */
-nav {
-  display: flex; /* Estilo para que el contenido de la etiqueta nav este uno junto al otro */
-  position: fixed; /* Estilo para fijar la posicion de nav al hacer scroll*/
-  width: 100vw;
-  height: 11vh;
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 4%;
+  background-color: #1B2E51;
   z-index: 5;
-  background-color: transparent; /* Estilo para darle color a la etiqueta en si */
-  transition: all 0.5s ease;
 }
 
-.nav.active {
-  background-color: #003274d1;
-}
-
-/* Estilos para la etiqueta div con la clase "botones" */
-.botones {
-  position: relative;
-  display: flex;
-  top: 1.5vh;
+header p{
+  height: 100%;
+  line-height: 220%;
+  text-align: center;
+  font-size: 0.8vw;
+  color: white;
   background-color: transparent;
 }
 
-/* Estilos para las etiquetas a con la clase "boton"*/
+nav{
+  position: fixed;
+  display: flex;
+  top: 4vh;
+  height: 10vh;
+  width: 100vw;
+  box-shadow: 0px 0.5vh 2vh black;
+  z-index: 5;
+}
+
+.container_nav{
+  display: flex;
+  width: 90vw;
+  height: 8vh;
+  margin-left: 5vw;
+  margin-top: 0.5vh;
+  border-bottom: black solid 0.2vh;
+  border-top: black solid 0.2vh;
+  z-index: 3;
+}
+
+.logo{
+  width: 4vw;
+  height: 4vw;
+  margin-left: 1vw;
+  margin-right: -2vw;
+  margin-top: 0.8vh;
+  border-radius: 1em;
+}
+
+.container_nav a{
+  width: 3.6vw;
+  height: 3.6vw;
+  background-color: transparent;
+}
+
+.botones{
+  z-index: 2;
+  display: flex;
+  width: 75vw;
+  margin-left: 2vw;
+  background-color: transparent;
+}
+
+.botones li, .dos{
+  width: 15vw;
+  height: 8vh;
+  line-height: 8vh;
+  text-align: center;
+}
+
+.boton{
+  width: 15vw;
+  height: 8vh;
+  background-color: transparent;
+}
+
+.boton span{
+  display: block;
+  width: 15vw;
+  height: 8vh;
+  font-size: 1vw;
+  color: black;
+  background-color: transparent;
+}
+
+.boton span:hover{
+  width: 15vw;
+  height: 8vh;
+  background-color: rgb(214, 214, 214);
+}
+
+.redes_sociales{
+  width: 11vw;
+}
+
+.redes_sociales i{
+  height: 8vh;
+  width: 3.3vw;
+  line-height: 8vh;
+  text-align: center;
+  font-size: 1.5vw;
+  color: black;
+}
+
 .submenu {
   position: absolute;
   display: none;
-  width: 13.2vw;
+  width: 15vw;
   height: 26vh;
   z-index: -1;
-  top: 0vh;
-  left: 20.8vw;
+  top: 8.7vh;
+  left: 25vw;
   transition: 0.5s;
-  border-radius: 3em;
-  background-color: coral;
+  background-color: rgb(233, 233, 233);
+}
+
+.submenu li{
+  background-color: transparent;
 }
 
 .submenu li span {
   display: inline-block;
   width: 14vw;
-  height: 5.5vh;
-  line-height: 5.5vh;
+  height: 8.5vh;
+  line-height: 8.5vh;
   text-align: center;
-  margin-left: -1.4vw;
-  font-size: 1.2vw;
-  color: white;
+  font-size: 1vw;
+  color: black;
+  background-color: transparent;
+}
+
+.submenu a{
   background-color: transparent;
 }
 
 .submenu li span:hover {
   width: 14vw;
   left: 0.1vw;
-  border-radius: 4em;
-  background-color: #bd4b00;
+  border-bottom: solid rgb(90, 90, 90) 0.3vw;
+  background-color: rgb(199, 199, 199);
 }
 
-#primero {
-  margin-top: 8vh;
+.dos{
+  background-color: transparent;
 }
+
+#btn2{
+  display: flex;
+  width: 15vw;
+}
+
+#btn2 i{
+  position: absolute;
+  left: 26vw;
+  height: 8vh;
+  line-height: 8vh;
+  font-size: 1vw;
+  background-color: transparent;
+}
+
+.dos:hover {}
 
 .dos:hover .submenu {
   display: initial;
 }
 
-.dos {
-  background-color: transparent;
-  z-index: -3;
+#btn2 span:hover,
+.dos:hover > .boton span {
+  background-color: rgb(199, 199, 199);
 }
 
-/*no eliminar, es necesaria para submenu aunque este vacia*/
-.dos:hover {
+.dos:hover .submenu {
+  display: block;
 }
-.botones {
-  position: relative;
+
+.dos:hover > .boton span {
+  background-color: white;
+}
+
+.titulo{
   display: flex;
-  top: 1.5vh;
-  background-color: transparent;
+  width: 100vw;
+  height: 12vh;
+  margin-top: 19vh;
 }
 
-.boton {
+.titulo h2{
+  width: 15vw;
+  height: 5vh;
+  text-align: center;
+  border-bottom: solid #1B2E51 0.5vw;
+}
+
+.titulo h2 span{
+  width: 15vw;
+}
+
+.linea1{
+  height: 0.25vh;
+  width: 38vw;
+  margin-top: 1.5vh;
+  margin-left: 2.5vw;
+  margin-right: 1vw;
+  background-color: #1B2E51;
+}
+
+.linea2{
+  height: 0.25vh;
+  width: 39vw;
+  margin-left: 1vw;
+  margin-top: 1.5vh;
+  background-color: #1B2E51;
+}
+
+.cont_titulo_componente1{
+  display: flex;
+  margin-top: -2vh;
+  margin-left: 2vw;
+  height: 4vh;
+  width: 48vw;
+  background-color: #1B2E51;
+}
+
+.cont_titulo_componente1 h2{
+  height: 4vh;
+  width: 55vw;
+  margin-left: 0.7vw;
+  line-height: 4vh;
+  background-color: #EEF1F4;
+}
+
+.cont_titulo_componente1 span{
+  height: 4vh;
+  margin-left: 0.5vw;
+  line-height: 4vh;
+  background-color: #EEF1F4;
+}
+
+.cont_titulo_componente1 .linea{
   position: absolute;
+  width: 48vw;
+  height: 0.3vh;
+  margin-top: 2vh;
+  margin-left: 47vw;
+  background-color: black;
+}
+
+.cont_titulo_componente2{
   display: flex;
-  padding: 5px 15px; /* Estilo para darle mas espacio 5px hacias arriba/abajo y 15px hacia la derecha/izquierda */
-  width: 14vw; /* Estilo para establecer el ancho de la etiqueta */
-  height: 6vh; /* Estilo para establecer el alto de la etiqueta */
-  text-align: center; /* Estilo para ajustar el texto en el centro de la etiqueta (horizontalmente) */
-  border-radius: 4em; /* Estilo para redondear las esquinas de la etiqueta */
-  margin-left: 1.5vw; /* Estilo para desplazar desde izquierda a derecha sin afectar el tamaño de la etiqueta */
-  color: white; /* Estilo para darle color a la letra dentro la etiqueta */
-  font-size: 1.2vw; /* Estilo para darle tamaño a la letra dentro de la etiqueta */
+  margin-top: 5vh;
+  margin-left: 2vw;
+  height: 4vh;
+  width: 48vw;
+  background-color: #1B2E51;
 }
 
-/* Estilos para las etiquetas i dentro de las etiquetas a con la clase "boton" */
-.boton i {
-  width: 2.8vw;
-  height: 5.5vh;
-  font-size: 1.7vw;
+.cont_titulo_componente2 h2{
+  height: 4vh;
+  width: 55vw;
+  margin-left: 0.7vw;
+  line-height: 4vh;
+  background-color: #EEF1F4;
+}
+
+.cont_titulo_componente2 span{
+  height: 4vh;
+  margin-left: 0.5vw;
+  line-height: 4vh;
+  background-color: #EEF1F4;
+}
+
+.cont_titulo_componente2 .linea{
+  position: absolute;
+  width: 59vw;
+  height: 0.2vh;
+  margin-top: 2vh;
+  margin-left: 36vw;
+  background-color: black;
+}
+
+.cont_titulo_componente3{
+  display: flex;
+  margin-top: 5vh;
+  margin-left: 2vw;
+  height: 4vh;
+  width: 48vw;
+  background-color: #1B2E51;
+}
+
+.cont_titulo_componente3 h2{
+  height: 4vh;
+  width: 55vw;
+  margin-left: 0.7vw;
+  line-height: 4vh;
+  background-color: #EEF1F4;
+}
+
+.cont_titulo_componente3 span{
+  height: 4vh;
+  margin-left: 0.5vw;
+  line-height: 4vh;
+  background-color: #EEF1F4;
+}
+
+.cont_titulo_componente3 .linea{
+  position: absolute;
+  width: 74.8vw;
+  height: 0.2vh;
+  margin-top: 2vh;
+  margin-left: 20.5vw;
+  background-color: black;
+}
+
+.container_componentes{
+  display: flex;
+  margin-left: 1.5vw;
+  margin-top: 3vh;
+}
+
+.container_componentes img{
+  width: 30vw;
+  height: 30vh;
+  border-radius: 1em;
+  box-shadow: 1vh 1vh 2vh black;
+}
+
+.texto_componente{
+  background-color: transparent;
+}
+
+.texto_componente p{
+  width: 57vw;
+  height: 24vh;
+  padding: 1.5vw;
+  margin-left: 1.5vw;
+  border-radius: 1em;
+  box-shadow: 1vh 1vh 2vh black;
+  font-size: 1.2vw;
+  background-color: white;
+}
+
+.componentes{
+  color: black;
+  cursor: pointer;
+}
+
+.cont_componente_emergente1, .cont_componente_emergente2, .cont_componente_emergente3{
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.425);
+  transition: all 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.container_comp{
+  position: absolute;
+  width: 90vw;
+  height: 90vh;
+  margin-top: 5vh;
+  margin-left: 5vw;
+  border-radius: 1em;
+  z-index: 11;
+}
+
+.container_comp label{
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#btn_componente1{
+  display: none;
+}
+
+#btn_componente1:checked ~ .cont_componente_emergente1{
+  opacity: 1;
+  visibility: visible;
+}
+
+#btn_componente2{
+  display: none;
+}
+
+#btn_componente2:checked ~ .cont_componente_emergente2{
+  opacity: 1;
+  visibility: visible;
+}
+
+#btn_componente3{
+  display: none;
+}
+
+#btn_componente3:checked ~ .cont_componente_emergente3{
+  opacity: 1;
+  visibility: visible;
+}
+.container_comp i{
+  position: relative;
+  top: 0.9vh;
+  left: 88vw;
+  font-size: 3vh;
+  background-color: transparent;
+}
+
+.linea_inicial{
+  width: 85vw;
+  height: 0.2vh;
   border-radius: 5em;
-  align-items: center;
-  line-height: 5.5vh; /* Estilo para ajustar el texto en el centro de la etiqueta (verticalmente) */
-  margin-left: -0.4vw;
+  margin-left: 2vw;
+  background-color: black;
 }
 
-/* Estilos para las etiquetas span dentro de las etiquetas a con las clase "boton" */
-.boton span {
-  width: 12vw;
+.container_comp h1{
+  width: 65vw;
+  height: 6vh;
   line-height: 6vh;
   background-color: transparent;
 }
 
-/* Estilos para la etiqueta img con la clase "logo" */
-.logo {
-  height: 9vh;
-  border-radius: 10em;
-  margin-top: 1vh;
-  margin-left: 1.5vw;
+.container_comp h1 span{
+  margin-left: 2vw;
+  color: #2c4d8b;
   background-color: transparent;
 }
 
-/* Estilos para la etiqueta a con un id "btn1" */
-#btn1 {
-  left: 1vw;
-  background-color: #004aad;
-  border: #0a3876 solid 0.2em; /* Estilos para crearle bordes a una etiqueta (color, estilo de borde, grosor) */
+.container_comp h3{
+  width: 65vw;
+  height: 6vh;
+  line-height: 6vh;
+  margin-top: -2vh;
+  margin-left: 4vw;
+  background-color: transparent;
 }
 
-/* Estilos para la etiqueta i con un id "logo_btn1" */
-#logo_btn1 {
-  background-color: #0a3876;
-  border: #052a5a solid 0.1em;
+.container_comp h3 span{
+  background-color: transparent;
 }
 
-/* Estilos para la animacion de la etiqueta a con un id "btn1" */
-#btn1:hover {
-  background-color: #003881;
-  border: #011631 solid 0.2em;
+.titulo_relacionadas{
+  position: absolute;
+  left: 67.5vw;
+  font-size: 1.4vw;
+  color: #2c4d8b;
+  top: 8vh;
+  background-color: transparent;
 }
 
-/* Estilos para la etiqueta a con un id "btn2" */
-#btn2 {
-  left: 19vw;
-  background-color: #ff0000;
-  border: #b70000 solid 0.2em;
+.contenido_componente1_emergente{
+  display: flex;
+  width: 85vw;
+  height: 70vh;
+  margin-left: 2.5vw;
+  background-color:transparent;
 }
 
-/* Estilos para la etiqueta i con un id "logo_btn2" */
-#logo_btn2 {
-  background-color: #b70000;
-  border: #8d0000 solid 0.1em;
+.info{
+  width: 60vw;
+  height: 70vh;
+  background-color: transparent;
+  border-radius: 1em;
+  overflow-y:scroll;
 }
 
-/* Estilos para la animacion de la etiqueta a con un id "btn2" */
-#btn2:hover {
-  background-color: #ad0000;
-  border: #680000 solid 0.2em;
+.contenerdor_info{
+  width: 58vw;
+  height: 100vh;
+  margin-left: 0.6vw;
+  background-color: transparent;
 }
 
-/* Estilos para la etiqueta a con un id "btn3" */
-#btn3 {
-  left: 37vw;
-  background-color: #1a929a;
-  border: #17676c solid 0.2em;
-  text-align: center;
+.contenerdor_info img{
+  width: 56vw;
+  height: 50vh;
+  margin-top: 2vh;
+  margin-left: 1vw;
+  object-fit: cover;
 }
 
-/* Estilos para la etiqueta i con un id "logo_btn3" */
-#logo_btn3 {
-  background-color: #17676c;
-  border: #0a585e solid 0.1em;
+.contenerdor_info p{
+  font-size: 1vw;
+  margin-top: 2vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-bottom: 2vw;
+  text-align: justify;
+  background-color: transparent;
 }
 
-/* Estilos para la animacion de la etiqueta a con un id "btn3" */
-#btn3:hover {
-  background-color: #077179;
-  border: #013135 solid 0.2em;
+.noticias_relacionadas{
+  width: 20vw;
+  height: 70vh;
+  margin-left: 5vw;
+  background-color: #ccc;
+  box-shadow: 0.5vh 0.5vh 0.5vh 0.5vh rgba(0, 0, 0, 0.219);
 }
 
-/* Estilos para la etiqueta a con un id "btn4" */
-#btn4 {
-  left: 55vw;
-  background-color: #00bf83;
-  border: #29735b solid 0.2em;
+.noticias_relacionadas a{
+  color: black;
+  background-color: transparent;
 }
 
-/* Estilos para la etiqueta i con un id "logo_btn4" */
-#logo_btn4 {
-  background-color: #29735b;
-  border: #14523e solid 0.1em;
+.noticias_relacionadas h2{
+  width: 20vw;
+  height: 4vh;
+  padding-top: 2vh;
+  background-color: transparent;
 }
 
-/* Estilos para la animacion de la etiqueta a con un id "btn4" */
-#btn4:hover {
-  background-color: #008d60;
-  border: #093527 solid 0.2em;
+.noticias_relacionadas h2 span{
+  font-size: 1.2vw;
+  height: 5vh;
+  background-color: transparent;
+  margin-left: 2vw;
 }
 
-/* Estilos para la etiqueta a con un id "btn5" */
-#btn5 {
-  left: 73vw;
-  background-color: #9b4195;
-  border: #7b3076 solid 0.2em;
+.noticias_relacionadas h4{
+  width: 20vw;
+  height: 2vh;  
+  margin-left: 2vw;
+  background-color: transparent;
 }
 
-/* Estilos para la etiqueta i con un id "logo_btn5" */
-#logo_btn5 {
-  background-color: #7b3076;
-  border: #53164f solid 0.1em;
+.noticias_rel{
+  width: 19vw;
+  height: 12.8vh;
+  margin-left: 0.5vw;
+  margin-top: 1vh;
+  border-radius: 1em;
+  background-color: white;
 }
 
-/* Estilos para la animacion de la etiqueta a con un id "btn5" */
-#btn5:hover {
-  background-color: #7a0a73;
-  border: #31072e solid 0.2em;
+.miss_click{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.linea_final{
+  width: 85vw;
+  height: 0.2vh;
+  border-radius: 5em;
+  margin-top: 3.5vh;
+  margin-left: 2vw;
+  background-color: black;
+}
+
+.separador{
+  margin-top: 50vh;
 }
 
 footer {
-  background-color: #27485e; /* Color azul oscuro del fondo */
+  background-color: #1B2E51; /* Color azul oscuro del fondo */
   color: white;
   padding: 20px 0;
   text-align: center;
+  width: 100vw;
+  height: 15vh;
+  position: relative;
+  bottom: 0;
 }
 
 .footer-container {
   background-color: transparent;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.footer-left,
-.footer-right {
-  display: flex;
-  align-items: center;
-  background-color: transparent;
 }
 
 .footer-logo {
-  width: 370px; /* Ajusta el tamaño del logo de la facultad */
-  margin-right: 10px;
-  background-color: transparent;
-}
-
-.footer-logo p {
-  background-color: transparent;
-}
-
-.footer-right {
-  flex-direction: row;
+  width: 20vw;
+  height: 12vh;
+  margin-left: 5vw;
   background-color: transparent;
 }
 
 .footer-gobierno-logo {
-  width: 200px; /* Ajusta el tamaño del logo del Gobierno */
-  margin-top: 5px;
-  background-color: transparent;
-}
-
-.footer-left p {
-  margin: 0;
-  font-size: 14px;
-  text-align: left;
-}
-
-.social-icons {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-  background-color: transparent;
-}
-
-.social-icons img {
-  width: 45px; /* Tamaño de los íconos de redes sociales */
-  filter: brightness(0) invert(1); /* Hace que los íconos sean blancos sobre el fondo oscuro */
+  width: 15vw; /* Ajusta el tamaño del logo del Gobierno */
+  height: 12vh;
+  margin-left: 55vw;
   background-color: transparent;
 }
 
 .footer-bottom {
-  margin-top: 20px;
-  font-size: 23px;
+  font-size: 1.2vw;
   background-color: transparent;
 }
 
@@ -317,6 +611,7 @@ footer {
     background-color: transparent;
   }
 }
+
 .separador {
-  height: 70vw;
+  margin-top: 30vh;
 }
