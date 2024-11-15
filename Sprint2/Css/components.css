@@ -148,16 +148,7 @@ nav{
   background-color: rgb(199, 199, 199);
 }
 
-.dos{
-  background-color: transparent;
-}
-
-#btn2{
-  display: flex;
-  width: 15vw;
-}
-
-#btn2 i{
+.dos i{
   position: absolute;
   left: 26vw;
   height: 8vh;
@@ -166,15 +157,25 @@ nav{
   background-color: transparent;
 }
 
-.dos:hover {}
+.dos span{
+  background-color: transparent;
+  font-size: 1vw;
+}
+
+.dos {
+  background-color: transparent;
+}
+
+.dos:hover {
+  background-color: white;
+}
 
 .dos:hover .submenu {
   display: initial;
 }
 
-#btn2 span:hover,
 .dos:hover > .boton span {
-  background-color: rgb(199, 199, 199);
+  background-color: white;
 }
 
 .dos:hover .submenu {
