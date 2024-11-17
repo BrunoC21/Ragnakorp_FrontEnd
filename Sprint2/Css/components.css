@@ -148,16 +148,7 @@ nav{
   background-color: rgb(199, 199, 199);
 }
 
-.dos{
-  background-color: transparent;
-}
-
-#btn2{
-  display: flex;
-  width: 15vw;
-}
-
-#btn2 i{
+.dos i{
   position: absolute;
   left: 26vw;
   height: 8vh;
@@ -166,15 +157,25 @@ nav{
   background-color: transparent;
 }
 
-.dos:hover {}
+.dos span{
+  background-color: transparent;
+  font-size: 1vw;
+}
+
+.dos {
+  background-color: transparent;
+}
+
+.dos:hover {
+  background-color: white;
+}
 
 .dos:hover .submenu {
   display: initial;
 }
 
-#btn2 span:hover,
 .dos:hover > .boton span {
-  background-color: rgb(199, 199, 199);
+  background-color: white;
 }
 
 .dos:hover .submenu {
@@ -189,7 +190,7 @@ nav{
   display: flex;
   width: 100vw;
   height: 12vh;
-  margin-top: 23vh;
+  margin-top: 19vh;
 }
 
 .titulo h2{
@@ -222,7 +223,7 @@ nav{
 
 .cont_titulo_componente1{
   display: flex;
-  margin-top: 5vh;
+  margin-top: -2vh;
   margin-left: 2vw;
   height: 4vh;
   width: 48vw;
@@ -326,8 +327,8 @@ nav{
 }
 
 .container_componentes img{
-  width: 35vw;
-  height: 40vh;
+  width: 30vw;
+  height: 30vh;
   border-radius: 1em;
   box-shadow: 1vh 1vh 2vh black;
 }
@@ -338,13 +339,12 @@ nav{
 
 .texto_componente p{
   width: 57vw;
-  height: 34vh;
+  height: 24vh;
   padding: 1.5vw;
   margin-left: 1.5vw;
   border-radius: 1em;
   box-shadow: 1vh 1vh 2vh black;
-  font-size: 1.4vw;
-  text-align: justify;
+  font-size: 1.2vw;
   background-color: white;
 }
 

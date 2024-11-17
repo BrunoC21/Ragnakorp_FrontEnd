@@ -1,764 +1,647 @@
-/* Estilos para todo */
 * {
-  background-color: #E0ECFA;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  list-style: none;
-  text-decoration: none;
+  padding: 0;
   margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Bree Serif", serif;
 }
 
-html{
-  height: 0;
+body {
+  background-color: #eef1f4;
 }
 
-/* Estilos para todas las etiquetas a */
-a {
-  background-color: transparent;
-}
-
-/* Estilo para todas las etiquetas li */
-li {
-  background-color: transparent;
-}
-
-/* Estilos para la barra superior (logo y botones) */
-/* Estilos para la etiqueta nav */
-nav {
-  display: flex; /* Estilo para que el contenido de la etiqueta nav este uno junto al otro */
-  position: fixed; /* Estilo para fijar la posicion de nav al hacer scroll*/
-  width: 100vw;
-  height: 11vh;
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 4%;
+  background-color: #1b2e51;
   z-index: 5;
-  background-color: transparent; /* Estilo para darle color a la etiqueta en si */
-  transition: all 0.5s ease;
 }
 
-.nav.active {
-  background-color: #003274d1;
-}
-
-/* Estilos para la etiqueta div con la clase "botones" */
-.botones {
-  position: relative;
-  display: flex;
-  top: 1.5vh;
+header p {
+  height: 100%;
+  line-height: 220%;
+  text-align: center;
+  font-size: 0.8vw;
+  color: white;
   background-color: transparent;
 }
 
-/* Estilos para las etiquetas a con la clase "boton"*/
+nav {
+  position: fixed;
+  display: flex;
+  top: 4vh;
+  height: 10vh;
+  width: 100vw;
+  box-shadow: 0px 0.5vh 2vh black;
+  z-index: 5;
+  background-color: #eef1f4;
+}
+
+.container_nav {
+  display: flex;
+  width: 90vw;
+  height: 8vh;
+  margin-left: 5vw;
+  margin-top: 0.5vh;
+  border-bottom: black solid 0.2vh;
+  border-top: black solid 0.2vh;
+  z-index: 3;
+}
+
+.logo {
+  width: 4vw;
+  height: 4vw;
+  margin-left: 1vw;
+  margin-right: -2vw;
+  margin-top: 0.8vh;
+  border-radius: 1em;
+}
+
+.container_nav a {
+  width: 3.6vw;
+  height: 3.6vw;
+  background-color: transparent;
+}
+
+.botones {
+  z-index: 2;
+  display: flex;
+  width: 75vw;
+  margin-left: 2vw;
+  background-color: transparent;
+}
+
+.botones li,
+.dos {
+  width: 15vw;
+  height: 8vh;
+  line-height: 8vh;
+  text-align: center;
+}
+
+.boton {
+  width: 15vw;
+  height: 8vh;
+  background-color: transparent;
+}
+
+.boton span {
+  display: block;
+  width: 15vw;
+  height: 8vh;
+  font-size: 1vw;
+  color: black;
+  background-color: transparent;
+}
+
+.boton span:hover {
+  width: 15vw;
+  height: 8vh;
+  background-color: rgb(214, 214, 214);
+}
+
+.redes_sociales {
+  width: 11vw;
+}
+
+.redes_sociales i {
+  height: 8vh;
+  width: 3.3vw;
+  line-height: 8vh;
+  text-align: center;
+  font-size: 1.5vw;
+  color: black;
+}
+
 .submenu {
   position: absolute;
   display: none;
-  width: 13.2vw;
+  width: 15vw;
   height: 26vh;
   z-index: -1;
-  top: 0vh;
-  left: 20.8vw;
+  top: 8.7vh;
+  left: 25vw;
   transition: 0.5s;
-  border-radius: 3em;
-  background-color: coral;
+  background-color: rgb(233, 233, 233);
+}
+
+.submenu li {
+  background-color: transparent;
 }
 
 .submenu li span {
   display: inline-block;
   width: 14vw;
-  height: 5.5vh;
-  line-height: 5.5vh;
+  height: 8.5vh;
+  line-height: 8.5vh;
   text-align: center;
-  margin-left: -1.4vw;
-  font-size: 1.2vw;
-  color: white;
+  font-size: 1vw;
+  color: black;
+  background-color: transparent;
+}
+
+.submenu a {
   background-color: transparent;
 }
 
 .submenu li span:hover {
   width: 14vw;
   left: 0.1vw;
-  border-radius: 4em;
-  background-color: #bd4b00;
+  border-bottom: solid rgb(90, 90, 90) 0.3vw;
+  background-color: rgb(199, 199, 199);
 }
 
-#primero {
-  margin-top: 8vh;
+.dos i{
+  position: absolute;
+  left: 26vw;
+  height: 8vh;
+  line-height: 8vh;
+  font-size: 1vw;
+  background-color: transparent;
+}
+
+.dos {
+  background-color: transparent;
+}
+
+.dos:hover {
+  background-color: white;
 }
 
 .dos:hover .submenu {
   display: initial;
 }
 
-.dos {
-  background-color: transparent;
-  z-index: -3;
-}
-
-/*no eliminar, es necesaria para submenu aunque este vacia*/
-.dos:hover {
-}
-.botones {
-  position: relative;
-  display: flex;
-  top: 1.5vh;
-  background-color: transparent;
-}
-
-.boton {
-  position: absolute;
-  display: flex;
-  padding: 5px 15px; /* Estilo para darle mas espacio 5px hacias arriba/abajo y 15px hacia la derecha/izquierda */
-  width: 14vw; /* Estilo para establecer el ancho de la etiqueta */
-  height: 6vh; /* Estilo para establecer el alto de la etiqueta */
-  text-align: center; /* Estilo para ajustar el texto en el centro de la etiqueta (horizontalmente) */
-  border-radius: 4em; /* Estilo para redondear las esquinas de la etiqueta */
-  margin-left: 1.5vw; /* Estilo para desplazar desde izquierda a derecha sin afectar el tamaño de la etiqueta */
-  color: white; /* Estilo para darle color a la letra dentro la etiqueta */
-  font-size: 1.3vw; /* Estilo para darle tamaño a la letra dentro de la etiqueta */
-}
-
-/* Estilos para las etiquetas i dentro de las etiquetas a con la clase "boton" */
-.boton i {
-  width: 2.8vw;
-  height: 5.5vh;
-  font-size: 1.7vw;
-  border-radius: 5em;
-  align-items: center;
-  line-height: 5.5vh; /* Estilo para ajustar el texto en el centro de la etiqueta (verticalmente) */
-  margin-left: -0.4vw;
-}
-
-/* Estilos para las etiquetas span dentro de las etiquetas a con las clase "boton" */
-.boton span {
-  width: 12vw;
-  line-height: 6vh;
-  background-color: transparent;
-}
-
-/* Estilos para la etiqueta img con la clase "logo" */
-.logo {
-  height: 9vh;
-  border-radius: 10em;
-  margin-top: 1vh;
-  margin-left: 1.5vw;
-  background-color: transparent;
-}
-
-/* Estilos para la etiqueta a con un id "btn1" */
-#btn1 {
-  left: 1vw;
-  background-color: #004aad;
-  border: #0a3876 solid 0.2em; /* Estilos para crearle bordes a una etiqueta (color, estilo de borde, grosor) */
-}
-
-/* Estilos para la etiqueta i con un id "logo_btn1" */
-#logo_btn1 {
-  background-color: #0a3876;
-  border: #052a5a solid 0.1em;
-}
-
-/* Estilos para la animacion de la etiqueta a con un id "btn1" */
-#btn1:hover {
-  background-color: #003881;
-  border: #011631 solid 0.2em;
-}
-
-/* Estilos para la etiqueta a con un id "btn2" */
-#btn2 {
-  left: 19vw;
-  background-color: #ff0000;
-  border: #b70000 solid 0.2em;
-}
-
-/* Estilos para la etiqueta i con un id "logo_btn2" */
-#logo_btn2 {
-  background-color: #b70000;
-  border: #8d0000 solid 0.1em;
-}
-
-/* Estilos para la animacion de la etiqueta a con un id "btn2" */
-#btn2:hover {
-  background-color: #ad0000;
-  border: #680000 solid 0.2em;
-}
-
-/* Estilos para la etiqueta a con un id "btn3" */
-#btn3 {
-  left: 37vw;
-  background-color: #1a929a;
-  border: #17676c solid 0.2em;
-  text-align: center;
-}
-
-/* Estilos para la etiqueta i con un id "logo_btn3" */
-#logo_btn3 {
-  background-color: #17676c;
-  border: #0a585e solid 0.1em;
-}
-
-/* Estilos para la animacion de la etiqueta a con un id "btn3" */
-#btn3:hover {
-  background-color: #077179;
-  border: #013135 solid 0.2em;
-}
-
-/* Estilos para la etiqueta a con un id "btn4" */
-#btn4 {
-  left: 55vw;
-  background-color: #00bf83;
-  border: #29735b solid 0.2em;
-}
-
-/* Estilos para la etiqueta i con un id "logo_btn4" */
-#logo_btn4 {
-  background-color: #29735b;
-  border: #14523e solid 0.1em;
-}
-
-/* Estilos para la animacion de la etiqueta a con un id "btn4" */
-#btn4:hover {
-  background-color: #008d60;
-  border: #093527 solid 0.2em;
-}
-
-/* Estilos para la etiqueta a con un id "btn5" */
-#btn5 {
-  left: 73vw;
-  background-color: #9b4195;
-  border: #7b3076 solid 0.2em;
-}
-
-/* Estilos para la etiqueta i con un id "logo_btn5" */
-#logo_btn5 {
-  background-color: #7b3076;
-  border: #53164f solid 0.1em;
-}
-
-/* Estilos para la animacion de la etiqueta a con un id "btn5" */
-#btn5:hover {
-  background-color: #7a0a73;
-  border: #31072e solid 0.2em;
-}
-
-/* Estilos para el titulo del polo de salud */
-.titulo_polo {
-  position: relative;
-  top: 16vh;
-  width: 22vw;
-  height: 8vh;
-  line-height: 8vh;
-  border-radius: 0em 3em 3em 0em;
-  color: white;
-  background-color: #003881;
-}
-
-.titulo_polo span {
-  margin-left: 3vw;
-  font-size: 2vw;
-  background-color: transparent;
-}
-
-#logo_crus {
-  position: relative;
-  top: 1.2vh;
-  left: 2vw;
-  background-color: transparent;
-  font-size: 3vw;
-}
-/* Estilos para la parte de polo de salud */
-.cont_about {
-  position: relative;
-  width: 80vw;
-  height: 80vh;
-  top: 20vh;
-  left: 10vw;
-  border-radius: 2em;
-  background-color: #003881;
-}
-
-.cont_about h2 {
-  position: relative;
-  height: 6vh;
-  width: 20vw;
-  top: 2vh;
-  left: 2vh;
-  line-height: 6vh;
-  border-radius: 3em;
+.dos:hover > .boton span {
   background-color: white;
 }
 
-.cont_about h2 span {
-  margin-left: 2vw;
-  font-size: 1.3vw;
-  background-color: transparent;
+.dos:hover .submenu {
+  display: block;
 }
 
-.cont_about p {
+.dos:hover > .boton span {
+  background-color: white;
+}
+
+.container {
   position: relative;
-  top: 5vh;
-  left: 1.2vw;
-  width: 76vw;
-  height: 63.2vh;
-  padding: 0.8vw;
-  border-radius: 2em;
-}
-
-/* Estilos para el titulo de miembros */
-.titulo_miembros {
-  position: relative;
-  top: 32vh;
-  width: 25vw;
-  height: 8vh;
-  line-height: 6vh;
-  border-radius: 0em 3em 3em 0em;
-  color: white;
-  background-color: #003881;
-}
-
-.titulo_miembros span {
-  margin-left: 3vw;
-  font-size: 2vw;
-  background-color: transparent;
-}
-
-#logo_quienes_somos {
-  position: relative;
-  top: 1.25vh;
-  left: 2vw;
-  background-color: transparent;
-  font-size: 2.7vw;
-}
-
-.cont_miembros {
-  position: relative;
-  top: 35vh;
-  left: 10vw;
-  width: 84vw;
-  height: 80vh;
-  border-radius: 3em;
-  background-color: #d4d4d4;
-}
-
-.primera_linea {
-  display: flex;
-  background-color: transparent;
-}
-
-.segunda_linea {
-  display: flex;
-  background-color: transparent;
-}
-
-.miembros {
-  width: 18vw;
-  height: 35vh;
-  margin-left: 2.25vw;
-  margin-top: 3.5vh;
-  border-radius: 2em;
-  background-color: #f3f3f3;
-}
-
-.miembros i {
-  width: 19vw;
-  height: 22vh;
-  font-size: 9vw;
-  line-height: 20vh;
-  text-align: center;
-  background-color: transparent;
-}
-
-.miembros h3 {
-  width: 17vw;
-  height: 4vh;
-  line-height: 4vh;
-  text-align: center;
-  background-color: transparent;
-}
-
-.miembros h4 {
-  width: 17vw;
-  text-align: center;
-  background-color: transparent;
-  font-size: 1.1vw;
-}
-
-.miembros h5 {
-  width: 17vw;
-  height: 4vh;
-  line-height: 4vh;
-  text-align: center;
-  background-color: transparent;
-}
-
-.cont_ubicanos {
-  width: 100vw;
-  height: 155vh;
-  margin-top: 35vh;
-}
-
-.cont_ubicanos h2 {
-  position: relative;
-  width: 25vw;
-  height: 9vh;
-  line-height: 8vh;
-  top: 10vh;
-  font-size: 2.5vw;
-  color: white;
-  border-radius: 0em 3em 3em 0em;
-  background-color: #003881;
-}
-
-.cont_ubicanos h2 span {
-  height: 8vh;
-  margin-left: 1.5vw;
-  background-color: transparent;
-}
-
-.cont_ubicanos h2 i {
-  height: 8vh;
-  line-height: 8vh;
-  margin-left: 1.5vw;
-  background-color: transparent;
-}
-
-.cont_map{
-  position: relative;
-  height: 75vh;
-  width: 40vw;
-  top: 12vh;
-  border-radius: 0em 2em 2em 0em;
-  background-color: #003881;
-}
-
-.cont_info{
-  position: relative;
-  height: 75vh;
-  width: 40vw;
-  top: -63vh;
-  left: 60vw;
-  border-radius: 2em 0em 0em 2em;
-  background-color: #003881;
-}
-
-.cont_map img {
-  position: relative;
-  width: 37.5vw;
+  top: 20vh;
+  width: 90vw;
+  margin-left: 5vw;
   height: 70vh;
-  top: 2.5vh;
+  background-color: rgb(212, 212, 212);
+  box-shadow: 0.5vw 1vh 2vh rgba(0, 0, 0, 0.459);
+}
+
+.splide__slide {
+  background-color: transparent;
+  display: flex;
+}
+
+.splide__slide img {
+  width: 95%;
+  height: 66vh;
+  margin-top: 2vh;
+  margin-left: 2.5%;
   object-fit: cover;
-  border-radius: 0em 2em 2em 0em;
+  cursor: pointer;
+  background-color: transparent;
 }
 
-.cont_derecha1{
+.splide__track {
+  background-color: transparent;
+}
+
+.splide__list {
+  background-color: transparent;
+}
+
+.splide__slide h3 {
   position: absolute;
-  width: 40vw;
-  height: 75vh;
-  top: 208vh;
-  left: 60vw;
-  border-radius: 2em;
-  background-color: #003881;
-  transition: all 0.2s ease;
-  opacity: 0;
-  visibility: hidden;
+  top: 60vh;
+  left: 2.25vw;
+  height: 10vh;
+  line-height: 8vh;
+  width: 85.5vw;
+  background-color: rgba(0, 0, 0, 0.521);
 }
 
-.cont_derecha2{
+.splide__slide span {
   position: absolute;
-  width: 40vw;
-  height: 75vh;
-  top: 208vh;
-  left: 60vw;
-  border-radius: 2em;
-  background-color: #003881;
-  transition: all 0.2s ease;
-  opacity: 0;
-  visibility: hidden;
+  font-size: 1.8vw;
+  left: 5vw;
+  color: white;
+  background-color: transparent;
 }
 
-.cont_derecha3{
+/* ultimas noticias*/
+
+.cont_titulo_noticias {
+  margin-top: 10vh;
+  height: 4vh;
+  width: 19vw;
+  background-color: #1b2e51;
+}
+
+.cont_titulo_noticias span {
   position: absolute;
-  width: 40vw;
-  height: 75vh;
-  top: 208vh;
-  left: 60vw;
-  border-radius: 2em;
-  background-color: #003881;
-  transition: all 0.2s ease;
-  opacity: 0;
-  visibility: hidden;
+  height: 4vh;
+  width: 18vw;
+  padding-left: 0.5vw;
+  line-height: 4vh;
+  left: 1vw;
+  background-color: #eef1f4;
 }
 
-.contenido{
-  position: relative;
-  top: 2.5vh;
-  left: 2vw;
+.linea {
+  position: absolute;
+  width: 65vw;
+  height: 0.3vh;
+  margin-top: 2vh;
+  margin-left: 20vw;
+  background-color: black;
+}
+
+.cont_ult_news {
+  position: absolute;
+  display: flex;
   height: 70vh;
-  width: 36vw;
+  width: 90vw;
+  top: 80vh;
+  border-radius: 1em;
+  background-color: transparent;
+}
+
+.cont_ult_news a {
+  width: 24vw;
+  height: 55vh;
+  margin-top: 2vh;
+  margin-left: 3.25vw;
+  color: black;
+  background-color: transparent;
+}
+
+.noticias {
+  width: 24vw;
+  height: 55vh;
+  border-radius: 2em;
+  background-color: transparent;
+}
+
+.noticias img {
+  width: 20vw;
+  height: 20vh;
+  margin-top: 4vh;
+  margin-left: 2vw;
+  object-fit: cover;
+  box-shadow: 0.5vh 0.5vh 1vh rgba(0, 0, 0, 0.342);
+}
+
+.text_news h3 {
+  width: 22vw;
+  height: 8vh;
+  line-height: 8vh;
+  margin-left: 1vw;
+  text-align: center;
+  font-size: 1.5vw;
+  color: black;
+  background-color: transparent;
+}
+
+.text_news p {
+  width: 20vw;
+  height: 19vh;
+  margin-left: 2vw;
+  font-size: 0.85vw;
+  text-align: justify;
+  background-color: transparent;
+}
+
+.text_news {
+  margin-top: 2vh;
+  background-color: transparent;
+}
+
+.separador {
+  margin-top: 50vh;
+}
+
+.imagen_polo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 17vh;
+}
+
+.iconos {
+  margin-top: 1.7vh;
+}
+
+.lineas {
+  margin-top: 0.5vh;
+  margin-left: 2.5vh;
+  width: 83%; /* Estira la imagen a lo largo de todo el contenedor */
+  height: auto;
+}
+
+/*Seccion ¿Quienes Somos*/
+
+.container_contenido_quienes_somos_titulo {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.container_contenido_quienes_somos_texto {
+  display: flex;
+  justify-content: center; /* Centra el contenido en el eje horizontal */
+  align-items: center; /* Centra el contenido en el eje vertical */
+}
+
+.container_contenido_quienes_somos_texto p {
+  width: 80%; /* Ajusta el ancho del párrafo */
+  text-align: center;
+}
+
+/*Seccion Donde estamos*/
+.container_contenido_donde_estamos_titulo {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.container_contenido_donde_estamos_contenido {
+  background-color: #90BEB9;
+  width: 70vw;
+  height: 60vh;
+  display: flex;
+  margin-left: 14.5vw;
+  border-radius: 0.5em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+  border: 0.25vw solid #1b2e51;
+}
+
+.mapa {
+  margin-top: 3vh;
+  width: 30vw;
+  height: 54vh;
+  background-color: transparent;
+}
+
+.fotos {
+  background-color: transparent;
+  width: 29vw;
+  height: 40vh;
+  margin-top: 6vh;
+  margin-left: 20vh;
+}
+
+.container_contenido1,
+.container_contenido2,
+.container_contenido3,
+.container_contenido4,
+.container_contenido5 {
+  background-color: transparent;
+  position: absolute;
+  left: 43vw;
+  top: 62.5vh;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.container_contenido_donde_estamos_contenido_info {
+  background-color: white;
+  width: 28vw;
+  height: 10vh;
+  border-radius: 1em;
+  margin-left: 20.7vh;
+  margin-top: 0.5vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 2);
   display: flex;
   flex-direction: column;
-  background-color: transparent;
+  padding: 0.5vh;
 }
 
-.imagen {
-  height: 80%;
-  width: 100%;
-  background-color: transparent;
+.container_contenido_donde_estamos_contenido_info span{
+  margin-left: 0.5vw;
 }
 
-.imagen img {
-  width: 100%;
-  height: 100%;
-  border-radius: 3em;
-  object-fit: cover;
+.container_contenido_donde_estamos_contenido_info i{
+  height: 2vh;
+  margin-right: 0.5vw;
 }
 
-.container_text {
-  height: 20%;
-  width: 100%;
+#primero_dato{
+  margin-top: 0.5vh;
+}
+
+.contenedor_info{
+  position: absolute;
+  width: 32vw;
+  height: 56vh;
   margin-top: 2vh;
-  color: black;
+  left: 51.5vw;
+  background-color: white;
   border-radius: 1em;
-  background-color: #f3f3f3;
 }
 
-.container_text p {
-  margin-left: 2vw;
-  font-size: 1vw;
-  background-color: transparent;
+.cont_mapa{
+  position: absolute;
+  width: 32vw;
+  height: 56vh;
+  top: 66.5vh;
+  left: 16vw;
+  border-radius: 1em;
+  background-color: white;
 }
 
-.container_text h5 {
-  font-size: 1.8vw;
-  margin-left: 2vw;
-  margin-top: 1vh;
-  background-color: transparent;
+.puntos{
+  color: red;
+  cursor: pointer;
 }
 
-#btn1_CS:checked ~ .cont_derecha1{
-  opacity: 1;
-  visibility: visible;
-}
-
-#btn2_CS:checked ~ .cont_derecha2{
-  opacity: 1;
-  visibility: visible;
-}
-
-#btn3_CS:checked ~ .cont_derecha3{
-  opacity: 1;
-  visibility: visible;
-}
-
-#btn1_CS, #btn2_CS, #btn3_CS{
+.btn_radio{
   display: none;
 }
 
 #punto1{
-  position: relative;
-  top: -50vh;
-  left: -20.02vw;
-  background-color: transparent;
-  cursor: pointer;
+  position: absolute;
+  top: 87.2vh;
+  left: 27.825vw;
+  font-size: 1.1vw;
 }
-
 #punto2{
-  position: relative;
-  top: -30vh;
-  left: 27.35vw;
-  background-color: transparent;
-  cursor: pointer;
+  position: absolute;
+  top: 81.7vh;
+  left: 30.18vw;
+  font-size: 1.1vw;
 }
-
 #punto3{
-  position: relative;
-  top: -50vh;
-  left: 11.5vw;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-#punto1 i, #punto2 i, #punto3 i{
-  color: red;
-  font-size: 1.5vw;
-  background-color: transparent;
-}
-
-.cont_lista {
   position: absolute;
-  top: 306vh;
-  width: 100vw;
-  height: 40vh;
-  background-color: #003881;
+  top: 76vh;
+  left: 21.5vw;
+  font-size: 1.1vw;
 }
-
-#titulo_imagenes{
-  position: relative;
-  top: -55vh;
-  width: 25vw;
-  height: 10vh;
-  line-height: 8vh;
-  border-radius: 0em 3em 3em 0em;
-  color: white;
-  background-color: #003881;
-}
-
-#titulo_imagenes span{
-  margin-left: 1.5vw;
-  font-size: 2vw;
-  background-color: transparent;
-}
-
-#titulo_imagenes i{
-  position: relative;
-  top: 1vh;
-}
-
-#Lista_Imagenes1{
+#punto4{
   position: absolute;
-  top: 312vh;
-  display: flex;
-  width: 100vw;
-  height: 40vh;
-  background-color: transparent;
-  opacity: 0;
-  visibility: hidden;
+  top: 94.8vh;
+  left: 25.56vw;
+  font-size: 1.1vw;
+}
+#punto5{
+  position: absolute;
+  top: 98vh;
+  left: 37.9vw;
+  font-size: 1.1vw;
 }
 
-#Lista_Imagenes1 img{
-  width: 30vw;
-  height: 28vh;
-  margin-left: 2.5vw;
-}
-
-#btn1_CS:checked ~ #Lista_Imagenes1{
+#btn1_opcion:checked ~ .container_contenido1{
   opacity: 1;
   visibility: visible;
 }
 
-#Lista_Imagenes2{
-  position: absolute;
-  top: 312vh;
-  display: flex;
-  width: 100vw;
-  height: 40vh;
-  background-color: transparent;
-  opacity: 0;
-  visibility: hidden;
-}
-
-#Lista_Imagenes2 img{
-  width: 30vw;
-  height: 28vh;
-  margin-left: 2.5vw;
-}
-
-#btn2_CS:checked ~ #Lista_Imagenes2{
+#btn2_opcion:checked ~ .container_contenido2{
   opacity: 1;
   visibility: visible;
 }
 
-#Lista_Imagenes3{
-  position: absolute;
-  top: 312vh;
-  display: flex;
-  width: 100vw;
-  height: 40vh;
-  background-color: transparent;
-  opacity: 0;
-  visibility: hidden;
-}
-
-#Lista_Imagenes3 img{
-  width: 30vw;
-  height: 28vh;
-  margin-left: 2.5vw;
-}
-
-#btn3_CS:checked ~ #Lista_Imagenes3{
+#btn3_opcion:checked ~ .container_contenido3{
   opacity: 1;
   visibility: visible;
 }
+
+#btn4_opcion:checked ~ .container_contenido4{
+  opacity: 1;
+  visibility: visible;
+}
+
+#btn5_opcion:checked ~ .container_contenido5{
+  opacity: 1;
+  visibility: visible;
+}
+
+/*Seccion Nuestro Equipo*/
+
+.container_contenido_nuestro_equipo_contenido {
+  background-image: url(/Sprint2/Images/aboutme_images/imagen_3.png);
+  background-repeat: no-repeat;
+  width: 1290px;
+  height: 735px;
+  margin-left: 30vh;
+  padding: 7vh;
+}
+
+.container_persona {
+  width: 171px;
+  height: 314px;
+  background-color: white;
+  margin-left: 15vh;
+  box-shadow: 10px 2px 10px rgba(0, 0, 0, 2);
+}
+
+.container_persona_textos {
+  padding: 2px;
+}
+
+.container_persona_textos h1 {
+  font-size: 20px;
+  margin-bottom: -2vh;
+}
+
+.container_persona_textos p {
+  font-size: 13px;
+  margin-top: 2vh;
+}
+
+.container_contenido_nuestro_equipo_contenido_fila_superior {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: -32vh;
+}
+
+.container_contenido_nuestro_equipo_contenido_fila_inferior {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: -32vh;
+  margin-top: 1vh;
+}
+
+/*Seccion gestion de conocimiento*/
+
+.container_contenido_gestion_del_conocimiento_titulo {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.container_contenifo_gestion_del_conocimiento_imagen {
+  margin-left: 26vh;
+}
+
+/*Seccion Quieres saber mas*/
+
+.container_contenido_quieres_saber_mas_titulo {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 40px;
+  margin-left: 5vh;
+}
+
+.container_contenido_quieres_saber_mas_titulo p {
+  width: 731px;
+  margin-right: -360px;
+}
+
+.lineas_fondo {
+  width: 700px;
+}
+
+.container_contenido_quieres_saber_mas_contenido {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.container_contenido_quieres_saber_mas_contenido_noticia {
+  width: 410px;
+  height: 360px;
+}
+
+.container_contenido_quieres_saber_mas_contenido_noticia p a {
+  text-decoration: none; /* Quita el subrayado */
+  color: black; /* Cambia el color del enlace */
+}
+
+/*Footer*/
 
 footer {
-  position: relative;
-  bottom: 0;
-  background-color: #27485e; /* Color azul oscuro del fondo */
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
-
-.footer-container {
-  background-color: transparent;
-  display: flex;
-  justify-content: space-between;
+  width: 100%px;
+  height: 106px;
+  background-color: #1b2e51;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 50px;
-}
-
-.footer-left,
-.footer-right {
   display: flex;
-  align-items: center;
-  background-color: transparent;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10vh;
 }
 
-.footer-logo {
-  width: 370px; /* Ajusta el tamaño del logo de la facultad */
-  margin-right: 10px;
-  background-color: transparent;
-}
-
-.footer-logo p {
-  background-color: transparent;
-}
-
-.footer-right {
-  flex-direction: row;
-  background-color: transparent;
-}
-
-.footer-gobierno-logo {
-  width: 200px; /* Ajusta el tamaño del logo del Gobierno */
-  margin-top: 5px;
-  background-color: transparent;
-}
-
-.footer-left p {
-  margin: 0;
-  font-size: 14px;
-  text-align: left;
-}
-
-.social-icons {
+.footer-images {
   display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-  background-color: transparent;
+  gap: 50vh;
+  margin-top: 2vh;
+  margin-left: 15vh;
 }
 
-.social-icons img {
-  width: 45px; /* Tamaño de los íconos de redes sociales */
-  filter: brightness(0) invert(1); /* Hace que los íconos sean blancos sobre el fondo oscuro */
-  background-color: transparent;
-}
-
-.footer-bottom {
-  margin-top: 20px;
-  font-size: 23px;
-  background-color: transparent;
-}
-
-.footer-bottom p{
-  background-color: transparent;
-}
-
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .footer-right {
-    margin-top: 20px;
-    background-color: transparent;
-  }
+footer p {
+  margin-bottom: 2vh;
+  color: #eef1f4;
+  margin-left: 15vh;
 }
