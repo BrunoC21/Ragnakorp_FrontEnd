@@ -1,0 +1,429 @@
+*{
+  background-color: #EEF1F4;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Bree Serif", serif;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 4%;
+  background-color: #1B2E51;
+  z-index: 5;
+}
+
+header p{
+  height: 100%;
+  line-height: 220%;
+  text-align: center;
+  font-size: 0.8vw;
+  color: white;
+  background-color: transparent;
+}
+
+nav{
+  position: fixed;
+  display: flex;
+  top: 4vh;
+  height: 10vh;
+  width: 100vw;
+  box-shadow: 0px 0.5vh 2vh black;
+  z-index: 5;
+}
+
+.container_nav{
+  display: flex;
+  width: 90vw;
+  height: 8vh;
+  margin-left: 5vw;
+  margin-top: 0.5vh;
+  border-bottom: black solid 0.2vh;
+  border-top: black solid 0.2vh;
+  z-index: 3;
+}
+
+.logo{
+  width: 4vw;
+  height: 4vw;
+  margin-left: 1vw;
+  margin-right: -2vw;
+  margin-top: 0.8vh;
+  border-radius: 1em;
+}
+
+.container_nav a{
+  width: 3.6vw;
+  height: 3.6vw;
+  background-color: transparent;
+}
+
+.botones{
+  z-index: 2;
+  display: flex;
+  width: 75vw;
+  margin-left: 2vw;
+  background-color: transparent;
+}
+
+.botones li, .dos{
+  width: 15vw;
+  height: 8vh;
+  line-height: 8vh;
+  text-align: center;
+}
+
+.boton{
+  width: 15vw;
+  height: 8vh;
+  background-color: transparent;
+}
+
+.boton span{
+  display: block;
+  width: 15vw;
+  height: 8vh;
+  font-size: 1vw;
+  color: black;
+  background-color: transparent;
+}
+
+.boton span:hover{
+  width: 15vw;
+  height: 8vh;
+  background-color: rgb(214, 214, 214);
+}
+
+.redes_sociales{
+  width: 11vw;
+}
+
+.redes_sociales i{
+  height: 8vh;
+  width: 3.3vw;
+  line-height: 8vh;
+  text-align: center;
+  font-size: 1.5vw;
+  color: black;
+}
+
+.submenu {
+  position: absolute;
+  display: none;
+  width: 15vw;
+  height: 26vh;
+  z-index: -1;
+  top: 8.7vh;
+  left: 25vw;
+  transition: 0.5s;
+  background-color: rgb(233, 233, 233);
+}
+
+.submenu li{
+  background-color: transparent;
+}
+
+.submenu li span {
+  display: inline-block;
+  width: 14vw;
+  height: 8.5vh;
+  line-height: 8.5vh;
+  text-align: center;
+  font-size: 1vw;
+  color: black;
+  background-color: transparent;
+}
+
+.submenu a{
+  background-color: transparent;
+}
+
+.submenu li span:hover {
+  width: 14vw;
+  left: 0.1vw;
+  border-bottom: solid rgb(90, 90, 90) 0.3vw;
+  background-color: rgb(199, 199, 199);
+}
+
+.dos{
+  background-color: transparent;
+}
+
+#btn2{
+  display: flex;
+  width: 15vw;
+}
+
+#btn2 i{
+  position: absolute;
+  left: 26vw;
+  height: 8vh;
+  line-height: 8vh;
+  font-size: 1vw;
+  background-color: transparent;
+}
+
+.dos:hover {}
+
+.dos:hover .submenu {
+  display: initial;
+}
+
+#btn2 span:hover,
+.dos:hover > .boton span {
+  background-color: rgb(199, 199, 199);
+}
+
+.dos:hover .submenu {
+  display: block;
+}
+
+.dos:hover > .boton span {
+  background-color: white;
+}
+
+.titulo{
+  display: flex;
+  width: 100vw;
+  height: 12vh;
+  margin-top: 20vh;
+}
+
+.titulo h2{
+  width: 30vw;
+  height: 6vh;
+  text-align: center;
+  border-bottom: solid #1B2E51 0.5vw;
+}
+
+.titulo h2 span{
+  width: 15vw;
+}
+
+.linea1{
+  height: 0.25vh;
+  width: 38vw;
+  margin-top: 1.5vh;
+  margin-right: 1vw;
+  background-color: #1B2E51;
+}
+
+.linea2{
+  height: 0.25vh;
+  width: 39vw;
+  margin-left: 1vw;
+  margin-top: 1.5vh;
+  background-color: #1B2E51;
+}
+
+.titulo_seccion{
+  margin-top: 1vh;
+  height: 4vh;
+  width: 19vw;
+  background-color: #1B2E51;
+}
+
+.titulo_seccion span{
+  position: absolute;
+  height: 4vh;
+  width: 28vw;
+  padding-left: 0.5vw;
+  line-height: 4vh;
+  left: 1vw;
+  background-color: #EEF1F4;
+}
+
+.titulo_seccion .linea{
+  position: absolute;
+  width: 75vw;
+  height: 0.3vh;
+  margin-top: 2vh;
+  margin-left: 27vw;
+  background-color: black;
+}
+
+.form-container {
+    position: absolute;
+    top: 42vh;
+    left: 30vw;
+    width: 40vw;
+    height: 68vh;
+    border: 2px solid #1B2E51;
+    border-radius: 3em;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+  
+.form-container h2 {
+    width: 27.5vw;
+    height: 6.5vh;
+    position: relative;
+    top: 3.5vh;
+    left: 2.5vw;
+    line-height: 6.5vh;
+    text-align: center;
+    font-size: 2vw;
+    border-radius: 5em;
+    margin-bottom: 2vw;
+    background-color: white;
+    color: black;
+}
+  
+form {
+    position: relative;
+    width: 60vw;
+    height: 20vh;
+    background-color: transparent;
+}
+  
+.form_labels {
+    display: block;
+    position: relative;
+    width: 25vw;
+    height: 2vw;
+    font-size: 1.5vw;
+    background-color: transparent;
+}
+  
+#label_nombre {
+    top: 3vh;
+    left: 3vw;
+    color: black;
+}
+  
+#nombre {
+    position: relative;
+    top: 4vh;
+    left: 2.5vw;
+    width: 30vw;
+    height: 4.5vh;
+    border-radius: 4em;
+    border: 2px solid black;
+    font-size: 1.2vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    background-color: #E3E1E1;
+}
+  
+#label_email {
+    top: 7.5vh;
+    left: 3vw;
+    color: black; 
+}
+  
+#email {
+    position: relative;
+    top: 8.5vh;
+    left: 2.5vw;
+    width: 30vw;
+    height: 4.5vh;
+    border-radius: 4em;
+    border: 2px solid black;
+    font-size: 1.2vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    background-color: #E3E1E1;
+}
+
+.checkbox-group{
+    background-color: transparent;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    color: black;
+    position: relative;
+    top: 13vh;
+    left: 6vw;
+    width: 25vw;
+    height: 4.5vh;
+    border-radius: 4em;
+    font-size: 1.2vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    background-color: transparent;
+  }
+  
+.checkbox-group input[type="checkbox"] {
+    margin-right: 8px;
+    background-color: transparent;
+    
+}
+
+#boton {
+    display: block;
+    position: relative;
+    width: 10vw;
+    height: 5vh;
+    top: 20vh;
+    left: 15vw;
+    border-radius: 1em;
+    border: none;
+    background-color: #1B2E51;
+    color: white;
+    font-size: 1.5vw;
+    cursor: pointer;
+  }
+  
+button:hover {
+    background-color: #ccc;
+}
+
+footer {
+    background-color: #1B2E51; /* Color azul oscuro del fondo */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100vw;
+    height: 15vh;
+    position: relative;
+    bottom: 0;
+  }
+  
+  .footer-container {
+    background-color: transparent;
+    display: flex;
+  }
+  
+  .footer-logo {
+    width: 20vw;
+    height: 12vh;
+    margin-left: 5vw;
+    background-color: transparent;
+  }
+  
+  .footer-gobierno-logo {
+    width: 15vw; /* Ajusta el tamaño del logo del Gobierno */
+    height: 12vh;
+    margin-left: 55vw;
+    background-color: transparent;
+  }
+  
+  .footer-bottom {
+    font-size: 1.2vw;
+    background-color: transparent;
+  }
+  
+  .footer-bottom p{
+    background-color: transparent;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .footer-right {
+      margin-top: 20px;
+      background-color: transparent;
+    }
+  }
+  
+  .separador {
+    margin-top: 80vh;
+  }
