@@ -259,15 +259,42 @@ input {
   background-color: #f7f9fc;
 }
 
-input[type="text"],
-textarea,
-select {
-  width: 100%;
+.input-contenido-nombre-noticia {
+  width: 95%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #ffffff; /* Fondo blanco de las casillas */
   color: #333;
+}
+
+.input-contenido-autores-noticia {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff; /* Fondo blanco de las casillas */
+  color: #333;
+}
+
+.input-contenido-referencias-noticia {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff; /* Fondo blanco de las casillas */
+  color: #333;
+}
+
+.input-contenido-noticia {
+  width: 138vh;
+  height: 50vh;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff; /* Fondo blanco de las casillas */
+  color: #333;
+  resize: none;
 }
 
 input[type="text"]:focus,

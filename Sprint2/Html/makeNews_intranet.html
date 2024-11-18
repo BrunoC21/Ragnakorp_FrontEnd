@@ -61,14 +61,26 @@
       <form action="#" method="POST" enctype="multipart/form-data">
         <!-- Nombre de la noticia -->
         <div class="form-group">
-          <label for="titulo">Nombre de la noticia</label>
-          <input type="text" id="titulo" name="titulo" required />
+          <label for="titulo">Titular de la noticia</label>
+          <input
+            type="text"
+            id="titulo"
+            name="titulo"
+            class="input-contenido-nombre-noticia"
+            required
+          />
         </div>
 
         <!-- Autores o redactores -->
         <div class="form-group">
           <label for="autores">Autores o redactores</label>
-          <input type="text" id="autores" name="autores" required />
+          <input
+            type="text"
+            id="autores"
+            name="autores"
+            class="input-contenido-autores-noticia"
+            required
+          />
         </div>
 
         <!-- Categoría -->
@@ -88,33 +100,14 @@
         <!-- Contenido de la noticia -->
         <div class="form-group">
           <label for="contenido">Contenido de la noticia</label>
-          <textarea
-            id="contenido"
-            name="contenido"
-            rows="5"
-            required
-          ></textarea>
+          <textarea class="input-contenido-noticia"></textarea>
         </div>
 
         <!-- Multimedia -->
         <div class="form-group">
           <label>Multimedia</label>
           <div class="multimedia-section">
-            <p>
-              Puedes seleccionar si acompañas la noticia con un video incrustado
-              de Youtube, un video de Facebook o una galería de hasta 5
-              imágenes.
-            </p>
-
             <div class="multimedia-options">
-              <label
-                ><input type="radio" name="multimedia" value="youtube" /> Video
-                de Youtube</label
-              ><br />
-              <label
-                ><input type="radio" name="multimedia" value="facebook" /> Video
-                de Facebook</label
-              ><br />
               <label
                 ><input
                   type="radio"
@@ -139,12 +132,7 @@
         <!-- Referencias (opcional) -->
         <div class="form-group">
           <label for="referencias">Referencias (opcional)</label>
-          <textarea
-            id="referencias"
-            name="referencias"
-            rows="3"
-            placeholder="Añade enlaces de referencia aquí..."
-          ></textarea>
+          <input type="text" class="input-contenido-referencias-noticia" />
         </div>
 
         <!-- Botón de enviar -->
@@ -192,6 +180,5 @@
     </footer>
 
     <script src="../Js/formNews.js"></script>
-
   </body>
 </html>
