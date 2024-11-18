@@ -1,221 +1,225 @@
-* {
-  background-color: #e0ecfa;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  list-style: none;
-  text-decoration: none;
+*{
+  background-color: #EEF1F4;
+  padding: 0;
   margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Bree Serif", serif;
 }
 
-/* Estilos para todas las etiquetas a */
-a {
-  background-color: transparent;
-  color: black;
+a{
+    color: black;
 }
 
-/* Estilo para todas las etiquetas li */
-li {
-  background-color: transparent;
+nav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 10vh;
+    box-shadow: 0.25vh 0.25vh 1vh black;
+    background-color: #EEF1F4;
+    z-index: 1;
 }
 
-body {
-  z-index: -100;
+#btn_menu{
+    display: none;
 }
 
-.container_nav {
-  position: absolute top;
-  display: flex;
-  width: 100vw;
-  height: 12vh;
-  background-color: #27485e;
-  z-index: 1;
+nav label{
+    cursor: pointer;
+    background-color: transparent;
 }
 
-.btn_menu {
-  background-color: transparent;
+nav label i{
+    height: 8vh;
+    margin-top: 1vh;
+    margin-left: 1vw;
+    font-size: 4vw;
+    color: #616161;
+    background-color: transparent;
 }
 
-.btn_menu label {
-  cursor: pointer;
-  background-color: transparent;
+nav a{
+    background-color: transparent;
 }
 
-.btn_menu label i {
-  margin-top: 2vh;
-  margin-left: 1vw;
-  font-size: 4vw;
-  color: white;
-  background-color: transparent;
+nav img{
+    width: 4vw;
+    height: 8vh;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    border-radius: 0.5em;
 }
 
-.logo {
-  background-color: transparent;
+nav ul{
+    margin-left: 80vw;
+    background-color: transparent;
 }
 
-.logo img {
-  width: 10vh;
-  height: 10vh;
-  border-radius: 5em;
-  border: none;
-  margin-top: 1vh;
-  margin-left: 1vw;
-  background-color: transparent;
+nav ul h3{
+    position: absolute;
+    display: flex;
+    z-index: 10;
+    background-color: #1d438a;
+    width: 7.5vw;
+    height: 4.5vh;
+    line-height: 4.5vh;
+    font-size: 1vw;
+    margin-top: 3vh;
+    color: white;
+    border-radius: 3em;
+    text-align: center;
 }
 
-#btn_menu_lateral {
-  display: none;
+nav ul h3 span{
+    margin-top: 0.2vh;
+    margin-left: 0.35vw;
+    background-color: transparent;
 }
 
-#opciones {
-  position: relative;
-  display: flex;
-  left: 75vw;
-  top: 3vh;
-  width: 10vw;
-  height: 6vh;
-  border-radius: 3em;
-  background-color: #48419b;
-  cursor: pointer;
+nav ul h3 i{
+    padding-top: 0.8vh;
+    margin-left: 0.5vw;
+    font-size: 1.5vw;
+    background-color: transparent;
 }
 
-#opciones i {
-  background-color: transparent;
-  height: 6vh;
-  line-height: 6vh;
-  font-size: 2vw;
-  margin-left: -1.5vw;
+/* Submenú oculto por defecto */
+.submenu {
+    position: absolute;
+    top: 6vh;
+    left: 90vw;
+    z-index: -1;
+    visibility: hidden; /* Ocultar inicialmente */
+    opacity: 0;
+    width: 7.5vw;
+    height: auto;
+    padding: 1.8vh 0;
+    color: black;
+    border-radius: 0em 0em 1em 1em;
+    background-color: white;
+    transition: visibility 0.2s ease, opacity 0.2s ease;
 }
 
-#opciones span {
-  height: 6vh;
-  line-height: 6vh;
-  margin-left: 2vw;
-  font-size: 1.5vw;
-  color: white;
-  background-color: transparent;
+/* Mostrar el submenú cuando el cursor esté sobre el contenedor */
+nav ul:hover .submenu,
+nav ul .submenu:hover {
+    z-index: 1;
+    visibility: visible;
+    opacity: 1;
 }
 
-#opciones:hover {
-  background-color: #2e277c;
+.submenu li{
+    width: 7.5vw;
+    height: 3.5vh;
+    text-align: center;
+    line-height: 3.5vh;
+    background-color: transparent;
 }
 
-#submenu {
-  position: absolute;
-  display: none;
-  height: 16.5vh;
-  width: 10vw;
-  left: 0vw;
-  top: 1.5vh;
-  border-radius: 1em 1em 1em 1em;
-  background-color: #d9d9d9;
-  z-index: -3;
+.submenu a{
+    display: block;
+    width: 7.5vw;
+    height: 3.5vh;
 }
 
-#opciones:hover #submenu {
-  display: block;
+.submenu a:hover{
+    background-color: #ccc;
 }
 
-#primero {
-  margin-top: 5vh;
+.container_menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.25s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.562);
+    z-index: 2;
 }
 
-#submenu li {
-  width: 12vw;
-  height: 4.9vh;
-  line-height: 4.9vh;
-  font-size: 1.5vw;
-  text-align: center;
-  margin-left: -2.1vw;
-  border: 0.1vh solid transparent;
+.menu_desplegable{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20vw;
+    height: 100vh;
 }
 
-#submenu li a {
-  color: black;
+.menu_desplegable i{
+    position: absolute;
+    font-size: 1.5vw;
+    top: 1vh;
+    left: 18vw;
+    cursor: pointer;
+    background-color: transparent;
 }
 
-#submenu li:hover {
-  background-color: #cacaca;
-  border-bottom: 0.1vh solid black;
+.miss{
+    position: fixed;
+    width: 80vw;
+    height: 100vh;
+    left: 20vw;
+    top: 0;
+    background-color: transparent;
 }
 
-.container_menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100vh;
-  transition: all 0.2s ease;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 1;
+.menu_desplegable img{
+    width: 15vw;
+    height: auto;
+    margin-top: 5vh;
+    margin-left: 2.5vw;
+    border-radius: 10em;
+    background-color: transparent;
 }
 
-#btn_menu_lateral:checked ~ .container_menu {
-  opacity: 1;
-  visibility: visible;
+.menu{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    height: 60vh;
+    margin-top: 2vh;
+    background-color: transparent;
 }
 
-.cont_menu {
-  position: relative;
-  width: 100%;
-  max-width: 25vw;
-  height: 100vh;
-  background-color: #27485e;
-  transition: all 0.2s ease;
+.menu li{
+    width: 19.6vw;
+    height: 8vh;
+    line-height: 8vh;
+    font-size: 1.2vw;
+    border-left: solid transparent 0.4vw;
 }
 
-.cont_menu nav {
-  transform: translateY(15%);
-  background-color: transparent;
+.menu li a{
+    display: block;
+    width: 19.6vw;
+    height: 8vh;
+    background-color: transparent;
 }
 
-.cont_menu nav img {
-  width: 10vw;
-  height: 10vw;
-  border-radius: 10em;
-  margin-top: 1vh;
-  margin-left: 7.5vw;
-  margin-bottom: 5vh;
+.menu li:hover{
+    background-color: #ccc;
+    border-left: solid #9e9e9e 0.4vw;
 }
 
-.cont_menu nav a {
-  display: block;
-  height: 8vh;
-  width: 24.8vw;
-  line-height: 8vh;
-  font-size: 2vw;
-  font-weight: bold;
-  color: white;
-  background-color: transparent;
-  border-left: 0.25vw solid transparent;
+.menu li span{
+   margin-left: 2vw;
+   background-color: transparent; 
 }
 
-.cont_menu nav a span {
-  margin-left: 1vw;
-  background-color: transparent;
-}
-
-.cont_menu nav a:hover {
-  background-color: #163549;
-  border-left: 0.25vw solid white;
-}
-
-.cont_menu label {
-  position: absolute;
-  right: 1vw;
-  top: 1vw;
-  cursor: pointer;
-  background-color: transparent;
-}
-
-.cont_menu label i {
-  font-size: 2vw;
-  color: white;
-  background-color: transparent;
+#btn_menu:checked ~ .container_menu{
+    visibility: visible;
+    opacity: 1;
 }
 
 /* Estilo general para el contenedor del formulario */
 .form-container {
+  position: relative;
+  top: 15vh;
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;

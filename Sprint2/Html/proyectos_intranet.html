@@ -1,55 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyectos</title>
-    <link rel="stylesheet" href="/Sprint2/Css/proyectos_intranet.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="container_nav">
-        <div class="btn_menu">
-          <label for="btn_menu_lateral"><i class="bx bx-menu"></i></label>
-        </div>
-
-        <div class="logo">
-          <img
-            src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png"
-            alt=""
-          />
-        </div>
-        <ul id="opciones">
-          <i class="bx bxs-user-circle" style="color: #ffffff"></i
-          ><span>Usuario</span>
-          <ul id="submenu">
-            <li class="btn_opcion" id="primero"><a href="">Perfil</a></li>
-            <li class="btn_opcion"><a href="">Cerrar secion</a></li>
-          </ul>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intranet</title>
+    <link rel="stylesheet" href="/Sprint2/Css/proyectos_intranet.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <input type="checkbox" id="btn_menu">
+    <nav>
+        <label for="btn_menu"><i class='bx bx-menu'></i></label>
+        <a href="home_intranet.html"><img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="Logo"></a>
+        <ul>
+            <h3><i class='bx bxs-user-circle' style='color:#ffffff'></i><span>Usuario</span></h3>
+            <div class="submenu">
+                <li><a href="/Sprint2/Html/perfil.html">Perfil</a></li>
+                <li><a href="#">Cerrar sesión</a></li>
+            </div>
         </ul>
-      </div>
-    </header>
-
-    <input type="checkbox" id="btn_menu_lateral">
+    </nav>
     <div class="container_menu">
-        <label for="btn_menu_lateral" class="miss_click"><div class="miss">
-
-        </div></label>
-        <div class="cont_menu">
-            <nav>
-                <img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="">
-                <a href="../Html/home_intranet.html"><span>Inicio</span></a>
-                <a href="../Html/makeNews_intranet.html"><span>Noticias</span></a>
-                <a href="#"><span>Proyectos</span></a>
-                <a href="../Html/estadisticas_intranet.html"><span>Estadisticas de visitas</span></a>
-                <a href="../Html/historial_cambios_intranet.html"><span>Historial de cambios</span></a>
-                <a href="../Html/roles_intranet.html"><span>Asignación de roles</span></a>
-            </nav>
-            <label for="btn_menu_lateral"><i class='bx bx-exit'></i></label>
+        <div class="menu_desplegable">
+            <label for="btn_menu"><i class='bx bx-x-circle'></i></label>
+            <label for="btn_menu"><div class="miss"></div></label>
+            <img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="">
+            <ul class="menu">
+                <li>
+                    <a href="../Html/home_intranet.html"><span>Inicio</span></a>
+                </li>
+                <li>
+                    <a href="../Html/makeNews_intranet.html"><span>Noticias</span></a>
+                </li>
+                <li>
+                    <a href="../Html/proyectos_intranet.html"><span>Proyectos</span></a>
+                </li>
+                <li>
+                    <a href="../Html/estadisticas_intranet.html"><span>Estadisticas de visitas</span></a>
+                </li>
+                <li>
+                    <a href="../Html/historial_cambios_intranet.html"><span>Historial de cambios</span></a>
+                </li>
+                <li>
+                    <a href="../Html/roles_intranet.html"><span>Asignación de roles</span></a>
+                </li>
+            </ul>
         </div>
     </div>
 

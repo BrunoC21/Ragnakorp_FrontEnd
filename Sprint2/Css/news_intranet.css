@@ -20,6 +20,7 @@ nav{
     height: 10vh;
     box-shadow: 0.25vh 0.25vh 1vh black;
     background-color: #EEF1F4;
+    z-index: 1;
 }
 
 #btn_menu{
@@ -138,6 +139,7 @@ nav ul .submenu:hover {
     opacity: 0;
     visibility: hidden;
     background-color: rgba(0, 0, 0, 0.562);
+    z-index: 2;
 }
 
 .menu_desplegable{
