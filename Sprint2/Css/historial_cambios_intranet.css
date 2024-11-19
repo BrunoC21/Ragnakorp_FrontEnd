@@ -216,17 +216,17 @@ nav ul .submenu:hover {
     opacity: 1;
 }
 
-#titulo_noticias{
+#titulo_cambios{
   position: relative;
   top: 16vh;
   height: 8vh;
-  width: 26vw;
+  width: 23vw;
   line-height: 8vh;
   border-radius: 0em 2em 2em 0em;
   background-color: #2e277c;
 }
 
-#titulo_noticias span{
+#titulo_cambios span{
   margin-left: 1.5vw;
   font-size: 2vw;
   color: white;
@@ -235,14 +235,15 @@ nav ul .submenu:hover {
 
 .container_news {
   position: relative;
-  top: 18vh;
+  top: 20vh;
   width: 1210px;
   height: 50vh;
 }
 
 .container_news h1{
   position: relative;
-  left: 2vw;
+  left: 8vw;
+  font-size: 2vw;
 }
 
 table {
@@ -276,33 +277,17 @@ tbody tr:hover {
   height: 10vw;
 }
 
-#titulo_proyectos{
-  position: relative;
-  top: 16vh;
-  height: 8vh;
-  width: 26vw;
-  line-height: 8vh;
-  border-radius: 0em 2em 2em 0em;
-  background-color: #2e277c;
-}
-
-#titulo_proyectos span{
-  margin-left: 1.5vw;
-  font-size: 2vw;
-  color: white;
-  background-color: transparent;
-}
-
 .container_proyects {
   position: relative;
-  top: 18vh;
+  top: 20vh;
   width: 1210px;
   height: 50vh;
 }
 
 .container_proyects h1{
   position: relative;
-  left: 2vw;
+  left: 8vw;
+  font-size: 2vw;
 }
 
   footer {
