@@ -314,6 +314,10 @@ footer {
     margin-bottom: 10px;
     background-color: transparent;
   }
+
+  .social-icons a{
+    background-color: transparent;
+  }
   
   .social-icons img {
     width: 45px; /* Tamaño de los íconos de redes sociales */
@@ -343,6 +347,6 @@ footer {
   }
 
   .separador {
-    height: 5vw;
+    height: 15vw;
   }
   
