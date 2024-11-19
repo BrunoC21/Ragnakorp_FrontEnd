@@ -407,6 +407,10 @@ footer {
   background-color: transparent;
 }
 
+.social-icons a{
+  background-color: transparent;
+}
+
 .social-icons img {
   width: 45px; /* Tamaño de los íconos de redes sociales */
   filter: brightness(0) invert(1); /* Hace que los íconos sean blancos sobre el fondo oscuro */
