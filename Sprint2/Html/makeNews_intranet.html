@@ -1,51 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Intranet</title>
-    <link rel="stylesheet" href="/Sprint2/Css/makeNews.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-    <input type="checkbox" id="btn_menu">
+    <link rel="stylesheet" href="/Sprint2/Css/makeNews.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- TinyMCE -->
+    <script
+      src="https://cdn.tiny.cloud/1/4fdc2y5574mndy843hleikms0pom58d3aul2f24mhlcj0bcy/tinymce/6/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script>
+    <script>
+      tinymce.init({
+        selector: "#editor", // Selecciona el textarea con este ID
+        menubar: false, // Opcional: Ocultar barra de menú
+        plugins: [
+          "advlist autolink lists link image charmap print preview anchor",
+          "searchreplace visualblocks code fullscreen",
+          "insertdatetime media table paste code help wordcount",
+        ],
+        toolbar:
+          "undo redo | formatselect | bold italic backcolor | \
+                alignleft aligncenter alignright alignjustify | \
+                bullist numlist outdent indent | removeformat | help",
+      });
+    </script>
+  </head>
+  <body>
+    <input type="checkbox" id="btn_menu" />
     <nav>
-        <label for="btn_menu"><i class='bx bx-menu'></i></label>
-        <a href="home_intranet.html"><img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="Logo"></a>
-        <ul>
-            <h3><i class='bx bxs-user-circle' style='color:#ffffff'></i><span>Usuario</span></h3>
-            <div class="submenu">
-                <li><a href="/Sprint2/Html/perfil.html">Perfil</a></li>
-                <li><a href="#">Cerrar sesión</a></li>
-            </div>
-        </ul>
+      <label for="btn_menu"><i class="bx bx-menu"></i></label>
+      <a href="home_intranet.html"
+        ><img
+          src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png"
+          alt="Logo"
+      /></a>
+      <ul>
+        <h3>
+          <i class="bx bxs-user-circle" style="color: #ffffff"></i
+          ><span>Usuario</span>
+        </h3>
+        <div class="submenu">
+          <li><a href="/Sprint2/Html/perfil.html">Perfil</a></li>
+          <li><a href="#">Cerrar sesión</a></li>
+        </div>
+      </ul>
     </nav>
     <div class="container_menu">
-        <div class="menu_desplegable">
-            <label for="btn_menu"><i class='bx bx-x-circle'></i></label>
-            <label for="btn_menu"><div class="miss"></div></label>
-            <img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="">
-            <ul class="menu">
-                <li>
-                    <a href="../Html/home_intranet.html"><span>Inicio</span></a>
-                </li>
-                <li>
-                    <a href="../Html/makeNews_intranet.html"><span>Noticias</span></a>
-                </li>
-                <li>
-                    <a href="../Html/proyectos_intranet.html"><span>Proyectos</span></a>
-                </li>
-                <li>
-                    <a href="../Html/estadisticas_intranet.html"><span>Estadisticas de visitas</span></a>
-                </li>
-                <li>
-                    <a href="../Html/historial_cambios_intranet.html"><span>Historial de cambios</span></a>
-                </li>
-                <li>
-                    <a href="../Html/roles_intranet.html"><span>Asignación de roles</span></a>
-                </li>
-            </ul>
-        </div>
+      <div class="menu_desplegable">
+        <label for="btn_menu"><i class="bx bx-x-circle"></i></label>
+        <label for="btn_menu"><div class="miss"></div></label>
+        <img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="" />
+        <ul class="menu">
+          <li>
+            <a href="../Html/home_intranet.html"><span>Inicio</span></a>
+          </li>
+          <li>
+            <a href="../Html/makeNews_intranet.html"><span>Noticias</span></a>
+          </li>
+          <li>
+            <a href="../Html/proyectos_intranet.html"><span>Proyectos</span></a>
+          </li>
+          <li>
+            <a href="../Html/estadisticas_intranet.html"
+              ><span>Estadisticas de visitas</span></a
+            >
+          </li>
+          <li>
+            <a href="../Html/historial_cambios_intranet.html"
+              ><span>Historial de cambios</span></a
+            >
+          </li>
+          <li>
+            <a href="../Html/roles_intranet.html"
+              ><span>Asignación de roles</span></a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
 
     <div class="form-container">
@@ -92,7 +128,7 @@
         <!-- Contenido de la noticia -->
         <div class="form-group">
           <label for="contenido">Contenido de la noticia</label>
-          <textarea class="input-contenido-noticia"></textarea>
+          <textarea id="editor" class="input-contenido-noticia"></textarea>
         </div>
 
         <!-- Multimedia -->
