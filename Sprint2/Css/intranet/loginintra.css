@@ -1,0 +1,219 @@
+* {
+  background-color: #e0ecfa;
+  font-family: "Bree Serif", serif;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+}
+
+header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 10vh;
+      box-shadow: 0.25vh 0.25vh 1vh black;
+      background-color: #EEF1F4;
+      z-index: 1;
+}
+
+.logo {
+  width: 4vw;
+  height: 8vh;
+  margin-left: 1vw;
+  margin-top: 1vh;
+  border-radius: 0.5em;
+}
+
+a {
+  background-color: transparent;
+}
+
+.form-container {
+  position: absolute;
+  width: 30vw;
+  height: 90vh;
+  top: 10vh;
+  left: 0vw;
+  z-index: 10;
+  margin-bottom: 20vh;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #1d438a;
+}
+
+.polo{
+  display: flex;
+  width: 30vw;
+  height: 20vh;
+  margin-top: 2vh;
+  background-color: transparent;
+}
+
+.polo img{
+  width: 6vw;
+  height: 6vw;
+  margin-top: 3vh;
+  margin-left: 1vw;
+  border-radius: 10em;
+  border: none;
+  background-color: transparent;
+}
+
+.polo h2 {
+  height: 14vh;
+  line-height: 14vh;
+  margin-left: 1vw;
+  margin-top: 2vh;
+  text-align: center;
+  font-size: 1.8vw;
+  color: white;
+  background-color: transparent;
+}
+
+.titulo_login{
+  position: absolute;
+  top: 16.5vh;
+  left: 11vw;
+  color: white;
+  background-color: transparent;
+}
+
+label {
+  display: block;
+  height: 7vh;
+  line-height: 7vh;
+  margin-left: 2vw;
+  font-size: 1.3vw;
+  color: white;
+  background-color: transparent;
+}
+
+#loginForm {
+  background-color: transparent;
+  margin-top: 2vh;
+}
+
+.nueva{
+  margin-top: 4vh;
+  margin-left: 4.5vw;
+  width: 8vw;
+  color: white;
+  background-color: transparent;
+}
+
+.olvidar{
+  margin-top: 4vh;
+  margin-left: 2.5vw;
+  width: 15vw;
+  color: white;
+  background-color: transparent;
+}
+
+.opciones{
+  display: flex;
+  background-color: transparent;
+}
+
+input[type="text"]{
+  width: 23vw;
+  height: 4.5vh;
+  margin-left: 2.5vw;
+  border-radius: 1em;
+  border: 0.2em solid #ccc;
+  font-size: 1vw;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  background-color: white;
+}
+
+input[type="password"] {
+  width: 23vw;
+  height: 4.5vh;
+  margin-left: 2.5vw;
+  border-radius: 1em;
+  border: 0.2em solid #ccc;
+  font-size: 1vw;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  background-color: white;
+}
+
+.rut{
+  margin-left: 2vw;
+}
+
+.password_label{
+  margin-left: 2vw;
+  margin-top: 3vh;
+}
+
+.recuerdame{
+  margin-top: 2vh;
+  display: flex;
+  background-color: transparent;
+}
+
+#btn_recuerdame{
+  margin-left: 2.5vw;
+}
+
+.recuerdame label{
+  width: 8vw;
+  margin-left: 0.5vw;
+  font-size: 0.9vw;
+}
+
+button {
+  width: 10vw;
+  height: 4.5vh;
+  margin-top: 2vh;
+  margin-left: 9vw;
+  border: none;
+  border-radius: 1em;
+  font-size: 1vw;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+
+.container{
+  position: absolute;
+  top: 10vh;
+  width: 70vw;
+  left: 30vw;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.splide__slide{
+  position: absolute;
+  background-color: transparent;
+  display: flex;
+  z-index: 100;
+}
+
+.splide__slide img{
+  width: 70vw;
+  height: 90vh;
+  object-fit: cover;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.splide__track{
+  background-color: transparent;
+}
+
+.splide__list{
+  background-color: transparent;
+}
+
+.cont_slider{
+  display: flex;
+  background-color: transparent;
+}
+

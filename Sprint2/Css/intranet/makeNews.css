@@ -1,0 +1,498 @@
+*{
+  background-color: #EEF1F4;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Bree Serif", serif;
+ }
+ 
+ 
+ a{
+    color: black;
+ }
+ 
+ 
+ nav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 10vh;
+    box-shadow: 0.25vh 0.25vh 1vh black;
+    background-color: #EEF1F4;
+    z-index: 10;
+ }
+ 
+ 
+ #btn_menu{
+    display: none;
+ }
+ 
+ 
+ nav label{
+    cursor: pointer;
+    background-color: transparent;
+ }
+ 
+ 
+ nav label i{
+    height: 8vh;
+    margin-top: 1vh;
+    margin-left: 1vw;
+    font-size: 4vw;
+    color: #616161;
+    background-color: transparent;
+ }
+ 
+ 
+ nav a{
+    background-color: transparent;
+ }
+ 
+ 
+ nav img{
+    width: 4vw;
+    height: 8vh;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    border-radius: 0.5em;
+ }
+ 
+ 
+ nav ul{
+    margin-left: 80vw;
+    background-color: transparent;
+ }
+ 
+ 
+ nav ul h3{
+    position: absolute;
+    display: flex;
+    z-index: 10;
+    background-color: #1d438a;
+    width: 7.5vw;
+    height: 4.5vh;
+    line-height: 4.5vh;
+    font-size: 1vw;
+    margin-top: 3vh;
+    color: white;
+    border-radius: 3em;
+    text-align: center;
+ }
+ 
+ 
+ nav ul h3 span{
+    margin-top: 0.2vh;
+    margin-left: 0.35vw;
+    background-color: transparent;
+ }
+ 
+ 
+ nav ul h3 i{
+    padding-top: 0.8vh;
+    margin-left: 0.5vw;
+    font-size: 1.5vw;
+    background-color: transparent;
+ }
+ 
+ 
+ /* Submenú oculto por defecto */
+ .submenu {
+    position: absolute;
+    top: 6vh;
+    left: 90vw;
+    z-index: -1;
+    visibility: hidden; /* Ocultar inicialmente */
+    opacity: 0;
+    width: 7.5vw;
+    height: auto;
+    padding: 1.8vh 0;
+    color: black;
+    border-radius: 0em 0em 1em 1em;
+    background-color: white;
+    transition: visibility 0.2s ease, opacity 0.2s ease;
+ }
+ 
+ 
+ /* Mostrar el submenú cuando el cursor esté sobre el contenedor */
+ nav ul:hover .submenu,
+ nav ul .submenu:hover {
+    z-index: 1;
+    visibility: visible;
+    opacity: 1;
+ }
+ 
+ 
+ .submenu li{
+    width: 7.5vw;
+    height: 3.5vh;
+    text-align: center;
+    line-height: 3.5vh;
+    background-color: transparent;
+ }
+ 
+ 
+ .submenu a{
+    display: block;
+    width: 7.5vw;
+    height: 3.5vh;
+ }
+ 
+ 
+ .submenu a:hover{
+    background-color: #ccc;
+ }
+ 
+ 
+ .container_menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.25s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.562);
+    z-index: 2;
+ }
+ 
+ 
+ .menu_desplegable{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20vw;
+    height: 100vh;
+    background-color: #ccc;
+ }
+ 
+ 
+ .menu_desplegable i{
+    position: absolute;
+    font-size: 1.5vw;
+    top: 1vh;
+    left: 18vw;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+ }
+ 
+ 
+ .miss{
+    position: fixed;
+    width: 80vw;
+    height: 100vh;
+    left: 20vw;
+    top: 0;
+    background-color: transparent;
+ }                                                                                                                    
+
+ .parte_superior{
+    display: flex;
+    width: 20vw;
+    height: 10vh;
+    padding-bottom: 3vh;
+    background-color: #2e277c;
+ }
+ 
+ .parte_superior img{
+    width: 5vw;
+    height: 10vh;
+    margin-top: 1.5vh;
+    margin-left: 1.5vw;
+    border-radius: 10em;
+    background-color: transparent;
+ }
+
+ .titulo_menu{
+    background-color: transparent;
+ }
+ 
+ .titulo_menu h2{
+    height: 2vw;
+    width: 9vw;
+    line-height: 4vh;
+    margin-top: 2.5vh;
+    margin-left: 1vw;
+    color: white;
+    background-color: transparent;
+ }
+
+ .titulo_menu h3{
+    margin-top: 0.2vh;
+    margin-left: 1vw;
+    font-size: 1.2vw;
+    color: white;
+    background-color: transparent;
+ }
+
+ .menu{
+    display: flex;
+    flex-direction: column;
+    width: 20vw; 
+    height: 60vh;
+    margin-top: 0vh;
+    background-color: transparent;
+ }
+ 
+ 
+ .menu li{
+    width: 19.65vw;
+    height: 8vh;
+    line-height: 8vh;
+    font-size: 1.2vw;
+    border-left: solid transparent 0.4vw;
+    background-color: transparent;
+ }
+ 
+ 
+ .menu li a{
+    display: block;
+    width: 19.6vw;
+    height: 8vh;
+    background-color: transparent;
+ }
+ 
+ 
+ .menu li:hover{
+    background-color: #a7a7a7;
+    border-left: solid #707070 0.4vw;
+ }
+ 
+ 
+ .menu li span{
+   margin-left: 2vw;
+   background-color: transparent;
+ }
+ 
+
+#btn_menu:checked ~ .container_menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.form-container {
+  position: absolute;
+  top: 23vh;
+  left: 15vw;
+  width: 70vw;
+  height: 115vh;
+  margin: 0.5vw auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f7f9fc; /* Fondo blanco del formulario */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.titulo_editor{
+  position: relative;
+    top: 13vh;
+    height: 8vh;
+    width: 20vw;
+    line-height: 8vh;
+    color: white;
+    font-size: 1.5vw;
+    padding-left: 2vw;
+    border-radius: 0em 2em 2em 0em;
+    background-color: #1d438a;
+}
+
+.form-group {
+  margin-top: 15px;
+  background-color: #f7f9fc;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  background-color: #f7f9fc;
+}
+
+form {
+  background-color: #f7f9fc;
+}
+
+small {
+  background-color: #f7f9fc;
+}
+
+input {
+  background-color: #f7f9fc;
+}
+
+#categoria{
+  width: 15vw;
+  height: 4vh;
+  border-radius: 0.5em;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  font-size: 0.8vw;
+  border: solid #c9c9c9 0.1em;
+}
+
+.input-contenido-nombre-noticia {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff; /* Fondo blanco de las casillas */
+  color: #333;
+}
+
+.input-contenido-autores-noticia {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff; /* Fondo blanco de las casillas */
+  color: #333;
+}
+
+.input-contenido-referencias-noticia {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff; /* Fondo blanco de las casillas */
+  color: #333;
+}
+
+.input-contenido-noticia {
+  width: 138vh;
+  height: 50vh;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff; /* Fondo blanco de las casillas */
+  color: #333;
+  resize: none;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff;
+  background-color: #ffffff; /* Fondo blanco al enfocar */
+  outline: none;
+}
+
+.multimedia-section {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f7f9fc; /* Fondo gris claro de la sección multimedia */
+}
+
+.multimedia-options {
+  background-color: #f7f9fc;
+}
+
+.multimedia-section p {
+  background-color: #f7f9fc;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9vw;
+  width: 15vw;
+  margin-top: 1vh;
+  margin-left: 27.5vw;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  position: absolute bottom;
+  width: 100vw;
+  background-color: #27485e; /* Color azul oscuro del fondo */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.footer-logo {
+  width: 370px; /* Ajusta el tamaño del logo de la facultad */
+  margin-right: 10px;
+  background-color: transparent;
+}
+
+.footer-logo p {
+  background-color: transparent;
+}
+
+.footer-right {
+  flex-direction: row;
+  background-color: transparent;
+}
+
+.footer-gobierno-logo {
+  width: 200px; /* Ajusta el tamaño del logo del Gobierno */
+  margin-top: 5px;
+  background-color: transparent;
+}
+
+.footer-left p {
+  margin: 0;
+  font-size: 14px;
+  text-align: left;
+  background-color: transparent;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  background-color: transparent;
+}
+
+.social-icons a{
+  background-color: transparent;
+}
+
+.social-icons img {
+  width: 45px; /* Tamaño de los íconos de redes sociales */
+  filter: brightness(0) invert(1); /* Hace que los íconos sean blancos sobre el fondo oscuro */
+  background-color: transparent;
+}
+
+.footer-bottom {
+  margin-top: 1vw;
+  font-size: 0, 5vw;
+  background-color: transparent;
+}
+
+.footer-bottom p {
+  background-color: transparent;
+}
+
+.separador {
+  height: 140vh;
+}
