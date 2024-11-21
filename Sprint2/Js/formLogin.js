@@ -36,7 +36,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
             console.log("Datos almacenados en localStorage:", localStorage.getItem('sessionData'));
 
             // Mostrar un mensaje de progreso
-            alert("¡Inicio de sesión exitoso! Los datos de sesión se han guardado.");
+            // alert("¡Inicio de sesión exitoso! Los datos de sesión se han guardado.");
 
             // Redirige a la página deseada
             window.location.href = '/Sprint2/Html/intranet/home_intranet.html';
