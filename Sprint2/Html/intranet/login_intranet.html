@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Sprint2/Css/intranet/loginintra.css">
+    <title>Polo de salud</title>
+    <link rel="stylesheet" href="/Sprint2/splide-4.1.3/dist/css/splide.min.css">
+    <script src="/Sprint2/splide-4.1.3/dist/js/splide.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="Logo" class="logo"></a>
+    </header>
+    <div class="form-container">
+        <div class="polo">
+            <img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="">
+            <h2>Polo de salud Ñuble</h2>
+        </div>
+        <h2 class="titulo_login">Inicio de Sesión</h2>
+        <form id="loginForm">
+            <label for="rut" class="rut">Rut:</label>
+            <input type="text" id="rut" name="rut" placeholder="Ingresa tu rut (sin puntos, con guion)" required />
+            
+            <label for="password" class="password_label">Contraseña:</label>
+            <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required />
+            
+            <div class="recuerdame">
+                <input type="checkbox" id="btn_recuerdame">
+                <label for="btn_recuerdame">recuerdame</label>
+            </div>
+            <button type="submit" id="btnIniciar">Iniciar Sesión</button>
+            <div class="opciones">
+                <a href="#" class="nueva">¿No tienes cuenta?</a>  
+                <a href="#" class="olvidar">¿olvidaste tu contraseña?</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+      <section class="splide" aria-label="Basic Structure Example">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide" style="background-color: transparent;">
+                <img src="/Sprint2/Images/CS1.jpg" alt="">
+              </li>
+              <li class="splide__slide" style="background-color: transparent;">
+                <img src="/Sprint2/Images/CS2.jpg" alt="">
+              </li>
+              <li class="splide__slide" style="background-color: transparent;">
+                <img src="/Sprint2/Images/CS3.jpg" alt="">
+              </li>
+            </ul>
+          </div>
+      </section>
+    </div> 
+
+
+    <script src="../Js/formLogin.js"></script>
+    <script>
+        var splide = new Splide( '.splide', {
+          type: 'loop',
+          autoplay:true,
+          inteval: '5000'
+        });
+        splide.mount();
+    </script>
+
+    <style>
+        .splide__arrow--prev{
+            display: none;
+        }
+
+        .splide__arrow--next{
+            display: none;
+        }
+    </style>
+</body>
+</html>

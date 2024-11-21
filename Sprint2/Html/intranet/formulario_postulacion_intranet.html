@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intranet</title>
+    <link rel="stylesheet" href="/Sprint2/Css/intranet/formularioPostulacionIntranet.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <input type="checkbox" id="btn_menu">
+    <nav>
+        <label for="btn_menu"><i class='bx bx-menu'></i></label>
+        <a href="../intranet/home_intranet.html"><img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="Logo"></a>
+        <ul>
+            <h3><i class='bx bxs-user-circle' style='color:#ffffff'></i><span>Usuario</span></h3>
+            <div class="submenu">
+                <li><a href="../intranet/perfil.html">Perfil</a></li>
+                <li><a href="#">Cerrar sesión</a></li>
+            </div>
+        </ul>
+    </nav>
+    <div class="container_menu">
+      <div class="menu_desplegable">
+          <label for="btn_menu"><i class='bx bx-x'></i></label>
+          <label for="btn_menu"><div class="miss"></div></label>
+          <div class="parte_superior">
+           <img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="">
+           <div class="titulo_menu">
+             <h2>Polo de salud</h2>
+             <h3>Ñuble</h3>
+           </div>
+          </div>
+          <ul class="menu">
+              <li>
+                  <a href="../intranet/home_intranet.html"><span>Inicio</span></a>
+              </li>
+              <li>
+                  <a href="#"><span>Noticias</span></a>
+              </li>
+              <li>
+                  <a href="../intranet/proyectos_intranet.html"><span>Proyectos</span></a>
+              </li>
+              <li>
+                  <a href="../intranet/estadisticas_intranet.html"><span>Estadisticas de visitas</span></a>
+              </li>
+              <li>
+                  <a href="../intranet/historial_cambios_intranet.html"><span>Historial de cambios</span></a>
+              </li>
+              <li>
+                  <a href="../intranet/roles_intranet.html"><span>Asignación de roles</span></a>
+              </li>
+          </ul>
+      </div>
+  </div>
+
+    <input type="checkbox" id="btn_menu_lateral" />
+    <div class="container_menu">
+      <div class="menu_desplegable">
+          <label for="btn_menu"><i class='bx bx-x'></i></label>
+          <label for="btn_menu"><div class="miss"></div></label>
+          <div class="parte_superior">
+           <img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="">
+           <div class="titulo_menu">
+             <h2>Polo de salud</h2>
+             <h3>Ñuble</h3>
+           </div>
+          </div>
+          <ul class="menu">
+              <li>
+                  <a href="../intranet/home_intranet.html"><span>Inicio</span></a>
+              </li>
+              <li>
+                  <a href="#"><span>Noticias</span></a>
+              </li>
+              <li>
+                  <a href="../intranet/proyectos_intranet.html"><span>Proyectos</span></a>
+              </li>
+              <li>
+                  <a href="../intranet/estadisticas_intranet.html"><span>Estadisticas de visitas</span></a>
+              </li>
+              <li>
+                  <a href="../intranet/historial_cambios_intranet.html"><span>Historial de cambios</span></a>
+              </li>
+              <li>
+                  <a href="../intranet/roles_intranet.html"><span>Asignación de roles</span></a>
+              </li>
+          </ul>
+      </div>
+  </div>
+
+    <div class="form-container">
+      <h1>Formulario de Postulación</h1>
+      <form action="submit_postulacion.html" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="rut">RUT</label>
+        <input type="text" id="rut" name="rut" required />
+
+        <label for="proyecto">Proyecto al que desea postular</label>
+        <select id="proyecto" name="proyecto" required></select>
+
+        <label for="motivo">Motivo de postulación</label>
+        <textarea
+          id="motivo"
+          name="motivo"
+          rows="4"
+          placeholder="Explique brevemente su motivo para postular"
+          required
+        ></textarea>
+
+        <button type="submit" class="submit-btn" id="botonPostular">
+          Enviar Postulación
+        </button>
+      </form>
+    </div>
+
+    <div class="separador"></div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <img
+            src="/Sprint2/Images/footer_images/logos-face-ubb-02 1.png"
+            alt="Logo Facultad"
+            class="footer-logo"
+          />
+        </div>
+        <div class="footer-right">
+          <div class="social-icons">
+            <a href="#"
+              ><img
+                src="/Sprint2/Images/footer_images/linkedin-square-logo-24 1.png"
+                alt="LinkedIn"
+            /></a>
+
+            <a href="#"
+              ><img
+                src="/Sprint2/Images/footer_images/bxl-instagram 1.png"
+                alt="Instagram"
+            /></a>
+          </div>
+          <img
+            src="/Sprint2/Images/footer_images/Logo (1).png"
+            alt="Gobierno de Ñuble"
+            class="footer-gobierno-logo"
+          />
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy;2024 Todos los Derechos Reservados</p>
+      </div>
+    </footer>
+
+    <script src="../Js/formPostulation.js"></script>
+  </body>
+</html>

@@ -5,13 +5,15 @@
     text-decoration: none;
     list-style: none;
     font-family: "Bree Serif", serif;
-  }
-  
-  a{
+   }
+   
+   
+   a{
       color: black;
-  }
-  
-  nav{
+   }
+   
+   
+   nav{
       display: flex;
       position: fixed;
       top: 0;
@@ -21,44 +23,51 @@
       box-shadow: 0.25vh 0.25vh 1vh black;
       background-color: #EEF1F4;
       z-index: 1;
-  }
-  
-  #btn_menu{
+   }
+   
+   
+   #btn_menu{
       display: none;
-  }
-  
-  nav label{
+   }
+   
+   
+   nav label{
       cursor: pointer;
       background-color: transparent;
-  }
-  
-  nav label i{
+   }
+   
+   
+   nav label i{
       height: 8vh;
       margin-top: 1vh;
       margin-left: 1vw;
       font-size: 4vw;
       color: #616161;
       background-color: transparent;
-  }
-  
-  nav a{
+   }
+   
+   
+   nav a{
       background-color: transparent;
-  }
-  
-  nav img{
+   }
+   
+   
+   nav img{
       width: 4vw;
       height: 8vh;
       margin-left: 1vw;
       margin-top: 1vh;
       border-radius: 0.5em;
-  }
-  
-  nav ul{
+   }
+   
+   
+   nav ul{
       margin-left: 80vw;
       background-color: transparent;
-  }
-  
-  nav ul h3{
+   }
+   
+   
+   nav ul h3{
       position: absolute;
       display: flex;
       z-index: 10;
@@ -71,23 +80,26 @@
       color: white;
       border-radius: 3em;
       text-align: center;
-  }
-  
-  nav ul h3 span{
+   }
+   
+   
+   nav ul h3 span{
       margin-top: 0.2vh;
       margin-left: 0.35vw;
       background-color: transparent;
-  }
-  
-  nav ul h3 i{
+   }
+   
+   
+   nav ul h3 i{
       padding-top: 0.8vh;
       margin-left: 0.5vw;
       font-size: 1.5vw;
       background-color: transparent;
-  }
-  
-  /* Submenú oculto por defecto */
-  .submenu {
+   }
+   
+   
+   /* Submenú oculto por defecto */
+   .submenu {
       position: absolute;
       top: 6vh;
       left: 90vw;
@@ -101,115 +113,161 @@
       border-radius: 0em 0em 1em 1em;
       background-color: white;
       transition: visibility 0.2s ease, opacity 0.2s ease;
-  }
-  
-  /* Mostrar el submenú cuando el cursor esté sobre el contenedor */
-  nav ul:hover .submenu,
-  nav ul .submenu:hover {
+   }
+   
+   
+   /* Mostrar el submenú cuando el cursor esté sobre el contenedor */
+   nav ul:hover .submenu,
+   nav ul .submenu:hover {
       z-index: 1;
       visibility: visible;
       opacity: 1;
-  }
-  
-  .submenu li{
+   }
+   
+   
+   .submenu li{
       width: 7.5vw;
       height: 3.5vh;
       text-align: center;
       line-height: 3.5vh;
       background-color: transparent;
-  }
-  
-  .submenu a{
+   }
+   
+   
+   .submenu a{
       display: block;
       width: 7.5vw;
       height: 3.5vh;
-  }
-  
-  .submenu a:hover{
+   }
+   
+   
+   .submenu a:hover{
       background-color: #ccc;
-  }
-  
-  .container_menu{
+   }
+   
+   
+   .container_menu{
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
+      width: 100vw;
       height: 100vh;
       transition: all 0.25s ease-in-out;
       opacity: 0;
       visibility: hidden;
       background-color: rgba(0, 0, 0, 0.562);
       z-index: 2;
-  }
-  
-  .menu_desplegable{
+   }
+   
+   
+   .menu_desplegable{
       position: absolute;
       top: 0;
       left: 0;
       width: 20vw;
       height: 100vh;
-  }
-  
-  .menu_desplegable i{
+      background-color: #ccc;
+   }
+   
+   
+   .menu_desplegable i{
       position: absolute;
       font-size: 1.5vw;
       top: 1vh;
       left: 18vw;
       cursor: pointer;
+      color: white;
       background-color: transparent;
-  }
-  
-  .miss{
+   }
+   
+   
+   .miss{
       position: fixed;
       width: 80vw;
       height: 100vh;
       left: 20vw;
       top: 0;
       background-color: transparent;
-  }
-  
-  .menu_desplegable img{
-      width: 15vw;
-      height: auto;
-      margin-top: 5vh;
-      margin-left: 2.5vw;
+   }                                                                                                                    
+
+   .parte_superior{
+      display: flex;
+      width: 20vw;
+      height: 10vh;
+      padding-bottom: 3vh;
+      background-color: #2e277c;
+   }
+   
+   .parte_superior img{
+      width: 5vw;
+      height: 10vh;
+      margin-top: 1.5vh;
+      margin-left: 1.5vw;
       border-radius: 10em;
       background-color: transparent;
-  }
-  
-  .menu{
+   }
+
+   .titulo_menu{
+      background-color: transparent;
+   }
+   
+   .titulo_menu h2{
+      height: 2vw;
+      width: 9vw;
+      line-height: 4vh;
+      margin-top: 2.5vh;
+      margin-left: 1vw;
+      color: white;
+      background-color: transparent;
+   }
+
+   .titulo_menu h3{
+      margin-top: 0.2vh;
+      margin-left: 1vw;
+      font-size: 1.2vw;
+      color: white;
+      background-color: transparent;
+   }
+
+   .menu{
       display: flex;
       flex-direction: column;
-      width: 20vw;
+      width: 20vw; 
       height: 60vh;
-      margin-top: 2vh;
+      margin-top: 0vh;
       background-color: transparent;
-  }
-  
-  .menu li{
-      width: 19.6vw;
+   }
+   
+   
+   .menu li{
+      width: 19.65vw;
       height: 8vh;
       line-height: 8vh;
       font-size: 1.2vw;
       border-left: solid transparent 0.4vw;
-  }
-  
-  .menu li a{
+      background-color: transparent;
+   }
+   
+   
+   .menu li a{
       display: block;
       width: 19.6vw;
       height: 8vh;
       background-color: transparent;
-  }
-  
-  .menu li:hover{
-      background-color: #ccc;
-      border-left: solid #9e9e9e 0.4vw;
-  }
-  
-  .menu li span{
+   }
+   
+   
+   .menu li:hover{
+      background-color: #a7a7a7;
+      border-left: solid #707070 0.4vw;
+   }
+   
+   
+   .menu li span{
      margin-left: 2vw;
-     background-color: transparent; 
-  }
+     background-color: transparent;
+   }
+   
   
   #btn_menu:checked ~ .container_menu{
       visibility: visible;
@@ -223,12 +281,12 @@
     width: 20vw;
     line-height: 8vh;
     border-radius: 0em 2em 2em 0em;
-    background-color: #2e277c;
+    background-color: #1d438a;
 }
 
 #titulo_noticias span{
     margin-left: 1.5vw;
-    font-size: 2vw;
+    font-size: 1.5vw;
     color: white;
     background-color: transparent;
 }
@@ -281,12 +339,12 @@
     width: 23vw;
     line-height: 8vh;
     border-radius: 0em 2em 2em 0em;
-    background-color: #2e277c;
+    background-color: #1d438a;
 }
 
 #titulo_proyectos span{
     margin-left: 1.5vw;
-    font-size: 2vw;
+    font-size: 1.5vw;
     color: white;
     background-color: transparent;
 }
