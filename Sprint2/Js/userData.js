@@ -1,38 +1,22 @@
-window.onload = function () {
-    obtenerSesion();
-};
+// Esperar a que el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", function() {
+    // Recuperar los datos almacenados en el localStorage
+    const sessionData = JSON.parse(localStorage.getItem("sessionData"));
+    
+    if (sessionData) {
+        // Si los datos existen en el localStorage, mostrarlos en el div correspondiente
+        const sessionDiv = document.getElementById("sessionData");
 
-let obtenerSesion = async () => {
-    try {
-        const peticion = await fetch("http://localhost:8080/proyecto/user/sessionInfo", {
-            method: "GET",
-            headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json"
-            },
-            credentials: "include" // Importante para enviar cookies
-        });
-
-        if (peticion.ok) {
-            const datos = await peticion.json();
-            console.log("Datos de sesión recibidos:", datos);
-
-            let contenido = `
-                <h3 id="nombre">Nombre: ${datos.username}</h3>
-                <h4 id="correo">Correo: ${datos.email}</h4>
-                <h4 id="rol">Rol(es): ${datos.role}</h4>
-                <h4 id="rut">Rut: ${datos.userRut}</h4>
-            `;
-
-            document.querySelector("#sessionData").innerHTML = contenido;
-        } else if (peticion.status === 401) {
-            alert("No hay sesión iniciada");
-            document.querySelector("#sessionData").innerHTML = "<h3>No hay sesión iniciada</h3>";
-        } else {
-            alert("Error inesperado:", peticion.status);
-            document.querySelector("#sessionData").innerHTML = "<h3>Error inesperado</h3>";
-        }
-    } catch (error) {
-        alert("Error al recuperar los datos de sesión:", error);
+        // Crear un contenido para mostrar los datos
+        sessionDiv.innerHTML = `
+            <h3>Nombre: ${sessionData.username} ${sessionData.lastName}</h3>
+            <h3>Rol: ${sessionData.role}</h3>
+            <h3>Email: ${sessionData.email}</h3>
+            <h3>Teléfono ${sessionData.phone}</h3>
+        `;
+    } else {
+        // Si no hay datos en el localStorage, mostrar un mensaje de error
+        const sessionDiv = document.getElementById("sessionData");
+        sessionDiv.innerHTML = "<p>No se ha encontrado información de sesión.</p>";
     }
-};
+});
