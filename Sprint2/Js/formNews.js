@@ -10,7 +10,7 @@ botonEnviar.addEventListener("click", async (evento) => {
   const noticia = {
     newsTitle: document.getElementById("titulo").value,
     newsContent: document.getElementById("contenido").value,
-    newsWriter: document.getElementById("editor").value,
+    newsWriter: document.getElementById("autores").value,
     primaryImage: document.getElementById("imagen").value,
     newsCategory: document.getElementById("categoria").value,
   };
