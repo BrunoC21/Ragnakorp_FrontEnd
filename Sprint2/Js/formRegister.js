@@ -28,7 +28,7 @@ let registrarUsuario = async () => {
         // Verificar si la respuesta es exitosa (status 200-299)
         if (peticion.ok) {
             // Redirigir a la ruta ../Html/index.html
-            window.location.href = '../Html/home_intranet.html';
+            window.location.href = '../Html/login_intranet.html';
         } else {
             // Mostrar un mensaje de error al usuario
             const errorMsg = await peticion.text();  // Obtener el mensaje de error del backend si es posible
