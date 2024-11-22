@@ -4,7 +4,7 @@ document.getElementById('makeNewsForm').addEventListener('submit', async functio
   const imageInput = document.getElementById("imagen"); // Input tipo file
   let imageBase64 = null;
 
-  // Para que el JSON sirva con la imagen elegi Convertir imagen a Base64 basicametne convbierte datos bonarios a ASCII
+  // Para que el JSON sirva con la imagen elegi Convertir imagen a Base64 basicametne convierte datos binarios a ASCII
   if (imageInput.files.length > 0) {
     const file = imageInput.files[0];
     const reader = new FileReader();
