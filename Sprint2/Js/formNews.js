@@ -1,24 +1,21 @@
 // Selección del botón de enviar y el formulario
-const botonEnviar = document.getElementById("btnCrearNoticia");
-const formulario = document.getElementById("formNoticia");
+
 
 // Evento para enviar los datos al servidor
-botonEnviar.addEventListener("click", async (evento) => {
-  evento.preventDefault(); // Evita que la página se recargue
+document.getElementById('makeNewsForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Evita que la página se recargue
 
   // Captura los datos del formulario
   const noticia = {
     newsTitle: document.getElementById("titulo").value,
     newsContent: document.getElementById("contenido").value,
-    newsWriter: document.getElementById("editor").value,
-    primaryImage: document.getElementById("imagen").value,
+    newsWriter: document.getElementById("autor").value,
     newsCategory: document.getElementById("categoria").value,
   };
 
   try {
     // Enviar los datos al servidor
-    const respuesta = await fetch(
-      "http://localhost:8080/proyecto/news/create",
+     fetch("http://localhost:8080/proyecto/news/create",
       {
         method: "POST",
         headers: {
@@ -33,8 +30,7 @@ botonEnviar.addEventListener("click", async (evento) => {
       alert("Noticia creada exitosamente.");
       formulario.reset(); // Limpia el formulario
     } else {
-      const errorMsg = await respuesta.text();
-      alert("Error al crear la noticia: " + errorMsg);
+      throw new Error("Error al crear la noticia: " );
     }
   } catch (error) {
     console.error("Error al enviar la noticia:", error);
