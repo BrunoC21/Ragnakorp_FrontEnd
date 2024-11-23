@@ -217,6 +217,7 @@
     line-height: 4vh;
     margin-top: 2.5vh;
     margin-left: 1vw;
+    font-size: 1.58vw;
     color: white;
     background-color: transparent;
  }
@@ -280,8 +281,9 @@
     height: 90vh;
     top: 16vh;
     margin-left: 5vw;
+    border: solid #163549;
     border-radius: 2em;
-    background-color: #163549;
+    background-color: white;
 }
 
 .columna1{
@@ -305,7 +307,9 @@
 }
 
 .texto_columna{
+  position: relative;
   background-color: transparent;
+  top: 7.25vh;
 }
 
 .texto_columna h3{
@@ -485,6 +489,10 @@ footer {
   .social-icons img {
     width: 45px; /* Tamaño de los íconos de redes sociales */
     filter: brightness(0) invert(1); /* Hace que los íconos sean blancos sobre el fondo oscuro */
+    background-color: transparent;
+  }
+
+  .social-icons a{
     background-color: transparent;
   }
   
