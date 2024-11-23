@@ -5,15 +5,26 @@ boton.addEventListener("click", evento => {
 });
 
 let registrarUsuario = async () => {
-    let campos = {};
 
-    campos.userRut = document.getElementById("rut").value;
-    campos.userLastName = document.getElementById("lastname").value;
-    campos.userName = document.getElementById("firstname").value;
-    campos.userEmail = document.getElementById("email").value;
-    campos.userPhone = document.getElementById("phone").value;
-    campos.userPassword = document.getElementById("password").value;
-    campos.userRole = document.getElementById("role").value;
+    // Recuperar los datos de la sesión del Local Storage
+    const sessionData = JSON.parse(localStorage.getItem("sessionData"));
+    if (!sessionData) {
+        alert("No hay datos de sesión disponibles. Por favor, inicie sesión nuevamente.");
+        return;
+    }
+
+    const campos = {
+        userDTO: {
+            userRut: document.getElementById("rut").value,
+            userLastName: document.getElementById("lastname").value,
+            userName: document.getElementById("firstname").value,
+            userEmail: document.getElementById("email").value,
+            userPhone: document.getElementById("phone").value,
+            userPassword: document.getElementById("password").value,
+            userRole: document.getElementById("role").value,
+        },
+        sessionData: sessionData,
+    };
 
     try {
         const peticion = await fetch("http://localhost:8080/proyecto/user/create", {  // Ajusta la URL si es necesario
