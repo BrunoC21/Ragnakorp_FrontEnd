@@ -27,6 +27,9 @@ document.getElementById('makeNewsForm').addEventListener('submit', async functio
     });
   }
 
+  const params = new URLSearchParams(window.location.search);
+  const newsId = params.get("id");
+
 
   // Crear el objeto con los datos del formulario y los datos de sesión
   const payload = {
@@ -41,14 +44,26 @@ document.getElementById('makeNewsForm').addEventListener('submit', async functio
   };
 
   try {
-    // Enviar los datos al servidor
-    const response = await fetch("http://localhost:8080/proyecto/news/create", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload), // Enviar el objeto completo
-    });
+    let response;
+    if (newsId) {
+      // Si estamos editando, realizamos un PUT
+      response = await fetch(`http://localhost:8080/proyecto/news/update/${newsId}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload), // Enviar el objeto completo
+      });
+    } else {
+      // Si estamos creando una noticia, realizamos un POST
+      response = await fetch("http://localhost:8080/proyecto/news/create", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+    }
 
     if (response.ok) {
       // alert("Noticia creada exitosamente.");
