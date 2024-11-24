@@ -274,6 +274,37 @@
     visibility: visible;
     opacity: 1;
 }
+
+.btn_roles{
+   position: absolute;
+   display: flex;
+   width: 9vw;
+   height: 5vh;
+   border-radius: 3em;
+   line-height: 5vh;
+   background-color: #2e277c;
+}
+
+#crear{
+   top: 18vh;
+   left: 80vw;
+}
+
+.btn_roles i{
+   height: 5vh;
+   line-height: 5vh;
+   font-size: 1.7vw;
+   margin-left: 1.8vw;
+   background-color: transparent;
+}
+
+.btn_roles span{
+   display: block;
+   height: 5vh;
+   font-size: 1.2vw;
+   color: white;
+   background-color: transparent;
+}
   
 .titulo_roles{
    position: absolute;
@@ -344,7 +375,33 @@ td {
    text-align: left;
    border-bottom: 1px solid #ddd;
    background-color: #f9f9f9;
- }
+}
+
+.datos{
+   display: flex;
+   width: 80vw;
+   height: 8vh;
+   border: solid #c9c9c9 0.2em;
+   background-color: #f9f9f9;
+}
+
+.datos h3{
+   width: 15vw;
+   line-height: 5vh;
+   padding-left: 1vw;
+   font-size: 1.1vw;
+   background-color: #f9f9f9;
+   font-weight: normal;
+}
+
+.datos h4{
+   width: 20vw;
+   line-height: 5vh;
+   padding-left: 1vw;
+   font-size: 1.1vw;
+   background-color: #f9f9f9;
+   font-weight: normal;
+}
 
 tbody tr:nth-child(even) {
   background-color: #f9f9f9;
