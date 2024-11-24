@@ -327,6 +327,7 @@
    margin-top: 25vh;
    margin-left: 10vw;
    background-color: transparent;
+   overflow-y: auto;
 }
 
 

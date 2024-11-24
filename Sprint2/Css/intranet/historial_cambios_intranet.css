@@ -313,6 +313,7 @@
   margin-top: 27vh;
   margin-left: 10vw;
   background-color: transparent;
+  overflow-y: auto;
 }
 
 .encabezados1{
@@ -377,6 +378,7 @@ tbody tr:hover {
   margin-top: 11vh;
   margin-left: 20vw;
   background-color: transparent;
+  overflow-y: auto;
 }
 
 .encabezados2{
