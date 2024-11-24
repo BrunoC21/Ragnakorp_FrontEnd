@@ -1,10 +1,13 @@
 * {
-  background-color: #eef1f4;
   padding: 0;
   margin: 0;
   text-decoration: none;
   list-style: none;
   font-family: "Bree Serif", serif;
+}
+
+body {
+  background-color: #eef1f4;
 }
 
 header {
@@ -33,6 +36,7 @@ nav {
   width: 100vw;
   box-shadow: 0px 0.5vh 2vh black;
   z-index: 5;
+  background-color: #eef1f4;
 }
 
 .container_nav {
@@ -149,16 +153,7 @@ nav {
   background-color: rgb(199, 199, 199);
 }
 
-.dos {
-  background-color: transparent;
-}
-
-#btn2 {
-  display: flex;
-  width: 15vw;
-}
-
-#btn2 i {
+.dos i{
   position: absolute;
   left: 26vw;
   height: 8vh;
@@ -167,16 +162,20 @@ nav {
   background-color: transparent;
 }
 
+.dos {
+  background-color: transparent;
+}
+
 .dos:hover {
+  background-color: white;
 }
 
 .dos:hover .submenu {
   display: initial;
 }
 
-#btn2 span:hover,
 .dos:hover > .boton span {
-  background-color: rgb(199, 199, 199);
+  background-color: white;
 }
 
 .dos:hover .submenu {
@@ -288,12 +287,19 @@ nav {
   background-color: transparent;
 }
 
+#primera{
+  margin-left: 20vw;
+}
+
+#segundo{
+  margin-left: 15vw;
+}
+
 .segunda_linea a{
   display: inline-block;
   width: 14.5vw;
   height: 18vh;
   margin-top: 5vh;
-  margin-left: 10vw;
   border-radius: 1em;
   border-top: solid transparent;
   background-color: #aaaaaa;

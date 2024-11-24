@@ -1,0 +1,376 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Bree Serif", serif;
+  }
+  
+  body {
+    background-color: #eef1f4;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4%;
+    background-color: #1b2e51;
+    z-index: 5;
+  }
+  
+  header p {
+    height: 100%;
+    line-height: 220%;
+    text-align: center;
+    font-size: 0.8vw;
+    color: white;
+    background-color: transparent;
+  }
+  
+  nav {
+    position: fixed;
+    display: flex;
+    top: 4vh;
+    height: 10vh;
+    width: 100vw;
+    box-shadow: 0px 0.5vh 2vh black;
+    z-index: 5;
+    background-color: #eef1f4;
+  }
+  
+  .container_nav {
+    display: flex;
+    width: 90vw;
+    height: 8vh;
+    margin-left: 5vw;
+    margin-top: 0.5vh;
+    border-bottom: black solid 0.2vh;
+    border-top: black solid 0.2vh;
+    z-index: 3;
+  }
+  
+  .logo {
+    width: 4vw;
+    height: 4vw;
+    margin-left: 1vw;
+    margin-right: -2vw;
+    margin-top: 0.8vh;
+    border-radius: 1em;
+  }
+  
+  .container_nav a {
+    width: 3.6vw;
+    height: 3.6vw;
+    background-color: transparent;
+  }
+  
+  .botones {
+    z-index: 2;
+    display: flex;
+    width: 75vw;
+    margin-left: 2vw;
+    background-color: transparent;
+  }
+  
+  .botones li,
+  .dos {
+    width: 15vw;
+    height: 8vh;
+    line-height: 8vh;
+    text-align: center;
+  }
+  
+  .boton {
+    width: 15vw;
+    height: 8vh;
+    background-color: transparent;
+  }
+  
+  .boton span {
+    display: block;
+    width: 15vw;
+    height: 8vh;
+    font-size: 1vw;
+    color: black;
+    background-color: transparent;
+  }
+  
+  .boton span:hover {
+    width: 15vw;
+    height: 8vh;
+    background-color: rgb(214, 214, 214);
+  }
+  
+  .redes_sociales {
+    width: 11vw;
+  }
+  
+  .redes_sociales i {
+    height: 8vh;
+    width: 3.3vw;
+    line-height: 8vh;
+    text-align: center;
+    font-size: 1.5vw;
+    color: black;
+  }
+  
+  .submenu {
+    position: absolute;
+    display: none;
+    width: 15vw;
+    height: 26vh;
+    z-index: -1;
+    top: 8.7vh;
+    left: 25vw;
+    transition: 0.5s;
+    background-color: rgb(233, 233, 233);
+  }
+  
+  .submenu li {
+    background-color: transparent;
+  }
+  
+  .submenu li span {
+    display: inline-block;
+    width: 14vw;
+    height: 8.5vh;
+    line-height: 8.5vh;
+    text-align: center;
+    font-size: 1vw;
+    color: black;
+    background-color: transparent;
+  }
+  
+  .submenu a {
+    background-color: transparent;
+  }
+  
+  .submenu li span:hover {
+    width: 14vw;
+    left: 0.1vw;
+    border-bottom: solid rgb(90, 90, 90) 0.3vw;
+    background-color: rgb(199, 199, 199);
+  }
+  
+  .dos i{
+    position: absolute;
+    left: 26vw;
+    height: 8vh;
+    line-height: 8vh;
+    font-size: 1vw;
+    background-color: transparent;
+  }
+  
+  .dos {
+    background-color: transparent;
+  }
+  
+  .dos:hover {
+    background-color: white;
+  }
+  
+  .dos:hover .submenu {
+    display: initial;
+  }
+  
+  .dos:hover > .boton span {
+    background-color: white;
+  }
+  
+  .dos:hover .submenu {
+    display: block;
+  }
+  
+  .dos:hover > .boton span {
+    background-color: white;
+  }
+  
+  .titulo {
+    display: flex;
+    width: 100vw;
+    height: 12vh;
+    margin-top: 20vh;
+  }
+  
+  .titulo h2 {
+    width: 15vw;
+    height: 5vh;
+    text-align: center;
+    border-bottom: solid #1b2e51 0.5vw;
+  }
+  
+  .titulo h2 span {
+    width: 15vw;
+  }
+  
+  .linea1 {
+    height: 0.25vh;
+    width: 38vw;
+    margin-top: 1.5vh;
+    margin-left: 2.5vw;
+    margin-right: 1vw;
+    background-color: #1b2e51;
+  }
+  
+  .linea2 {
+    height: 0.25vh;
+    width: 39vw;
+    margin-left: 1vw;
+    margin-top: 1.5vh;
+    background-color: #1b2e51;
+  }
+  
+  .container_general{
+    display: flex;
+  }
+
+  .container_relaciones{
+    width: 60vw;
+    height: 60vh;
+    margin-left: 7.5vw;
+    margin-bottom: 10vh;
+    border-radius: 1em;
+    background-color: white;
+    border: #c9c9c9 solid 0.25vh;
+    box-shadow: -1px -2px 35px -8px rgba(0,0,0,0.75);
+  }
+
+  .container_opciones{
+    width: 20vw;
+    height: 60vh;
+    margin-left: 5vw;
+    margin-bottom: 10vh;
+    border-radius: 1em;
+    background-color: white;
+    border: #c9c9c9 solid 0.25vh;
+    box-shadow: -1px -2px 35px -8px rgba(0,0,0,0.75);
+  }
+
+  .cont_opt_rel{
+    width: 18vw;
+    height: 12vh;
+    margin-top: 2.5vh;
+    margin-left: 1vw;
+    text-align: center;
+    border-radius: 0.5em;
+    background-color: #1b2e51;
+  }
+
+  .opt_rel{
+    width: 18vw;
+    height: 12vh;
+    line-height: 12vh;
+    font-size: 1.2vw;
+    color: white;
+  }
+  
+  .cont_rel1,.cont_rel2,
+  .cont_rel3,.cont_rel4{
+    position: absolute;
+    width: 56.5vw;
+    height: 50vh;
+    top: 36vh;
+    left: 9.5vw;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    border-radius: 0.5em;
+    background-color: #c9c9c9;
+    overflow-y: scroll;
+  }
+
+  .cont_rel1 img,.cont_rel2 img,
+  .cont_rel3 img,.cont_rel4 img{
+    width: 20vw;
+    height: 20vh;
+    margin-top: 2vh;
+    object-fit: cover;
+    border-radius: 1em;
+    margin-left: 1vw;
+  }
+
+  .cont_rel1 p,.cont_rel2 p,
+  .cont_rel3 p,.cont_rel4 p{
+    width: 38vw;
+    height: 20vh;
+    margin-top: 1vh;
+    margin-left: 1vw;
+  }
+
+  .cont_rel1 h3,.cont_rel2 h3,
+  .cont_rel3 h3,.cont_rel4 h3{
+    width: 38vw;
+    margin-top: 2vh;
+    margin-left: 1vw;
+  }
+
+  #btn_rel1, #btn_rel2,
+  #btn_rel3, #btn_rel4{
+    display: none;
+  }
+
+  #btn_rel1:checked ~ .cont_rel1,
+  #btn_rel2:checked ~ .cont_rel2,
+  #btn_rel3:checked ~ .cont_rel3,
+  #btn_rel4:checked ~ .cont_rel4{
+    opacity: 1;
+    visibility: visible;
+    z-index: 100;
+  }
+
+  .info{
+    display: flex;
+    width: 54vw;
+    height: 24vh;
+    border-bottom: solid black 0.20vh;
+  }
+
+  footer {
+    background-color: #1b2e51; /* Color azul oscuro del fondo */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100vw;
+    height: 15vh;
+    position: absolute;
+  }
+  
+  .footer-container {
+    background-color: transparent;
+    display: flex;
+  }
+  
+  .footer-logo {
+    width: 20vw;
+    height: 12vh;
+    margin-left: 5vw;
+    background-color: transparent;
+  }
+  
+  .footer-gobierno-logo {
+    width: 15vw; /* Ajusta el tamaño del logo del Gobierno */
+    height: 12vh;
+    margin-left: 55vw;
+    background-color: transparent;
+  }
+  
+  .footer-bottom {
+    font-size: 1.2vw;
+    background-color: transparent;
+  }
+  
+  .footer-bottom p {
+    background-color: transparent;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .footer-right {
+      margin-top: 20px;
+      background-color: transparent;
+    }
+  }
