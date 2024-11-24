@@ -27,9 +27,6 @@ document.getElementById('makeNewsForm').addEventListener('submit', async functio
     });
   }
 
-  const params = new URLSearchParams(window.location.search);
-  const newsId = params.get("id");
-
 
   // Crear el objeto con los datos del formulario y los datos de sesión
   const payload = {
@@ -44,33 +41,25 @@ document.getElementById('makeNewsForm').addEventListener('submit', async functio
   };
 
   try {
-    let response;
-    if (newsId) {
-      // Si estamos editando, realizamos un PUT
-      response = await fetch(`http://localhost:8080/proyecto/news/update/${newsId}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload), // Enviar el objeto completo
-      });
-    } else {
-      // Si estamos creando una noticia, realizamos un POST
-      response = await fetch("http://localhost:8080/proyecto/news/create", {
+    // Enviar los datos al servidor
+    const respuesta = await fetch(
+      "http://localhost:8080/proyecto/news/create",
+      {
         method: "POST",
         headers: {
+          Accept: "application/json",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(payload),
-      });
-    }
+        body: JSON.stringify(noticia),
+      }
+    );
 
-    if (response.ok) {
-      // alert("Noticia creada exitosamente.");
-      document.getElementById("makeNewsForm").reset(); // Limpia el formulario
+    if (respuesta.ok) {
+      alert("Noticia creada exitosamente.");
+      formulario.reset(); // Limpia el formulario
     } else {
-      const errorMessage = await response.text();
-      throw new Error(`Error del servidor: ${errorMessage}`);
+      const errorMsg = await respuesta.text();
+      alert("Error al crear la noticia: " + errorMsg);
     }
   } catch (error) {
     console.error("Error al enviar la noticia:", error);
