@@ -397,16 +397,22 @@ select:focus {
 }
 
 button {
+  justify-content: space-between;
+  display: inline;
   background-color: #007bff;
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.9vw;
-  width: 15vw;
-  margin-top: 1vh;
-  margin-left: 27.5vw;
+  width: 15vw; /* Puedes ajustar el tamaño según lo que necesites */
+  /* Elimina los márgenes que separan demasiado los botones */
+  margin-top: 0; /* No hace falta margen superior si estás usando flexbox */
+}
+
+button.updateNew {
+  background-color: #0cd358;
 }
 
 button:hover {
