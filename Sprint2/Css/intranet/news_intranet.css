@@ -335,51 +335,64 @@
    }
    
    
-   .encabezados{
-      display: flex;
-      width: 80vw;
-      height: 8vh;
-      border-radius: 3em;
-      border: solid #c9c9c9 0.2em;
+   /* Estilo general de la tabla */
+   table {
+      width: 100%; /* Tabla ocupa todo el ancho del contenedor */
+      border-collapse: collapse; /* Combina bordes */
+      font-family: Arial, sans-serif; /* Fuente clara */
+      font-size: 16px;
+   }
+ 
+   /* Encabezados de la tabla */
+   thead {
+      background-color: #007BFF; /* Fondo azul */
+      color: #000000; /* Texto blanco */
+   }
+ 
+   thead th {
+      padding: 12px 10px; /* Espaciado interno */
+      text-align: left; /* Texto alineado a la izquierda */
+      font-weight: bold;
+      text-transform: uppercase; /* Texto en mayúsculas */
       background-color: white;
    }
-   
-   table{
-    background-color: transparent;
+
+   thead h3{
+      background-color: transparent;
    }
 
-   thead{
-    background-color: transparent;
-   }
-
-   th{
-    background-color: transparent;
-   }
-   
-   .encabezados h3{
-      width: 14vw;
-      line-height: 8vh;
-      text-align: center;
-      font-size: 1.1vw;
-      background-color: transparent;
+ 
+   /* Filas del cuerpo de la tabla */
+   tbody tr {
+      background-color: #ffffff; /* Fondo blanco */
+      transition: background-color 0.3s ease; /* Transición para el hover */
    }
    
-   
-   .encabezados h4{
-      width: 24vw;
-      line-height: 8vh;
-      padding-left: 1vw;
-      font-size: 1.1vw;
-      background-color: transparent;
+   tbody tr:nth-child(even) {
+      background-color: #f2f2f2; /* Fondo alternado para filas pares */
    }
    
+   tbody tr:hover {
+      background-color: #e9f5ff; /* Fondo azul claro al pasar el cursor */
+   }
    
-   .encabezados h5{
-      width: 10vw;
-      line-height: 8vh;
-      font-size: 1.1vw;
-      padding-left: 1vw;
-      background-color: transparent;
+   /* Celdas del cuerpo de la tabla */
+   tbody td {
+      padding: 10px 8px; /* Espaciado interno */
+      border-bottom: 1px solid #ddd; /* Línea inferior */
+      text-align: left; /* Texto alineado a la izquierda */
+      background-color: rgb(201, 201, 201);
+   }
+   
+   /* Estilo de los enlaces */
+   tbody td a {
+      color: #007BFF; /* Azul para enlaces */
+      text-decoration: none; /* Sin subrayado */
+      font-weight: bold;
+   }
+   
+   tbody td a:hover {
+      text-decoration: underline; /* Subrayado al pasar el cursor */
    }
 
    td {

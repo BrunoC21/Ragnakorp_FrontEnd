@@ -14,6 +14,7 @@
       src="https://cdn.tiny.cloud/1/4fdc2y5574mndy843hleikms0pom58d3aul2f24mhlcj0bcy/tinymce/6/tinymce.min.js"
       referrerpolicy="origin"
     ></script>
+
     <script>
       tinymce.init({
         selector: "#editor", // Selecciona el textarea con este ID
@@ -29,6 +30,8 @@
                 bullist numlist outdent indent | removeformat | help",
       });
     </script>
+
+
   </head>
   <body>
     <input type="checkbox" id="btn_menu" />
@@ -72,10 +75,13 @@
                 <a href="estadisticas_intranet.html"><span>Estadisticas de visitas</span></a>
             </li>
             <li>
+              <a href="#"><span>Vinculaciones al medio</span></a>
+            </li>
+            <li>
                 <a href="historial_cambios_intranet.html"><span>Historial de cambios</span></a>
             </li>
             <li>
-                <a href="roles_intranet.html"><span>Asignación de roles</span></a>
+                <a href="roles_intranet.html"><span>Administracion de usuarios</span></a>
             </li>
           </ul>
       </div>
@@ -83,29 +89,17 @@
 
   <h2 class="titulo_editor">Crear Noticia</h2>
     <div class="form-container">
-      <form action="#" method="POST" enctype="multipart/form-data">
+      <form id="makeNewsForm" action="#" method="POST" enctype="multipart/form-data">
         <!-- Nombre de la noticia -->
         <div class="form-group">
           <label for="titulo">Titular de la noticia</label>
-          <input
-            type="text"
-            id="titulo"
-            name="titulo"
-            class="input-contenido-nombre-noticia"
-            required
-          />
+          <input type="text" id="titulo" name="titulo"class="input-contenido-nombre-noticia"required/>
         </div>
 
         <!-- Autores o redactores -->
         <div class="form-group">
           <label for="autores">Autores o redactores</label>
-          <input
-            type="text"
-            id="autores"
-            name="autores"
-            class="input-contenido-autores-noticia"
-            required
-          />
+          <input type="text" id="autor" name="autores" class="input-contenido-autores-noticia"required/>
         </div>
 
         <!-- Categoría -->
@@ -125,7 +119,7 @@
         <!-- Contenido de la noticia -->
         <div class="form-group">
           <label for="contenido">Contenido de la noticia</label>
-          <textarea id="editor" class="input-contenido-noticia"></textarea>
+          <textarea id="contenido" class="input-contenido-noticia"></textarea>
         </div>
 
         <!-- Multimedia -->
@@ -133,32 +127,17 @@
           <label>Multimedia</label>
           <div class="multimedia-section">
             <div class="multimedia-options">
-              <label
-                ><input
-                  type="radio"
-                  name="multimedia"
-                  value="imagenes"
-                  checked
-                />
-                Imágenes o fotos (máximo 5)</label
-              >
+              <label><input type="radio"name="multimedia"value="imagenes"checked/>Imágenes o fotos (máximo 5)</label>
             </div>
 
             <div class="form-group">
-              <input type="file" name="imagenes" accept="image/*" multiple />
-              <small
-                >El tamaño mínimo de las imágenes debe ser de 571x321 px para
-                que puedan verse correctamente.</small
-              >
+              <input id="imagen" type="file" name="imagen" accept="image/*" multiple />
+              <small>El tamaño mínimo de las imágenes debe ser de 571x321 px para que puedan verse correctamente.</small>
             </div>
           </div>
         </div>
 
-        <!-- Referencias (opcional) -->
-        <div class="form-group">
-          <label for="referencias">Referencias (opcional)</label>
-          <input type="text" class="input-contenido-referencias-noticia" />
-        </div>
+        
 
         <!-- Botón de enviar -->
         <div class="form-group">

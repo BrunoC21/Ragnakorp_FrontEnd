@@ -19,15 +19,23 @@ let obtenerNoticias = async ()=>{
         for (let noticia of noticias) {
             contenidoTabla += `
                 <tr>
+                    <td>${noticia.id}</td>
                     <td>${noticia.newsTitle}</td>
                     <td>${noticia.newsWriter}</td>
                     <td>${noticia.newsCategory}</td>
                     <td>${noticia.newsDateTime}</td>
+                    <td><button class ="edit-btn" onclick= "editNews(${noticia.id})">Editar</button>
+                    </td>
                 </tr>
             `;
         }
 
         document.querySelector("#tabla tbody").outerHTML = contenidoTabla;
+    
+}
+
+function editNews(newsId) {
+    window.location.href = `makeNews_intranet.html?id=${newsId}`;
 }
 
 // // Función para obtener las noticias del servidor

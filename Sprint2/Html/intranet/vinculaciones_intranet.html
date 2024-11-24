@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intranet</title>
-    <link rel="stylesheet" href="/Sprint2/Css/intranet/estadisticas_intranet.css">
+    <link rel="stylesheet" href="/Sprint2/Css/intranet/vinculaciones_intranet.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <input type="checkbox" id="btn_menu">
@@ -54,56 +53,39 @@
           </ul>
       </div>
   </div>
-
-    <h2 id="titulo_stats"><span>Visitas Diarias</span></h2>
-
+  
+  <h1 class="titulo_proyectos">Proyectos del Polo de Salud</h1>
     <div class="container">
-      <div class="chart-container">
-        <canvas id="visitasChart" height="227.2" width="594.88"></canvas>
-      </div>
-    </div>
-    <script>
-      // Configuración de ejemplo del gráfico
-      const ctx = document.getElementById('visitasChart').getContext('2d');
-      const visitasChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00',
-                   '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'], // Etiquetas de ejemplo
-          datasets: [{
-            label: 'Visitas por hora',
-            data: [10, 15, 12, 8, 20, 18, 12, 41, 5, 51, 12, 54, 4, 12, 51, 63, 19, 38, 21, 69, 100, 2, 12, 58], // Datos de ejemplo
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            borderColor: 'rgba(75, 192, 192, 1)',
-            borderWidth: 2
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          scales: {
-            y: {
-              beginAtZero: true
-            }
-          },
-          plugins: {
-            title: {
-              display: true, // Mostrar el título
-              text: 'Gráfico de visitas diarias', // Texto del título
-              font: {
-                size: 20 // Tamaño de la fuente
-              },
-              padding: {
-                top: 10,
-                bottom: 10
-              }
-            }
-          }
-        }
-      });
-    </script>
+      <div class="container_proyectos1">
+        <table id="tabla">
+            <thead>
+                <tr class="encabezados">
+                    <th><h3 class="primero">Nombre del proyecto</h3></th>
+                    <th><h4>Descripción</h4></th>
+                    <th><h3>Fecha de inicio</h3></th>
+                    <th><h4>Requerimientos de postulación</h4></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="datos">
+                  <td><h3>Proyecto 1</h3></td>
+                  <td><h4>Proyecto relacionado con..</h4></td>
+                  <td><h3>dd/mm/aaaa</h3></td>
+                  <td><a href="#"><h3>Detalles</h3></a></td>
+                </tr>
+                <tr class="datos">
+                  <td><h3>Proyecto 1</h3></td>
+                  <td><h4>Proyecto relacionado con..</h4></td>
+                  <td><h3>dd/mm/aaaa</h3></td>
+                  <td><a href="#"><h3>Detalles</h3></a></td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="formulario_postulacion_intranet.html" class="postular-btn">
+          Postular a un Proyecto
+        </a>
+   </div>
 
-    <div class="separador"></div>    
 
     <footer>
       <div class="footer-container">
