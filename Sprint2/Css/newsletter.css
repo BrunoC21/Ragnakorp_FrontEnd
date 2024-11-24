@@ -329,6 +329,26 @@ form {
     background-color: #E3E1E1;
 }
 
+#label_telefono {
+  top: 12vh;
+  left: 3vw;
+  color: black;
+}
+
+#telefono {
+  position: relative;
+  top: 13vh;
+  left: 2.5vw;
+  width: 30vw;
+  height: 4.5vh;
+  border-radius: 4em;
+  border: 2px solid black;
+  font-size: 1.2vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  background-color: #E3E1E1;
+}
+
 .checkbox-group{
     background-color: transparent;
 }
@@ -338,7 +358,7 @@ form {
     align-items: center;
     color: black;
     position: relative;
-    top: 13vh;
+    top: 16vh;
     left: 6vw;
     width: 25vw;
     height: 4.5vh;
