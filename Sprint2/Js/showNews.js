@@ -18,13 +18,14 @@ let obtenerNoticias = async ()=>{
         let contenidoTabla = "";
         for (let noticia of noticias) {
             contenidoTabla += `
-                <tr>
-                    <td>${noticia.id}</td>
-                    <td>${noticia.newsTitle}</td>
-                    <td>${noticia.newsWriter}</td>
-                    <td>${noticia.newsCategory}</td>
-                    <td>${noticia.newsDateTime}</td>
-                    <td><button class ="edit-btn" onclick= "editNews(${noticia.id})">Editar</button>
+               <tr>
+                 <td>${noticia.id}</td>
+                 <td>${noticia.newsTitle}</td>
+                 <td>${noticia.newsWriter}</td>
+                 <td>${noticia.newsCategory}</td>
+                 <td>${noticia.newsDateTime}</td>
+                    <td>
+                        <button id="btnEditar" data-id="${noticia.id}">Editar</button>
                     </td>
                 </tr>
             `;
