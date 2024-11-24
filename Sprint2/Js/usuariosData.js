@@ -21,7 +21,7 @@ let listarUsuarios = async ()=> {
                     <td>${usuario.userName} ${usuario.userLastName}</td>
                     <td>${usuario.userRut}</td>
                     <td>${usuario.userRole}</td>
-                    <td><button type="button"><a href="../register.html">Editar Rol</a></button></td>
+                    <td><button>Editar Rol</button>
                 </tr>
             `;
         }
