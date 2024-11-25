@@ -292,23 +292,8 @@
   background-color: transparent;
 }
 
-.titulo_noticias{
-  position: absolute;
-  top: 25vh;
-  left: 37.5vw;
-  width: 25vw;
-  height: 8vh;
-  text-align: center;
-  line-height: 8vh;
-  border-radius: 2em;
-  color: white;
-  font-size: 1.5vw;
-  background-color: #1d438a;
-}
-
-
 .container_noticias{
-  width: 80vw;
+  width: 81vw;
   height: 70vh;
   margin-top: 27vh;
   margin-left: 10vw;
@@ -353,29 +338,14 @@ tbody tr:hover {
   background-color: #f1f1f1;
 }
 
-.separador_news{
+.separador{
   height: 5vw;
 } 
 
-.titulo_proyectos{
-  position: absolute;
-  top: 115vh;
-  left: 37.5vw;
-  width: 25vw;
-  height: 8vh;
-  text-align: center;
-  line-height: 8vh;
-  border-radius: 2em;
-  color: white;
-  font-size: 1.5vw;
-  background-color: #1d438a;
-}
-
-
 .container_proyectos{
-  width: 60vw;
+  width: 62vw;
   height: 70vh;
-  margin-top: 11vh;
+  margin-top: 23vh;
   margin-left: 20vw;
   background-color: transparent;
   overflow-y: auto;
