@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head> 
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Intranet</title>
@@ -30,8 +30,6 @@
                 bullist numlist outdent indent | removeformat | help",
       });
     </script>
-
-
   </head>
   <body>
     <input type="checkbox" id="btn_menu" />
@@ -56,51 +54,79 @@
     <!-- menu.html -->
     <div class="container_menu">
       <div class="menu_desplegable">
-          <label for="btn_menu"><i class='bx bx-x'></i></label>
-          <label for="btn_menu"><div class="miss"></div></label>
-          <div class="parte_superior">
-              <img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="">
-              <div class="titulo_menu">
-                  <h2>Polo de salud</h2>
-                  <h3>Ñuble</h3>
-              </div>
+        <label for="btn_menu"><i class="bx bx-x"></i></label>
+        <label for="btn_menu"><div class="miss"></div></label>
+        <div class="parte_superior">
+          <img
+            src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png"
+            alt=""
+          />
+          <div class="titulo_menu">
+            <h2>Polo de salud</h2>
+            <h3>Ñuble</h3>
           </div>
-          <ul class="menu">
-              <li id="news-item">
-                  <a href="news_intranet.html"><span>Noticias</span></a>
-              </li>
-              <li id="proyectos-item">
-                  <a href="proyectos_intranet.html"><span>Proyectos</span></a>
-              </li>
-              <li id="estadisticas-item">
-                  <a href="estadisticas_intranet.html"><span>Estadisticas de visitas</span></a>
-              </li>
-              <li id="vinculaciones-item">
-                  <a href="#"><span>Vinculaciones al medio</span></a>
-              </li>
-              <li id="historial-item">
-                  <a href="historial_cambios_intranet.html"><span>Historial de cambios</span></a>
-              </li>
-              <li id="roles-item">
-                  <a href="roles_intranet.html"><span>Administracion de usuarios</span></a>
-              </li>
-          </ul>
+        </div>
+        <ul class="menu">
+          <li id="news-item">
+            <a href="news_intranet.html"><span>Noticias</span></a>
+          </li>
+          <li id="proyectos-item">
+            <a href="proyectos_intranet.html"><span>Proyectos</span></a>
+          </li>
+          <li id="estadisticas-item">
+            <a href="estadisticas_intranet.html"
+              ><span>Estadisticas de visitas</span></a
+            >
+          </li>
+          <li id="vinculaciones-item">
+            <a href="/Sprint2/Html/intranet/vinculaciones_intranet.html"
+              ><span>Vinculaciones al medio</span></a
+            >
+          </li>
+          <li id="historial-item">
+            <a href="historial_cambios_intranet.html"
+              ><span>Historial de cambios</span></a
+            >
+          </li>
+          <li id="roles-item">
+            <a href="roles_intranet.html"
+              ><span>Administracion de usuarios</span></a
+            >
+          </li>
+        </ul>
       </div>
-  </div>
+    </div>
 
-  <h2 class="titulo_editor">Crear Noticia</h2>
+    <h2 class="titulo_editor">Crear Noticia</h2>
     <div class="form-container">
-      <form id="makeNewsForm" action="#" method="POST" enctype="multipart/form-data">
+      <form
+        id="makeNewsForm"
+        action="#"
+        method="POST"
+        enctype="multipart/form-data"
+      >
         <!-- Nombre de la noticia -->
         <div class="form-group">
           <label for="titulo">Titular de la noticia</label>
-          <input type="text" id="titulo" name="titulo"class="input-contenido-nombre-noticia"required/>
+          <input
+            type="text"
+            id="titulo"
+            name="titulo"
+            class="input-contenido-nombre-noticia"
+            required
+          />
         </div>
 
         <!-- Autores o redactores -->
         <div class="form-group">
           <label for="autor">Autores o redactores</label>
-          <input type="text" id="autor" name="autores" class="input-contenido-autores-noticia"required/>
+          <input
+            type="text"
+            id="autor"
+            name="autores"
+            class="input-contenido-autores-noticia"
+            required
+          />
         </div>
 
         <!-- Categoría -->
@@ -133,15 +159,26 @@
           <div class="multimedia-section">
             <div class="form-group">
               <!-- <label for="imagen">Subir imágenes:</label> -->
-              <input id="imagen" type="file" name="imagen" accept="image/*" multiple />
-              <small>El tamaño mínimo de las imágenes debe ser de 571x321 pixeles.</small>
+              <input
+                id="imagen"
+                type="file"
+                name="imagen"
+                accept="image/*"
+                multiple
+              />
+              <small
+                >El tamaño mínimo de las imágenes debe ser de 571x321
+                pixeles.</small
+              >
             </div>
           </div>
-        </div>       
+        </div>
 
         <!-- Botón de enviar y actualizar -->
         <div class="form-group">
-          <button type="submit" id="update" class="updateNew">Actualizar Noticia</button>
+          <button type="submit" id="update" class="updateNew">
+            Actualizar Noticia
+          </button>
           <button type="submit">Publicar Noticia</button>
         </div>
       </form>

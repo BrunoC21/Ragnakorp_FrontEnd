@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intranet</title>
-    <link rel="stylesheet" href="/Sprint2/Css/intranet/news_intranet.css" />
+    <title>Formulario Vinculacion</title>
+    <link rel="stylesheet" href="/Sprint2/Css/intranet/makeVinculacion.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -76,29 +76,42 @@
       </div>
     </div>
 
-    <a
-      href="../intranet/makeNews_intranet.html"
-      class="btn_noticias"
-      id="agregar"
-      ><i class="bx bx-plus" style="color: #ffffff"></i><span>Agregar</span></a
-    >
-    <h2 class="titulo">Noticias del polo de salud</h2>
+    <h2 class="titulo_vinculacion">
+      Formulario Creacion Vinculacion con el medio
+    </h2>
+    <div class="container-form">
+      <form id="makeVinculacionForm" action="#">
+        <!-- Nombre de la Actividad -->
+        <div class="form-group">
+          <label for="titulo">Nombre de la ctividad a realizar</label>
+          <input
+            type="text"
+            id="titulo"
+            name="titulo"
+            class="input-contenido-nombre-actividad"
+            required
+          />
+        </div>
 
-    <div class="container_noticias1">
-      <table id="tabla">
-        <thead>
-          <tr class="encabezados">
-            <th><h3>Nro Noticia</h3></th>
-            <th><h3>Titulo</h3></th>
-            <th><h3>Autor</h3></th>
-            <th><h3>Categoria</h3></th>
-            <th><h3>Publicacion</h3></th>
-            <th><h3>Editar</h3></th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+        <div class="form-group">
+          <label for="descripcion">Descripion de la Actividad</label>
+          <textarea
+            id="descripcion"
+            class="input-descripcion-actividad"
+          ></textarea>
+        </div>
+
+        <!-- Botón de enviar y actualizar -->
+        <div class="form-group">
+          <button type="submit" id="update" class="updateNew">
+            Actualizar Vinculacion
+          </button>
+          <button type="submit">Publicar Vinculacion</button>
+        </div>
+      </form>
     </div>
+
+    <div class="separador"></div>
 
     <footer>
       <div class="footer-container">
@@ -134,8 +147,5 @@
         <p>&copy;2024 Todos los Derechos Reservados</p>
       </div>
     </footer>
-
-    <script src="../../Js/menu.js"></script>
-    <script src="../../Js/showNews.js"></script>
   </body>
 </html>

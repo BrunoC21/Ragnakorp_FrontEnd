@@ -251,171 +251,106 @@ nav ul .submenu:hover {
   opacity: 1;
 }
 
-.btn_vinculaciones {
-  position: absolute;
-  display: flex;
-  width: 10vw;
-  height: 5vh;
-  border-radius: 3em;
-  line-height: 5vh;
-  background-color: #2e277c;
-  top: 18vh;
-  left: 80vw;
-}
-
-.btn_vinculaciones i {
-  height: 5vh;
-  line-height: 5vh;
-  font-size: 1.5vw;
-  margin-left: 1.8vw;
-  background-color: transparent;
-}
-
-.btn_vinculaciones span {
-  display: block;
-  height: 5vh;
-  font-size: 1.2vw;
-  color: white;
-  background-color: transparent;
-}
-
-/* Estilos para la tabla */
 .titulo_vinculacion {
-  position: absolute;
-  top: 14vh;
-  left: 0vw;
-  width: 25vw;
+  position: relative;
+  top: 13vh;
   height: 8vh;
+  width: 40vw;
   line-height: 8vh;
+  color: white;
+  font-size: 1.5vw;
   padding-left: 2vw;
   border-radius: 0em 2em 2em 0em;
-  color: white;
-  font-size: 1.5vw;
   background-color: #1d438a;
 }
 
-.container_proyectos1 {
-  width: 80vw;
-  height: 70vh;
-  margin-top: 25vh;
-  margin-left: 10vw;
-  background-color: transparent;
+.container-form {
+  position: absolute;
+  top: 22vh;
+  left: 25vw;
+  width: 50vw;
+  height: 60vh;
+  margin: 0.5vw auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f7f9fc; /* Fondo blanco del formulario */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.encabezados {
-  display: flex;
-  width: 80vw;
-  height: 8vh;
-  border-radius: 3em;
-  border: solid #c9c9c9 0.2em;
-  background-color: white;
+.form-group {
+  margin-top: 15px;
+  background-color: #f7f9fc;
 }
 
-table {
-  background-color: transparent;
-}
-
-thead {
-  background-color: transparent;
-}
-
-th {
-  background-color: transparent;
-}
-
-.encabezados h3 {
-  width: 15vw;
-  line-height: 8vh;
-  text-align: center;
-  font-size: 1.1vw;
-  background-color: transparent;
-}
-
-.primero {
-  margin-left: 2vw;
-}
-
-.encabezados h4 {
-  width: 23vw;
-  line-height: 8vh;
-  padding-left: 1vw;
-  font-size: 1.1vw;
-  background-color: transparent;
-}
-
-td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-  background-color: #f9f9f9;
-}
-
-.datos {
-  display: flex;
-  width: 80vw;
-  height: 8vh;
-  border: solid #c9c9c9 0.2em;
-  background-color: #f9f9f9;
-}
-
-.datos h3 {
-  width: 15vw;
-  line-height: 5vh;
-  padding-left: 1vw;
-  font-size: 1.1vw;
-  background-color: #f9f9f9;
-  font-weight: normal;
-}
-
-.datos h4 {
-  width: 23vw;
-  line-height: 5vh;
-  padding-left: 1vw;
-  font-size: 1.1vw;
-  background-color: #f9f9f9;
-  font-weight: normal;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-tbody tr:hover {
-  background-color: #f1f1f1;
-}
-
-/* Estilos para el botón */
-.postular-btn {
-  display: inline-block;
-  width: 15vw;
-  height: 6vh;
-  line-height: 6vh;
-  position: relative;
-  top: 6vh;
-  left: 32.5vw;
-  background-color: #4caf50;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  border-radius: 0.5em;
-  font-size: 1vw;
+label {
+  display: block;
+  margin-bottom: 5px;
   font-weight: bold;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s;
+  background-color: #f7f9fc;
 }
 
-.postular-btn:hover {
-  background-color: #45a049;
+form {
+  background-color: #f7f9fc;
+}
+
+small {
+  background-color: #f7f9fc;
+}
+
+input {
+  background-color: #f7f9fc;
+}
+
+.input-contenido-nombre-actividad {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff; /* Fondo blanco de las casillas */
+  color: #333;
+}
+
+.input-descripcion-actividad {
+  width: 95%;
+  height: 40vh;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff; /* Fondo blanco de las casillas */
+  color: #333;
+  resize: none;
+}
+
+button {
+  justify-content: space-between;
+  display: inline;
+  background-color: #007bff;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9vw;
+  width: 15vw; /* Puedes ajustar el tamaño según lo que necesites */
+  /* Elimina los márgenes que separan demasiado los botones */
+  margin-top: 0; /* No hace falta margen superior si estás usando flexbox */
+}
+
+button.updateNew {
+  background-color: #0cd358;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
+  position: absolute bottom;
+  width: 100vw;
   background-color: #27485e; /* Color azul oscuro del fondo */
   color: white;
   padding: 20px 0;
   text-align: center;
-  width: 100%;
 }
 
 .footer-container {
@@ -503,5 +438,5 @@ footer {
 }
 
 .separador {
-  height: 5vw;
+  height: 80vh;
 }
