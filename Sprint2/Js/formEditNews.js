@@ -93,6 +93,8 @@ document.getElementById('update').addEventListener('click', async function (even
 
     if (respuesta.ok) {
       alert("Noticia actualizada exitosamente.");
+      // Eliminar el localStorage con el nombre "noticiaEdit"
+      localStorage.removeItem("noticiaEdit");
       // Redirigir o limpiar el formulario si es necesario
       window.location.href = "/Sprint2/Html/intranet/news_intranet.html"; // O cualquier otra página de redirección
     } else {

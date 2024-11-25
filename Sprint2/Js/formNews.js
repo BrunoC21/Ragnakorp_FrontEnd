@@ -27,7 +27,6 @@ document.getElementById('makeNewsForm').addEventListener('submit', async functio
     });
   }
 
-
   // Crear el objeto con los datos del formulario y los datos de sesión
   const payload = {
     news: {
@@ -50,18 +49,22 @@ document.getElementById('makeNewsForm').addEventListener('submit', async functio
           Accept: "application/json",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(noticia),
+        body: JSON.stringify(payload),
       }
     );
 
     if (respuesta.ok) {
       alert("Noticia creada exitosamente.");
-      formulario.reset(); // Limpia el formulario
+      // Redirige a la página deseada
+      window.location.href = '/Sprint2/Html/intranet/news_intranet.html';
+      document.getElementById("makeNewsForm").reset(); // Limpia el formulario
     } else {
+      // Si la respuesta no es exitosa, obtener el mensaje de error
       const errorMsg = await respuesta.text();
       alert("Error al crear la noticia: " + errorMsg);
     }
   } catch (error) {
+    // Solo mostramos este mensaje si ocurre un error de conexión o problema con la solicitud
     console.error("Error al enviar la noticia:", error);
     alert("Error al conectar con el servidor. Intenta nuevamente.");
   }
