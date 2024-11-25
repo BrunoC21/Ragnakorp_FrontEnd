@@ -23,9 +23,21 @@ let listarProyectos = async ()=>{
                     <td>${proyecto.projDescription}</td>
                     <td>${proyecto.projStartDate}</td>
                     <td>${proyecto.projRequirementsPostulation}</td>
+                    <td>
+                        <button class="btnEditar" data-noticia='${JSON.stringify(proyecto)}'>Editar</button>
+                    </td>
                 </tr>
             `;
         }
 
         document.querySelector("#tabla tbody").outerHTML = contenidoTabla;
 }
+
+// Asigna eventos a los botones "Editar"
+document.querySelectorAll(".btnEditar").forEach(button => {
+    button.addEventListener("click", () => {
+        const proyecto = JSON.parse(button.dataset.proyecto);
+        localStorage.setItem("proyectoEdit", JSON.stringify(proyecto));
+        window.location.href = `make_proyect.html?id=${proyecto.id}`;
+    })
+})
