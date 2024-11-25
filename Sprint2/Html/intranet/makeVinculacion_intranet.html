@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intranet</title>
-    <link rel="stylesheet" href="/Sprint2/Css/intranet/roles_intranet.css" />
+    <title>Formulario Vinculacion</title>
+    <link rel="stylesheet" href="/Sprint2/Css/intranet/makeVinculacion.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -46,50 +46,72 @@
           </div>
         </div>
         <ul class="menu">
-            <li id="news-item">
-                <a href="news_intranet.html"><span>Noticias</span></a>
-            </li>
-            <li id="proyectos-item">
-                <a href="proyectos_intranet.html"><span>Proyectos</span></a>
-            </li>
-            <li id="estadisticas-item">
-                <a href="estadisticas_intranet.html"><span>Estadisticas de visitas</span></a>
-            </li>
-            <li id="vinculaciones-item">
-                <a href="#"><span>Vinculaciones al medio</span></a>
-            </li>
-            <li id="historial-item" class="submenu-parent">
-              <a href="#"><span>Historial de cambios</span></a>
-              <ul class="submenu-historial">
-                  <li><a href="historial_cambios_noticintra.html"><span>Historial de noticias</span></a></li>
-                  <li><a href="historial_cambios_proyecintra.html"><span>Historial de proyectos</span></a></li>
-              </ul>
-            </li>
-            <li id="roles-item">
-                <a href="roles_intranet.html"><span>Administracion de usuarios</span></a>
-            </li>
+          <li id="news-item">
+            <a href="news_intranet.html"><span>Noticias</span></a>
+          </li>
+          <li id="proyectos-item">
+            <a href="proyectos_intranet.html"><span>Proyectos</span></a>
+          </li>
+          <li id="estadisticas-item">
+            <a href="estadisticas_intranet.html"
+              ><span>Estadisticas de visitas</span></a
+            >
+          </li>
+          <li id="vinculaciones-item">
+            <a href="/Sprint2/Html/intranet/vinculaciones_intranet.html"
+              ><span>Vinculaciones al medio</span></a
+            >
+          </li>
+          <li id="historial-item">
+            <a href="historial_cambios_intranet.html"
+              ><span>Historial de cambios</span></a
+            >
+          </li>
+          <li id="roles-item">
+            <a href="roles_intranet.html"
+              ><span>Administracion de usuarios</span></a
+            >
+          </li>
         </ul>
       </div>
     </div>
 
-    <a href="/Sprint2/Html/register.html" class="btn_roles" id="crear"
-      ><i class="bx bx-plus" style="color: #ffffff"></i><span>Crear</span></a
-    >
-    <h1 class="titulo_roles">Manejo de roles</h1>
+    <h2 class="titulo_vinculacion">
+      Formulario Creacion Vinculacion con el medio
+    </h2>
+    <div class="container-form">
+      <form id="makeVinculacionForm" action="#">
+        <!-- Nombre de la Actividad -->
+        <div class="form-group">
+          <label for="titulo">Nombre de la ctividad a realizar</label>
+          <input
+            type="text"
+            id="titulo"
+            name="titulo"
+            class="input-contenido-nombre-actividad"
+            required
+          />
+        </div>
 
-    <div class="container_roles">
-      <table id="tabla">
-        <thead>
-          <tr class="encabezados">
-            <th><h3 class="primero">Nombre completo</h3></th>
-            <th><h3>RUT</h3></th>
-            <th><h3>Rol actual</h3></th>
-            <th><h3>Editar rol</h3></th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+        <div class="form-group">
+          <label for="descripcion">Descripion de la Actividad</label>
+          <textarea
+            id="descripcion"
+            class="input-descripcion-actividad"
+          ></textarea>
+        </div>
+
+        <!-- Botón de enviar y actualizar -->
+        <div class="form-group">
+          <button type="submit" id="update" class="updateNew">
+            Actualizar Vinculacion
+          </button>
+          <button type="submit">Publicar Vinculacion</button>
+        </div>
+      </form>
     </div>
+
+    <div class="separador"></div>
 
     <footer>
       <div class="footer-container">
@@ -127,7 +149,7 @@
     </footer>
 
     <script src="../../Js/menu.js"></script>
-    <script src="../../Js/usuariosData.js"></script>
     <script src="../../Js/logout.js"></script>
+
   </body>
 </html>

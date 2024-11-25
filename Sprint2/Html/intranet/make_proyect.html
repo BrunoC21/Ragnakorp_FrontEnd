@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head> 
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Intranet</title>
     <link rel="stylesheet" href="/Sprint2/Css/intranet/makeproy.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -31,8 +34,6 @@
                 bullist numlist outdent indent | removeformat | help",
       });
     </script>
-
-
   </head>
   <body>
     <input type="checkbox" id="btn_menu" />
@@ -50,7 +51,7 @@
         </h3>
         <div class="submenu">
           <li><a href="../intranet/perfil.html">Perfil</a></li>
-          <li><a href="#">Cerrar sesión</a></li>
+          <li><a href="#" id="closeSession">Cerrar sesión</a></li>
         </div>
       </ul>
     </nav>
@@ -90,22 +91,79 @@
                   <a href="roles_intranet.html"><span>Administracion de usuarios</span></a>
               </li>
           </ul>
+        <label for="btn_menu"><i class="bx bx-x"></i></label>
+        <label for="btn_menu"><div class="miss"></div></label>
+        <div class="parte_superior">
+          <img
+            src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png"
+            alt=""
+          />
+          <div class="titulo_menu">
+            <h2>Polo de salud</h2>
+            <h3>Ñuble</h3>
+          </div>
+        </div>
+        <ul class="menu">
+          <li id="news-item">
+            <a href="news_intranet.html"><span>Noticias</span></a>
+          </li>
+          <li id="proyectos-item">
+            <a href="proyectos_intranet.html"><span>Proyectos</span></a>
+          </li>
+          <li id="estadisticas-item">
+            <a href="estadisticas_intranet.html"
+              ><span>Estadisticas de visitas</span></a
+            >
+          </li>
+          <li id="vinculaciones-item">
+            <a href="/Sprint2/Html/intranet/vinculaciones_intranet.html"
+              ><span>Vinculaciones al medio</span></a
+            >
+          </li>
+          <li id="historial-item">
+            <a href="historial_cambios_intranet.html"
+              ><span>Historial de cambios</span></a
+            >
+          </li>
+          <li id="roles-item">
+            <a href="roles_intranet.html"
+              ><span>Administracion de usuarios</span></a
+            >
+          </li>
+        </ul>
       </div>
-  </div>
+    </div>
 
-  <h2 class="titulo_editor">Crear proyecto</h2>
+    <h2 class="titulo_editor">Crear proyecto</h2>
     <div class="form-container">
-      <form id="makeProyForm" action="#" method="POST" enctype="multipart/form-data">
+      <form
+        id="makeProyForm"
+        action="#"
+        method="POST"
+        enctype="multipart/form-data"
+      >
         <!-- Nombre de la noticia -->
         <div class="form-group">
           <label for="titulo">Titular del proyecto</label>
-          <input type="text" id="titulo" name="titulo"class="input-contenido-nombre"required/>
+          <input
+            type="text"
+            id="titulo"
+            name="titulo"
+            class="input-contenido-nombre"
+            required
+          />
         </div>
 
         <!-- Autores o redactores -->
         <div class="form-group">
           <label for="inversion">Inversión</label>
-          <input type="text" id="inversion" name="inversion" class="input-contenido-inversion"required/>
+          <input
+            type="text"
+            id="inversion"
+            name="inversion"
+            class="input-contenido-inversion"
+            required
+          />
         </div>
 
         <!-- Categoría -->
@@ -113,21 +171,37 @@
           <label for="categoria">Categoría</label>
           <select id="categoria" name="categoria" required>
             <option value="" disabled selected>Seleccione una categoría</option>
-            <option value="Tecnología e Innovación">Tecnología e Innovación</option>
+            <option value="Tecnología e Innovación">
+              Tecnología e Innovación
+            </option>
             <option value="Educación y Formación">Educación y Formación</option>
-            <option value="Medio Ambiente y Sostenibilidad">Medio Ambiente y Sostenibilidad</option>
+            <option value="Medio Ambiente y Sostenibilidad">
+              Medio Ambiente y Sostenibilidad
+            </option>
             <option value="Arte y Cultura">Arte y Cultura</option>
             <option value="Salud y Bienestar">Salud y Bienestar</option>
-            <option value="Negocios y Emprendimiento">Negocios y Emprendimiento</option>
-            <option value="Infraestructura y Construcción">Infraestructura y Construcción</option>
-            <option value="Comunidad y Desarrollo Social">Comunidad y Desarrollo Social</option>
+            <option value="Negocios y Emprendimiento">
+              Negocios y Emprendimiento
+            </option>
+            <option value="Infraestructura y Construcción">
+              Infraestructura y Construcción
+            </option>
+            <option value="Comunidad y Desarrollo Social">
+              Comunidad y Desarrollo Social
+            </option>
             <option value="Otros">Otros</option>
           </select>
         </div>
 
         <div class="form-group">
-            <label for="fecha">Fecha de inicio</label>
-            <input type="text" id="fecha" name="fecha" class="input-contenido-fecha"required/>
+          <label for="fecha">Fecha de inicio</label>
+          <input
+            type="text"
+            id="fecha"
+            name="fecha"
+            class="input-contenido-fecha"
+            required
+          />
         </div>
 
         <!-- Contenido de la noticia -->
@@ -136,30 +210,55 @@
           <textarea id="contenido" class="input-contenido"></textarea>
         </div>
 
-        
         <div class="form-group" id="form-map">
-           
-            <label for="address">Dirección:</label>
-            <input type="text" id="address" name="address" placeholder="Ingresa una dirección">
-            <button type="button" id="searchAddressBtn">Buscar Dirección</button>
+          <label for="address">Dirección:</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="Ingresa una dirección"
+          />
+          <button type="button" id="searchAddressBtn">Buscar Dirección</button>
 
-            <label for="latitude">Latitud:</label>
-            <input type="text" id="latitude" name="latitude" placeholder="Latitud" readonly>
+          <label for="latitude">Latitud:</label>
+          <input
+            type="text"
+            id="latitude"
+            name="latitude"
+            placeholder="Latitud"
+            readonly
+          />
 
-            <label for="longitude">Longitud:</label>
-            <input type="text" id="longitude" name="longitude" placeholder="Longitud" readonly>
+          <label for="longitude">Longitud:</label>
+          <input
+            type="text"
+            id="longitude"
+            name="longitude"
+            placeholder="Longitud"
+            readonly
+          />
 
-            <div id="map"></div>
+          <div id="map"></div>
         </div>
 
         <div class="form-group">
-            <label for="requerimientos" id="titulo_requerimientos">Requerimientos de postulación</label>
-            <input type="text" id="requerimientos" name="requerimientos" class="input-contenido-requerimientos"required/>
+          <label for="requerimientos" id="titulo_requerimientos"
+            >Requerimientos de postulación</label
+          >
+          <input
+            type="text"
+            id="requerimientos"
+            name="requerimientos"
+            class="input-contenido-requerimientos"
+            required
+          />
         </div>
 
         <!-- Botón de enviar y actualizar -->
         <div class="form-group">
-          <button type="submit" id="update" class="updateNew">Actualizar proyecto</button>
+          <button type="submit" id="update" class="updateNew">
+            Actualizar proyecto
+          </button>
           <button type="submit">Publicar proyecto</button>
         </div>
       </form>
@@ -205,81 +304,90 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
       // Inicializar el mapa
-      const map = L.map('map').setView([0, 0], 2); // Coordenadas iniciales (mundo)
-  
+      const map = L.map("map").setView([0, 0], 2); // Coordenadas iniciales (mundo)
+
       // Añadir una capa de mapa
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       }).addTo(map);
-  
+
       // Añadir un marcador arrastrable
       const marker = L.marker([0, 0], { draggable: true }).addTo(map);
-  
+
       // Actualizar coordenadas en el formulario cuando el marcador se mueve
-      marker.on('dragend', function () {
+      marker.on("dragend", function () {
         const position = marker.getLatLng();
-        document.getElementById('latitude').value = position.lat.toFixed(6);
-        document.getElementById('longitude').value = position.lng.toFixed(6);
+        document.getElementById("latitude").value = position.lat.toFixed(6);
+        document.getElementById("longitude").value = position.lng.toFixed(6);
       });
-  
+
       // Obtener campos del formulario
-      const addressInput = document.getElementById('address');
-      const latitudeInput = document.getElementById('latitude');
-      const longitudeInput = document.getElementById('longitude');
-      const searchAddressBtn = document.getElementById('searchAddressBtn');
-  
+      const addressInput = document.getElementById("address");
+      const latitudeInput = document.getElementById("latitude");
+      const longitudeInput = document.getElementById("longitude");
+      const searchAddressBtn = document.getElementById("searchAddressBtn");
+
       // Función para buscar una dirección usando la API de Nominatim
-      searchAddressBtn.addEventListener('click', () => {
+      searchAddressBtn.addEventListener("click", () => {
         const address = addressInput.value.trim();
         if (!address) {
-          alert('Por favor, ingresa una dirección.');
+          alert("Por favor, ingresa una dirección.");
           return;
         }
-  
+
         // Realizar la petición a la API de Nominatim
-        fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`)
-          .then(response => response.json())
-          .then(data => {
+        fetch(
+          `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(
+            address
+          )}`
+        )
+          .then((response) => response.json())
+          .then((data) => {
             if (data.length === 0) {
-              alert('No se encontró la dirección. Intenta con otra.');
+              alert("No se encontró la dirección. Intenta con otra.");
               return;
             }
-  
+
             // Obtener la primera coincidencia
             const { lat, lon } = data[0];
-  
+
             // Mover el marcador y centrar el mapa
             const newLatLng = [parseFloat(lat), parseFloat(lon)];
             marker.setLatLng(newLatLng);
             map.setView(newLatLng, 13);
-  
+
             // Actualizar los campos de latitud y longitud
             latitudeInput.value = parseFloat(lat).toFixed(6);
             longitudeInput.value = parseFloat(lon).toFixed(6);
           })
-          .catch(error => {
-            console.error('Error al buscar la dirección:', error);
-            alert('Hubo un problema al buscar la dirección. Inténtalo más tarde.');
+          .catch((error) => {
+            console.error("Error al buscar la dirección:", error);
+            alert(
+              "Hubo un problema al buscar la dirección. Inténtalo más tarde."
+            );
           });
       });
-  
+
       // Centrar el mapa en la ubicación del usuario (si está disponible)
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
           (position) => {
             const userLat = position.coords.latitude;
             const userLng = position.coords.longitude;
-  
+
             // Mover el marcador y centrar el mapa
             map.setView([userLat, userLng], 13);
             marker.setLatLng([userLat, userLng]);
-  
+
             // Llenar los campos del formulario
             latitudeInput.value = userLat.toFixed(6);
             longitudeInput.value = userLng.toFixed(6);
           },
           () => {
-            alert('No se pudo obtener tu ubicación automáticamente. Usa el mapa para seleccionarla.');
+            alert(
+              "No se pudo obtener tu ubicación automáticamente. Usa el mapa para seleccionarla."
+            );
           }
         );
       }
@@ -287,5 +395,6 @@
     <script src="../../Js/menu.js"></script>
     <script src="../../Js/formNews.js"></script>
     <script src="../../Js/formEditNews.js"></script>
+    <script src="../../Js/logout.js"></script>
   </body>
 </html>
