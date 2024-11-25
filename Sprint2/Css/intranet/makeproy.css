@@ -197,6 +197,7 @@ body{
       display: flex;
       width: 20vw;
       height: 10vh;
+      margin-top: -1vh;
       padding-bottom: 3vh;
       background-color: #2e277c;
    }
@@ -355,6 +356,15 @@ body{
     background-color: #ffffff; /* Fondo blanco de las casillas */
     color: #333;
   }
+
+  .input-contenido-fecha {
+    width: 25%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffff; /* Fondo blanco de las casillas */
+    color: #333;
+  }
   
   .input-contenido-requerimientos {
     width: 95%;
@@ -363,6 +373,10 @@ body{
     border-radius: 4px;
     background-color: #ffffff; /* Fondo blanco de las casillas */
     color: #333;
+  }
+
+  #titulo_requerimientos{
+    margin-top: 3svh;
   }
   
   .input-contenido {
@@ -382,21 +396,6 @@ body{
     border-color: #007bff;
     background-color: #ffffff; /* Fondo blanco al enfocar */
     outline: none;
-  }
-  
-  .multimedia-section {
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: #f7f9fc; /* Fondo gris claro de la sección multimedia */
-  }
-  
-  .multimedia-options {
-    background-color: #f7f9fc;
-  }
-  
-  .multimedia-section p {
-    background-color: #f7f9fc;
   }
 
   #address, #latitude, #longitude{
@@ -442,16 +441,17 @@ body{
     justify-content: space-between;
     display: inline;
     background-color: #007bff;
-    color: rgb(0, 0, 0);
+    color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.5vh;
     cursor: pointer;
     font-size: 0.9vw;
     width: 15vw; /* Puedes ajustar el tamaño según lo que necesites */
     /* Elimina los márgenes que separan demasiado los botones */
-    margin-top: 0; /* No hace falta margen superior si estás usando flexbox */
-  }
+    margin-top: 2vh; /* No hace falta margen superior si estás usando flexbox */
+    margin-right: 2vw;
+}
   
   button.updateNew {
     background-color: #0cd358;

@@ -121,24 +121,17 @@
           </select>
         </div>
 
+        <div class="form-group">
+            <label for="fecha">Fecha de inicio</label>
+            <input type="text" id="fecha" name="fecha" class="input-contenido-fecha"required/>
+        </div>
+
         <!-- Contenido de la noticia -->
         <div class="form-group">
           <label for="contenido">Descripción</label>
           <textarea id="contenido" class="input-contenido"></textarea>
         </div>
 
-        <!-- Multimedia -->
-        <div class="form-group">
-          <!-- <h4>Multimedia</h4> -->
-          <label for="imagen">Subir imágenes:</label>
-          <div class="multimedia-section">
-            <div class="form-group">
-              <!-- <label for="imagen">Subir imágenes:</label> -->
-              <input id="imagen" type="file" name="imagen" accept="image/*" multiple />
-              <small>El tamaño mínimo de las imágenes debe ser de 571x321 pixeles.</small>
-            </div>
-          </div>
-        </div>    
         
         <div class="form-group" id="form-map">
            
@@ -156,7 +149,7 @@
         </div>
 
         <div class="form-group">
-            <label for="requerimientos">Requerimientos</label>
+            <label for="requerimientos" id="titulo_requerimientos">Requerimientos de postulación</label>
             <input type="text" id="requerimientos" name="requerimientos" class="input-contenido-requerimientos"required/>
         </div>
 
