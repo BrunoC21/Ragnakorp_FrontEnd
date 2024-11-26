@@ -1,3 +1,10 @@
+window.onload = function () {
+    const sessionData = JSON.parse(localStorage.getItem("sessionData"));
+    if (sessionData) {
+        localStorage.removeItem("sessionData");
+    }
+}
+
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
 
