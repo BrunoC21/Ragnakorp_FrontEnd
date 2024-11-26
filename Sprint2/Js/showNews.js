@@ -75,3 +75,10 @@ let generarOpcionesFiltro = () => {
     });
 };
 
+let boton = document.getElementById("agregar");
+boton.addEventListener("click", evento => {
+    const noticia = JSON.parse(localStorage.getItem("noticiaEdit"));
+    if (noticia) {
+        localStorage.removeItem("noticiaEdit");
+    }
+});
