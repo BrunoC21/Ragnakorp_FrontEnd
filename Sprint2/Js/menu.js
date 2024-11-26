@@ -1,5 +1,12 @@
 // menu.js
 
+window.onload = function () {
+    const sessionData = JSON.parse(localStorage.getItem("sessionData"));
+    if (!sessionData) {
+        window.location.href = "/Sprint2/Html/intranet/login_intranet.html";
+    }
+}
+
 // Esperamos que el DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", function() {
     // Recuperar los datos de la sesión del Local Storage
