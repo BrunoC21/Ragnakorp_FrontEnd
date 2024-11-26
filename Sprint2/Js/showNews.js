@@ -2,6 +2,8 @@ window.onload = function () {
     obtenerNoticias();
 };
 
+let noticias = []; // Variable global para almacenar las noticias
+
 let obtenerNoticias = async () => {
     const peticion = await fetch("http://localhost:8080/proyecto/news/search", {
         method: "GET",
@@ -11,10 +13,20 @@ let obtenerNoticias = async () => {
         }
     });
 
-    const noticias = await peticion.json();
+    noticias = await peticion.json(); // Guarda las noticias en la variable global
+    generarOpcionesFiltro(); // Genera dinámicamente las opciones del filtro
+    renderizarTabla("todos"); // Inicializa la tabla mostrando todas las noticias
+};
 
+let renderizarTabla = (filtroCategoria) => {
     let contenidoTabla = "";
-    for (let noticia of noticias) {
+
+    // Filtrar las noticias si se selecciona una categoría específica
+    const noticiasFiltradas = filtroCategoria === "todos" 
+        ? noticias 
+        : noticias.filter(noticia => noticia.newsCategory.toLowerCase() === filtroCategoria.toLowerCase());
+
+    for (let noticia of noticiasFiltradas) {
         contenidoTabla += `
             <tr>
                 <td>${noticia.id}</td>
@@ -39,5 +51,27 @@ let obtenerNoticias = async () => {
             window.location.href = `makeNews_intranet.html?id=${noticia.id}`;
         });
     });
-    
 };
+
+let generarOpcionesFiltro = () => {
+    const categoriasUnicas = [...new Set(noticias.map(noticia => noticia.newsCategory))];
+    const filtroCategoria = document.querySelector("#filtro-categoria");
+
+    // Agregar la opción "Todos" por defecto
+    filtroCategoria.innerHTML = '<option value="todos">Todos</option>';
+
+    // Crear opciones dinámicas basadas en las categorías únicas
+    categoriasUnicas.forEach(categoria => {
+        const option = document.createElement("option");
+        option.value = categoria;
+        option.textContent = categoria.charAt(0).toUpperCase() + categoria.slice(1); // Capitaliza
+        filtroCategoria.appendChild(option);
+    });
+
+    // Configura el evento "change" para filtrar las noticias
+    filtroCategoria.addEventListener("change", () => {
+        const categoriaSeleccionada = filtroCategoria.value;
+        renderizarTabla(categoriaSeleccionada);
+    });
+};
+
