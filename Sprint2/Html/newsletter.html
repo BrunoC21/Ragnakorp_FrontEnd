@@ -72,20 +72,14 @@
     </div>
 
     <div class="form-container">
-            <label for="nombre" class="form_labels" id="label_nombre">Nombre y Apellidos:</label>
-            <input type="text" id="nombre" name="nombre" required />
-            <label for="email" class="form_labels" id="label_email">Email:</label>
-            <input type="email" id="email" name="email" required />
-            <label for="telefono" class="form_labels" id="label_telefono">Teléfono:</label>
-            <input type="number" id="telefono" name="telefono" required />
-
-            <div class="checkbox-group">
-                <label><input type="checkbox" name="notification" value="noticias"> Recibir Notificaciones de noticias</label>
-                <label><input type="checkbox" name="notification" value="vinculacion"> Recibir Notificaciones de eventos futuros</label>
-            </div>
-
-          <button type="submit" id="boton">Enviar</button>
-      </div>
+      <label for="nombre" class="form_labels" id="label_nombre">Nombre y Apellidos:</label>
+      <input type="text" id="nombre" name="nombre" required />
+      <label for="email" class="form_labels" id="label_email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <label for="telefono" class="form_labels" id="label_telefono">Teléfono:</label>
+      <input type="number" id="telefono" name="telefono" required />
+      <button type="button" id="boton">Enviar</button>
+  </div>
 
     <div class="separador"></div>
     <footer>
@@ -107,5 +101,6 @@
       });
       splide.mount();
     </script>
+    <script src="../Js/formNewsLetter.js"></script>
 </body>
 </html>
