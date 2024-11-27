@@ -74,44 +74,71 @@
     <!-- fin menu lateral intranet -->
 
     <h2 class="titulo_postulaciones">Solicitudes de postulacion</h2>
+    
     <div class="postulation_container">
     </div>
-    <table id="postulaciones">
-      <thead>
-        <tr>
-          <th>ID Postulación</th>
-          <th>A qué está postulando</th>
-          <th>Acción</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Ejemplo de datos -->
-        <tr>
-          <td>1</td>
-          <td>Desarrollador Frontend</td>
-          <td><button onclick="toggleDetails(this)">+</button></td>
-        </tr>
-        <tr class="hidden">
-          <td colspan="3">
-            <p><strong>Nombre:</strong> Juan Pérez</p>
-            <p><strong>RUT:</strong> 12.345.678-9</p>
-            <p>
-              <strong>Descripción:</strong> Estoy interesado en aportar con mis
-              habilidades en diseño web.
-            </p>
-            <button onclick="acceptPostulation(this)">Aceptar</button>
-            <button onclick="rejectPostulation(this)">Rechazar</button>
-            <div class="hidden rejection-reason">
-              <p>Justifique el rechazo:</p>
-              <textarea rows="3"></textarea>
-              <button onclick="submitRejection(this)">
-                Enviar Justificación
-              </button>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+        <div class="container_filtro">
+          <!-- Filtro -->
+          <label for="statusFilter">Filtrar por estado:</label>
+          <select id="statusFilter" onchange="filterTable()">
+              <option value="all">Todos</option>
+              <option value="pendiente">Pendiente</option>
+              <option value="aceptada">Aceptada</option>
+              <option value="rechazada">Rechazada</option>
+          </select>
+        </div>
+        <table id="postulaciones">
+          <thead>
+              <tr>
+                  <th>RUT</th>
+                  <th>A qué está postulando</th>
+                  <th>Estado</th>
+                  <th>Acción</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>12.345.678-9</td>
+                  <td>Desarrollador Frontend</td>
+                  <td class="status status-pending">Pendiente</td>
+                  <td><button onclick="toggleDetails(this)">+</button></td>
+              </tr>
+              <tr class="hidden">
+                  <td colspan="4">
+                      <p><strong>RUT:</strong> 12.345.678-9</p>
+                      <p><strong>Nombre:</strong> Juan Pérez</p>
+                      <p><strong>Descripción:</strong> Estoy interesado en aportar con mis habilidades en diseño web.</p>
+                      <button onclick="acceptPostulation(this)">Aceptar</button>
+                      <button onclick="rejectPostulation(this)">Rechazar</button>
+                      <div class="hidden rejection-reason">
+                          <p>Justifique el rechazo:</p>
+                          <textarea rows="3"></textarea>
+                          <button onclick="submitRejection(this)">Enviar Justificación</button>
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td>98.765.432-1</td>
+                  <td>Diseñador UX</td>
+                  <td class="status status-accepted">Aceptada</td>
+                  <td><button onclick="toggleDetails(this)">+</button></td>
+              </tr>
+              <tr class="hidden">
+                  <td colspan="4">
+                      <p><strong>RUT:</strong> 98.765.432-1</p>
+                      <p><strong>Nombre:</strong> María López</p>
+                      <p><strong>Descripción:</strong> Apasionada por crear interfaces amigables y funcionales.</p>
+                      <button onclick="acceptPostulation(this)">Aceptar</button>
+                      <button onclick="rejectPostulation(this)">Rechazar</button>
+                      <div class="hidden rejection-reason">
+                          <p>Justifique el rechazo:</p>
+                          <textarea rows="3"></textarea>
+                          <button onclick="submitRejection(this)">Enviar Justificación</button>
+                      </div>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
     </div>
 
    
