@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intranet</title>
-    <link rel="stylesheet" href="/Sprint2/Css/intranet/home_intranet.css" />
+    <title>Postulaciones</title>
+    <link rel="stylesheet" href="/Sprint2/Css/intranet/postulaciones.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -129,107 +129,48 @@
       </div>
     </div>
 
-    <h2 id="titulo_noticias"><span>Ultimas noticias</span></h2>
-
-    <div class="noticias1">
-      <a href="">
-        <div class="noticia">
-          <div class="imagenes"></div>
-          <p>Titulo1: xxxxxxxxxxxxxxxxxxxxxx</p>
-        </div>
-      </a>
-      <a href="">
-        <div class="noticia">
-          <div class="imagenes"></div>
-          <p>Titulo2: xxxxxxxxxxxxxxxxxxxxxx</p>
-        </div>
-      </a>
+    <h2 class="titulo_postulaciones">Solicitudes de postulacion</h2>
+    <div class="postulation_container">
+    </div>
+    <table id="postulaciones">
+      <thead>
+        <tr>
+          <th>ID Postulación</th>
+          <th>A qué está postulando</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Ejemplo de datos -->
+        <tr>
+          <td>1</td>
+          <td>Desarrollador Frontend</td>
+          <td><button onclick="toggleDetails(this)">+</button></td>
+        </tr>
+        <tr class="hidden">
+          <td colspan="3">
+            <p><strong>Nombre:</strong> Juan Pérez</p>
+            <p><strong>RUT:</strong> 12.345.678-9</p>
+            <p>
+              <strong>Descripción:</strong> Estoy interesado en aportar con mis
+              habilidades en diseño web.
+            </p>
+            <button onclick="acceptPostulation(this)">Aceptar</button>
+            <button onclick="rejectPostulation(this)">Rechazar</button>
+            <div class="hidden rejection-reason">
+              <p>Justifique el rechazo:</p>
+              <textarea rows="3"></textarea>
+              <button onclick="submitRejection(this)">
+                Enviar Justificación
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
     </div>
 
-    <div class="noticias2">
-      <a href="">
-        <div class="noticia">
-          <div class="imagenes"></div>
-          <p>Titulo3: xxxxxxxxxxxxxxxxxxxxxx</p>
-        </div>
-      </a>
-      <a href="">
-        <div class="noticia">
-          <div class="imagenes"></div>
-          <p>Titulo4: xxxxxxxxxxxxxxxxxxxxxx</p>
-        </div>
-      </a>
-    </div>
-
-    <h2 id="titulo_proyectos"><span>Proyectos destacados</span></h2>
-
-    <div class="proyectos1">
-      <a href="">
-        <div class="proyecto">
-          <div class="imagenes"></div>
-          <p>Titulo1: xxxxxxxxxxxxxxxxxxxxxx</p>
-        </div>
-      </a>
-      <a href="">
-        <div class="proyecto">
-          <div class="imagenes"></div>
-          <p>Titulo2: xxxxxxxxxxxxxxxxxxxxxx</p>
-        </div>
-      </a>
-    </div>
-
-    <div class="proyectos2">
-      <a href="">
-        <div class="proyecto">
-          <div class="imagenes"></div>
-          <p>Titulo3: xxxxxxxxxxxxxxxxxxxxxx</p>
-        </div>
-      </a>
-      <a href="">
-        <div class="proyecto">
-          <div class="imagenes"></div>
-          <p>Titulo4: xxxxxxxxxxxxxxxxxxxxxx</p>
-        </div>
-      </a>
-    </div>
-
-    <div class="separador"></div>
-
-    <footer>
-      <div class="footer-container">
-        <div class="footer-left">
-          <img
-            src="/Sprint2/Images/footer_images/logos-face-ubb-02 1.png"
-            alt="Logo Facultad"
-            class="footer-logo"
-          />
-        </div>
-        <div class="footer-right">
-          <div class="social-icons">
-            <a href="#"
-              ><img
-                src="/Sprint2/Images/footer_images/linkedin-square-logo-24 1.png"
-                alt="LinkedIn"
-            /></a>
-
-            <a href="#"
-              ><img
-                src="/Sprint2/Images/footer_images/bxl-instagram 1.png"
-                alt="Instagram"
-            /></a>
-          </div>
-          <img
-            src="/Sprint2/Images/footer_images/Logo (1).png"
-            alt="Gobierno de Ñuble"
-            class="footer-gobierno-logo"
-          />
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy;2024 Todos los Derechos Reservados</p>
-      </div>
-    </footer>
-    <script src="../../Js/menu.js"></script>
-    <script src="../../Js/logout.js"></script>
+   
+    <script src="/Sprint2/Js/showPostulations.js"></script>
   </body>
 </html>
