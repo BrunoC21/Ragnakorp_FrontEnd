@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
             estadisticas: document.getElementById("estadisticas-item"),
             historial: document.getElementById("historial-item"),
             roles: document.getElementById("roles-item"),
+            postulaciones: document.getElementById("postulaciones-item"),
         };
 
         // Mostrar el rol para verificar
@@ -54,10 +55,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
             case "ESTUDIANTE":
                 // ESTUDIANTE no ve Estadísticas, Administración de usuarios, ni Historial de cambios
-                console.log("Rol ESTUDIANTE, ocultando Estadísticas, Administración de usuarios y Historial.");
+                console.log("Rol ESTUDIANTE, ocultando Estadísticas, postulaciones, Administración de usuarios y Historial.");
                 elements.estadisticas.style.display = 'none';
                 elements.roles.style.display = 'none';
                 elements.historial.style.display = 'none';
+                elements.postulaciones.style.display = 'none';
                 break;
 
             default:
