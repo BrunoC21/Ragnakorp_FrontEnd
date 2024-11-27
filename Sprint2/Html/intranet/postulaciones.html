@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -97,51 +97,13 @@
               </tr>
           </thead>
           <tbody>
-              <tr>
-                  <td>12.345.678-9</td>
-                  <td>Desarrollador Frontend</td>
-                  <td class="status status-pending">Pendiente</td>
-                  <td><button onclick="toggleDetails(this)">+</button></td>
-              </tr>
-              <tr class="hidden">
-                  <td colspan="4">
-                      <p><strong>RUT:</strong> 12.345.678-9</p>
-                      <p><strong>Nombre:</strong> Juan Pérez</p>
-                      <p><strong>Descripción:</strong> Estoy interesado en aportar con mis habilidades en diseño web.</p>
-                      <button onclick="acceptPostulation(this)">Aceptar</button>
-                      <button onclick="rejectPostulation(this)">Rechazar</button>
-                      <div class="hidden rejection-reason">
-                          <p>Justifique el rechazo:</p>
-                          <textarea rows="3"></textarea>
-                          <button onclick="submitRejection(this)">Enviar Justificación</button>
-                      </div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>98.765.432-1</td>
-                  <td>Diseñador UX</td>
-                  <td class="status status-accepted">Aceptada</td>
-                  <td><button onclick="toggleDetails(this)">+</button></td>
-              </tr>
-              <tr class="hidden">
-                  <td colspan="4">
-                      <p><strong>RUT:</strong> 98.765.432-1</p>
-                      <p><strong>Nombre:</strong> María López</p>
-                      <p><strong>Descripción:</strong> Apasionada por crear interfaces amigables y funcionales.</p>
-                      <button onclick="acceptPostulation(this)">Aceptar</button>
-                      <button onclick="rejectPostulation(this)">Rechazar</button>
-                      <div class="hidden rejection-reason">
-                          <p>Justifique el rechazo:</p>
-                          <textarea rows="3"></textarea>
-                          <button onclick="submitRejection(this)">Enviar Justificación</button>
-                      </div>
-                  </td>
-              </tr>
+              
           </tbody>
       </table>
     </div>
 
    
     <script src="/Sprint2/Js/showPostulations.js"></script>
+    <script src="../../Js/logout.js"></script>
   </body>
 </html>
