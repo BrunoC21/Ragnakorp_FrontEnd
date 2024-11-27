@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Intranet</title>
-    <link rel="stylesheet" href="/Sprint2/Css/intranet/estadisticas_intranet.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      rel="stylesheet"
+      href="/Sprint2/Css/intranet/estadisticas_intranet.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-    <input type="checkbox" id="btn_menu">
+  </head>
+  <body>
+    <input type="checkbox" id="btn_menu" />
     <nav>
-        <label for="btn_menu"><i class='bx bx-menu'></i></label>
-        <a href="../intranet/home_intranet.html"><img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="Logo"></a>
-        <ul>
-            <h3><i class='bx bxs-user-circle' style='color:#ffffff'></i><span>Usuario</span></h3>
-            <div class="submenu">
-                <li><a href="../intranet/perfil.html">Perfil</a></li>
-                <li><a href="#">Cerrar sesión</a></li>
-            </div>
-        </ul>
+      <label for="btn_menu"><i class="bx bx-menu"></i></label>
+      <a href="../intranet/home_intranet.html"
+        ><img
+          src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png"
+          alt="Logo"
+      /></a>
+      <ul>
+        <h3>
+          <i class="bx bxs-user-circle" style="color: #ffffff"></i
+          ><span>Usuario</span>
+        </h3>
+        <div class="submenu">
+          <li><a href="../intranet/perfil.html">Perfil</a></li>
+          <li><a href="#" id="closeSession">Cerrar sesión</a></li>
+        </div>
+      </ul>
     </nav>
     <!-- menu.html -->
     <div class="container_menu">
@@ -46,15 +59,59 @@
               <li id="vinculaciones-item">
                   <a href="#"><span>Vinculaciones al medio</span></a>
               </li>
-              <li id="historial-item">
-                  <a href="historial_cambios_intranet.html"><span>Historial de cambios</span></a>
+              <li id="historial-item" class="submenu-parent">
+                <a href="#"><span>Historial de cambios</span></a>
+                <ul class="submenu-historial">
+                    <li><a href="historial_cambios_noticintra.html"><span>Historial de noticias</span></a></li>
+                    <li><a href="historial_cambios_proyecintra.html"><span>Historial de proyectos</span></a></li>
+                </ul>
               </li>
               <li id="roles-item">
                   <a href="roles_intranet.html"><span>Administracion de usuarios</span></a>
               </li>
           </ul>
+        <label for="btn_menu"><i class="bx bx-x"></i></label>
+        <label for="btn_menu"><div class="miss"></div></label>
+        <div class="parte_superior">
+          <img
+            src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png"
+            alt=""
+          />
+          <div class="titulo_menu">
+            <h2>Polo de salud</h2>
+            <h3>Ñuble</h3>
+          </div>
+        </div>
+        <ul class="menu">
+          <li id="news-item">
+            <a href="news_intranet.html"><span>Noticias</span></a>
+          </li>
+          <li id="proyectos-item">
+            <a href="proyectos_intranet.html"><span>Proyectos</span></a>
+          </li>
+          <li id="estadisticas-item">
+            <a href="estadisticas_intranet.html"
+              ><span>Estadisticas de visitas</span></a
+            >
+          </li>
+          <li id="vinculaciones-item">
+            <a href="/Sprint2/Html/intranet/vinculaciones_intranet.html"
+              ><span>Vinculaciones al medio</span></a
+            >
+          </li>
+          <li id="historial-item">
+            <a href="historial_cambios_intranet.html"
+              ><span>Historial de cambios</span></a
+            >
+          </li>
+          <li id="roles-item">
+            <a href="roles_intranet.html"
+              ><span>Administracion de usuarios</span></a
+            >
+          </li>
+        </ul>
       </div>
-  </div>
+    </div>
 
     <h2 id="titulo_stats"><span>Visitas Diarias</span></h2>
 
@@ -65,46 +122,75 @@
     </div>
     <script>
       // Configuración de ejemplo del gráfico
-      const ctx = document.getElementById('visitasChart').getContext('2d');
+      const ctx = document.getElementById("visitasChart").getContext("2d");
       const visitasChart = new Chart(ctx, {
-        type: 'line',
+        type: "line",
         data: {
-          labels: ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00',
-                   '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'], // Etiquetas de ejemplo
-          datasets: [{
-            label: 'Visitas por hora',
-            data: [10, 15, 12, 8, 20, 18, 12, 41, 5, 51, 12, 54, 4, 12, 51, 63, 19, 38, 21, 69, 100, 2, 12, 58], // Datos de ejemplo
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            borderColor: 'rgba(75, 192, 192, 1)',
-            borderWidth: 2
-          }]
+          labels: [
+            "00:00",
+            "01:00",
+            "02:00",
+            "03:00",
+            "04:00",
+            "05:00",
+            "06:00",
+            "07:00",
+            "08:00",
+            "09:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00",
+            "22:00",
+            "23:00",
+          ], // Etiquetas de ejemplo
+          datasets: [
+            {
+              label: "Visitas por hora",
+              data: [
+                10, 15, 12, 8, 20, 18, 12, 41, 5, 51, 12, 54, 4, 12, 51, 63, 19,
+                38, 21, 69, 100, 2, 12, 58,
+              ], // Datos de ejemplo
+              backgroundColor: "rgba(75, 192, 192, 0.2)",
+              borderColor: "rgba(75, 192, 192, 1)",
+              borderWidth: 2,
+            },
+          ],
         },
         options: {
           responsive: true,
           maintainAspectRatio: false,
           scales: {
             y: {
-              beginAtZero: true
-            }
+              beginAtZero: true,
+            },
           },
           plugins: {
             title: {
               display: true, // Mostrar el título
-              text: 'Gráfico de visitas diarias', // Texto del título
+              text: "Gráfico de visitas diarias", // Texto del título
               font: {
-                size: 20 // Tamaño de la fuente
+                size: 20, // Tamaño de la fuente
               },
               padding: {
                 top: 10,
-                bottom: 10
-              }
-            }
-          }
-        }
+                bottom: 10,
+              },
+            },
+          },
+        },
       });
     </script>
 
-    <div class="separador"></div>    
+    <div class="separador"></div>
 
     <footer>
       <div class="footer-container">
@@ -142,6 +228,6 @@
     </footer>
     <script src="../../Js/menu.js"></script>
     <script src="../../Js/projectData.js"></script>
-
+    <script src="../../Js/logout.js"></script>
   </body>
 </html>

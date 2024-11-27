@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Intranet</title>
-    <link rel="stylesheet" href="/Sprint2/Css/intranet/formularioPostulacionIntranet.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-    <input type="checkbox" id="btn_menu">
+    <link
+      rel="stylesheet"
+      href="/Sprint2/Css/intranet/formularioPostulacionIntranet.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <input type="checkbox" id="btn_menu" />
     <nav>
-        <label for="btn_menu"><i class='bx bx-menu'></i></label>
-        <a href="../intranet/home_intranet.html"><img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="Logo"></a>
-        <ul>
-            <h3><i class='bx bxs-user-circle' style='color:#ffffff'></i><span>Usuario</span></h3>
-            <div class="submenu">
-                <li><a href="../intranet/perfil.html">Perfil</a></li>
-                <li><a href="#">Cerrar sesión</a></li>
-            </div>
-        </ul>
+      <label for="btn_menu"><i class="bx bx-menu"></i></label>
+      <a href="../intranet/home_intranet.html"
+        ><img
+          src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png"
+          alt="Logo"
+      /></a>
+      <ul>
+        <h3>
+          <i class="bx bxs-user-circle" style="color: #ffffff"></i
+          ><span>Usuario</span>
+        </h3>
+        <div class="submenu">
+          <li><a href="../intranet/perfil.html">Perfil</a></li>
+          <li><a href="#" id="closeSession">Cerrar sesión</a></li>
+        </div>
+      </ul>
     </nav>
     <!-- menu.html -->
     <div class="container_menu">
@@ -45,50 +58,105 @@
               <li id="vinculaciones-item">
                   <a href="#"><span>Vinculaciones al medio</span></a>
               </li>
-              <li id="historial-item">
-                  <a href="historial_cambios_intranet.html"><span>Historial de cambios</span></a>
+              <li id="historial-item" class="submenu-parent">
+                <a href="#"><span>Historial de cambios</span></a>
+                <ul class="submenu-historial">
+                    <li><a href="historial_cambios_noticintra.html"><span>Historial de noticias</span></a></li>
+                    <li><a href="historial_cambios_proyecintra.html"><span>Historial de proyectos</span></a></li>
+                </ul>
               </li>
               <li id="roles-item">
                   <a href="roles_intranet.html"><span>Administracion de usuarios</span></a>
               </li>
           </ul>
+        <label for="btn_menu"><i class="bx bx-x"></i></label>
+        <label for="btn_menu"><div class="miss"></div></label>
+        <div class="parte_superior">
+          <img
+            src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png"
+            alt=""
+          />
+          <div class="titulo_menu">
+            <h2>Polo de salud</h2>
+            <h3>Ñuble</h3>
+          </div>
+        </div>
+        <ul class="menu">
+          <li id="news-item">
+            <a href="news_intranet.html"><span>Noticias</span></a>
+          </li>
+          <li id="proyectos-item">
+            <a href="proyectos_intranet.html"><span>Proyectos</span></a>
+          </li>
+          <li id="estadisticas-item">
+            <a href="estadisticas_intranet.html"
+              ><span>Estadisticas de visitas</span></a
+            >
+          </li>
+          <li id="vinculaciones-item">
+            <a href="/Sprint2/Html/intranet/vinculaciones_intranet.html"
+              ><span>Vinculaciones al medio</span></a
+            >
+          </li>
+          <li id="historial-item">
+            <a href="historial_cambios_intranet.html"
+              ><span>Historial de cambios</span></a
+            >
+          </li>
+          <li id="roles-item">
+            <a href="roles_intranet.html"
+              ><span>Administracion de usuarios</span></a
+            >
+          </li>
+        </ul>
       </div>
-  </div>
+    </div>
 
     <input type="checkbox" id="btn_menu_lateral" />
     <div class="container_menu">
       <div class="menu_desplegable">
-          <label for="btn_menu"><i class='bx bx-x'></i></label>
-          <label for="btn_menu"><div class="miss"></div></label>
-          <div class="parte_superior">
-           <img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="">
-           <div class="titulo_menu">
-             <h2>Polo de salud</h2>
-             <h3>Ñuble</h3>
-           </div>
+        <label for="btn_menu"><i class="bx bx-x"></i></label>
+        <label for="btn_menu"><div class="miss"></div></label>
+        <div class="parte_superior">
+          <img
+            src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png"
+            alt=""
+          />
+          <div class="titulo_menu">
+            <h2>Polo de salud</h2>
+            <h3>Ñuble</h3>
           </div>
-          <ul class="menu">
-              <li>
-                  <a href="../intranet/home_intranet.html"><span>Inicio</span></a>
-              </li>
-              <li>
-                  <a href="#"><span>Noticias</span></a>
-              </li>
-              <li>
-                  <a href="../intranet/proyectos_intranet.html"><span>Proyectos</span></a>
-              </li>
-              <li>
-                  <a href="../intranet/estadisticas_intranet.html"><span>Estadisticas de visitas</span></a>
-              </li>
-              <li>
-                  <a href="../intranet/historial_cambios_intranet.html"><span>Historial de cambios</span></a>
-              </li>
-              <li>
-                  <a href="../intranet/roles_intranet.html"><span>Asignación de roles</span></a>
-              </li>
-          </ul>
+        </div>
+        <ul class="menu">
+          <li>
+            <a href="../intranet/home_intranet.html"><span>Inicio</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Noticias</span></a>
+          </li>
+          <li>
+            <a href="../intranet/proyectos_intranet.html"
+              ><span>Proyectos</span></a
+            >
+          </li>
+          <li>
+            <a href="../intranet/estadisticas_intranet.html"
+              ><span>Estadisticas de visitas</span></a
+            >
+          </li>
+          <li>
+            <a href="../intranet/historial_cambios_intranet.html"
+              ><span>Historial de cambios</span></a
+            >
+          </li>
+          <li>
+            <a href="../intranet/roles_intranet.html"
+              ><span>Asignación de roles</span></a
+            >
+          </li>
+        </ul>
       </div>
-  </div>
+    </div>
 
     <div class="form-container">
       <h1>Formulario de Postulación</h1>
@@ -155,5 +223,6 @@
     </footer>
     <script src="../../Js/menu.js"></script>
     <script src="../../Js/formPostulation.js"></script>
+    <script src="../../Js/logout.js"></script>
   </body>
 </html>

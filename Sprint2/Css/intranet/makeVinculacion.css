@@ -251,177 +251,106 @@ nav ul .submenu:hover {
   opacity: 1;
 }
 
-.btn_vinculaciones {
-  position: absolute;
-  display: flex;
-  width: 10vw;
-  height: 5vh;
-  border-radius: 3em;
-  line-height: 5vh;
-  background-color: #2e277c;
-  top: 18vh;
-  left: 80vw;
-}
-
-.btn_vinculaciones i {
-  height: 5vh;
-  line-height: 5vh;
-  font-size: 1.5vw;
-  margin-left: 1.8vw;
-  background-color: transparent;
-}
-
-.btn_vinculaciones span {
-  display: block;
-  height: 5vh;
-  font-size: 1.2vw;
-  color: white;
-  background-color: transparent;
-}
-
-/* Estilos para la tabla */
 .titulo_vinculacion {
-  position: absolute;
-  top: 14vh;
-  left: 0vw;
-  width: 25vw;
+  position: relative;
+  top: 13vh;
   height: 8vh;
+  width: 40vw;
   line-height: 8vh;
+  color: white;
+  font-size: 1.5vw;
   padding-left: 2vw;
   border-radius: 0em 2em 2em 0em;
-  color: white;
-  font-size: 1.5vw;
   background-color: #1d438a;
 }
 
-.container_proyectos1 {
-  width: 80vw;
-  height: 70vh;
-  margin-top: 25vh;
-  margin-left: 10vw;
-  background-color: transparent;
+.container-form {
+  position: absolute;
+  top: 22vh;
+  left: 25vw;
+  width: 50vw;
+  height: 60vh;
+  margin: 0.5vw auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f7f9fc; /* Fondo blanco del formulario */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo general de la tabla */
-table {
-  width: 100%; /* Tabla ocupa todo el ancho del contenedor */
-  border-collapse: collapse; /* Combina bordes */
-  font-family: Arial, sans-serif; /* Fuente clara */
-  font-size: 16px;
+.form-group {
+  margin-top: 15px;
+  background-color: #f7f9fc;
 }
 
-/* Encabezados de la tabla */
-thead {
-  background-color: #007BFF; /* Fondo azul */
-  color: #000000; /* Texto blanco */
-}
-
-thead th {
-  padding: 12px 10px; /* Espaciado interno */
-  text-align: left; /* Texto alineado a la izquierda */
+label {
+  display: block;
+  margin-bottom: 5px;
   font-weight: bold;
-  text-transform: uppercase; /* Texto en mayúsculas */
-  background-color: white;
+  background-color: #f7f9fc;
 }
 
-thead h3{
-  background-color: transparent;
+form {
+  background-color: #f7f9fc;
 }
 
-thead h4{
-  background-color: transparent;
+small {
+  background-color: #f7f9fc;
 }
 
-/* Filas del cuerpo de la tabla */
-tbody tr {
-  background-color: #ffffff; /* Fondo blanco */
-  transition: background-color 0.3s ease; /* Transición para el hover */
+input {
+  background-color: #f7f9fc;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #f2f2f2; /* Fondo alternado para filas pares */
+.input-contenido-nombre-actividad {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff; /* Fondo blanco de las casillas */
+  color: #333;
 }
 
-tbody tr:hover {
-  background-color: #e9f5ff; /* Fondo azul claro al pasar el cursor */
+.input-descripcion-actividad {
+  width: 95%;
+  height: 40vh;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff; /* Fondo blanco de las casillas */
+  color: #333;
+  resize: none;
 }
 
-/* Celdas del cuerpo de la tabla */
-tbody td {
-  padding: 10px 8px; /* Espaciado interno */
-  border-bottom: 1px solid #ddd; /* Línea inferior */
-  text-align: left; /* Texto alineado a la izquierda */
-  background-color: rgb(255, 255, 255);
+button {
+  justify-content: space-between;
+  display: inline;
+  background-color: #007bff;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9vw;
+  width: 15vw; /* Puedes ajustar el tamaño según lo que necesites */
+  /* Elimina los márgenes que separan demasiado los botones */
+  margin-top: 0; /* No hace falta margen superior si estás usando flexbox */
 }
 
-tbody button{
-  width: 8vh;
-  height: 4vh;
-  border-radius: 20px;
+button.updateNew {
+  background-color: #0cd358;
 }
 
-/* Estilo de los enlaces */
-tbody td a {
-  color: #007BFF; /* Azul para enlaces */
-  text-decoration: none; /* Sin subrayado */
-  font-weight: bold;
-}
-
-tbody td a:hover {
-  text-decoration: underline; /* Subrayado al pasar el cursor */
-}
-
-td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-  background-color: #f9f9f9;
-}
-
-
-
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-tbody tr:hover {
-  background-color: #f1f1f1;
-}
-
-
-
-/* Estilos para el botón */
-.postular-btn {
-  display: inline-block;
-  width: 15vw;
-  height: 6vh;
-  line-height: 6vh;
-  position: relative;
-  top: 6vh;
-  left: 32.5vw;
-  background-color: #4caf50;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  border-radius: 0.5em;
-  font-size: 1vw;
-  font-weight: bold;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s;
-}
-
-.postular-btn:hover {
-  background-color: #45a049;
+button:hover {
+  background-color: #0056b3;
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
+  position: absolute bottom;
+  width: 100vw;
   background-color: #27485e; /* Color azul oscuro del fondo */
   color: white;
   padding: 20px 0;
   text-align: center;
-  width: 100%;
 }
 
 .footer-container {
@@ -509,5 +438,5 @@ footer {
 }
 
 .separador {
-  height: 5vw;
+  height: 80vh;
 }

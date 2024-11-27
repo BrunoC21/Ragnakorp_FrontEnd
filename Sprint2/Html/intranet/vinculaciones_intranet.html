@@ -16,7 +16,7 @@
             <h3><i class='bx bxs-user-circle' style='color:#ffffff'></i><span>Usuario</span></h3>
             <div class="submenu">
                 <li><a href="../intranet/perfil.html">Perfil</a></li>
-                <li><a href="#">Cerrar sesión</a></li>
+                <li><a href="#" id="closeSession">Cerrar sesión</a></li>
             </div>
         </ul>
     </nav>
@@ -45,46 +45,37 @@
             <li id="vinculaciones-item">
                 <a href="#"><span>Vinculaciones al medio</span></a>
             </li>
-            <li id="historial-item">
-                <a href="historial_cambios_intranet.html"><span>Historial de cambios</span></a>
+            <li id="historial-item" class="submenu-parent">
+              <a href="#"><span>Historial de cambios</span></a>
+              <ul class="submenu-historial">
+                  <li><a href="historial_cambios_noticintra.html"><span>Historial de noticias</span></a></li>
+                  <li><a href="historial_cambios_proyecintra.html"><span>Historial de proyectos</span></a></li>
+              </ul>
             </li>
             <li id="roles-item">
                 <a href="roles_intranet.html"><span>Administracion de usuarios</span></a>
             </li>
         </ul>
     </div>
-</div>
+  </div>
   
-  <h1 class="titulo_proyectos">Proyectos del Polo de Salud</h1>
+  <h1 class="titulo_vinculacion">Viculaciones Polo de Salud</h1>
+  <a href="../intranet/makeVinculacion_intranet.html" class="btn_vinculaciones" id="agregar"><i class='bx bx-plus' style='color:#ffffff' ></i><span>Agregar</span></a>
+
     <div class="container">
       <div class="container_proyectos1">
         <table id="tabla">
             <thead>
                 <tr class="encabezados">
-                    <th><h3 class="primero">Nombre del proyecto</h3></th>
+                    <th><h3 class="primero">Nombre de la vinculacion</h3></th>
                     <th><h4>Descripción</h4></th>
-                    <th><h3>Fecha de inicio</h3></th>
-                    <th><h4>Requerimientos de postulación</h4></th>
+                    <th><h4>Editar</h4></th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="datos">
-                  <td><h3>Proyecto 1</h3></td>
-                  <td><h4>Proyecto relacionado con..</h4></td>
-                  <td><h3>dd/mm/aaaa</h3></td>
-                  <td><a href="#"><h3>Detalles</h3></a></td>
-                </tr>
-                <tr class="datos">
-                  <td><h3>Proyecto 1</h3></td>
-                  <td><h4>Proyecto relacionado con..</h4></td>
-                  <td><h3>dd/mm/aaaa</h3></td>
-                  <td><a href="#"><h3>Detalles</h3></a></td>
-                </tr>
+                
             </tbody>
         </table>
-        <a href="formulario_postulacion_intranet.html" class="postular-btn">
-          Postular a un Proyecto
-        </a>
    </div>
 
 
@@ -124,7 +115,8 @@
     </footer>
 
     <script src="../../Js/menu.js"></script>
-    <script src="../../Js/projectData.js"></script>
+    <script src="../../Js/vinculacionesData.js"></script>
+    <script src="../../Js/logout.js"></script>
 
   </body>
 </html>
