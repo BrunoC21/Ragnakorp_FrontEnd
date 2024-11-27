@@ -48,7 +48,8 @@ let registrarPostulacion = async () => {
         postulationName: document.getElementById("nombre").value,
         postulationDescription: document.getElementById("motivo").value,
         postulationProject: document.getElementById("proyecto").value,
-        postulationRut: document.getElementById("rut").value
+        postulationRut: document.getElementById("rut").value,
+        postulationStatus: "Pendiente"
     };
 
     try {
@@ -62,7 +63,7 @@ let registrarPostulacion = async () => {
         });
 
         if (peticion.ok) {
-            window.location.href = '../Html/home_intranet.html';
+            window.location.href = '/Sprint2/Html/intranet/proyectos_intranet.html';
         } else {
             const errorMsg = await peticion.text();
             alert("Error al registrar la postulación: " + errorMsg);
