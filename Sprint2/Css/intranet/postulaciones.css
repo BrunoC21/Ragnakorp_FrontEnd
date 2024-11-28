@@ -379,4 +379,31 @@ button:hover {
   margin-left: 30vh;
 }
 
+/* Botón Aceptar (Verde) */
+.btn-accept {
+  background-color: #28a745; /* Verde */
+  color: white; /* Texto blanco */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-accept:hover {
+  background-color: #218838; /* Verde más oscuro al pasar el mouse */
+}
+
+/* Botón Rechazar (Rojo) */
+.btn-reject {
+  background-color: #dc3545; /* Rojo */
+  color: white; /* Texto blanco */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-reject:hover {
+  background-color: #c82333; /* Rojo más oscuro al pasar el mouse */
+}
 

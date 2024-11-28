@@ -21,70 +21,107 @@ let renderizarTabla = (filtroCategoria) => {
   let contenidoTabla = "";
 
   const postulacionesFiltradas = filtroCategoria === "todos"
-    ? postulaciones
-    : postulaciones.filter(postulaciones => postulaciones.postulationStatus.toLowerCase() === filtroCategoria.toLowerCase());
+      ? postulaciones
+      : postulaciones.filter(
+          postulacion => postulacion.postulationStatus.toLowerCase() === filtroCategoria.toLowerCase()
+      );
 
   for (let Postulacion of postulacionesFiltradas) {
-    contenidoTabla += `
-        <tr>
-            <td>${Postulacion.postulationRut}</td>
-            <td>${Postulacion.postulationProject}</td>
-            <td class="status status-pending">${Postulacion.postulationStatus}</td>
-            <td><button onclick="toggleDetails(this)">+</button></td>
-        </tr>
-        <tr class="hidden">
-            <td colspan="4">
-                <p><strong>RUT:</strong> ${Postulacion.postulationRut}</p>
-                <p><strong>Nombre:</strong> ${Postulacion.postulationName}</p>
-                <p><strong>Descripción:</strong> ${Postulacion.postulationDescription}</p>
-                <button onclick="acceptPostulation(this)">Aceptar</button>
-                <button onclick="rejectPostulation(this)">Rechazar</button>
-                <div class="hidden rejection-reason">
-                    <p>Justifique el rechazo:</p>
-                    <textarea rows="3"></textarea>
-                    <button onclick="submitRejection(this)">Enviar Justificación</button>
-                </div>
-            </td>
-        </tr>
-    `;
+      let statusClass = "";
+      switch (Postulacion.postulationStatus) {
+          case "Pendiente":
+              statusClass = "status-pending";
+              break;
+          case "Aprobada":
+              statusClass = "status-accepted";
+              break;
+          case "Rechazada":
+              statusClass = "status-rejected";
+              break;
+          default:
+              statusClass = "status-unknown";
+      }
+
+      contenidoTabla += `
+          <tr>
+              <td>${Postulacion.postulationRut}</td>
+              <td>${Postulacion.postulationName}</td>
+              <td>${Postulacion.postulationProject}</td>
+              <td class="status ${statusClass}">${Postulacion.postulationStatus}</td>
+              <td><button onclick="toggleDetails(this)">Detalle</button></td>
+              
+              <td>
+                  <button class="btn-accept" data-postulacion='${JSON.stringify(Postulacion)}' data-status="Aprobada">Aceptar</button>
+                  <button class="btn-reject" data-postulacion='${JSON.stringify(Postulacion)}' data-status="Rechazada">Rechazar</button>
+              </td>
+          </tr>
+          <tr class="hidden">
+              <td colspan="4">
+                  <p><strong>Descripción:</strong> ${Postulacion.postulationDescription}</p>
+              </td>
+          </tr>
+      `;
   }
 
   document.querySelector("#postulaciones tbody").innerHTML = contenidoTabla;
 
+  // Agregar eventos a los botones
+  document.querySelectorAll(".btn-accept, .btn-reject").forEach(button => {
+      button.addEventListener("click", (event) => {
+          const postulacion = JSON.parse(button.dataset.postulacion);
+          const status = button.dataset.status;
+          modificarPostulacion(postulacion, status);
+      });
+  });
+};
+
+
+async function modificarPostulacion(postulacion, status) {
+  const sessionData = JSON.parse(localStorage.getItem("sessionData"));
+  if (!sessionData) {
+      alert("No hay datos de sesión disponibles. Por favor, inicie sesión nuevamente.");
+      return;
+  }
+
+  const payload = {
+      post: {
+          id: postulacion.id,
+          postulationName: postulacion.postulationName,
+          postulationRut: postulacion.postulationRut,
+          postulationDescription: postulacion.postulationDescription,
+          postulationProject: postulacion.postulationProject,
+          postulationStatus: status,
+      },
+      sessionData: sessionData,
+  };
+
+  try {
+      const respuesta = await fetch("http://localhost:8080/proyecto/postulation/update", {
+          method: "PUT",
+          headers: {
+              "Accept": "application/json",
+              "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+      });
+
+      if (respuesta.ok) {
+          window.location.reload();
+      } else {
+          const errorMsg = await respuesta.text();
+          alert("Error al actualizar la postulación: " + errorMsg);
+      }
+  } catch (error) {
+      console.error("Error al conectar con el servidor:", error);
+      alert("Error al conectar con el servidor. Intenta nuevamente.");
+  }
 }
+
 
 function toggleDetails(button) {
   const detailRow = button.parentElement.parentElement.nextElementSibling;
   detailRow.classList.toggle("hidden");
-  button.textContent = detailRow.classList.contains("hidden") ? "+" : "-";
-}
-
-function acceptPostulation(button) {
-  const parentRow = button.closest("tr").previousElementSibling;
-  const statusCell = parentRow.querySelector(".status");
-  statusCell.textContent = "Aceptada";
-  statusCell.className = "status status-accepted";
-  alert("Postulación aceptada.");
-  toggleDetails(button.closest("tr").previousElementSibling.querySelector("button"));
-}
-
-function rejectPostulation(button) {
-  const rejectionDiv = button.nextElementSibling;
-  rejectionDiv.classList.remove("hidden");
-}
-
-function submitRejection(button) {
-  const reason = button.previousElementSibling.value.trim();
-  if (!reason) {
-      alert("Debe justificar el rechazo.");
-      return;
-  }
-  const parentRow = button.closest("tr").previousElementSibling;
-  const statusCell = parentRow.querySelector(".status");
-  statusCell.textContent = "Rechazada";
-  statusCell.className = "status status-rejected";
-  alert("Postulación rechazada. Justificación enviada.");
-  toggleDetails(button.closest("tr").previousElementSibling.querySelector("button"));
+  button.textContent = detailRow.classList.contains("hidden") ? "Detalle" : "Cerrar";
 }
 
 function filterTable() {
