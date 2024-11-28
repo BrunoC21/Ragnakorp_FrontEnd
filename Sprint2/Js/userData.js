@@ -20,3 +20,96 @@ document.addEventListener("DOMContentLoaded", function() {
         sessionDiv.innerHTML = "<p>No se ha encontrado información de sesión.</p>";
     }
 });
+
+
+
+window.onload = function() {
+    cargarProyectos(); // Agregar la función para cargar los proyectos
+
+    const sessionData = JSON.parse(localStorage.getItem("sessionData"));
+
+    const rol = sessionData.role;
+    switch(rol) {
+        case "ADMIN":
+        case "DESARROLLADOR":
+            // ADMIN y DESARROLLADOR ven todas las páginas
+            console.log("Rol ADMIN o DESARROLLADOR, se muestra todo.");
+            document.querySelector(".postulaciones").style.display = "none";
+            break;
+
+        case "ADMINISTRATIVE":
+            // ADMINISTRATIVE no ve Estadísticas ni Administración de usuarios
+            console.log("Rol ADMINISTRATIVE, ocultando Estadísticas y Administración de usuarios.");
+            document.querySelector(".postulaciones").style.display = "none";
+            break;
+
+        case "INVESTIGADOR":
+            // INVESTIGADOR no ve Estadísticas, Administración de usuarios ni Historial de cambios
+            console.log("Rol INVESTIGADOR, ocultando Estadísticas, Administración de usuarios y Historial.");
+            break;
+
+        case "ESTUDIANTE":
+            // ESTUDIANTE no ve Estadísticas, Administración de usuarios, ni Historial de cambios
+            console.log("Rol ESTUDIANTE, ocultando Estadísticas, postulaciones, Administración de usuarios y Historial.");
+            document.querySelector(".noticias").style.display = "none";
+            document.querySelector(".proyectos").style.display = "none";
+            break;
+
+        default:
+            console.log("Rol desconocido:", rol);
+    }
+    
+}
+// Función para cargar los proyectos del usuario
+const cargarProyectos = async () => {
+    const sessionData = JSON.parse(localStorage.getItem("sessionData"));
+
+    try {
+        const peticion = await fetch("http://localhost:8080/proyecto/userProj/myproj", {
+            method: "POST",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                sessionData: {
+                    userRut: sessionData.userRut // Asegúrate de que `sessionData` tiene esta clave
+                }
+            })
+        });
+
+        if (!peticion.ok) throw new Error("Error al obtener las postulaciones");
+
+        const postulaciones = await peticion.json();
+
+        // Filtrar por estado "Aprobado"
+        const postulacionesAprobadas = postulaciones.filter(
+            (postulacion) => postulacion.postulationStatus === "Aprobada"
+        );
+
+        let contenidoPostulaciones = "";
+        for (let postulacion of postulacionesAprobadas) {
+            contenidoPostulaciones += `
+                - ${postulacion.postulationProject}<br>
+            `;
+        }        
+
+        if (contenidoPostulaciones) {
+            document.querySelector(".postulaciones").innerHTML = `
+                <h2>Postulaciones aprobadas</h2>
+                <p>${contenidoPostulaciones}</p>
+            `;
+        } else {
+            document.querySelector(".postulaciones").innerHTML = `
+                <h2>Postulaciones aprobadas</h2>
+                <p>No hay postulaciones aprobadas para mostrar.</p>
+            `;
+        }
+    } catch (error) {
+        console.error(error);
+        document.querySelector(".postulaciones").innerHTML = `
+            <h2>Postulaciones aprobadas</h2>
+            <p>No hay postulaciones</p>
+        `;
+    }
+};

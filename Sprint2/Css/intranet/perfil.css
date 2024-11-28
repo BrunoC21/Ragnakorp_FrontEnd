@@ -389,14 +389,15 @@
   background-color: transparent;
 }
 
-.biografia{
+.info{
   width: 65vw;
   height: 30vh;
   border-radius: 1em;
   background-color: #27485e;
+  margin-bottom: 5px;
 }
 
-.biografia h2{
+.info h2{
   width: 65vw;
   height: 6vh;
   line-height: 6vh;
@@ -406,7 +407,7 @@
   background-color: transparent;
 }
 
-.biografia p{
+.info p{
   width: 60vw;
   height: 18vh;
   margin-left: 1%;
@@ -416,7 +417,7 @@
   background-color: white;
 }
 
-.noticias{
+/* .noticias{
   width: 65vw;
   height: 25.5vh;
   margin-top: 2vh;
@@ -470,7 +471,7 @@
   color: black;
   padding: 1vw;
   background-color: white;
-}
+} */
 
 
 footer {
