@@ -17,8 +17,21 @@ document.addEventListener("DOMContentLoaded", function() {
             <h3>${sessionData.email}</h3>
             <h3>+56${sessionData.phone}</h3>
             <br>
-            <button class="EditPerfil">Editar perfil</button>
+            <a href="editarPerfil.html" class="EditPerfil">Editar perfil</a>
         `;
+
+
+        if (sessionData.userBio) {
+            document.querySelector(".biografia").innerHTML = `
+                <h2>Biografía</h2>
+                <p>${sessionData.userBio}</p>
+            `;
+        } else {
+            document.querySelector(".biografia").innerHTML = `
+                <h2>Biografía</h2>
+                <p>No configurada</p>
+            `;
+        }
     } else {
         // Si no hay datos en el localStorage, mostrar un mensaje de error
         const sessionDiv = document.getElementById("sessionData");
