@@ -1,7 +1,15 @@
 let boton = document.getElementById("btnRegistrar");
 
+if (!window.location.search.includes("?id=")) {
+    // Si no hay un parámetro de ID en la URL, limpia el localStorage
+    localStorage.removeItem("usuarioEdit");
+    console.log("LocalStorage limpiado: Modo Registrar Usuario");
+}
+
 boton.addEventListener("click", evento => {
-    registrarUsuario();
+    if (!window.location.search.includes("?id=")) {
+        registrarUsuario();
+    }
 });
 
 let registrarUsuario = async () => {
