@@ -1,4 +1,12 @@
 window.onload = function() {
+    const sessionData = JSON.parse(localStorage.getItem("sessionData"));
+
+        
+    // Ocultar el botón de "Agregar" si el usuario es estudiante
+    if (sessionData.role === "ESTUDIANTE") {
+        document.getElementById("agregar").style.display = "none";
+    }
+
     listarProyectos();
 }
 
