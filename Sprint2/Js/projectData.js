@@ -7,6 +7,10 @@ window.onload = function() {
         document.getElementById("agregar").style.display = "none";
     }
 
+    if (sessionData.role === "ADMIN" || sessionData.role === "ADMINISTRATIVE") {
+        document.getElementById("btnPostular").style.display = "none";
+    }
+
     listarProyectos();
 }
 
