@@ -71,9 +71,9 @@ document.getElementById('update').addEventListener('click', async function (even
     news: {
       id: newsId,
       newsTitle: document.getElementById("titulo").value,
-      newsContent: document.getElementById("contenido").value,
       newsWriter: document.getElementById("autor").value,
       newsCategory: document.getElementById("categoria").value,
+      newsContent: document.getElementById("contenido").value,
       primaryImage: imageBase64, // Agregar la imagen codificada en Base64 (si existe)
     },
     sessionData: sessionData, // Agregar los datos de la sesión
@@ -92,7 +92,17 @@ document.getElementById('update').addEventListener('click', async function (even
       });
 
     if (respuesta.ok) {
+
+      const noticia = JSON.parse(localStorage.getItem("noticiaEdit"));
+
       alert("Noticia actualizada exitosamente.");
+
+      noticia.newsTitle = payload.news.newsTitle;
+      noticia.newsContent = payload.news.newsContent;
+      noticia.newsCategory = payload.news.newsCategory;
+      noticia.newsWriter = payload.news.newsWriter;
+      noticia.newsImage = payload.news.newsImage;
+
       // Eliminar el localStorage con el nombre "noticiaEdit"
       localStorage.removeItem("noticiaEdit");
       // Redirigir o limpiar el formulario si es necesario

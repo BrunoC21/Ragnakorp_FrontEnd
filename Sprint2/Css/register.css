@@ -36,6 +36,17 @@ body {
     margin-top: -4vh;
   }
 
+  textarea{
+    width: 23vw;
+    height: 4vh;
+    margin-left: 2.5vw;
+    border-radius: 1em;
+    border: 0.2em solid #ccc;
+    font-size: 1vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+  }
+
   input[type="text"],
   input[type="email"],
   input[type="password"],
