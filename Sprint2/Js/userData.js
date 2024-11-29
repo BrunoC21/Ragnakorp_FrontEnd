@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 window.onload = function() {
     cargarProyectos(); // Agregar la función para cargar los proyectos
+    cargarProyectosCreados();
 
     const sessionData = JSON.parse(localStorage.getItem("sessionData"));
 
@@ -122,3 +123,51 @@ const cargarProyectos = async () => {
         `;
     }
 };
+
+const cargarProyectosCreados = async () => {
+    const sessionData = JSON.parse(localStorage.getItem("sessionData"));
+
+    try {
+        const peticion = await fetch("http://localhost:8080/proyecto/userProj/myprojCreate", {
+            method: "POST",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                sessionData: {
+                    userRut: sessionData.userRut // Asegúrate de que `sessionData` tiene esta clave
+                }
+            })
+        });
+
+        if (!peticion.ok) throw new Error("Error al obtener los proyectos");
+
+        const proyectos = await peticion.json();
+
+        let contenidoProyectos = "";
+        for (let proyecto of proyectos) {
+            contenidoProyectos += `
+                - ${proyecto.projName}<br>
+            `;
+        }        
+
+        if (contenidoProyectos) {
+            document.querySelector(".proyectos").innerHTML = `
+                <h2>Proyectos Creados</h2>
+                <p>${contenidoProyectos}</p>
+            `;
+        } else {
+            document.querySelector(".proyectos").innerHTML = `
+                <h2>Proyectos Creados</h2>
+                <p>No hay proyectos para mostrar.</p>
+            `;
+        }
+    } catch (error) {
+        console.error(error);
+        document.querySelector(".proyectos").innerHTML = `
+            <h2>Proyectos Creados</h2>
+            <p>No hay proyectos</p>
+        `;
+    }
+}
