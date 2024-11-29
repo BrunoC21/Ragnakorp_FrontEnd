@@ -341,6 +341,30 @@
   color: white;
   background-color: #27485e;
 }
+.columna1 .EditPerfil {
+  background-color: #007BFF; /* Color de fondo azul */
+  color: #ffffff; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 12px; /* Tamaño de fuente */
+  margin-left: 1vh;
+  cursor: pointer; /* Cambiar el cursor a "mano" al pasar */
+  transition: background-color 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+.EditPerfil:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+}
+
+.EditPerfil:active {
+    background-color: #003f7f; /* Color aún más oscuro al hacer clic */
+}
+
+.EditPerfil:disabled {
+    background-color: #cccccc; /* Color gris si está deshabilitado */
+    cursor: not-allowed; /* Cursor deshabilitado */
+}
 
 .imagen{
   position: relative;
@@ -360,9 +384,9 @@
 
 .texto_columna h3{
   width: 20vw;
-  height: 12vh;
-  line-height: 12vh;
-  margin-top: 5vh;
+  height: 3vh;
+  line-height: 3vh;
+  margin-top: 2vh;
   font-size: 1.5vw;
   text-align: center;
   border-bottom:  black  solid 0.1vw;
@@ -371,8 +395,8 @@
 
 .texto_columna h4{
   width: 20vw;
-  height: 4vh;
-  margin-top: 4vh;
+  height: 3vh;
+  margin-top: 3vh;
   margin-bottom: 2vh;
   font-size: 1.2vw;
   text-align: center;
@@ -391,7 +415,7 @@
 
 .info{
   width: 65vw;
-  height: 30vh;
+  height: 25vh;
   border-radius: 1em;
   background-color: #27485e;
   margin-bottom: 5px;
@@ -400,8 +424,8 @@
 .info h2{
   width: 65vw;
   height: 6vh;
-  line-height: 6vh;
-  margin-left: 3vw;
+  line-height: 7vh;
+  margin-left: 2vw;
   font-size: 2vw;
   color: white;
   background-color: transparent;
@@ -409,70 +433,13 @@
 
 .info p{
   width: 60vw;
-  height: 18vh;
-  margin-left: 1%;
+  height: 15vh;
+  margin-left: 2%;
   border-radius: 1em;
   color: black;
   padding: 1vw;
   background-color: white;
 }
-
-/* .noticias{
-  width: 65vw;
-  height: 25.5vh;
-  margin-top: 2vh;
-  border-radius: 1em;
-  background-color: #27485e;
-}
-
-.noticias h2{
-  width: 65vw;
-  height: 6vh;
-  line-height: 6vh;
-  margin-left: 3vw;
-  font-size: 2vw;
-  color: white;
-  background-color: transparent;
-}
-
-.noticias p{
-  width: 60vw;
-  height: 14vh;
-  margin-left: 1%;
-  border-radius: 1em;
-  color: black;
-  padding: 1vw;
-  background-color: white;
-}
-
-.proyectos{
-  width: 65vw;
-  height: 25.5vh;
-  margin-top: 2vh;
-  border-radius: 1em;
-  background-color: #27485e;
-}
-
-.proyectos h2{
-  width: 65vw;
-  height: 6vh;
-  line-height: 6vh;
-  margin-left: 3vw;
-  font-size: 2vw;
-  color: white;
-  background-color: transparent;
-}
-
-.proyectos p{
-  width: 60vw;
-  height: 14vh;
-  margin-left: 1%;
-  border-radius: 1em;
-  color: black;
-  padding: 1vw;
-  background-color: white;
-} */
-
 
 footer {
     background-color: #27485e; /* Color azul oscuro del fondo */
@@ -567,4 +534,3 @@ footer {
   .separador {
     height: 20vw;
   }
-  

@@ -7,12 +7,17 @@ document.addEventListener("DOMContentLoaded", function() {
         // Si los datos existen en el localStorage, mostrarlos en el div correspondiente
         const sessionDiv = document.getElementById("sessionData");
 
+        const role = sessionData.role;
+        const formattedRole = role.charAt(0).toUpperCase() + role.slice(1).toLowerCase();
+
         // Crear un contenido para mostrar los datos
         sessionDiv.innerHTML = `
-            <h3>Nombre: ${sessionData.username} ${sessionData.lastName}</h3>
-            <h3>Rol: ${sessionData.role}</h3>
-            <h3>Email: ${sessionData.email}</h3>
-            <h3>Teléfono ${sessionData.phone}</h3>
+            <h3>${sessionData.username} ${sessionData.lastName}</h3>
+            <h3>${formattedRole}</h3>
+            <h3>${sessionData.email}</h3>
+            <h3>+56${sessionData.phone}</h3>
+            <br>
+            <button class="EditPerfil">Editar perfil</button>
         `;
     } else {
         // Si no hay datos en el localStorage, mostrar un mensaje de error
@@ -31,6 +36,10 @@ window.onload = function() {
     const rol = sessionData.role;
     switch(rol) {
         case "ADMIN":
+            document.querySelector(".noticias").style.display = "none";
+            document.querySelector(".proyectos").style.display = "none";
+            document.querySelector(".postulaciones").style.display = "none";
+            break;
         case "DESARROLLADOR":
             // ADMIN y DESARROLLADOR ven todas las páginas
             console.log("Rol ADMIN o DESARROLLADOR, se muestra todo.");
