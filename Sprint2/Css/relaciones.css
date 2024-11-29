@@ -195,13 +195,10 @@
   
   .titulo h2 {
     width: 15vw;
-    height: 5vh;
+    height: 12vh;
+    font-size: 2vw;
     text-align: center;
     border-bottom: solid #1b2e51 0.5vw;
-  }
-  
-  .titulo h2 span {
-    width: 15vw;
   }
   
   .linea1 {

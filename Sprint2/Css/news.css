@@ -7,61 +7,65 @@
   font-family: "Bree Serif", serif;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 4%;
-  background-color: #1b2e51;
-  z-index: 5;
-}
-
-header p {
-  height: 100%;
-  line-height: 220%;
+header p{
+  height: 3vh;
+  line-height: 3vh;
   text-align: center;
-  font-size: 0.8vw;
+  font-size: 1vw;
   color: white;
   background-color: transparent;
 }
 
-nav {
+header{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 3vh;
+  background-color: #1B2E51;
+  z-index: 5;
+}
+
+nav{
   position: fixed;
   display: flex;
-  top: 4vh;
-  height: 10vh;
+  top: 3vh;
+  height: 8vh;
   width: 100vw;
   box-shadow: 0px 0.5vh 2vh black;
   z-index: 5;
 }
 
-.container_nav {
+nav a{
+  width: 7vw;
+}
+
+.container_nav{
   display: flex;
   width: 90vw;
-  height: 8vh;
-  margin-left: 5vw;
+  height: 6.5vh;
+  margin-left: 0%;
   margin-top: 0.5vh;
   border-bottom: black solid 0.2vh;
   border-top: black solid 0.2vh;
   z-index: 3;
 }
 
-.logo {
-  width: 4vw;
-  height: 4vw;
+.logo{
+  width: auto;
+  height: 80%;
   margin-left: 1vw;
   margin-right: -2vw;
   margin-top: 0.8vh;
   border-radius: 1em;
 }
 
-.container_nav a {
+.container_nav a{
   width: 3.6vw;
   height: 3.6vw;
   background-color: transparent;
 }
 
-.botones {
+.botones{
   z-index: 2;
   display: flex;
   width: 75vw;
@@ -69,43 +73,42 @@ nav {
   background-color: transparent;
 }
 
-.botones li,
-.dos {
+.botones li, .dos{
   width: 15vw;
-  height: 8vh;
-  line-height: 8vh;
+  height: 6vh;
+  line-height: 6vh;
   text-align: center;
 }
 
-.boton {
+.boton{
   width: 15vw;
   height: 8vh;
   background-color: transparent;
 }
 
-.boton span {
+.boton span{
   display: block;
   width: 15vw;
-  height: 8vh;
+  height: 6vh;
   font-size: 1vw;
   color: black;
   background-color: transparent;
 }
 
-.boton span:hover {
+.boton span:hover{
   width: 15vw;
-  height: 8vh;
+  height: 6vh;
   background-color: rgb(214, 214, 214);
 }
 
-.redes_sociales {
+.redes_sociales{
   width: 11vw;
 }
 
-.redes_sociales i {
-  height: 8vh;
+.redes_sociales i{
+  height: 6vh;
   width: 3.3vw;
-  line-height: 8vh;
+  line-height: 6vh;
   text-align: center;
   font-size: 1.5vw;
   color: black;
@@ -115,30 +118,30 @@ nav {
   position: absolute;
   display: none;
   width: 15vw;
-  height: 26vh;
+  height: 18vh;
   z-index: -1;
-  top: 8.7vh;
-  left: 25vw;
+  top: 7vh;
+  left: 24vw;
   transition: 0.5s;
   background-color: rgb(233, 233, 233);
 }
 
-.submenu li {
+.submenu li{
   background-color: transparent;
 }
 
 .submenu li span {
   display: inline-block;
   width: 14vw;
-  height: 8.5vh;
-  line-height: 8.5vh;
+  height: 4.5vh;
+  line-height: 4.5vh;
   text-align: center;
   font-size: 1vw;
   color: black;
   background-color: transparent;
 }
 
-.submenu a {
+.submenu a{
   background-color: transparent;
 }
 
@@ -149,34 +152,34 @@ nav {
   background-color: rgb(199, 199, 199);
 }
 
-.dos {
-  background-color: transparent;
-}
-
-#btn2 {
-  display: flex;
-  width: 15vw;
-}
-
-#btn2 i {
+.dos i{
   position: absolute;
   left: 26vw;
-  height: 8vh;
-  line-height: 8vh;
+  height: 6vh;
+  line-height: 6vh;
   font-size: 1vw;
   background-color: transparent;
 }
 
+.dos span{
+  background-color: transparent;
+  font-size: 1vw;
+}
+
+.dos {
+  background-color: transparent;
+}
+
 .dos:hover {
+  background-color: white;
 }
 
 .dos:hover .submenu {
   display: initial;
 }
 
-#btn2 span:hover,
 .dos:hover > .boton span {
-  background-color: rgb(199, 199, 199);
+  background-color: white;
 }
 
 .dos:hover .submenu {
@@ -186,7 +189,6 @@ nav {
 .dos:hover > .boton span {
   background-color: white;
 }
-
 .titulo {
   display: flex;
   width: 100vw;
@@ -301,6 +303,7 @@ nav {
   height: 4vh;
   width: 28vw;
   margin-left: 0.7vw;
+  font-size: 1.4vw;
   line-height: 4vh;
   background-color: #eef1f4;
 }
@@ -317,7 +320,7 @@ nav {
   width: 20vw;
   height: 0.4vh;
   margin-top: 2vh;
-  margin-left: 16vw;
+  margin-left: 17vw;
   background-color: black;
 }
 
@@ -519,6 +522,7 @@ nav {
   height: 4vh;
   margin-left: 0.5vw;
   line-height: 4vh;
+  font-size: 1.5vw;
   background-color: #eef1f4;
 }
 

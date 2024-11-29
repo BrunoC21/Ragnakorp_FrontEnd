@@ -7,39 +7,43 @@
   font-family: "Bree Serif", serif;
 }
 
+header p{
+  height: 3vh;
+  line-height: 3vh;
+  text-align: center;
+  font-size: 1vw;
+  color: white;
+  background-color: transparent;
+}
+
 header{
   position: fixed;
   top: 0;
-  width: 100%;
-  height: 4%;
+  width: 100vw;
+  height: 3vh;
   background-color: #1B2E51;
   z-index: 5;
-}
-
-header p{
-  height: 100%;
-  line-height: 220%;
-  text-align: center;
-  font-size: 0.8vw;
-  color: white;
-  background-color: transparent;
 }
 
 nav{
   position: fixed;
   display: flex;
-  top: 4vh;
-  height: 10vh;
+  top: 3vh;
+  height: 8vh;
   width: 100vw;
   box-shadow: 0px 0.5vh 2vh black;
   z-index: 5;
 }
 
+nav a{
+  width: 7vw;
+}
+
 .container_nav{
   display: flex;
   width: 90vw;
-  height: 8vh;
-  margin-left: 5vw;
+  height: 6.5vh;
+  margin-left: 0%;
   margin-top: 0.5vh;
   border-bottom: black solid 0.2vh;
   border-top: black solid 0.2vh;
@@ -47,8 +51,8 @@ nav{
 }
 
 .logo{
-  width: 4vw;
-  height: 4vw;
+  width: auto;
+  height: 80%;
   margin-left: 1vw;
   margin-right: -2vw;
   margin-top: 0.8vh;
@@ -71,8 +75,8 @@ nav{
 
 .botones li, .dos{
   width: 15vw;
-  height: 8vh;
-  line-height: 8vh;
+  height: 6vh;
+  line-height: 6vh;
   text-align: center;
 }
 
@@ -85,7 +89,7 @@ nav{
 .boton span{
   display: block;
   width: 15vw;
-  height: 8vh;
+  height: 6vh;
   font-size: 1vw;
   color: black;
   background-color: transparent;
@@ -93,7 +97,7 @@ nav{
 
 .boton span:hover{
   width: 15vw;
-  height: 8vh;
+  height: 6vh;
   background-color: rgb(214, 214, 214);
 }
 
@@ -102,9 +106,9 @@ nav{
 }
 
 .redes_sociales i{
-  height: 8vh;
+  height: 6vh;
   width: 3.3vw;
-  line-height: 8vh;
+  line-height: 6vh;
   text-align: center;
   font-size: 1.5vw;
   color: black;
@@ -114,10 +118,10 @@ nav{
   position: absolute;
   display: none;
   width: 15vw;
-  height: 26vh;
+  height: 18vh;
   z-index: -1;
-  top: 8.7vh;
-  left: 25vw;
+  top: 7vh;
+  left: 24vw;
   transition: 0.5s;
   background-color: rgb(233, 233, 233);
 }
@@ -129,8 +133,8 @@ nav{
 .submenu li span {
   display: inline-block;
   width: 14vw;
-  height: 8.5vh;
-  line-height: 8.5vh;
+  height: 4.5vh;
+  line-height: 4.5vh;
   text-align: center;
   font-size: 1vw;
   color: black;
@@ -151,8 +155,8 @@ nav{
 .dos i{
   position: absolute;
   left: 26vw;
-  height: 8vh;
-  line-height: 8vh;
+  height: 6vh;
+  line-height: 6vh;
   font-size: 1vw;
   background-color: transparent;
 }
@@ -202,6 +206,8 @@ nav{
 
 .titulo h2 span{
   width: 15vw;
+  font-size: 1.8vw;
+  background-color: transparent;
 }
 
 .linea1{
@@ -226,7 +232,8 @@ nav{
   margin-top: -2vh;
   margin-left: 2vw;
   height: 4vh;
-  width: 48vw;
+  width: 55vw;
+  font-size: 1vw;
   background-color: #1B2E51;
 }
 
@@ -247,10 +254,10 @@ nav{
 
 .cont_titulo_componente1 .linea{
   position: absolute;
-  width: 48vw;
-  height: 0.3vh;
+  width: 40vw;
+  height: 0.15vh;
   margin-top: 2vh;
-  margin-left: 47vw;
+  margin-left: 55vw;
   background-color: black;
 }
 
@@ -260,6 +267,7 @@ nav{
   margin-left: 2vw;
   height: 4vh;
   width: 48vw;
+  font-size: 1vw;
   background-color: #1B2E51;
 }
 
@@ -280,10 +288,10 @@ nav{
 
 .cont_titulo_componente2 .linea{
   position: absolute;
-  width: 59vw;
+  width: 53vw;
   height: 0.2vh;
   margin-top: 2vh;
-  margin-left: 36vw;
+  margin-left: 42vw;
   background-color: black;
 }
 
@@ -293,6 +301,7 @@ nav{
   margin-left: 2vw;
   height: 4vh;
   width: 48vw;
+  font-size: 1vw;
   background-color: #1B2E51;
 }
 
@@ -313,10 +322,10 @@ nav{
 
 .cont_titulo_componente3 .linea{
   position: absolute;
-  width: 74.8vw;
+  width: 71.8vw;
   height: 0.2vh;
   margin-top: 2vh;
-  margin-left: 20.5vw;
+  margin-left: 23.5vw;
   background-color: black;
 }
 
@@ -426,6 +435,7 @@ nav{
   width: 65vw;
   height: 6vh;
   line-height: 6vh;
+  font-size: 1.5vw;
   background-color: transparent;
 }
 
@@ -438,6 +448,7 @@ nav{
 .container_comp h3{
   width: 65vw;
   height: 6vh;
+  font-size: 0.8vw;
   line-height: 6vh;
   margin-top: -2vh;
   margin-left: 4vw;
@@ -529,6 +540,7 @@ nav{
   width: 20vw;
   height: 2vh;  
   margin-left: 2vw;
+  font-size: 0.9vw;
   background-color: transparent;
 }
 
@@ -614,5 +626,5 @@ footer {
 }
 
 .separador {
-  margin-top: 30vh;
+  margin-top: 10vh;
 }

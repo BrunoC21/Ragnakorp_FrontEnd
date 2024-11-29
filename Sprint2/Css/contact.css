@@ -7,39 +7,43 @@
   font-family: "Bree Serif", serif;
 }
 
+header p{
+  height: 3vh;
+  line-height: 3vh;
+  text-align: center;
+  font-size: 1vw;
+  color: white;
+  background-color: transparent;
+}
+
 header{
   position: fixed;
   top: 0;
-  width: 100%;
-  height: 4%;
+  width: 100vw;
+  height: 3vh;
   background-color: #1B2E51;
   z-index: 5;
-}
-
-header p{
-  height: 100%;
-  line-height: 220%;
-  text-align: center;
-  font-size: 0.8vw;
-  color: white;
-  background-color: transparent;
 }
 
 nav{
   position: fixed;
   display: flex;
-  top: 4vh;
-  height: 10vh;
+  top: 3vh;
+  height: 8vh;
   width: 100vw;
   box-shadow: 0px 0.5vh 2vh black;
   z-index: 5;
 }
 
+nav a{
+  width: 7vw;
+}
+
 .container_nav{
   display: flex;
   width: 90vw;
-  height: 8vh;
-  margin-left: 5vw;
+  height: 6.5vh;
+  margin-left: 0%;
   margin-top: 0.5vh;
   border-bottom: black solid 0.2vh;
   border-top: black solid 0.2vh;
@@ -47,8 +51,8 @@ nav{
 }
 
 .logo{
-  width: 4vw;
-  height: 4vw;
+  width: auto;
+  height: 80%;
   margin-left: 1vw;
   margin-right: -2vw;
   margin-top: 0.8vh;
@@ -71,8 +75,8 @@ nav{
 
 .botones li, .dos{
   width: 15vw;
-  height: 8vh;
-  line-height: 8vh;
+  height: 6vh;
+  line-height: 6vh;
   text-align: center;
 }
 
@@ -85,7 +89,7 @@ nav{
 .boton span{
   display: block;
   width: 15vw;
-  height: 8vh;
+  height: 6vh;
   font-size: 1vw;
   color: black;
   background-color: transparent;
@@ -93,7 +97,7 @@ nav{
 
 .boton span:hover{
   width: 15vw;
-  height: 8vh;
+  height: 6vh;
   background-color: rgb(214, 214, 214);
 }
 
@@ -102,9 +106,9 @@ nav{
 }
 
 .redes_sociales i{
-  height: 8vh;
+  height: 6vh;
   width: 3.3vw;
-  line-height: 8vh;
+  line-height: 6vh;
   text-align: center;
   font-size: 1.5vw;
   color: black;
@@ -114,10 +118,10 @@ nav{
   position: absolute;
   display: none;
   width: 15vw;
-  height: 26vh;
+  height: 18vh;
   z-index: -1;
-  top: 8.7vh;
-  left: 25vw;
+  top: 7vh;
+  left: 24vw;
   transition: 0.5s;
   background-color: rgb(233, 233, 233);
 }
@@ -129,8 +133,8 @@ nav{
 .submenu li span {
   display: inline-block;
   width: 14vw;
-  height: 8.5vh;
-  line-height: 8.5vh;
+  height: 4.5vh;
+  line-height: 4.5vh;
   text-align: center;
   font-size: 1vw;
   color: black;
@@ -148,33 +152,34 @@ nav{
   background-color: rgb(199, 199, 199);
 }
 
-.dos{
-  background-color: transparent;
-}
-
-#btn2{
-  display: flex;
-  width: 15vw;
-}
-
-#btn2 i{
+.dos i{
   position: absolute;
   left: 26vw;
-  height: 8vh;
-  line-height: 8vh;
+  height: 6vh;
+  line-height: 6vh;
   font-size: 1vw;
   background-color: transparent;
 }
 
-.dos:hover {}
+.dos span{
+  background-color: transparent;
+  font-size: 1vw;
+}
+
+.dos {
+  background-color: transparent;
+}
+
+.dos:hover {
+  background-color: white;
+}
 
 .dos:hover .submenu {
   display: initial;
 }
 
-#btn2 span:hover,
 .dos:hover > .boton span {
-  background-color: rgb(199, 199, 199);
+  background-color: white;
 }
 
 .dos:hover .submenu {
@@ -188,19 +193,21 @@ nav{
 .titulo{
   display: flex;
   width: 100vw;
-  height: 12vh;
-  margin-top: 20vh;
+  height: 8vh;
+  margin-top: 18vh;
 }
 
 .titulo h2{
   width: 15vw;
   height: 5vh;
+  font-size: 1.8vw;
   text-align: center;
   border-bottom: solid #1B2E51 0.5vw;
 }
 
 .titulo h2 span{
   width: 15vw;
+  background-color: transparent;
 }
 
 .linea1{
@@ -221,35 +228,27 @@ nav{
 }
 
 .titulo_seccion{
-  margin-top: 1vh;
-  height: 4vh;
-  width: 19vw;
+  height: 6vh;
+  width: 25vw;
+  margin-left: 1vw;
   background-color: #1B2E51;
 }
 
-.titulo_seccion span{
-  position: absolute;
-  height: 4vh;
-  width: 18vw;
+.titulo_seccion h2{
+  height: 6vh;
+  width: 30vw;
+  font-size: 1.8vw;
   padding-left: 0.5vw;
-  line-height: 4vh;
-  left: 1vw;
+  line-height: 6vh;
+  margin-left: 0.5vw;
   background-color: #EEF1F4;
 }
 
-.titulo_seccion .linea{
-  position: absolute;
-  width: 80vw;
-  height: 0.3vh;
-  margin-top: 2vh;
-  margin-left: 19.5vw;
-  background-color: black;
-}
 
 /* Estilos para el formulario */
 .form-container {
   position: absolute;
-  top: 42vh;
+  top: 36vh;
   left: 15vw;
   width: 69vw;
   height: 68vh;
@@ -292,14 +291,14 @@ form {
 }
 
 #label_nombre {
-  top: 3vh;
+  top: 5vh;
   left: 3vw;
   color: black;
 }
 
 #nombre {
   position: relative;
-  top: 4vh;
+  top: 7vh;
   left: 2.5vw;
   width: 25vw;
   height: 4.5vh;
@@ -312,14 +311,14 @@ form {
 }
 
 #label_email {
-  top: 7.5vh;
+  top: 9.5vh;
   left: 3vw;
   color: black;
 }
 
 #email {
   position: relative;
-  top: 8.5vh;
+  top: 11.5vh;
   left: 2.5vw;
   width: 25vw;
   height: 4.5vh;
@@ -332,14 +331,14 @@ form {
 }
 
 #label_titulo {
-  top: 12vh;
+  top: 14vh;
   left: 3vw;
   color: black;
 }
 
 #titulo {
   position: relative;
-  top: 13vh;
+  top: 16vh;
   left: 2.5vw;
   width: 25vw;
   height: 4.5vh;
@@ -352,15 +351,16 @@ form {
 }
 
 #label_mensaje {
-  position: relative;
-  top: -26vh;
-  left: 35vw;
+
+  margin-top: -22vh;
+  margin-left: 35vw;
   color: black;
+  z-index: 10;
 }
 
 #mensaje {
   position: relative;
-  top: -11.7vw;
+  top: 2vh;
   left: 34.5vw;
   width: 29.5vw;
   height: 43vh;
@@ -380,7 +380,7 @@ form {
   position: relative;
   width: 10vw;
   height: 5vh;
-  top: -32vh;
+  top: -6vh;
   left: 11vw;
   border-radius: 1em;
   border: none;
