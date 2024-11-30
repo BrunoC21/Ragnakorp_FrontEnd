@@ -1,13 +1,10 @@
 * {
+  background-color: #eef1f4;
   padding: 0;
   margin: 0;
   text-decoration: none;
   list-style: none;
   font-family: "Bree Serif", serif;
-}
-
-body {
-  background-color: #eef1f4;
 }
 
 header p{
@@ -106,6 +103,7 @@ nav a{
 
 .redes_sociales{
   width: 11vw;
+  font-size: 1.5vw;
 }
 
 .redes_sociales i{
@@ -113,7 +111,6 @@ nav a{
   width: 3.3vw;
   line-height: 6vh;
   text-align: center;
-  font-size: 1.5vw;
   color: black;
 }
 
@@ -131,6 +128,7 @@ nav a{
 
 .submenu li{
   background-color: transparent;
+  font-size: 1vw;
 }
 
 .submenu li span {
@@ -146,11 +144,13 @@ nav a{
 
 .submenu a{
   background-color: transparent;
+  font-size: 1vw;
 }
 
 .submenu li span:hover {
   width: 14vw;
   left: 0.1vw;
+  font-size: 1vw;
   border-bottom: solid rgb(90, 90, 90) 0.3vw;
   background-color: rgb(199, 199, 199);
 }
@@ -171,6 +171,7 @@ nav a{
 
 .dos {
   background-color: transparent;
+  font-size: 1vw;
 }
 
 .dos:hover {
@@ -211,6 +212,7 @@ nav a{
 
 .titulo h2 span {
   width: 15vw;
+  background-color: transparent;
 }
 
 .linea1 {

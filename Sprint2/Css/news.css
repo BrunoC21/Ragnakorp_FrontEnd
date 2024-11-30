@@ -103,6 +103,7 @@ nav a{
 
 .redes_sociales{
   width: 11vw;
+  font-size: 1.5vw;
 }
 
 .redes_sociales i{
@@ -110,7 +111,6 @@ nav a{
   width: 3.3vw;
   line-height: 6vh;
   text-align: center;
-  font-size: 1.5vw;
   color: black;
 }
 
@@ -128,6 +128,7 @@ nav a{
 
 .submenu li{
   background-color: transparent;
+  font-size: 1vw;
 }
 
 .submenu li span {
@@ -143,11 +144,13 @@ nav a{
 
 .submenu a{
   background-color: transparent;
+  font-size: 1vw;
 }
 
 .submenu li span:hover {
   width: 14vw;
   left: 0.1vw;
+  font-size: 1vw;
   border-bottom: solid rgb(90, 90, 90) 0.3vw;
   background-color: rgb(199, 199, 199);
 }
@@ -168,6 +171,7 @@ nav a{
 
 .dos {
   background-color: transparent;
+  font-size: 1vw;
 }
 
 .dos:hover {
@@ -189,6 +193,7 @@ nav a{
 .dos:hover > .boton span {
   background-color: white;
 }
+
 .titulo {
   display: flex;
   width: 100vw;
@@ -199,12 +204,14 @@ nav a{
 .titulo h2 {
   width: 15vw;
   height: 5vh;
+  font-size: 1.5vw;
   text-align: center;
   border-bottom: solid #1b2e51 0.5vw;
 }
 
 .titulo h2 span {
   width: 15vw;
+  background-color: transparent;
 }
 
 .linea1 {
@@ -492,6 +499,7 @@ nav a{
   width: 20vw;
   height: 4vh;
   line-height: 4vh;
+  font-size: 1vw;
   border-radius: 0.5em 0.5em 0em 0em;
   background-color: rgba(0, 0, 0, 0.555);
 }
@@ -536,7 +544,7 @@ nav a{
 }
 
 footer {
-  background-color: #1b2e51; /* Color azul oscuro del fondo */
+  background-color: #1B2E51; /* Color azul oscuro del fondo */
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -570,19 +578,8 @@ footer {
   background-color: transparent;
 }
 
-.footer-bottom p {
+.footer-bottom p{
   background-color: transparent;
-}
-
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .footer-right {
-    margin-top: 20px;
-    background-color: transparent;
-  }
 }
 
 .separador {
