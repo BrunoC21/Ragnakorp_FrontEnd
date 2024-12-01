@@ -652,7 +652,7 @@ nav a{
       margin-left: 1vh;
     }
 
-    footer {
+    /* footer {
       width: 100%;
       height: 20vh;
       background-color: #1b2e51;
@@ -660,6 +660,17 @@ nav a{
       display: flex;
       justify-content: center;
       flex-direction: column;
+    } */
+
+    footer {
+      position: relative; /* Cambiar de absolute a relative */
+      bottom: 0;
+      top: 15px;
+      background-color: #27485e;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      width: 100%;
     }
     
     .footer-images {

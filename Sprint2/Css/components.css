@@ -350,16 +350,44 @@ nav a{
   background-color: transparent;
 }
 
-.texto_componente p{
+.texto_componente p {
   width: 57vw;
   height: 24vh;
   padding: 1.5vw;
   margin-left: 1.5vw;
   border-radius: 1em;
   box-shadow: 1vh 1vh 2vh black;
-  font-size: 1.2vw;
+  font-size: 0.9vw;
   background-color: white;
+  position: relative; /* Necesario para posicionar el pseudo-elemento */
+  transition: color 0.3s ease;
 }
+
+.texto_componente p::after {
+  content: "Click para ver más";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.39); /* Fondo borroso */
+  display: none; /* Inicialmente oculto */
+  color: black;
+  text-align: center;
+  line-height: 24vh; /* Centra el texto */
+  font-size: 1vw; /* Ajusta el tamaño de la fuente */
+  font-weight: bold;
+  z-index: 1; /* Asegura que el texto alternativo esté encima del original */
+}
+
+.texto_componente p:hover::after {
+  display: block; /* Muestra el texto alternativo al hacer hover */
+}
+
+.texto_componente p:hover {
+  color: rgb(224, 224, 224); /* Hace el texto original transparente */
+}
+
 
 .componentes{
   color: black;

@@ -6,6 +6,14 @@
   list-style: none;
   font-family: "Bree Serif", serif;
  }
+
+ body, html {
+   margin: 0;
+   padding: 0;
+   min-height: 100%;
+   display: flex;
+   flex-direction: column; /* Permite un diseño en columna */
+ }
  
  
  a{
@@ -143,6 +151,11 @@
  
  .submenu a:hover{
     background-color: #ccc;
+ }
+
+ .container {
+   flex: 1; /* Permite que el contenido crezca dinámicamente */
+   overflow: hidden; /* Evita que el contenido desborde fuera del contenedor */
  }
  
  
@@ -501,15 +514,26 @@ tbody tr:hover {
   background-color: #45a049;
 }
 
-footer {
+/* footer {
   position: absolute;
   bottom: 0;
-  background-color: #27485e; /* Color azul oscuro del fondo */
+  background-color: #27485e; 
   color: white;
   padding: 20px 0;
   text-align: center;
   width: 100%;
-}
+} */
+
+/* footer {
+   position: relative; 
+   bottom: 0;
+   top: 15px;
+   background-color: #27485e;
+   color: white;
+   padding: 20px 0;
+   text-align: center;
+   width: 100%;
+ } */
 
 .footer-container {
   position: bottom;

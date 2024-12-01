@@ -482,14 +482,14 @@
      background-color: #f1f1f1;
    }
    
-   footer {
+   /* footer {
     position: absolute;
-    background-color: #27485e; /* Color azul oscuro del fondo */
+    background-color: #27485e; 
     color: white;
     padding: 20px 0;
     text-align: center;
     width: 100%;
-  }
+  } */
   
   .footer-container {
     position: bottom;

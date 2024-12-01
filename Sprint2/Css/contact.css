@@ -398,8 +398,8 @@ button:hover {
   background-color: #ccc;
 }
 
-footer {
-  background-color: #1B2E51; /* Color azul oscuro del fondo */
+/* footer {
+  background-color: #1B2E51; 
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -407,6 +407,17 @@ footer {
   height: 15vh;
   position: relative;
   bottom: 0;
+} */
+
+footer {
+  position: relative; /* Cambiar de absolute a relative */
+  bottom: 0;
+  top: 15px;
+  background-color: #27485e;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
 }
 
 .footer-container {

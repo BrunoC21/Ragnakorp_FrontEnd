@@ -22,24 +22,40 @@ document.addEventListener("DOMContentLoaded", async () => {
             throw new Error("Contenedor de proyectos destacados no encontrado en el DOM");
         }
 
+        // Función para recortar la descripción a 200 palabras
+        const truncateDescription = (text, wordLimit = 200) => {
+            const words = text.split(/\s+/);
+            if (words.length > wordLimit) {
+                return words.slice(0, wordLimit).join(" ") + "...";
+            }
+            return text;
+        };
+
         // Iterar sobre los proyectos y agregar los títulos y detalles
         projectlist.forEach((project) => {
+            const descripcionCorta = truncateDescription(project.projDescription);
+
             const titulo = `
                 <input type="checkbox" id="btn_componente1">
                 <label for="btn_componente1" class="componentes">
                     <div class="cont_titulo_componente1">
-                        <h2><span>${project.projName}</span></h2>
+                        <h2><span>${project.projName.toUpperCase()}</span></h2>
                         <div class="linea"></div>
                     </div>
+
+                    <br>
 
                     <div class="container_componentes">
                         <img src="http://localhost:8080/proyecto/images/${project.projPicture}" alt="${project.primaryImage}">
                         <div class="texto_componente">
-                            <p>${project.projDescription}</p>
+                            <p>${descripcionCorta}</p>
                         </div>
                     </div>
                 </label>
-                <div class="separador"></div>
+                    <br>
+                    <br>
+                    <br>
+
             `;
             contenedorPrincipal.innerHTML += titulo; // Agregar el nuevo título al contenedor
         });
