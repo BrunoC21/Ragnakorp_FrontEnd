@@ -8,6 +8,7 @@ function recuperarVinculacion() {
 
     if (vinculacion) {
         document.getElementById("titulo").value = vinculacion.activityName;
+        document.getElementById("categoria").value = vinculacion.activityCategory;
         document.getElementById("descripcion").value = vinculacion.activityDescription;
     } else {
         console.log("No hay datos en localStorage");
@@ -38,6 +39,7 @@ document.getElementById('update').addEventListener('click', async function (even
         vinculation: {
             id: vinculacion.id,
             activityName: document.getElementById("titulo").value,
+            activityCategory: document.getElementById("categoria").value,
             activityDescription: document.getElementById("descripcion").value,
             user: vinculationUser, // Usuario recuperado directamente del localStorage
         },

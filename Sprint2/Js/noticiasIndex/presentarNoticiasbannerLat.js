@@ -64,8 +64,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     perPage: 2, // En pantallas medianas, muestra 2 elementos
                 },
             },
-        }).mount();
-        
+        }).mount();       
   
       } else {
         alert("No se encontraron noticias.");
