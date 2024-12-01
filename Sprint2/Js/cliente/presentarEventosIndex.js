@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 envExtras.insertAdjacentHTML("beforeend", envHTML); // Usar insertAdjacentHTML
             });
         } else {
-            alert("No se encontraron actividades.");
+            console.log("No se encontraron actividades.");
         }
     } catch (error) {
         console.error("Error al cargar las actividades:", error);

@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     } catch (error) {
         console.error("Error al cargar las noticias:", error);
-        alert("Error al cargar las noticias. Por favor, intenta nuevamente.");
+        console.log("Error al cargar las noticias. Por favor, intenta nuevamente.");
     }
 });
 

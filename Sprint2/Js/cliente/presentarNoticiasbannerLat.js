@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }).mount();       
   
       } else {
-        alert("No se encontraron noticias.");
+        console.log("No se encontraron noticias.");
       }
     } catch (error) {
       console.error("Error al cargar las noticias:", error);

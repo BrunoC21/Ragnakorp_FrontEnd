@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 envExtras.insertAdjacentHTML("beforeend", envHTML);
             });
         } else {
-            alert("No se encontraron actividades.");
+            console.log("No se encontraron actividades.");
         }
     } catch (error) {
         console.error("Error al cargar las actividades:", error);
