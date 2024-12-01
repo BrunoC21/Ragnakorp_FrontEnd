@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     perPage: 1, // En pantallas pequeñas, muestra 1 elemento
                 },
                 1024: {
-                    perPage: 2, // En pantallas medianas, muestra 2 elementos
+                    perPage: 1, // En pantallas medianas, muestra 2 elementos
                 },
             },
         }).mount();

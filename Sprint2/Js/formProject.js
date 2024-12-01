@@ -7,6 +7,27 @@ event.preventDefault(); // Evitar la recarga de la página
         alert("No hay datos de sesión disponibles. Por favor, inicie sesión nuevamente.");
         return;
     }  
+
+    const imageInput = document.getElementById("imagen"); // Input tipo file
+    let imageBase64 = null;
+
+    // Convertir la imagen a Base64 si se seleccionó alguna
+    if (imageInput.files.length > 0) {
+        const file = imageInput.files[0];
+        const reader = new FileReader();
+
+        // Esperar la conversión de la imagen a Base64
+        imageBase64 = await new Promise((resolve, reject) => {
+        reader.onload = () => {
+            const base64String = reader.result.split(",")[1]; // Eliminar el prefijo
+            resolve(base64String);
+        };
+        reader.onerror = () => reject("Error al leer la imagen");
+        reader.readAsDataURL(file);
+        });
+    }
+
+
     // Crear el objeto con los datos necesarios
     const payload = {
         projectData: {
@@ -19,6 +40,7 @@ event.preventDefault(); // Evitar la recarga de la página
             projBudget: document.getElementById('inversion').value,
             projCategory: document.getElementById('categoria').value,
             projAddress: document.getElementById('address').value,
+            projPicture: imageBase64,
         },
         sessionData: sessionData,
     };
