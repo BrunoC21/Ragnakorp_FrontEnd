@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (index < latestNoticiasDestacadas.length) {
                 const news = latestNoticiasDestacadas[index];
                 const noticiasExtras = `
-                    <img src="http://localhost:8080/proyecto/images/${news.primaryImage}" alt="${news.newsTitle}" />
+                    <a href="./noticia.html?id=${news.id}"><img src="http://localhost:8080/proyecto/images/${news.primaryImage}" alt="${news.newsTitle}"></a>
                     <div class="text">
                         <h4>${news.newsTitle}</h4>
                         <h5>${news.newsWriter}</h5>
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         latestNoticias.forEach((news, index) => {
             const noticiaHTML = `
                 <div class="noticias">
-                    <a href="#">
+                    <a href="./noticia.html?id=${news.id}">
                         <img src="http://localhost:8080/proyecto/images/${news.primaryImage}" alt="${news.newsTitle}" />
                         <h4>${news.newsTitle}</h4>
                         <h5>${news.newsWriter}</h5>
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         sliderNews.forEach((news) => {
             const slideHTML = `
             <li class="splide__slide" style="background-color: transparent;">
-                <img src="http://localhost:8080/proyecto/images/${news.primaryImage}" alt="${news.newsTitle}">
+                <a href="./noticia.html?id=${news.id}"><img src="http://localhost:8080/proyecto/images/${news.primaryImage}" alt="${news.newsTitle}"></a>
                 <h3><span>${news.newsTitle}</span></h3>
             </li>
             `;

@@ -17,14 +17,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         if (response.ok) {
             const envList = await response.json(); 
-            const lastEnvList = envList.slice(0, 3);
             const envExtras = document.querySelector(".container");
             envExtras.innerHTML = "";
 
-            lastEnvList.forEach((env) => {
+            envList.forEach((env) => {
                 const envHTML = `
                     <div class="actividad_text">
-                        <h3>${env.activityName}: </h3>
+                        <h3>• ${env.activityName}: </h3>
                         <p>${env.activityDescription}</p>
                     </div>
                 `;

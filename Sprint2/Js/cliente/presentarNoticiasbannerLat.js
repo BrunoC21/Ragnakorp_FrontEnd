@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   
         latestNewsExtras.forEach((news) => {
           const noticiaHTML = `
-            <a href="#">
+            <a href="./noticia.html?id=${news.id}">
               <div class="noticia_extra">
                 <img src="http://localhost:8080/proyecto/images/${news.primaryImage}" alt="${news.newsTitle}">
                 <h2><span>${news.newsTitle}</span></h2>
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         sliderNews.forEach((news) => {
             const slideHTML = `
             <li class="splide__slide" style="background-color: transparent;">
-                <img src="http://localhost:8080/proyecto/images/${news.primaryImage}" alt="${news.newsTitle}">
+                <a href="./noticia.html?id=${news.id}"><img src="http://localhost:8080/proyecto/images/${news.primaryImage}" alt="${news.newsTitle}"></a>
                 <h3><span>${news.newsTitle}</span></h3>
             </li>
             `;
