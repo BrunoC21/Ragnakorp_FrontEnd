@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         const contenedorPrincipal = document.querySelector(".contenedor_principal");
         contenedorPrincipal.innerHTML = "";
 
+        const contComponenteEmergente = document.querySelector(".cont_componente_emergente1");
+        contComponenteEmergente.innerHTML = "";
         if (!contenedorPrincipal) {
             throw new Error("Contenedor de proyectos destacados no encontrado en el DOM");
         }
