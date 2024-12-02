@@ -158,7 +158,7 @@
   
       // Agregar evento al checkbox para detectar cambios
       checkbox2.addEventListener('change', () => {
-          if (checkbox.checked) {
+          if (checkbox2.checked) {
               iconElement2.classList.remove('bx-moon');
               iconElement2.classList.add('bx-sun');
           } else {
@@ -197,12 +197,12 @@
             // Activar tema oscuro
             iconElement.classList.remove('bx-moon');
             iconElement.classList.add('bx-sun');
-            bodyElement.style.backgroundColor = '#212121';
+            bodyElement.style.backgroundColor = '#3c3c3c';
             navElement.style.backgroundColor = '#292929';
             logoA.style.backgroundColor = 'transparent';
             contNav.style.backgroundColor = 'transparent';
             RS.style.backgroundColor = 'transparent';
-            titulo.style.backgroundColor = '#212121';
+            titulo.style.backgroundColor = '#3c3c3c';
             titulo.style.color = 'white';
             linea.style.backgroundColor = 'white';
 
@@ -232,7 +232,6 @@
             });
 
             iconElement.style.color = '#ffffff';
-            iconElement.style.border = 'white solid 0.3vh';
 
             // Agregar clase para hover oscuro
             navElement.classList.add('dark-hover');

@@ -21,34 +21,39 @@
       <p>Bienvenid@s al polo de salud Ñuble</p>
     </header>
 
-    <nav>
-      <a href="index.html"><img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="Logo" class="logo"/></a>
-        <div class="container_nav">
-          <ul class="botones">
-            <li>
-              <a href="aboutme.html" class="boton" id="btn1"><span>¿Quienes somos?</span></a>
-            </li>
-            <li>
-              <a href="components.html" class="boton" id="btn2"><span>Proyectos</span></a>
-            </li>
-            <li>
-              <a href="link.html" class="boton" id="btn3"><span>Vinculación</span></a>
-            </li>
-            <li>
-              <a href="news.html" class="boton" id="btn4"><span>Noticias</span></a>
-            </li>
-            <li>
-              <a href="contactus.html" class="boton" id="btn5"><span>Contactanos</span></a>
-            </li>
-          </ul>
-          <div class="redes_sociales">  
-            <a href="#"><i class='bx bxl-instagram'></i></a>
-            <a href="#"><i class='bx bxl-linkedin-square'></i></a>
-            <a href="#"><i class='bx bx-user'></i></a>
-          </div>
-          <i class='bx bx-moon'></i>
+    <header>
+      <p>Bienvenid@s al polo de salud Ñuble</p>
+  </header>
+
+  <nav>
+    <a href="index.html" id="logoA"><img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="Logo" class="logo"/></a>
+      <div class="container_nav" id="cont_nav">
+        <ul class="botones">
+          <li>
+            <a href="aboutme.html" class="boton" id="btn1"><span>¿Quienes somos?</span></a>
+          </li>
+          <li>
+            <a href="components.html" class="boton" id="btn2"><span>Proyectos</span></a>
+          </li>
+          <li>
+            <a href="link.html" class="boton" id="btn3"><span>Vinculación</span></a>
+          </li>
+          <li>
+            <a href="news.html" class="boton" id="btn4"><span>Noticias</span></a>
+          </li>
+          <li>
+            <a href="contactus.html" class="boton" id="btn5"><span>Contactanos</span></a>
+          </li>
+        </ul>
+        <div class="redes_sociales" id = "RS">  
+          <a href="#"><i class='bx bxl-instagram'></i></a>
+          <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+          <a href="#"><i class='bx bx-user'></i></a>
         </div>
+      </div>
     </nav>
+    <input type="checkbox" id="btn-oscuro">
+    <label for="btn-oscuro"><i class='bx bx-moon' id="oscuro"></i></label>
 
     <div class="titulo">
       <div class="linea1"></div>
@@ -102,5 +107,21 @@
       });
       splide.mount();
     </script>
+    <script>
+      // Seleccionar el input y el ícono
+      const checkbox2 = document.getElementById('btn-oscuro');
+      const iconElement2 = document.getElementById('oscuro');
+  
+      // Agregar evento al checkbox para detectar cambios
+      checkbox2.addEventListener('change', () => {
+          if (checkbox2.checked) {
+              iconElement2.classList.remove('bx-moon');
+              iconElement2.classList.add('bx-sun');
+          } else {
+              iconElement2.classList.remove('bx-sun');
+              iconElement2.classList.add('bx-moon');
+          }
+      });
+  </script>
 </body>
 </html>

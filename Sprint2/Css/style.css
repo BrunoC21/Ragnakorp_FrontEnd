@@ -99,8 +99,16 @@ nav a{
 .boton span:hover{
   width: 15vw;
   height: 6vh;
+  transition: background-color 0.3s ease-in-out;
   background-color: rgb(214, 214, 214);
 }
+
+  /* Efecto hover para los span en modo oscuro */
+  nav.dark-hover span:hover {
+    background-color: #444444;  /* Fondo gris oscuro */
+    color: #ffffff;             /* Color de texto blanco */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transición suave */
+  }
 
 .redes_sociales{
   width: 11vw;
@@ -122,23 +130,24 @@ nav a{
 
   #oscuro{
     position: fixed;
-    top: 5vh;
-    right: 1vw;
+    top: 1vh;
+    right: 2vw;
     font-size: 1vw;
-    width: 1.5vw;
-    height: 1.5vw;
-    line-height: 1.5vw;
+    width: 0.5vw;
+    height: 0.5vw;
+    line-height: 0.5vw;
     text-align: center;
+    color: white;
     border-radius: 5vw;
-    border: #292929 solid 0.3vh;
+    border: none;
     background-color: transparent;
     z-index: 5;
+    cursor: pointer;
   }
 
   #oscuro:hover{
     background-color: #1B2E51;
     color: white;
-    border: white solid 0.3vh;
   }
 
 
@@ -351,8 +360,7 @@ nav a{
     text-align: center;
     width: 100vw;
     height: 15vh;
-    position: relative;
-    bottom: 0;
+    position: absolute bottom;
   }
   
   .footer-container {
@@ -384,14 +392,8 @@ nav a{
   }
   
   .separador {
-    margin-top: 50vh;
+    margin-top: 52vh;
   }
 
 
   
-  /* Efecto hover para los span en modo oscuro */
-  nav.dark-hover span:hover {
-    background-color: #444444;  /* Fondo gris oscuro */
-    color: #ffffff;             /* Color de texto blanco */
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transición suave */
-  }
