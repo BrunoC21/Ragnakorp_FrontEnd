@@ -21,26 +21,15 @@
     </header>
 
     <nav>
-      <a href="index.html"><img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="Logo" class="logo"/></a>
-        <div class="container_nav">
+      <a href="index.html" id="logoA"><img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="Logo" class="logo"/></a>
+        <div class="container_nav" id="cont_nav">
           <ul class="botones">
             <li>
               <a href="aboutme.html" class="boton" id="btn1"><span>¿Quienes somos?</span></a>
             </li>
-            <ul class="dos">
-              <i class='bx bx-chevron-down'></i><span>Componentes</span>
-              <ul class="submenu">
-                <li id="primero">
-                  <a href="components.html"><span>Proyectos</span></a>
-                </li>
-                <li>
-                  <a href="components.html"><span>Componente 2</span></a>
-                </li>
-                <li>
-                  <a href="components.html"><span>Componente 3</span></a>
-                </li>
-              </ul>
-            </ul>
+            <li>
+              <a href="components.html" class="boton" id="btn2"><span>Proyectos</span></a>
+            </li>
             <li>
               <a href="link.html" class="boton" id="btn3"><span>Vinculación</span></a>
             </li>
@@ -51,13 +40,15 @@
               <a href="contactus.html" class="boton" id="btn5"><span>Contactanos</span></a>
             </li>
           </ul>
-          <div class="redes_sociales">  
+          <div class="redes_sociales" id = "RS">  
             <a href="#"><i class='bx bxl-instagram'></i></a>
             <a href="#"><i class='bx bxl-linkedin-square'></i></a>
             <a href="#"><i class='bx bx-user'></i></a>
           </div>
         </div>
-    </nav>
+      </nav>
+      <input type="checkbox" id="btn-oscuro">
+      <label for="btn-oscuro"><i class='bx bx-moon' id="oscuro"></i></label>
 
     <div class="cont_slider">
       <div class="container">
@@ -90,8 +81,8 @@
     
       
     <div class="cont_titulo_noticias">
-      <h2><span>ULTIMAS NOTICIAS Y EVENTOS</span></h2>
-      <div class="linea">
+      <h2><span id="titulo_span">ULTIMAS NOTICIAS Y EVENTOS</span></h2>
+      <div class="linea" id="linea_titulo">
           <div class="line"></div>
       </div>
     </div>
@@ -160,8 +151,138 @@
       </div>
     </footer>
 
+    <script>
+      // Seleccionar el input y el ícono
+      const checkbox2 = document.getElementById('btn-oscuro');
+      const iconElement2 = document.getElementById('oscuro');
+  
+      // Agregar evento al checkbox para detectar cambios
+      checkbox2.addEventListener('change', () => {
+          if (checkbox.checked) {
+              iconElement2.classList.remove('bx-moon');
+              iconElement2.classList.add('bx-sun');
+          } else {
+              iconElement2.classList.remove('bx-sun');
+              iconElement2.classList.add('bx-moon');
+          }
+      });
+  </script>
+  
+  </script>
     <script src="/Sprint2/Js/barnav.js"></script>
     <script src="../Js/cliente/presentarNoticiasbannerLat.js"></script>
     <script src="../Js/cliente/presentarEventosIndex.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    // Selección de elementos
+    const checkbox = document.getElementById('btn-oscuro');
+    const iconElement = document.getElementById('oscuro');
+    const bodyElement = document.body;
+    const navElement = document.querySelector('nav');
+    const logoA = document.getElementById('logoA');
+    const contNav = document.getElementById('cont_nav');
+    const RS = document.getElementById('RS');
+    const botones = document.querySelectorAll('.boton');
+    const navLinks = document.querySelectorAll('nav span');
+    const icons = document.querySelectorAll('nav i');
+    const titulo = document.getElementById('titulo_span');
+    const linea = document.getElementById('linea_titulo');
+    const fondoTitulo = document.querySelectorAll('.cont_titulo_noticias');
+    const tituloNoticias = document.querySelectorAll('.text_news h3');
+    const textNotiocias = document.querySelectorAll('.text_news p');
+
+    // Evento para cambiar estilos
+    checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+            // Activar tema oscuro
+            iconElement.classList.remove('bx-moon');
+            iconElement.classList.add('bx-sun');
+            bodyElement.style.backgroundColor = '#212121';
+            navElement.style.backgroundColor = '#292929';
+            logoA.style.backgroundColor = 'transparent';
+            contNav.style.backgroundColor = 'transparent';
+            RS.style.backgroundColor = 'transparent';
+            titulo.style.backgroundColor = '#212121';
+            titulo.style.color = 'white';
+            linea.style.backgroundColor = 'white';
+
+            fondoTitulo.forEach(fondo => {
+                fondo.style.backgroundColor = '#1d5acc';
+            });
+
+            tituloNoticias.forEach(titulos => {
+                titulos.style.color = 'white';
+            });
+
+            textNotiocias.forEach(texto => {
+                texto.style.color = 'white';
+            });
+
+            botones.forEach(boton => {
+                boton.style.color = '#ffffff';
+                boton.style.backgroundColor = 'transparent';
+            });
+
+            navLinks.forEach(link => {
+                link.style.color = '#ffffff';
+            });
+
+            icons.forEach(icon => {
+                icon.style.color = '#ffffff';
+            });
+
+            iconElement.style.color = '#ffffff';
+            iconElement.style.border = 'white solid 0.3vh';
+
+            // Agregar clase para hover oscuro
+            navElement.classList.add('dark-hover');
+        } else {
+            // Restaurar tema claro
+            iconElement.classList.remove('bx-sun');
+            iconElement.classList.add('bx-moon');
+            bodyElement.style.backgroundColor = '';
+            navElement.style.backgroundColor = '';
+            navElement.style.boxShadow = '';
+            logoA.style.backgroundColor = '';
+            contNav.style.backgroundColor = '';
+            RS.style.backgroundColor = '';
+            titulo.style.backgroundColor = '';
+            titulo.style.color = '';
+            linea.style.backgroundColor = '';
+
+            fondoTitulo.forEach(fondo => {
+                fondo.style.backgroundColor = '';
+            });
+
+            tituloNoticias.forEach(titulos => {
+                titulos.style.color = '';
+            });
+
+            textNotiocias.forEach(texto => {
+                texto.style.color = '';
+            });
+
+            botones.forEach(boton => {
+                boton.style.color = '';
+                boton.style.backgroundColor = '';
+            });
+
+            navLinks.forEach(link => {
+                link.style.color = '';
+            });
+
+            icons.forEach(icon => {
+                icon.style.color = '';
+            });
+
+            iconElement.style.color = '';
+
+            // Quitar clase para hover oscuro
+            navElement.classList.remove('dark-hover');
+        }
+    });
+});
+
+  </script>
 </body>
 </html>

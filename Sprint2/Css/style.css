@@ -73,11 +73,12 @@ nav a{
   background-color: transparent;
 }
 
-.botones li, .dos{
+.botones li{
   width: 15vw;
   height: 6vh;
   line-height: 6vh;
   text-align: center;
+  background-color: transparent;
 }
 
 .boton{
@@ -112,87 +113,34 @@ nav a{
   line-height: 6vh;
   text-align: center;
   color: black;
+  background-color: transparent;
 }
 
-.submenu {
-  position: absolute;
+#btn-oscuro{
   display: none;
-  width: 15vw;
-  height: 18vh;
-  z-index: -1;
-  top: 7vh;
-  left: 24vw;
-  transition: 0.5s;
-  background-color: rgb(233, 233, 233);
 }
 
-.submenu li{
-  background-color: transparent;
-  font-size: 1vw;
-}
+  #oscuro{
+    position: fixed;
+    top: 5vh;
+    right: 1vw;
+    font-size: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+    line-height: 1.5vw;
+    text-align: center;
+    border-radius: 5vw;
+    border: #292929 solid 0.3vh;
+    background-color: transparent;
+    z-index: 5;
+  }
 
-.submenu li span {
-  display: inline-block;
-  width: 14vw;
-  height: 4.5vh;
-  line-height: 4.5vh;
-  text-align: center;
-  font-size: 1vw;
-  color: black;
-  background-color: transparent;
-}
+  #oscuro:hover{
+    background-color: #1B2E51;
+    color: white;
+    border: white solid 0.3vh;
+  }
 
-.submenu a{
-  background-color: transparent;
-  font-size: 1vw;
-}
-
-.submenu li span:hover {
-  width: 14vw;
-  left: 0.1vw;
-  font-size: 1vw;
-  border-bottom: solid rgb(90, 90, 90) 0.3vw;
-  background-color: rgb(199, 199, 199);
-}
-
-.dos i{
-  position: absolute;
-  left: 26vw;
-  height: 6vh;
-  line-height: 6vh;
-  font-size: 1vw;
-  background-color: transparent;
-}
-
-.dos span{
-  background-color: transparent;
-  font-size: 1vw;
-}
-
-.dos {
-  background-color: transparent;
-  font-size: 1vw;
-}
-
-.dos:hover {
-  background-color: white;
-}
-
-.dos:hover .submenu {
-  display: initial;
-}
-
-.dos:hover > .boton span {
-  background-color: white;
-}
-
-.dos:hover .submenu {
-  display: block;
-}
-
-.dos:hover > .boton span {
-  background-color: white;
-}
 
   .container{
     position: relative;
@@ -436,5 +384,14 @@ nav a{
   }
   
   .separador {
-    margin-top: 80vh;
+    margin-top: 50vh;
+  }
+
+
+  
+  /* Efecto hover para los span en modo oscuro */
+  nav.dark-hover span:hover {
+    background-color: #444444;  /* Fondo gris oscuro */
+    color: #ffffff;             /* Color de texto blanco */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transición suave */
   }
