@@ -25,7 +25,7 @@ header{
   z-index: 5;
 }
 
-nav{
+#nav{
   position: fixed;
   display: flex;
   top: 3vh;
@@ -37,6 +37,57 @@ nav{
 
 nav a{
   width: 7vw;
+}
+
+body.dark-mode {
+  background-color: #3c3c3c;
+  color: white;
+}
+
+.container_nav.dark-mode {
+  background-color: #292929;
+}
+
+#nav.dark-mode{
+  background-color: #292929;
+}
+
+#logoA.dark-mode{
+  background-color: transparent;
+}
+
+#RS.dark-mode{
+  background-color: transparent;
+  color: white;
+}
+
+#RS i.dark-mode{
+  color: white;
+}
+
+nav span.dark-mode{
+  color: white;
+}
+
+#titulo_span.dark-mode{
+  color: white;
+  background-color: #3c3c3c;
+}
+
+#linea_titulo.dark-mode{
+  background-color: white;
+}
+
+.text_news p.dark-mode{
+  color: white;
+}
+
+.text_news h3.dark-mode{
+  color: white;
+}
+
+.cont_titulo_noticias.dark-mode{
+  background-color: rgb(3, 3, 148);
 }
 
 .container_nav{
@@ -104,7 +155,7 @@ nav a{
 }
 
   /* Efecto hover para los span en modo oscuro */
-  nav.dark-hover span:hover {
+  .boton span:hover.dark-mode {
     background-color: #444444;  /* Fondo gris oscuro */
     color: #ffffff;             /* Color de texto blanco */
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transición suave */
@@ -341,6 +392,7 @@ nav a{
     margin-left: 2vw;
     font-size: 0.85vw;
     text-align: justify;
+    color: black;
     background-color: transparent;
   }
   
