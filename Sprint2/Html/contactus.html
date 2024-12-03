@@ -108,20 +108,36 @@
       splide.mount();
     </script>
     <script>
-      // Seleccionar el input y el ícono
-      const checkbox2 = document.getElementById('btn-oscuro');
-      const iconElement2 = document.getElementById('oscuro');
-  
-      // Agregar evento al checkbox para detectar cambios
-      checkbox2.addEventListener('change', () => {
-          if (checkbox2.checked) {
-              iconElement2.classList.remove('bx-moon');
-              iconElement2.classList.add('bx-sun');
-          } else {
-              iconElement2.classList.remove('bx-sun');
-              iconElement2.classList.add('bx-moon');
-          }
-      });
+      document.addEventListener('DOMContentLoaded', () => {
+    const checkbox = document.getElementById('btn-oscuro');
+    const iconElement = document.getElementById('oscuro');
+    const bodyElement = document.body;
+
+    // Sincronizar el estado inicial
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    checkbox.checked = isDarkMode;
+    toggleDarkMode(isDarkMode);
+
+    // Cambiar tema y guardar el estado en localStorage
+    checkbox.addEventListener('change', () => {
+        const darkMode = checkbox.checked;
+        toggleDarkMode(darkMode);
+        localStorage.setItem('darkMode', darkMode);
+    });
+
+    function toggleDarkMode(enable) {
+        if (enable) {
+            iconElement.classList.remove('bx-moon');
+            iconElement.classList.add('bx-sun');
+            bodyElement.classList.add('dark-mode');
+        } else {
+            iconElement.classList.remove('bx-sun');
+            iconElement.classList.add('bx-moon');
+            bodyElement.classList.remove('dark-mode');
+        }
+    }
+});
+
   </script>
 </body>
 </html>

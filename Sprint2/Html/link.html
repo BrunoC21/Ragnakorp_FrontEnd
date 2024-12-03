@@ -99,130 +99,35 @@
         <p>&copy;2024 Todos los Derechos Reservados</p>
       </div>
     </footer>
-    <script>
-      // Seleccionar el input y el ícono
-      const checkbox2 = document.getElementById('btn-oscuro');
-      const iconElement2 = document.getElementById('oscuro');
-  
-      // Agregar evento al checkbox para detectar cambios
-      checkbox2.addEventListener('change', () => {
-          if (checkbox2.checked) {
-              iconElement2.classList.remove('bx-moon');
-              iconElement2.classList.add('bx-sun');
-          } else {
-              iconElement2.classList.remove('bx-sun');
-              iconElement2.classList.add('bx-moon');
-          }
-      });
-  </script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-    // Selección de elementos
     const checkbox = document.getElementById('btn-oscuro');
     const iconElement = document.getElementById('oscuro');
     const bodyElement = document.body;
-    const navElement = document.querySelector('nav');
-    const logoA = document.getElementById('logoA');
-    const contNav = document.getElementById('cont_nav');
-    const RS = document.getElementById('RS');
-    const botones = document.querySelectorAll('.boton');
-    const navLinks = document.querySelectorAll('nav span');
-    const icons = document.querySelectorAll('nav i');
-    const titulo = document.getElementById('titulo_span');
-    const linea = document.getElementById('linea_titulo');
-    const fondoTitulo = document.querySelectorAll('.cont_titulo_noticias');
-    const tituloNoticias = document.querySelectorAll('.text_news h3');
-    const textNotiocias = document.querySelectorAll('.text_news p');
 
-    // Evento para cambiar estilos
+    // Sincronizar el estado inicial
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    checkbox.checked = isDarkMode;
+    toggleDarkMode(isDarkMode);
+
+    // Cambiar tema y guardar el estado en localStorage
     checkbox.addEventListener('change', () => {
-        if (checkbox.checked) {
-            // Activar tema oscuro
+        const darkMode = checkbox.checked;
+        toggleDarkMode(darkMode);
+        localStorage.setItem('darkMode', darkMode);
+    });
+
+    function toggleDarkMode(enable) {
+        if (enable) {
             iconElement.classList.remove('bx-moon');
             iconElement.classList.add('bx-sun');
-            bodyElement.style.backgroundColor = '#3c3c3c';
-            navElement.style.backgroundColor = '#292929';
-            logoA.style.backgroundColor = 'transparent';
-            contNav.style.backgroundColor = 'transparent';
-            RS.style.backgroundColor = 'transparent';
-            titulo.style.backgroundColor = '#3c3c3c';
-            titulo.style.color = 'white';
-            linea.style.backgroundColor = 'white';
-
-            fondoTitulo.forEach(fondo => {
-                fondo.style.backgroundColor = '#1d5acc';
-            });
-
-            tituloNoticias.forEach(titulos => {
-                titulos.style.color = 'white';
-            });
-
-            textNotiocias.forEach(texto => {
-                texto.style.color = 'white';
-            });
-
-            botones.forEach(boton => {
-                boton.style.color = 'white';
-                boton.style.backgroundColor = 'transparent';
-            });
-
-            navLinks.forEach(link => {
-                link.style.color = 'white';
-            });
-
-            icons.forEach(icon => {
-                icon.style.color = '#ffffff';
-            });
-
-            iconElement.style.color = '#ffffff';
-
-            // Agregar clase para hover oscuro
-            navElement.classList.add('dark-hover');
+            bodyElement.classList.add('dark-mode');
         } else {
-            // Restaurar tema claro
             iconElement.classList.remove('bx-sun');
             iconElement.classList.add('bx-moon');
-            bodyElement.style.backgroundColor = '';
-            navElement.style.backgroundColor = '';
-            navElement.style.boxShadow = '';
-            logoA.style.backgroundColor = '';
-            contNav.style.backgroundColor = '';
-            RS.style.backgroundColor = '';
-            titulo.style.backgroundColor = '';
-            titulo.style.color = '';
-            linea.style.backgroundColor = '';
-
-            fondoTitulo.forEach(fondo => {
-                fondo.style.backgroundColor = '';
-            });
-
-            tituloNoticias.forEach(titulos => {
-                titulos.style.color = '';
-            });
-
-            textNotiocias.forEach(texto => {
-                texto.style.color = '';
-            });
-
-            botones.forEach(boton => {
-                boton.style.color = '';
-                boton.style.backgroundColor = '';
-            });
-
-            navLinks.forEach(link => {
-                link.style.color = '';
-            });
-
-            icons.forEach(icon => {
-                icon.style.color = '';
-            });
-
-            iconElement.style.color = '';
-
-            // Quitar clase para hover oscuro
-            navElement.classList.remove('dark-hover');
+            bodyElement.classList.remove('dark-mode');
         }
-    });
+    }
 });
 
   </script>
