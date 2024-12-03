@@ -322,7 +322,7 @@ nav span.dark-mode{
   .cont_titulo_noticias span{
     position: absolute;
     height: 4vh;
-    width: 18vw;
+    width: 23vw;
     padding-left: 0.5vw;
     line-height: 4vh;
     left: 11vw;
@@ -332,10 +332,10 @@ nav span.dark-mode{
   
   .linea{
     position: absolute;
-    width: 55vw;
+    width: 53vw;
     height: 0.3vh;
     margin-top: 2vh;
-    margin-left: 20vw;
+    margin-left: 22vw;
     background-color: black;
   }
   
