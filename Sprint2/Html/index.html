@@ -20,7 +20,7 @@
         <p>Bienvenid@s al polo de salud Ñuble</p>
     </header>
 
-    <nav>
+    <nav id="nav">
       <a href="index.html" id="logoA"><img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="Logo" class="logo"/></a>
         <div class="container_nav" id="cont_nav">
           <ul class="botones">
@@ -169,117 +169,106 @@
   </script>
   
   </script>
-    <script src="/Sprint2/Js/barnav.js"></script>
-    <script src="../Js/cliente/presentarNoticiasbannerLat.js"></script>
-    <script src="../Js/cliente/presentarEventosIndex.js"></script>
-    <script>
+  <script src="/Sprint2/Js/barnav.js"></script>
+  <script src="../Js/cliente/presentarNoticiasbannerLat.js"></script>
+  <script src="../Js/cliente/presentarEventosIndex.js"></script>
+  <script>
     document.addEventListener('DOMContentLoaded', () => {
-    // Selección de elementos
     const checkbox = document.getElementById('btn-oscuro');
     const iconElement = document.getElementById('oscuro');
     const bodyElement = document.body;
-    const navElement = document.querySelector('nav');
-    const logoA = document.getElementById('logoA');
-    const contNav = document.getElementById('cont_nav');
-    const RS = document.getElementById('RS');
-    const botones = document.querySelectorAll('.boton');
+    const navContElement = document.querySelectorAll('.container_nav');
+    const navElement = document.getElementById('nav');
+    const logoElement = document.getElementById('logoA');
+    const rsElemento = document.getElementById('RS')
+    const botones = document.querySelectorAll('#RS i');
     const navLinks = document.querySelectorAll('nav span');
-    const icons = document.querySelectorAll('nav i');
+    
     const titulo = document.getElementById('titulo_span');
     const linea = document.getElementById('linea_titulo');
     const fondoTitulo = document.querySelectorAll('.cont_titulo_noticias');
     const tituloNoticias = document.querySelectorAll('.text_news h3');
     const textNotiocias = document.querySelectorAll('.text_news p');
 
-    // Evento para cambiar estilos
+    const efectos = document.querySelectorAll('.boton span:hover');
+
+    // Sincronizar el estado inicial
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    checkbox.checked = isDarkMode;
+    toggleDarkMode(isDarkMode);
+
+    // Cambiar tema y guardar el estado en localStorage
     checkbox.addEventListener('change', () => {
-        if (checkbox.checked) {
-            // Activar tema oscuro
+        const darkMode = checkbox.checked;
+        toggleDarkMode(darkMode);
+        localStorage.setItem('darkMode', darkMode);
+    });
+
+    function toggleDarkMode(enable) {
+        if (enable) {
             iconElement.classList.remove('bx-moon');
             iconElement.classList.add('bx-sun');
-            bodyElement.style.backgroundColor = '#3c3c3c';
-            navElement.style.backgroundColor = '#292929';
-            logoA.style.backgroundColor = 'transparent';
-            contNav.style.backgroundColor = 'transparent';
-            RS.style.backgroundColor = 'transparent';
-            titulo.style.backgroundColor = '#3c3c3c';
-            titulo.style.color = 'white';
-            linea.style.backgroundColor = 'white';
-
-            fondoTitulo.forEach(fondo => {
-                fondo.style.backgroundColor = '#1d5acc';
+            bodyElement.classList.add('dark-mode');
+            navElement.classList.add('dark-mode');
+            logoElement.classList.add('dark-mode');
+            rsElemento.classList.add('dark-mode');
+            titulo.classList.add('dark-mode');
+            linea.classList.add('dark-mode');
+            efectos.forEach(efecto => {
+              efecto.classList.add('dark.mode');
             });
 
-            tituloNoticias.forEach(titulos => {
-                titulos.style.color = 'white';
+            navContElement.forEach(nav => {
+              nav.classList.add('dark-mode');
             });
-
-            textNotiocias.forEach(texto => {
-                texto.style.color = 'white';
-            });
-
-            botones.forEach(boton => {
-                boton.style.color = '#ffffff';
-                boton.style.backgroundColor = 'transparent';
-            });
-
             navLinks.forEach(link => {
-                link.style.color = '#ffffff';
+                link.classList.add('dark-mode');
+            });
+            botones.forEach(boton => {
+                boton.classList.add('dark-mode');
+            });
+            fondoTitulo.forEach(fondo => {
+                fondo.classList.add('dark-mode');
+            });
+            tituloNoticias.forEach(titulos => {
+                titulos.classList.add('dark-mode');
+            });
+            textNotiocias.forEach(texto => {
+                texto.classList.add('dark-mode');
             });
 
-            icons.forEach(icon => {
-                icon.style.color = '#ffffff';
-            });
-
-            iconElement.style.color = '#ffffff';
-
-            // Agregar clase para hover oscuro
-            navElement.classList.add('dark-hover');
         } else {
-            // Restaurar tema claro
             iconElement.classList.remove('bx-sun');
             iconElement.classList.add('bx-moon');
-            bodyElement.style.backgroundColor = '';
-            navElement.style.backgroundColor = '';
-            navElement.style.boxShadow = '';
-            logoA.style.backgroundColor = '';
-            contNav.style.backgroundColor = '';
-            RS.style.backgroundColor = '';
-            titulo.style.backgroundColor = '';
-            titulo.style.color = '';
-            linea.style.backgroundColor = '';
-
-            fondoTitulo.forEach(fondo => {
-                fondo.style.backgroundColor = '';
+            bodyElement.classList.remove('dark-mode');
+            navElement.classList.remove('dark-mode');
+            logoElement.classList.remove('dark-mode');
+            rsElemento.classList.remove('dark-mode');
+            titulo.classList.remove('dark-mode');
+            linea.classList.remove('dark-mode');
+            navContElement.forEach(nav => {
+              nav.classList.remove('dark-mode');
             });
-
-            tituloNoticias.forEach(titulos => {
-                titulos.style.color = '';
-            });
-
-            textNotiocias.forEach(texto => {
-                texto.style.color = '';
-            });
-
-            botones.forEach(boton => {
-                boton.style.color = '';
-                boton.style.backgroundColor = '';
-            });
-
             navLinks.forEach(link => {
-                link.style.color = '';
+                link.classList.remove('dark-mode');
             });
-
-            icons.forEach(icon => {
-                icon.style.color = '';
+            botones.forEach(boton => {
+                boton.classList.remove('dark-mode');
             });
-
-            iconElement.style.color = '';
-
-            // Quitar clase para hover oscuro
-            navElement.classList.remove('dark-hover');
+            fondoTitulo.forEach(fondo => {
+                fondo.classList.remove('dark-mode');
+            });
+            tituloNoticias.forEach(titulos => {
+                titulos.classList.remove('dark-mode');
+            });
+            textNotiocias.forEach(texto => {
+                texto.classList.remove('dark-mode');
+            });
+            efectos.forEach(efecto => {
+              efecto.classList.add('dark.mode');
+            });
         }
-    });
+    }
 });
 
   </script>
