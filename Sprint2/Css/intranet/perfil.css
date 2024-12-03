@@ -324,7 +324,7 @@
     position: relative;
     display: flex;
     width: 90vw;
-    height: 90vh;
+    height: 108vh;
     top: 16vh;
     margin-left: 5vw;
     border: solid #163549;
@@ -333,7 +333,7 @@
 }
 
 .columna1{
-  height: 85vh;
+  height: 102vh;
   width: 20vw;
   margin-top: 2.5vh;
   margin-left:1vw;
@@ -433,7 +433,7 @@
 
 .info p{
   width: 60vw;
-  height: 15vh;
+  height: 14vh;
   margin-left: 2%;
   border-radius: 1em;
   color: black;
@@ -532,5 +532,5 @@
   }
 
   .separador {
-    height: 20vw;
+    height: 17vw;
   }
