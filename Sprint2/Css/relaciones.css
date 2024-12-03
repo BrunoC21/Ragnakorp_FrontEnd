@@ -224,6 +224,7 @@ nav a{
     line-height: 12vh;
     font-size: 1.2vw;
     color: white;
+    background-color: transparent;
   }
   
   .cont_rel1,.cont_rel2,
