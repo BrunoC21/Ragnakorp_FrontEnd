@@ -1,189 +1,153 @@
 * {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    font-family: "Bree Serif", serif;
+  background-color: #eef1f4;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Bree Serif", serif;
+}
+
+header p{
+  height: 3vh;
+  line-height: 3vh;
+  text-align: center;
+  font-size: 1vw;
+  color: white;
+  background-color: transparent;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 3vh;
+  background-color: #1B2E51;
+  z-index: 5;
+}
+
+nav{
+  position: fixed;
+  display: flex;
+  top: 3vh;
+  height: 8vh;
+  width: 100vw;
+  box-shadow: 0px 0.5vh 2vh black;
+  z-index: 5;
+}
+
+nav a{
+  width: 7vw;
+}
+
+.container_nav{
+  display: flex;
+  width: 90vw;
+  height: 6.5vh;
+  margin-left: 0%;
+  margin-top: 0.5vh;
+  border-bottom: black solid 0.2vh;
+  border-top: black solid 0.2vh;
+  z-index: 3;
+}
+
+.logo{
+  width: auto;
+  height: 80%;
+  margin-left: 1vw;
+  margin-right: -2vw;
+  margin-top: 0.8vh;
+  border-radius: 1em;
+}
+
+.container_nav a{
+  width: 3.6vw;
+  height: 3.6vw;
+  background-color: transparent;
+}
+
+.botones{
+  z-index: 2;
+  display: flex;
+  width: 75vw;
+  margin-left: 2vw;
+  background-color: transparent;
+}
+
+.botones li{
+  width: 15vw;
+  height: 6vh;
+  line-height: 6vh;
+  text-align: center;
+  background-color: transparent;
+}
+
+.boton{
+  width: 15vw;
+  height: 8vh;
+  background-color: transparent;
+}
+
+.boton span{
+  display: block;
+  width: 15vw;
+  height: 6vh;
+  font-size: 1vw;
+  color: black;
+  background-color: transparent;
+}
+
+.boton span:hover{
+  width: 15vw;
+  height: 6vh;
+  transition: background-color 0.3s ease-in-out;
+  background-color: rgb(214, 214, 214);
+}
+
+  /* Efecto hover para los span en modo oscuro */
+  nav.dark-hover span:hover {
+    background-color: #444444;  /* Fondo gris oscuro */
+    color: #ffffff;             /* Color de texto blanco */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transición suave */
   }
-  
-  body {
-    background-color: #eef1f4;
-  }
-  
-  header {
+
+.redes_sociales{
+  width: 11vw;
+  font-size: 1.5vw;
+}
+
+.redes_sociales i{
+  height: 6vh;
+  width: 3.3vw;
+  line-height: 6vh;
+  text-align: center;
+  color: black;
+  background-color: transparent;
+}
+
+#btn-oscuro{
+  display: none;
+}
+
+  #oscuro{
     position: fixed;
-    top: 0;
-    width: 100%;
-    height: 4%;
-    background-color: #1b2e51;
-    z-index: 5;
-  }
-  
-  header p {
-    height: 100%;
-    line-height: 220%;
+    top: 1vh;
+    right: 2vw;
+    font-size: 1vw;
+    width: 0.5vw;
+    height: 0.5vw;
+    line-height: 0.5vw;
     text-align: center;
-    font-size: 0.8vw;
     color: white;
+    border-radius: 5vw;
+    border: none;
     background-color: transparent;
-  }
-  
-  nav {
-    position: fixed;
-    display: flex;
-    top: 4vh;
-    height: 10vh;
-    width: 100vw;
-    box-shadow: 0px 0.5vh 2vh black;
     z-index: 5;
-    background-color: #eef1f4;
+    cursor: pointer;
   }
-  
-  .container_nav {
-    display: flex;
-    width: 90vw;
-    height: 8vh;
-    margin-left: 5vw;
-    margin-top: 0.5vh;
-    border-bottom: black solid 0.2vh;
-    border-top: black solid 0.2vh;
-    z-index: 3;
-  }
-  
-  .logo {
-    width: 4vw;
-    height: 4vw;
-    margin-left: 1vw;
-    margin-right: -2vw;
-    margin-top: 0.8vh;
-    border-radius: 1em;
-  }
-  
-  .container_nav a {
-    width: 3.6vw;
-    height: 3.6vw;
-    background-color: transparent;
-  }
-  
-  .botones {
-    z-index: 2;
-    display: flex;
-    width: 75vw;
-    margin-left: 2vw;
-    background-color: transparent;
-  }
-  
-  .botones li,
-  .dos {
-    width: 15vw;
-    height: 8vh;
-    line-height: 8vh;
-    text-align: center;
-  }
-  
-  .boton {
-    width: 15vw;
-    height: 8vh;
-    background-color: transparent;
-  }
-  
-  .boton span {
-    display: block;
-    width: 15vw;
-    height: 8vh;
-    font-size: 1vw;
-    color: black;
-    background-color: transparent;
-  }
-  
-  .boton span:hover {
-    width: 15vw;
-    height: 8vh;
-    background-color: rgb(214, 214, 214);
-  }
-  
-  .redes_sociales {
-    width: 11vw;
-  }
-  
-  .redes_sociales i {
-    height: 8vh;
-    width: 3.3vw;
-    line-height: 8vh;
-    text-align: center;
-    font-size: 1.5vw;
-    color: black;
-  }
-  
-  .submenu {
-    position: absolute;
-    display: none;
-    width: 15vw;
-    height: 26vh;
-    z-index: -1;
-    top: 8.7vh;
-    left: 25vw;
-    transition: 0.5s;
-    background-color: rgb(233, 233, 233);
-  }
-  
-  .submenu li {
-    background-color: transparent;
-  }
-  
-  .submenu li span {
-    display: inline-block;
-    width: 14vw;
-    height: 8.5vh;
-    line-height: 8.5vh;
-    text-align: center;
-    font-size: 1vw;
-    color: black;
-    background-color: transparent;
-  }
-  
-  .submenu a {
-    background-color: transparent;
-  }
-  
-  .submenu li span:hover {
-    width: 14vw;
-    left: 0.1vw;
-    border-bottom: solid rgb(90, 90, 90) 0.3vw;
-    background-color: rgb(199, 199, 199);
-  }
-  
-  .dos i{
-    position: absolute;
-    left: 26vw;
-    height: 8vh;
-    line-height: 8vh;
-    font-size: 1vw;
-    background-color: transparent;
-  }
-  
-  .dos {
-    background-color: transparent;
-  }
-  
-  .dos:hover {
-    background-color: white;
-  }
-  
-  .dos:hover .submenu {
-    display: initial;
-  }
-  
-  .dos:hover > .boton span {
-    background-color: white;
-  }
-  
-  .dos:hover .submenu {
-    display: block;
-  }
-  
-  .dos:hover > .boton span {
-    background-color: white;
+
+  #oscuro:hover{
+    background-color: #1B2E51;
+    color: white;
   }
   
   .titulo {

@@ -11,6 +11,7 @@ document.getElementById('makeVinculacionForm').addEventListener('submit', async 
     const campos = {
         vinculacionDTO: {
             activityName: document.getElementById("titulo").value,
+            activityCategory: document.getElementById("categoria").value,
             activityDescription: document.getElementById("descripcion").value
         },
         sessionData: sessionData,
@@ -29,6 +30,7 @@ document.getElementById('makeVinculacionForm').addEventListener('submit', async 
         // Verificar si la respuesta es exitosa (status 200-299)
         if (peticion.ok) {
             // Redirigir a la ruta ../Html/index.html
+            alert("vinculacion creada");
             window.location.href = '/Sprint2/Html/intranet/vinculaciones_intranet.html';
         } else {
             // Mostrar un mensaje de error al usuario

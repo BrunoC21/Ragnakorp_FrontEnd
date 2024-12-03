@@ -1,0 +1,72 @@
+/* .container {
+    width: 100%; 
+    margin: 0;
+    padding: 20px; 
+    background: #fff;
+    box-sizing: border-box;
+} */
+
+body {
+    background-color: #fff;
+}
+
+.container {
+    position: relative;
+    top: 12vh;
+    box-shadow: none;
+    width: 100%; 
+    margin: 0;
+    padding: 20px; 
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.news-title {
+    font-size: 2rem;
+    color: #000;
+    background-color: #fff;
+    margin-bottom: 10px;
+    text-align: center; /* Asegura que el título esté centrado */
+    text-decoration: underline;
+}
+
+.news-meta {
+    font-size: 0.9rem;
+    background-color: #fff;
+    color: #000;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.news-meta span {
+    background-color: #fff;
+    margin-right: 15px;
+}
+
+.news-image {
+    background-color: #fff;
+    margin-top: 2px;
+    width: 50%; /* Asegura que la imagen ocupe un 50% del ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto original */
+    max-height: 400px; /* Limita la altura máxima */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+    margin: 0 auto; /* Centra la imagen en el contenedor */
+    display: block; /* Hace que la imagen se comporte como un bloque para aplicar el centrado */
+    margin-bottom: 20px;
+}
+
+.news-content {
+    background-color: #fff;
+    font-size: 1rem;
+    color: #000;
+    line-height: 1.6;
+}
+
+p {
+    background-color: #fff;
+}
+
+span strong {
+    background-color: #fff;
+}

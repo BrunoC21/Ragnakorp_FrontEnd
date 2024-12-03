@@ -6,6 +6,11 @@ window.onload = function () {
         document.getElementById("agregar").style.display = "none";
     }
 
+    const news = localStorage.getItem('noticiaEdit');
+    if (news) {
+        localStorage.removeItem('noticiaEdit');
+    }
+
     obtenerNoticias();
 };
 

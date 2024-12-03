@@ -1,4 +1,8 @@
 window.onload = function () {
+    const vin = localStorage.getItem('vinculacionEdit');
+    if (vin) {
+        localStorage.removeItem('vinculacionEdit');
+    }
     obtenerVinculaciones();
 };
 

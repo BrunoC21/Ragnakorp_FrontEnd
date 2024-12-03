@@ -417,7 +417,7 @@ tbody tr:hover {
 footer {
   position: absolute;
   bottom: 0;
-  background-color: #27485e; /* Color azul oscuro del fondo */
+  background-color: #27485e; 
   color: white;
   padding: 20px 0;
   text-align: center;
