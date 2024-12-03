@@ -1,11 +1,11 @@
 window.onload = function () {
-  obtenerPostulaciones();
+    obtenerPostulaciones();
 };
 
 let postulaciones = [];
 
 let obtenerPostulaciones = async () => {
-  const peticion = await fetch("http://localhost:8080/proyecto/postulation/search", {
+  const peticion = await fetch('http://localhost:8080/proyecto/postulation/search', {
     method: "GET",
     headers: {
         "Accept": "application/json",
