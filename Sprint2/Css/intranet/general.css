@@ -12,6 +12,8 @@ body, html {
   overflow: hidden; /* Evita que el contenido desborde fuera del contenedor */
 }
 
+
+
 /* Ajuste del footer */
 footer {
   position: relative; /* Cambiar de absolute a relative */
