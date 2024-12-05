@@ -24,7 +24,7 @@
       <p>Bienvenid@s al polo de salud Ñuble</p>
   </header>
 
-  <nav>
+  <nav id="nav">
     <a href="index.html" id="logoA"><img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="Logo" class="logo"/></a>
       <div class="container_nav" id="cont_nav">
         <ul class="botones">
@@ -54,21 +54,21 @@
     <input type="checkbox" id="btn-oscuro">
     <label for="btn-oscuro"><i class='bx bx-moon' id="oscuro"></i></label>
 
-    <div class="titulo">
-      <div class="linea1"></div>
-      <h2><span>PROYECTOS</span></h2>
-      <div class="linea2"></div>
+    <div class="titulo" id="cont_titulo">
+      <div class="linea1" id="line1"></div>
+      <h2 id="h2_titulo"><span id="titulo_span">PROYECTOS</span></h2>
+      <div class="linea2" id="line2"></div>
     </div>
 
-    <div class="contenedor_principal">
+    <div class="contenedor_principal" id="container_all">
       <input type="checkbox" id="btn_componente1">
       <label for="btn_componente1" class="componentes">
-        <div class="cont_titulo_componente1">
-          <h2><span>CARRERA DE MEDICINA, ESPECIALIDADES MEDICAS Y CARRERAS NO MEDICAS</span></h2>
-          <div class="linea"></div>
+        <div class="cont_titulo_componente1" id="fondo_titulo2">
+          <h2 id="cont_titulo2"><span id="span_titulo2">CARRERA DE MEDICINA, ESPECIALIDADES MEDICAS Y CARRERAS NO MEDICAS</span></h2>
+          <div class="linea" id="line3"></div>
         </div>
 
-        <div class="container_componentes">
+        <div class="container_componentes" id="componente">
             <img src="/Sprint2/Images/medicina.png" alt="">
             <div class="texto_componente">
               <p>Responde a la necesidad de aumentar el número de profesionales en la red de salud pública, 
@@ -178,7 +178,25 @@
     const checkbox = document.getElementById('btn-oscuro');
     const iconElement = document.getElementById('oscuro');
     const bodyElement = document.body;
-
+    const navContElement = document.querySelectorAll('.container_nav');
+    const navElement = document.getElementById('nav');
+    const logoElement = document.getElementById('logoA');
+    const rsElemento = document.getElementById('RS')
+    const botones = document.querySelectorAll('#RS i');
+    const navLinks = document.querySelectorAll('nav span');
+    const titulo = document.getElementById('titulo_span');
+    const container = document.getElementById('container_all');
+    const componente = document.getElementById('componente');
+    const contTitulo = document.getElementById('cont_titulo');
+    const h2 = document.getElementById('h2_titulo');
+    const linea1 = document.getElementById('line1');
+    const linea2 = document.getElementById('line2');
+    const linea3 = document.getElementById('line3');
+    const titulo2 = document.getElementById('span_titulo2');
+    const contTitulo2 = document.getElementById('cont_titulo2');
+    const fondoTitulo2 = document.getElementById('fondo_titulo2');
+    
+    
     // Sincronizar el estado inicial
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
     checkbox.checked = isDarkMode;
@@ -196,10 +214,60 @@
             iconElement.classList.remove('bx-moon');
             iconElement.classList.add('bx-sun');
             bodyElement.classList.add('dark-mode');
+            navElement.classList.add('dark-mode');
+            logoElement.classList.add('dark-mode');
+            rsElemento.classList.add('dark-mode');
+            titulo.classList.add('dark-mode');
+            container.classList.add('dark-mode');
+            componente.classList.add('dark-mode');
+            contTitulo.classList.add('dark-mode');
+            h2.classList.add('dark-mode');
+            linea1.classList.add('dark-mode');
+            linea2.classList.add('dark-mode');
+            linea3.classList.add('dark-mode');
+            titulo2.classList.add('dark-mode');
+            contTitulo2.classList.add('dark-mode');
+            fondoTitulo2.classList.add('dark-mode');
+            
+
+            navContElement.forEach(nav => {
+              nav.classList.add('dark-mode');
+            });
+            navLinks.forEach(link => {
+                link.classList.add('dark-mode');
+            });
+            botones.forEach(boton => {
+                boton.classList.add('dark-mode');
+            });
+
         } else {
             iconElement.classList.remove('bx-sun');
             iconElement.classList.add('bx-moon');
             bodyElement.classList.remove('dark-mode');
+            navElement.classList.remove('dark-mode');
+            logoElement.classList.remove('dark-mode');
+            rsElemento.classList.remove('dark-mode');
+            titulo.classList.remove('dark-mode');
+            container.classList.remove('dark-mode');
+            componente.classList.remove('dark-mode');
+            contTitulo.classList.remove('dark-mode');
+            h2.classList.remove('dark-mode');
+            line1.classList.remove('dark-mode');
+            line2.classList.remove('dark-mode');
+            line3.classList.remove('dark-mode');
+            titulo2.classList.remove('dark-mode');
+            contTitulo2.classList.remove('dark-mode');
+            fondoTitulo2.classList.remove('dark-mode');
+            
+            navContElement.forEach(nav => {
+              nav.classList.remove('dark-mode');
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('dark-mode');
+            });
+            botones.forEach(boton => {
+                boton.classList.remove('dark-mode');
+            });
         }
     }
 });

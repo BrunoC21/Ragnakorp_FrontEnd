@@ -25,7 +25,7 @@
       <p>Bienvenid@s al polo de salud Ñuble</p>
   </header>
 
-  <nav>
+  <nav id="nav">
     <a href="index.html" id="logoA"><img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="Logo" class="logo"/></a>
       <div class="container_nav" id="cont_nav">
         <ul class="botones">
@@ -55,19 +55,19 @@
     <input type="checkbox" id="btn-oscuro">
     <label for="btn-oscuro"><i class='bx bx-moon' id="oscuro"></i></label>
 
-    <div class="titulo">
-      <div class="linea1"></div>
-      <h2><span>CONTÁCTANOS</span></h2>
-      <div class="linea2"></div>
+    <div class="titulo" id="cont_titulo">
+      <div class="linea1" id="line1"></div>
+      <h2 id="h2_titulo"><span id="titulo_span">CONTACTANOS</span></h2>
+      <div class="linea2" id="line2"></div>
     </div>
     
-    <div class="titulo_seccion">
-      <h2>
-        <span> <i class="bx bxs-contact" style="color: #000000"></i> Formulario de contacto</span>
+    <div class="titulo_seccion" id="cont_titulo2">
+      <h2 id="h2_titulo2">
+        <span id="titulo_span2"> <i class="bx bxs-contact" id="icon"></i> Formulario de contacto</span>
       </h2>
     </div>
 
-    <div class="form-container">
+    <div class="form-container" id="form">
       <form action="https://formspree.io/f/xvgogkjy" method="POST">
         <label for="nombre" class="form_labels" id="label_nombre"
           >Nombre:</label
@@ -112,6 +112,21 @@
     const checkbox = document.getElementById('btn-oscuro');
     const iconElement = document.getElementById('oscuro');
     const bodyElement = document.body;
+    const navContElement = document.querySelectorAll('.container_nav');
+    const navElement = document.getElementById('nav');
+    const logoElement = document.getElementById('logoA');
+    const rsElemento = document.getElementById('RS')
+    const botones = document.querySelectorAll('#RS i');
+    const navLinks = document.querySelectorAll('nav span');
+    const contTitulo = document.getElementById('cont_titulo');
+    const h2 = document.getElementById('h2_titulo');
+    const linea1 = document.getElementById('line1');
+    const linea2 = document.getElementById('line2');
+    const contTitulo2 = document.getElementById('cont_titulo2');
+    const h22 = document.getElementById('h2_titulo2');
+    const icon = document.getElementById('icon');
+    const spanTitulo2 = document.getElementById('titulo_span2');
+    const formulario = document.getElementById('form');
 
     // Sincronizar el estado inicial
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
@@ -130,10 +145,54 @@
             iconElement.classList.remove('bx-moon');
             iconElement.classList.add('bx-sun');
             bodyElement.classList.add('dark-mode');
+            navElement.classList.add('dark-mode');
+            logoElement.classList.add('dark-mode');
+            rsElemento.classList.add('dark-mode');
+            contTitulo.classList.add('dark-mode');
+            h2.classList.add('dark-mode');
+            linea1.classList.add('dark-mode');
+            linea2.classList.add('dark-mode');
+            contTitulo2.classList.add('dark-mode');
+            h22.classList.add('dark-mode');
+            icon.classList.add('dark-mode');
+            spanTitulo2.classList.add('dark-mode');
+            formulario.classList.add('dark-mode');
+
+            navContElement.forEach(nav => {
+              nav.classList.add('dark-mode');
+            });
+            navLinks.forEach(link => {
+                link.classList.add('dark-mode');
+            });
+            botones.forEach(boton => {
+                boton.classList.add('dark-mode');
+            });
         } else {
             iconElement.classList.remove('bx-sun');
             iconElement.classList.add('bx-moon');
             bodyElement.classList.remove('dark-mode');
+            navElement.classList.remove('dark-mode');
+            logoElement.classList.remove('dark-mode');
+            rsElemento.classList.remove('dark-mode');
+            contTitulo.classList.remove('dark-mode');
+            h2.classList.remove('dark-mode');
+            linea1.classList.remove('dark-mode');
+            linea2.classList.remove('dark-mode');
+            contTitulo2.classList.remove('dark-mode');
+            h22.classList.remove('dark-mode');
+            icon.classList.remove('dark-mode');
+            spanTitulo2.classList.remove('dark-mode');
+            formulario.classList.remove('dark-mode');
+
+            navContElement.forEach(nav => {
+              nav.classList.remove('dark-mode');
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('dark-mode');
+            });
+            botones.forEach(boton => {
+                boton.classList.remove('dark-mode');
+            });
         }
     }
 });
