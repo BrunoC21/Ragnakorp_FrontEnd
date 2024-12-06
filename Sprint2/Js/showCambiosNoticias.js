@@ -14,10 +14,7 @@ let obtenerCambios = async () => {
     });
 
     cambios = await peticion.json();
-    renderizarTablaCambios();
-}
 
-let renderizarTablaCambios = () => {
     let contenidoTabla = "";
     
     for (let cambio in cambios) {
@@ -31,4 +28,5 @@ let renderizarTablaCambios = () => {
         `;
     }
     document.querySelector("#tabla tbody").innerHTML = contenidoTabla;
-};
+    // renderizarTablaCambios();
+}
