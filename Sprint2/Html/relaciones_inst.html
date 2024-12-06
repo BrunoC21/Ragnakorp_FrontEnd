@@ -32,7 +32,7 @@
       <p>Bienvenid@s al polo de salud Ñuble</p>
   </header>
 
-  <nav>
+  <nav id="nav">
     <a href="index.html" id="logoA"><img src="/Sprint2/Images/Logo Clínica Salud Moderno Azul.png" alt="Logo" class="logo"/></a>
       <div class="container_nav" id="cont_nav">
         <ul class="botones">
@@ -62,21 +62,21 @@
     <input type="checkbox" id="btn-oscuro">
     <label for="btn-oscuro"><i class='bx bx-moon' id="oscuro"></i></label>
 
-    <div class="titulo">
-      <div class="linea1"></div>
-      <h2><span>Relaciones institucionales</span></h2>
-      <div class="linea2"></div>
+    <div class="titulo" id="cont_titulo">
+      <div class="linea1" id="line1"></div>
+      <h2 id="h2_titulo"><span id="titulo_span">RELACIONES INSTITUCIONALES</span></h2>
+      <div class="linea2" id="line2"></div>
     </div>
 
         <input type="radio" name="btn_rel" id="btn_rel1">
         <input type="radio" name="btn_rel" id="btn_rel2">
         <input type="radio" name="btn_rel" id="btn_rel3">
         <input type="radio" name="btn_rel" id="btn_rel4">
-    <div class="container_general"> 
-        <div class="container_relaciones container">
+    <div class="container_general" id="container"> 
+        <div class="container_relaciones container" id="info">
         </div>
     
-        <div class="container_opciones">
+        <div class="container_opciones" id="opt">
             <div class="cont_opt_rel">
                 <label for="btn_rel1" class="opt_rel">Relaciones gubernamentales</label>
             </div>
@@ -120,6 +120,20 @@
     const checkbox = document.getElementById('btn-oscuro');
     const iconElement = document.getElementById('oscuro');
     const bodyElement = document.body;
+    const navContElement = document.querySelectorAll('.container_nav');
+    const navElement = document.getElementById('nav');
+    const logoElement = document.getElementById('logoA');
+    const rsElemento = document.getElementById('RS')
+    const botones = document.querySelectorAll('#RS i');
+    const navLinks = document.querySelectorAll('nav span');
+    const contTitulo = document.getElementById('cont_titulo');
+    const h2 = document.getElementById('h2_titulo');
+    const linea1 = document.getElementById('line1');
+    const linea2 = document.getElementById('line2');
+    const span = document.getElementById('titulo_span');
+    const cont = document.getElementById('container');
+    const opt = document.getElementById('opt');
+    const info = document.getElementById('info');
 
     // Sincronizar el estado inicial
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
@@ -138,10 +152,50 @@
             iconElement.classList.remove('bx-moon');
             iconElement.classList.add('bx-sun');
             bodyElement.classList.add('dark-mode');
+            navElement.classList.add('dark-mode');
+            logoElement.classList.add('dark-mode');
+            rsElemento.classList.add('dark-mode');
+            contTitulo.classList.add('dark-mode');
+            h2.classList.add('dark-mode');
+            linea1.classList.add('dark-mode');
+            linea2.classList.add('dark-mode');
+            span.classList.add('dark-mode');
+            cont.classList.add('dark-mode');
+            opt.classList.add('dark-mode');
+            info.classList.add('dark-mode');
+            navContElement.forEach(nav => {
+              nav.classList.add('dark-mode');
+            });
+            navLinks.forEach(link => {
+                link.classList.add('dark-mode');
+            });
+            botones.forEach(boton => {
+                boton.classList.add('dark-mode');
+            });
         } else {
             iconElement.classList.remove('bx-sun');
             iconElement.classList.add('bx-moon');
             bodyElement.classList.remove('dark-mode');
+            navElement.classList.remove('dark-mode');
+            logoElement.classList.remove('dark-mode');
+            rsElemento.classList.remove('dark-mode');
+            contTitulo.classList.remove('dark-mode');
+            h2.classList.remove('dark-mode');
+            linea1.classList.remove('dark-mode');
+            linea2.classList.remove('dark-mode');
+            span.classList.remove('dark-mode');
+            cont.classList.remove('dark-mode');
+            opt.classList.remove('dark-mode');
+            info.classList.remove('dark-mode');
+            navContElement.forEach(nav => {
+              nav.classList.remove('dark-mode');
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('dark-mode');
+            });
+            botones.forEach(boton => {
+                boton.classList.remove('dark-mode');
+            });
         }
     }
 });

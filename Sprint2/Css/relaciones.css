@@ -39,6 +39,65 @@ nav a{
   width: 7vw;
 }
 
+body.dark-mode {
+  background-color: #3c3c3c;
+  color: white;
+}
+
+.container_nav.dark-mode {
+  background-color: #292929;
+}
+
+#nav.dark-mode{
+  background-color: #292929;
+}
+
+#logoA.dark-mode{
+  background-color: transparent;
+}
+
+#RS.dark-mode{
+  background-color: transparent;
+  color: white;
+}
+
+#RS i.dark-mode{
+  color: white;
+}
+
+nav span.dark-mode{
+  color: white;
+}
+
+#titulo_span.dark-mode{
+  color: white;
+  background-color: #3c3c3c;
+}
+
+#cont_titulo.dark-mode{
+  background-color: #3c3c3c;
+  color: white;
+}
+
+#h2_titulo.dark-mode{
+  background-color: #3c3c3c;
+  border-bottom: solid white 0.5vw;
+}
+
+#line1.dark-mode,
+#line2.dark-mode{
+  background-color: white;
+}
+
+#container.dark-mode{
+  background-color: #3c3c3c;
+}
+
+#opt.dark-mode,
+#info.dark-mode{
+  background-color: #707070;
+}
+
 .container_nav{
   display: flex;
   width: 90vw;
@@ -104,7 +163,7 @@ nav a{
 }
 
   /* Efecto hover para los span en modo oscuro */
-  nav.dark-hover span:hover {
+  .boton span:hover.dark-mode {
     background-color: #444444;  /* Fondo gris oscuro */
     color: #ffffff;             /* Color de texto blanco */
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transición suave */
