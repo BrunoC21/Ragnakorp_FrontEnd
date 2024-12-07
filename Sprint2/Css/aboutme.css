@@ -90,6 +90,10 @@ nav span.dark-mode{
   background-color: white;
 }
 
+#cont_all.dark-mode{
+  background-color: #3c3c3c;
+}
+
 .container_nav{
   display: flex;
   width: 90vw;
@@ -207,6 +211,7 @@ nav span.dark-mode{
       margin-right: auto;
       margin-top: 13vh;
       width: 70vw;
+      background-color: transparent;
     }
     
     .iconos {
@@ -221,28 +226,43 @@ nav span.dark-mode{
     }
     
     /*Seccion ¿Quienes Somos*/
-  
+    .container_contenido_quienes_somos{
+      background-color: transparent;
+    }
+
     .container_contenido_quienes_somos_titulo {
       align-items: center;
       display: flex;
       justify-content: flex-start;
       font-size: 1.5vw;
+      background-color: transparent;
     }
-  
+
+    .container_contenido_quienes_somos_titulo img{
+      background-color: transparent;
+    }
+    
+    .container_contenido_quienes_somos_titulo p{
+      background-color: transparent;
+    }
+
     .container_contenido_quienes_somos_titulo i{
       font-size: 1.5vw;
+      background-color: transparent;
     }
   
     .container_contenido_quienes_somos_texto {
       display: flex;
       justify-content: center; /* Centra el contenido en el eje horizontal */
       align-items: center; /* Centra el contenido en el eje vertical */
+      background-color: transparent;
     }
   
     .container_contenido_quienes_somos_texto p {
       width: 80%; /* Ajusta el ancho del párrafo */
       text-align: center;
       font-size: 1vw;
+      background-color: transparent;
     }
   
     /*Seccion Donde estamos*/
@@ -251,6 +271,7 @@ nav span.dark-mode{
         height: 65vh;
         overflow-x: hidden;
         overflow-y: hidden;
+        background-color: transparent;
     }
 
     .container_contenido_donde_estamos_titulo {
@@ -258,10 +279,17 @@ nav span.dark-mode{
       display: flex;
       justify-content: flex-start;
       font-size: 1.5vw;
+      background-color: transparent;
     }
   
     .container_contenido_donde_estamos_titulo i{
       font-size: 1.5vw;
+      background-color: transparent;
+    }
+
+    .container_contenido_donde_estamos_titulo p,
+    .container_contenido_donde_estamos_titulo img{
+      background-color: transparent;
     }
   
     .container_all{
@@ -299,108 +327,24 @@ nav span.dark-mode{
       border-radius: 1em;
     }
   
-    .container_contenido1{
-        position: relative;
+    .container_contenido1,
+    .container_contenido2,
+    .container_contenido3,
+    .container_contenido4,
+    .container_contenido5{
+        position: absolute;
         background-color: transparent;
         margin-top: 2vh;
-        margin-left: 39.25vw;
+        margin-left: 40vw;
         visibility: hidden;
         opacity: 0;
         transition: all 0.2s ease;
     }
 
-    .container_contenido1 .container_contenido_donde_estamos_contenido_info{
-      background-color: white;
-      width: 28vw;
-      height: 12vh;
-      border-radius: 1em;
-      margin-left: 13.3vw;
-      margin-top: 0.5vh;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 2);
-      display: flex;
-      flex-direction: column;
-      padding: 0.5vh;
-    }
-
-    .container_contenido2{
-        position: relative;
-        background-color: transparent;
-        margin-top: 2vh;
-        margin-left: -43vw;
-        visibility: hidden;
-        opacity: 0;
-        transition: all 0.2s ease;
-    }
-
-    .container_contenido2 .container_contenido_donde_estamos_contenido_info{
-      background-color: white;
-      width: 28vw;
-      height: 12vh;
-      border-radius: 1em;
-      margin-left: 13.3vw;
-      margin-top: 0.5vh;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 2);
-      display: flex;
-      flex-direction: column;
-      padding: 0.5vh;
-    }
-
-    .container_contenido3{
-        position: relative;
-        background-color: transparent;
-        margin-top: 2vh;
-        margin-left: -43vw;
-        visibility: hidden;
-        opacity: 0;
-        transition: all 0.2s ease;
-    }
-
-    .container_contenido3 .container_contenido_donde_estamos_contenido_info{
-      background-color: white;
-      width: 28vw;
-      height: 12vh;
-      border-radius: 1em;
-      margin-left: 13.3vw;
-      margin-top: 0.5vh;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 2);
-      display: flex;
-      flex-direction: column;
-      padding: 0.5vh;
-    }
-
-    .container_contenido4{
-        position: relative;
-        background-color: transparent;
-        margin-top: 2vh;
-        margin-left: -43vw;
-        visibility: hidden;
-        opacity: 0;
-        transition: all 0.2s ease;
-    }
-
-    .container_contenido4 .container_contenido_donde_estamos_contenido_info{
-      background-color: white;
-      width: 28vw;
-      height: 12vh;
-      border-radius: 1em;
-      margin-left: 13.3vw;
-      margin-top: 0.5vh;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 2);
-      display: flex;
-      flex-direction: column;
-      padding: 0.5vh;
-    }
-
-    .container_contenido5 {
-        position: relative;
-        background-color: transparent;
-        margin-top: 2vh;
-        margin-left: -43.2vw;
-        visibility: hidden;
-        opacity: 0;
-        transition: all 0.2s ease;
-    }
-
+    .container_contenido1 .container_contenido_donde_estamos_contenido_info,
+    .container_contenido2 .container_contenido_donde_estamos_contenido_info,
+    .container_contenido3 .container_contenido_donde_estamos_contenido_info,
+    .container_contenido4 .container_contenido_donde_estamos_contenido_info,
     .container_contenido5 .container_contenido_donde_estamos_contenido_info{
       background-color: white;
       width: 28vw;
@@ -454,7 +398,7 @@ nav span.dark-mode{
     }
 
     .puntos {
-        position: relative;
+        position: absolute;
         font-size: 1vw;
         color: red;
         cursor: pointer;
@@ -463,34 +407,30 @@ nav span.dark-mode{
     
   /* Punto 1 */
   #punto1 {
-    
+      top: 99vh;
+      left: 22.30vw;
     }
 
 /* Punto 2 */
     #punto2 {
-        top: 45.8%; /* Calculado como (600px / 1311px) * 100 */
-        left: 59.9%; /* Calculado como (1300px / 2171px) * 100 */
+        top: 104.5vh;
+        left: 30.95vw;
     }
 
 /* Punto 3 */
     #punto3 {
-        top: 76.3%; /* Calculado como (1000px / 1311px) * 100 */
-        left: 69.0%; /* Calculado como (1500px / 2171px) * 100 */
+         top: 110vh;
+         left: 28.6vw;
     }
 
     #punto4{
-
-      top: 88.2vh;
-      left: 27.25vw;
-      font-size: 1.1vw;
-      background-color: transparent;
+        top: 117.8vh;
+        left: 26.35vw;
+      
     }
     #punto5{
-     
-      top: 103vh;
-      left: 38.7vw;
-      font-size: 1.1vw;
-      background-color: transparent;
+        top: 121vh;
+        left: 38.5vw;
     }
   
     #btn1_opcion:checked ~ .container_contenido1,
@@ -503,6 +443,10 @@ nav span.dark-mode{
     }
   
     /*Seccion Nuestro Equipo*/
+    .container_contenido_nuestro_equipo{
+      background-color: transparent;
+    }
+
   
     .container_contenido_nuestro_equipo_contenido {
       background-image: url(/Sprint2/Images/aboutme_images/imagen_3.png);
@@ -511,6 +455,7 @@ nav span.dark-mode{
       height: 100vh;
       margin-left: 8vw;
       padding-left: 7vw;
+      background-color: transparent;
     }
   
     .container_persona {
@@ -597,6 +542,14 @@ nav span.dark-mode{
     }
   
     /*Seccion Quieres saber mas*/
+    .container_contenifo_gestion_del_conocimiento,
+    .container_contenido_gestion_del_conocimiento_titulo,
+    .container_contenido_gestion_del_conocimiento_titulo img,
+    .container_contenido_gestion_del_conocimiento_titulo p,
+    .container_contenido_gestion_del_conocimiento_titulo i,
+    .container_contenifo_gestion_del_conocimiento_imagen{
+      background-color: transparent;
+    }
   
     .container_contenido_quieres_saber_mas_titulo {
       align-items: center;
@@ -604,6 +557,7 @@ nav span.dark-mode{
       justify-content: flex-start;
       font-size: 2vw;
       margin-top: 2vh;
+      background-color: transparent;
     }
   
     .container_contenido_quieres_saber_mas_titulo p {
@@ -613,6 +567,7 @@ nav span.dark-mode{
       width: 20vw;
       left: 40vw;
       border-bottom: #1B2E51 solid 1vh;
+      background-color: transparent;
     }
   
     .lineas_fondo {
@@ -626,21 +581,31 @@ nav span.dark-mode{
       justify-content: center;
       gap: 60px;
       margin-top: 6vh;
+      background-color: transparent;
     }
   
     .container_contenido_quieres_saber_mas_contenido_noticia {
       width: 40vw;
       height: 50vh;
       font-size: 1.5vw;
+      background-color: transparent;
     }
   
     .container_contenido_quieres_saber_mas_contenido_noticia img{
       width: 35vw;
+      background-color: transparent;
     }
 
     .container_contenido_quieres_saber_mas_contenido_noticia p a {
       text-decoration: none; /* Quita el subrayado */
       color: black; /* Cambia el color del enlace */
+      background-color: transparent;
+    }
+
+    .container_contenido_quieres_saber_mas,
+    .container_contenido_quieres_saber_mas_contenido p,
+    .container_contenido_quieres_saber_mas_contenido{
+      background-color: transparent;
     }
     
     .texto_noticia{
@@ -659,20 +624,8 @@ nav span.dark-mode{
       margin-left: 1vh;
     }
 
-    /* footer {
-      width: 100%;
-      height: 20vh;
-      background-color: #1b2e51;
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-    } */
-
     footer {
-      position: relative; /* Cambiar de absolute a relative */
-      bottom: 0;
-      top: 15px;
+      position: absolute bottom; /* Cambiar de absolute a relative */
       background-color: #27485e;
       color: white;
       padding: 20px 0;
@@ -682,7 +635,7 @@ nav span.dark-mode{
     
     .footer-images {
       display: flex;
-      gap: 50vh;
+      gap: 100vh;
       margin-left: 15vh;
       background-color: transparent;
     }
@@ -694,14 +647,13 @@ nav span.dark-mode{
     }
   
     footer p {
-      margin-bottom: -4vh;
       color: #eef1f4;
-      margin-left: 15vh;
-      font-size: 1.5vw;
+      font-size: 1.2vw;
       background-color: transparent;
     }
     
     .separador{
-      height: 20vh;
+      height: 25vh;
+      background-color: transparent;
     }
 

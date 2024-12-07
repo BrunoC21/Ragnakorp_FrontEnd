@@ -98,7 +98,7 @@ nav span.dark-mode{
   color: white;
 }
 
-#form{
+#form.dark-mode{
   background-color: #707070;
   border: solid white 2px;
 }
