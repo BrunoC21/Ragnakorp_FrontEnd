@@ -58,22 +58,15 @@ let actualizarPerfil = async () => {
         });
 
         // Verificar si la respuesta es exitosa (status 200-299)
-        if (peticion.ok) {
-            // Redirigir a la ruta ../Html/index.html
-            alert("Perfil actualizado");
-            // Actualizar `localStorage` con los nuevos datos
-            sessionData.userBio = campos.userDTO.userBio;
-            sessionData.userLastName = campos.userDTO.userLastName;
-            sessionData.userName = campos.userDTO.userName;
-            sessionData.userEmail = campos.userDTO.userEmail;
-            sessionData.userPhone = campos.userDTO.userPhone;
-            localStorage.setItem("sessionData", JSON.stringify(sessionData));
-            window.location.href = '/Sprint2/Html/intranet/perfil.html';
-        } else {
-            // Mostrar un mensaje de error al usuario
-            const errorMsg = await peticion.text();  // Obtener el mensaje de error del backend si es posible
-            alert("Error al actualizar el usuario: " + errorMsg);
-        }
+        sessionData.userBio = campos.userDTO.userBio;
+        sessionData.userLastName = campos.userDTO.userLastName;
+        sessionData.userName = campos.userDTO.userName;
+        sessionData.userEmail = campos.userDTO.userEmail;
+        sessionData.userPhone = campos.userDTO.userPhone;
+        localStorage.setItem("sessionData", JSON.stringify(sessionData));
+        alert("Perfil actualizado");
+        window.location.href = '/Sprint2/Html/intranet/perfil.html';
+
     } catch (error) {
         console.error("Error al realizar la solicitud:", error);
         alert("Error al actualizar perfil. Por favor, inténtalo nuevamente.");
