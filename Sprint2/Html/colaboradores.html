@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Polo de Salud</title>
-    <link rel="stylesheet" href="/Sprint2/Css/link.css" />
+    <link rel="stylesheet" href="/Sprint2/Css/colaboradores.css" />
     <link rel="stylesheet" href="/Sprint2/Css/intranet/general.css">
 
     <link
@@ -62,12 +62,11 @@
       <input type="checkbox" id="btn-oscuro">
       <label for="btn-oscuro"><i class='bx bx-moon' id="oscuro"></i></label>
 
-    <div class="titulo">
-      <div class="linea1"></div>
-      <h2><span>Colaboradores</span></h2>
-      <div class="linea2"></div>
-    </div>
-
+      <div class="titulo" id="cont_titulo">
+        <div class="linea1" id="line1"></div>
+        <h2 id="h2_titulo"><span id="titulo_span">Colaboradores</span></h2>
+        <div class="linea2" id="line2"></div>
+      </div>
     <div class="container_vinculacion container">
     
     </div>
@@ -93,12 +92,22 @@
     </footer>
 
     <div id="dynamicCategory" data-category="Colaboradores"></div>
-    <script src="../Js/cliente/relacionesInstitucionales.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
     const checkbox = document.getElementById('btn-oscuro');
     const iconElement = document.getElementById('oscuro');
     const bodyElement = document.body;
+    const navContElement = document.querySelectorAll('.container_nav');
+    const navElement = document.getElementById('nav');
+    const logoElement = document.getElementById('logoA');
+    const rsElemento = document.getElementById('RS')
+    const botones = document.querySelectorAll('#RS i');
+    const navLinks = document.querySelectorAll('nav span');
+    const contTitulo = document.getElementById('cont_titulo');
+    const h2 = document.getElementById('h2_titulo');
+    const linea1 = document.getElementById('line1');
+    const linea2 = document.getElementById('line2');
+    const span = document.getElementById('titulo_span');
 
     // Sincronizar el estado inicial
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
@@ -117,14 +126,49 @@
             iconElement.classList.remove('bx-moon');
             iconElement.classList.add('bx-sun');
             bodyElement.classList.add('dark-mode');
+            navElement.classList.add('dark-mode');
+            logoElement.classList.add('dark-mode');
+            rsElemento.classList.add('dark-mode');
+            contTitulo.classList.add('dark-mode');
+            h2.classList.add('dark-mode');
+            linea1.classList.add('dark-mode');
+            linea2.classList.add('dark-mode');
+            span.classList.add('dark-mode');
+            navContElement.forEach(nav => {
+              nav.classList.add('dark-mode');
+            });
+            navLinks.forEach(link => {
+                link.classList.add('dark-mode');
+            });
+            botones.forEach(boton => {
+                boton.classList.add('dark-mode');
+            });
         } else {
             iconElement.classList.remove('bx-sun');
             iconElement.classList.add('bx-moon');
             bodyElement.classList.remove('dark-mode');
+            navElement.classList.remove('dark-mode');
+            logoElement.classList.remove('dark-mode');
+            rsElemento.classList.remove('dark-mode');
+            contTitulo.classList.remove('dark-mode');
+            h2.classList.remove('dark-mode');
+            linea1.classList.remove('dark-mode');
+            linea2.classList.remove('dark-mode');
+            span.classList.remove('dark-mode');
+            navContElement.forEach(nav => {
+              nav.classList.remove('dark-mode');
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('dark-mode');
+            });
+            botones.forEach(boton => {
+                boton.classList.remove('dark-mode');
+            });
         }
     }
 });
 
   </script>
+    <script src="../Js/cliente/relacionesInstitucionales.js"></script>
   </body>
 </html>

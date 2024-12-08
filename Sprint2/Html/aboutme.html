@@ -63,7 +63,7 @@
       class="imagen_polo"
     />
 
-    <div class="container_contenido">
+    <div class="container_contenido" id="cont_all">
       <div class="container_contenido_quienes_somos">
         <div class="container_contenido_quienes_somos_titulo">
           <img
@@ -349,6 +349,7 @@
     const navElement = document.getElementById('nav');
     const logoElement = document.getElementById('logoA');
     const rsElemento = document.getElementById('RS')
+    const cont_all = document.getElementById('cont_all')
     const botones = document.querySelectorAll('#RS i');
     const navLinks = document.querySelectorAll('nav span');
 
@@ -372,6 +373,7 @@
             navElement.classList.add('dark-mode');
             logoElement.classList.add('dark-mode');
             rsElemento.classList.add('dark-mode');
+            cont_all.classList.add('dark-mode');
 
             navContElement.forEach(nav => {
               nav.classList.add('dark-mode');
@@ -389,6 +391,7 @@
             navElement.classList.remove('dark-mode');
             logoElement.classList.remove('dark-mode');
             rsElemento.classList.remove('dark-mode');
+            cont_all.classList.remove('dark-mode');
 
             navContElement.forEach(nav => {
               nav.classList.remove('dark-mode');
