@@ -4,6 +4,13 @@ window.onload = function () {
     // Ocultar el botón de "Agregar" si el usuario es estudiante
     if (sessionData.role === "ESTUDIANTE") {
         document.getElementById("agregar").style.display = "none";
+        // Ocultar columna "Editar" en encabezado
+        document.querySelector("th:nth-child(7)").style.display = "none";
+        // Ocultar columna "Editar" en las filas de la tabla
+        let filas = document.querySelectorAll("#tabla tbody tr");
+        filas.forEach(fila => {
+            fila.querySelector("td:nth-child(7)").style.display = "none";
+        });
     }
 
     const news = localStorage.getItem('noticiaEdit');
@@ -31,6 +38,8 @@ let obtenerNoticias = async () => {
 };
 
 let renderizarTabla = (filtroCategoria) => {
+
+    const sessionData = JSON.parse(localStorage.getItem("sessionData"));
     let contenidoTabla = "";
 
     // Filtrar las noticias si se selecciona una categoría específica
@@ -47,11 +56,17 @@ let renderizarTabla = (filtroCategoria) => {
                 <td>${noticia.newsCategory}</td>
                 <td>${noticia.newsDateTime}</td>
                 <td>
+                    <button class="btnEditar" data-noticia='${JSON.stringify(noticia)}'>Ver</button>
+                </td>
+                ${sessionData.role === "ESTUDIANTE" ? "" : `
+                <td>
                     <button class="btnEditar" data-noticia='${JSON.stringify(noticia)}'>Editar</button>
                 </td>
+                `}
             </tr>
         `;
     }
+        
 
     document.querySelector("#tabla tbody").innerHTML = contenidoTabla;
 

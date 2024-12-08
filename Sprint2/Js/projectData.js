@@ -5,6 +5,13 @@ window.onload = function() {
     // Ocultar el botón de "Agregar" si el usuario es estudiante
     if (sessionData.role === "ESTUDIANTE") {
         document.getElementById("agregar").style.display = "none";
+        // Ocultar columna "Edición" en encabezado
+        document.querySelector("th:nth-child(6)").style.display = "none";
+        // Ocultar columna "Edición" en las filas de la tabla
+        let filas = document.querySelectorAll("#tabla tbody tr");
+        filas.forEach(fila => {
+            fila.querySelector("td:nth-child(6)").style.display = "none";
+        });
     }
 
     if (sessionData.role === "ADMIN" || sessionData.role === "ADMINISTRATIVE") {
@@ -12,6 +19,13 @@ window.onload = function() {
     }
 
     listarProyectos();
+}
+
+function truncateText(text, limit) {
+    if (text.length > limit) {
+        return text.substring(0, limit) + '...'; // Agregar "..." al final si excede el límite
+    }
+    return text;
 }
 
 
@@ -25,19 +39,29 @@ let listarProyectos = async ()=>{
             }
         });
 
+        const sessionData = JSON.parse(localStorage.getItem("sessionData"));
+
         const proyectos = await peticion.json();
 
         let contenidoTabla = "";
         for (let proyecto of proyectos) {
+                // Truncar la descripción a 200 caracteres
+                const truncatedDescription = truncateText(proyecto.projDescription, 200);
+
             contenidoTabla += `
                 <tr>
                     <td>${proyecto.projName}</td>
-                    <td>${proyecto.projDescription}</td>
+                    <td>${truncatedDescription}</td>
                     <td>${proyecto.projStartDate}</td>
                     <td>${proyecto.projRequirementsPostulation}</td>
                     <td>
+                        <button class="btnEditar" data-noticia='${JSON.stringify(proyecto)}'>Ver</button>
+                    </td>
+                    ${sessionData.role === "ESTUDIANTE" ? "" : `
+                    <td>
                         <button class="btnEditar" data-noticia='${JSON.stringify(proyecto)}'>Editar</button>
                     </td>
+                    `}
                 </tr>
             `;
         }
