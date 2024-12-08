@@ -7,6 +7,10 @@
   font-family: "Bree Serif", serif;
 }
 
+html{
+  background-color: transparent;
+}
+
 header p{
   height: 3vh;
   line-height: 3vh;

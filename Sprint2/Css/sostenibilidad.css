@@ -6,6 +6,10 @@
     list-style: none;
     font-family: "Bree Serif", serif;
   }
+
+  html{
+    background-color: transparent;
+  }
   
   header p{
     height: 3vh;

@@ -7,6 +7,10 @@
   font-family: "Bree Serif", serif;
 }
 
+html{
+  background-color: transparent;
+}
+
 header p{
   height: 3vh;
   line-height: 3vh;
@@ -97,10 +101,6 @@ nav span.dark-mode{
 #line1.dark-mode,
 #line2.dark-mode{
   background-color: white;
-}
-
-#fondo_titulo2.dark-mode{
-  background-color: rgb(3, 3, 148);
 }
 
 #cont_link.dark-mode{

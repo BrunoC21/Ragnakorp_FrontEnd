@@ -5,6 +5,10 @@ body {
     padding: 20px;
   }
 
+  html{
+    background-color: transparent;
+  }
+
   .form-container {
     width: 30vw;
     height: 90vh;

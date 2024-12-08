@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+html{
+  background-color: transparent;
+}
+
 /* Estilos para todas las etiquetas a */
 a {
   background-color: transparent;

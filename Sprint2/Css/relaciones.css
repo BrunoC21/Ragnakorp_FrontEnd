@@ -7,6 +7,10 @@
   font-family: "Bree Serif", serif;
 }
 
+html{
+  background-color: transparent;
+}
+
 header p{
   height: 3vh;
   line-height: 3vh;
@@ -242,26 +246,17 @@ nav span.dark-mode{
   }
   
   .container_general{
-    display: flex;
+    width: 80vw;
+    height: 60vh;
+    margin-left: 10vw;
+    margin-top: 4vh;
   }
 
   .container_relaciones{
-    width: 60vw;
+    width: 80vw;
     height: 60vh;
-    margin-left: 7.5vw;
-    margin-bottom: 10vh;
     border-radius: 1em;
-    background-color: white;
-    border: #c9c9c9 solid 0.25vh;
-    box-shadow: -1px -2px 35px -8px rgba(0,0,0,0.75);
-  }
-
-  .container_opciones{
-    width: 20vw;
-    height: 60vh;
-    margin-left: 5vw;
-    margin-bottom: 10vh;
-    border-radius: 1em;
+    margin-top: 1vh;
     background-color: white;
     border: #c9c9c9 solid 0.25vh;
     box-shadow: -1px -2px 35px -8px rgba(0,0,0,0.75);
@@ -347,14 +342,20 @@ nav span.dark-mode{
     border-bottom: solid black 0.20vh;
   }
 
+  .separador{
+    height: 10vh;
+    background-color: transparent;
+  }
+
   footer {
-    background-color: #1b2e51; /* Color azul oscuro del fondo */
+    position: relative; /* Cambiar de absolute a relative */
+    bottom: 0;
+    top: 15px;
+    background-color: #27485e;
     color: white;
     padding: 20px 0;
     text-align: center;
-    width: 100vw;
-    height: 15vh;
-    position: absolute;
+    width: 100%;
   }
   
   .footer-container {
@@ -381,7 +382,7 @@ nav span.dark-mode{
     background-color: transparent;
   }
   
-  .footer-bottom p {
+  .footer-bottom p{
     background-color: transparent;
   }
   
