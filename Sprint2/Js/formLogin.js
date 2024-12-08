@@ -1,7 +1,11 @@
 window.onload = function () {
     const sessionData = JSON.parse(localStorage.getItem("sessionData"));
+    const projectData = JSON.parse(localStorage.getItem("proyectoEdit"))
     if (sessionData) {
         localStorage.removeItem("sessionData");
+    }
+    if (projectData) {
+        localStorage.removeItem("proyectoEdit");
     }
 }
 
