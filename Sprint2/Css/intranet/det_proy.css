@@ -1,15 +1,11 @@
 *{
+    background-color: #EEF1F4;
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     font-family: "Bree Serif", serif;
-}
-
-body{
-    background-color: #EEF1F4;
-}
-   
+   }
    
    a{
       color: black;
@@ -192,12 +188,11 @@ body{
       top: 0;
       background-color: transparent;
    }                                                                                                                    
-  
+
    .parte_superior{
       display: flex;
       width: 20vw;
       height: 10vh;
-      margin-top: -1vh;
       padding-bottom: 3vh;
       background-color: #2e277c;
    }
@@ -210,7 +205,7 @@ body{
       border-radius: 10em;
       background-color: transparent;
    }
-  
+
    .titulo_menu{
       background-color: transparent;
    }
@@ -221,11 +216,11 @@ body{
       line-height: 4vh;
       margin-top: 2.5vh;
       margin-left: 1vw;
-      font-size: 1.56vw;
+      font-size: 1.58vw;
       color: white;
       background-color: transparent;
    }
-  
+
    .titulo_menu h3{
       margin-top: 0.2vh;
       margin-left: 1vw;
@@ -233,7 +228,7 @@ body{
       color: white;
       background-color: transparent;
    }
-  
+
    .menu{
       display: flex;
       flex-direction: column;
@@ -274,255 +269,101 @@ body{
    }
    
    .submenu-parent {
-    position: relative;
- }
-
-.submenu-historial {
-    display: none; /* Oculto por defecto */
-    position: absolute;
-    top: 100%; /* Justo debajo del elemento padre */
-    left: 0;
-    background-color: #a7a7a7;
-    border: 1px solid #707070;
-    width: 19.51vw; /* Ajusta según sea necesario */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-}
-
-.submenu-historial li {
-    width: 19.5vw;
-    height: 8vh;
-    line-height: 8vh;
-    font-size: 1.2vw;
-    border-left: solid transparent 0.4vw;
-    background-color: transparent;
-}
-
-.submenu-historial li a {
-    display: block;
-    width: 15vw;
-    height: 8vh;
-    background-color: transparent;
-}
-
-.submenu-historial li a:hover {
-    background-color: #a7a7a7;
-    border-left: solid #707070 0.1vw;
-}
-
-.submenu-historial li span{
-    margin-left: 2vw;
-    background-color: transparent;
-}
-
-.submenu-parent:hover .submenu-historial {
-    display: block; /* Muestra el submenú cuando se pasa el cursor */
-}  
+      position: relative;
+   }
   
-  #btn_menu:checked ~ .container_menu {
-    visibility: visible;
-    opacity: 1;
+  .submenu-historial {
+      display: none; /* Oculto por defecto */
+      position: absolute;
+      top: 100%; /* Justo debajo del elemento padre */
+      left: 0;
+      background-color: #a7a7a7;
+      border: 1px solid #707070;
+      width: 19.51vw; /* Ajusta según sea necesario */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1;
   }
   
-  .form-container {
-    position: absolute;
-    top: 23vh;
-    left: 15vw;
-    width: 70vw;
-    height: 155vh;
-    margin: 0.5vw auto;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #f7f9fc; /* Fondo blanco del formulario */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .titulo_editor{
-    position: relative;
-      top: 13vh;
+  .submenu-historial li {
+      width: 19.5vw;
       height: 8vh;
-      width: 20vw;
       line-height: 8vh;
-      color: white;
-      font-size: 1.5vw;
-      padding-left: 2vw;
-      border-radius: 0em 2em 2em 0em;
-      background-color: #1d438a;
+      font-size: 1.2vw;
+      border-left: solid transparent 0.4vw;
+      background-color: transparent;
   }
   
-  .form-group {
-    margin-top: 1.5vh;
-    background-color: #f7f9fc;
+  .submenu-historial li a {
+      display: block;
+      width: 15vw;
+      height: 8vh;
+      background-color: transparent;
   }
   
-  label {
-    display: block;
-    margin-bottom: 0.5vh;
-    font-weight: bold;
-    background-color: #f7f9fc;
-  }
-  
-  form {
-    background-color: #f7f9fc;
-  }
-  
-  small {
-    background-color: #f7f9fc;
-  }
-  
-  input {
-    background-color: #f7f9fc;
-  }
-  
-  #categoria{
-    width: 15vw;
-    height: 4vh;
-    border-radius: 0.5em;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    font-size: 0.8vw;
-    border: solid #c9c9c9 0.1em;
-  }
-  
-  .input-contenido-nombre {
-    width: 95%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #ffffff; /* Fondo blanco de las casillas */
-    color: #333;
-  }
-  
-  .input-contenido-inversion {
-    width: 95%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #ffffff; /* Fondo blanco de las casillas */
-    color: #333;
+  .submenu-historial li a:hover {
+      background-color: #a7a7a7;
+      border-left: solid #707070 0.1vw;
   }
 
-  .input-contenido-fecha {
-    width: 25%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #ffffff; /* Fondo blanco de las casillas */
-    color: #333;
+  .submenu-historial li span{
+      margin-left: 2vw;
+      background-color: transparent;
   }
   
-  .input-contenido-requerimientos {
-    width: 95%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #ffffff; /* Fondo blanco de las casillas */
-    color: #333;
+  .submenu-parent:hover .submenu-historial {
+      display: block; /* Muestra el submenú cuando se pasa el cursor */
+  }  
+
+  #btn_menu:checked ~ .container_menu{
+      visibility: visible;
+      opacity: 1;
   }
 
-  #titulo_requerimientos{
-    margin-top: 3svh;
-  }
-  
-  .input-contenido {
-    width: 138vh;
-    height: 50vh;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #ffffff; /* Fondo blanco de las casillas */
-    color: #333;
-    resize: none;
-  }
-  
-  input[type="text"]:focus,
-  textarea:focus,
-  select:focus {
-    border-color: #007bff;
-    background-color: #ffffff; /* Fondo blanco al enfocar */
-    outline: none;
-  }
-
-  #address, #latitude, #longitude{
-    width: 40%;
-    padding: 10px;
-    margin-bottom: 2vh;
-    border: 1px solid #ccc;
-    border-radius: 0.25vw;
-    background-color: #ffffff; /* Fondo blanco de las casillas */
-    color: #333;
-  }
-
-  #searchAddressBtn{
-    width: 10vw;
-    height: 4vh;
-    line-height: 0vw;
-    font-size: 1vw;
-    color: white;
-    margin-left: 2.5vw;
-  }
-
-  #map {
+  .titulo_detalles{
+    height: 8vh;
+    width: 25vw;
+    line-height: 8vh;
+    background-color: #1d438a;
     position: absolute;
-    width: 20vw;
-    height: 30vh;
-    top: 102vh;
-    left: 45vw;
-    object-fit: cover;
-    z-index: 0;
-    background-color: transparent;
-  }
-
-  #form-map{
-    width: 66vw;
-    height: 30vh;
-  }
-
-  .leaflet-marker-icon leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable{
-    background-color: transparent;
-  }
-  
-  button {
-    justify-content: space-between;
-    display: inline;
-    background-color: #007bff;
+    top: 14vh;
+    border-radius: 0 3em 3em 0;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 0.5vh;
-    cursor: pointer;
-    font-size: 0.9vw;
-    width: 15vw; /* Puedes ajustar el tamaño según lo que necesites */
-    /* Elimina los márgenes que separan demasiado los botones */
-    margin-top: 2vh; /* No hace falta margen superior si estás usando flexbox */
-    margin-right: 2vw;
-}
-  
-  button.updateNew {
-    background-color: #0cd358;
+  }
+
+  .titulo_detalles i{
+    margin-left: 1vw;
+    margin-right: 0.5vw;
+    background-color: transparent;
+  }
+
+  .container{
+    position: relative;
+    top: 24vh;
+    box-shadow: none;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .separador{
+    height: 130vh;
   }
   
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* footer {
-    position: absolute bottom;
-    width: 100vw;
+footer {
     background-color: #27485e; 
     color: white;
-    padding: 20px 0;
+    width: 99.2vw;
     text-align: center;
-  } */
+    bottom: 0vh;
+  } 
   
   .footer-container {
     background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
   }
   
   .footer-left,
@@ -570,7 +411,7 @@ body{
   .social-icons a{
     background-color: transparent;
   }
-  
+
   .social-icons img {
     width: 45px; /* Tamaño de los íconos de redes sociales */
     filter: brightness(0) invert(1); /* Hace que los íconos sean blancos sobre el fondo oscuro */
@@ -578,16 +419,11 @@ body{
   }
   
   .footer-bottom {
-    margin-top: 1vw;
-    font-size: 0, 5vw;
+    margin-top: 20px;
+    font-size: 23px;
     background-color: transparent;
   }
   
-  .footer-bottom p {
+  .footer-bottom p{
     background-color: transparent;
   }
-  
-  .separador {
-    height: 190vh;
-  }
-  
