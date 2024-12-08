@@ -72,7 +72,7 @@ let actualizarPerfil = async () => {
         } else {
             // Mostrar un mensaje de error al usuario
             const errorMsg = await peticion.text();  // Obtener el mensaje de error del backend si es posible
-            alert("Error al registrar el usuario: " + errorMsg);
+            alert("Error al actualizar el usuario: " + errorMsg);
         }
     } catch (error) {
         console.error("Error al realizar la solicitud:", error);
