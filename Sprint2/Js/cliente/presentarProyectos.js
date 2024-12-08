@@ -48,7 +48,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <div class="container_componentes">
                         <img src="http://localhost:8080/proyecto/images/${project.projPicture}" alt="${project.primaryImage}">
                         <div class="texto_componente">
-                            <p>${descripcionCorta}</p>
+                            <a href="./proyecto.html?id=${project.id}">
+                                <p>${descripcionCorta}</p>
+                            </a>
                         </div>
                     </div>
                 </label>

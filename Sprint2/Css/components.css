@@ -364,6 +364,20 @@ nav span.dark-mode{
   margin-top: 3vh;
 }
 
+.texto_componente a {
+  text-decoration: none; /* Elimina el subrayado */
+  color: inherit; /* Hereda el color del texto contenedor */
+}
+
+.texto_componente a:hover, 
+.texto_componente a:focus, 
+.texto_componente a:visited, 
+.texto_componente a:active {
+  text-decoration: none; /* Asegura que no se aplique subrayado en ningún estado */
+  color: inherit; /* Mantiene el color consistente en todos los estados */
+}
+
+
 .container_componentes img{
   width: 30vw;
   height: 30vh;
