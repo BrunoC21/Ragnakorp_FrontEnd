@@ -66,8 +66,8 @@ async function obtenerTituloNoticia(projId) {
             throw new Error(`HTTP error! status: ${peticion.status}`);
         }
 
-        const proyeecto = await peticion.json();
-        return proyeecto.projName;
+        const proyecto = await peticion.json();
+        return proyecto.projName;
     } catch (error) {
         console.error("Error al obtener el proyecto:", error);
         return "Título no encontrado";  // Valor por defecto si ocurre un error
