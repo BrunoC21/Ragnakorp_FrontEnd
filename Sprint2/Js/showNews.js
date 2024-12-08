@@ -56,7 +56,7 @@ let renderizarTabla = (filtroCategoria) => {
                 <td>${noticia.newsCategory}</td>
                 <td>${noticia.newsDateTime}</td>
                 <td>
-                    <button class="btnEditar" data-noticia='${JSON.stringify(noticia)}'>Ver</button>
+                    <button class="btnVer" data-noticia='${JSON.stringify(noticia)}'>Ver</button>
                 </td>
                 ${sessionData.role === "ESTUDIANTE" ? "" : `
                 <td>
@@ -76,6 +76,14 @@ let renderizarTabla = (filtroCategoria) => {
             const noticia = JSON.parse(button.dataset.noticia);
             localStorage.setItem("noticiaEdit", JSON.stringify(noticia));
             window.location.href = `makeNews_intranet.html?id=${noticia.id}`;
+        });
+    });
+
+    document.querySelectorAll(".btnVer").forEach(button => {
+        button.addEventListener("click", () => {
+            const noticia = JSON.parse(button.dataset.noticia);
+            localStorage.setItem("noticiaEdit", JSON.stringify(noticia));
+            window.location.href = `detalles_noticias.html?id=${noticia.id}`;
         });
     });
 };
