@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
             historial: document.getElementById("historial-item"),
             roles: document.getElementById("roles-item"),
             postulaciones: document.getElementById("postulaciones-item"),
+            centros: document.getElementById("ubicaciones-item"),
         };
 
         // Mostrar el rol para verificar
@@ -51,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 elements.estadisticas.style.display = 'none';
                 elements.roles.style.display = 'none';
                 elements.historial.style.display = 'none';
+                elements.centros.style.display ='none';
                 break;
 
             case "ESTUDIANTE":
@@ -60,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 elements.roles.style.display = 'none';
                 elements.historial.style.display = 'none';
                 elements.postulaciones.style.display = 'none';
+                elements.centros.style.display ='none';
                 break;
 
             default:
