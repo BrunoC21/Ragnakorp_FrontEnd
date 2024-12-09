@@ -43,6 +43,20 @@ nav a{
   width: 7vw;
 }
 
+
+.container_persona,
+.container_persona h1,
+.container_persona p {
+  color: black; /* Asegura que el texto en .container_persona se mantenga negro */
+}
+
+.container_persona.dark-mode,
+.container_persona.dark-mode h1,
+.container_persona.dark-mode p {
+  color: black; /* Asegura que el texto en .container_persona siga siendo negro en modo oscuro */
+}
+
+
 body.dark-mode {
   background-color: #3c3c3c;
   color: white;
@@ -110,6 +124,8 @@ nav span.dark-mode{
 #cont_all.dark-mode{
   background-color: #3c3c3c;
 }
+
+
 
 .container_nav{
   display: flex;

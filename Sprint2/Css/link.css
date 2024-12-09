@@ -107,6 +107,25 @@ nav span.dark-mode{
   background-color: #707070;
 }
 
+/* Estilos para los botones en el modo oscuro */
+.container_vinculacion.dark-mode .primera_linea a,
+.container_vinculacion.dark-mode .segunda_linea a {
+  background-color: #444444; /* Fondo oscuro para los botones */
+}
+
+.container_vinculacion.dark-mode .primera_linea a span,
+.container_vinculacion.dark-mode .segunda_linea a span {
+  background-color: #333333; /* Fondo de texto ligeramente más oscuro */
+  color: #ffffff; /* Texto blanco */
+}
+
+.container_vinculacion.dark-mode .primera_linea a:hover,
+.container_vinculacion.dark-mode .segunda_linea a:hover {
+  background-color: #1b2e51; /* Fondo azul oscuro al hacer hover */
+  transform: rotate(7deg) scale(110%);
+  box-shadow: 4px -4px 33px -14px rgba(0, 0, 0, 0.5);
+}
+
 .container_nav{
   display: flex;
   width: 90vw;
