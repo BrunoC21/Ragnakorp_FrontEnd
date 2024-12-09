@@ -370,17 +370,7 @@ input {
   background-color: #f7f9fc;
 }
 
-#categoria{
-  width: 15vw;
-  height: 4vh;
-  border-radius: 0.5em;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  font-size: 0.8vw;
-  border: solid #c9c9c9 0.1em;
-}
-
-.input-contenido-nombre-noticia {
+.input-contenido-nombre-ubicacion {
   width: 95%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -389,7 +379,7 @@ input {
   color: #333;
 }
 
-.input-contenido-autores-noticia {
+.input-contenido-direccion-ubicacion {
   width: 95%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -398,7 +388,16 @@ input {
   color: #333;
 }
 
-.input-contenido-referencias-noticia {
+.input-contenido-localizacion-ubicacion {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff; /* Fondo blanco de las casillas */
+  color: #333;
+}
+
+.input-contenido-contacto-ubicacion {
   width: 95%;
   padding: 10px;
   border: 1px solid #ccc;

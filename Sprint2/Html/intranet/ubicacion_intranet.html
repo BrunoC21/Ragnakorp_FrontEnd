@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Intranet</title>
-    <link rel="stylesheet" href="/Sprint2/Css/intranet/det_news.css">
+    <link rel="stylesheet" href="/Sprint2/Css/intranet/general.css">
+
+    <link rel="stylesheet" href="/Sprint2/Css/intranet/ubicacion_intranet.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-</head>
-<body>
+  </head>
+  <body>
     <input type="checkbox" id="btn_menu" />
     <nav>
       <label for="btn_menu"><i class="bx bx-menu"></i></label>
@@ -25,12 +27,11 @@
           ><span>Usuario</span>
         </h3>
         <div class="submenu">
-          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="../intranet/perfil.html">Perfil</a></li>
           <li><a href="#" id="closeSession">Cerrar sesión</a></li>
         </div>
       </ul>
     </nav>
-
     <!-- inicio menu lateral intranet -->
     <div class="container_menu">
       <div class="menu_desplegable">
@@ -60,7 +61,7 @@
                   <a href="vinculaciones_intranet.html"><span>Vinculaciones al medio</span></a>
               </li>
               <li id="ubicaciones-item">
-                <a href="ubicacion_intranet.html"><span>Ubicaciones del Polo</span></a>
+                    <a href="ubicacion_intranet.html"><span>Ubicaciones del Polo</span></a>
               </li>
               <li id="historial-item" class="submenu-parent">
                 <a href="#"><span>Historial de cambios</span></a>
@@ -75,62 +76,69 @@
           </ul>
       </div>
     </div>
+    <!-- fin menu lateral intranet -->
 
-    <h2 class="titulo_detalles"><i class='bx bx-detail'></i>Detalles de la noticia</h2>
-    <div class="container">
-        <h1 class="titulo_proyecto">Titulo:</h1>
-        <br>
-        <div class="detalles_proyecto">
-            <span><strong>Numero de noticia:</strong></span>
-            <br>
-            <span><strong>Autor/a:</strong></span>
-            <br>
-            <span><strong>Categoria:</strong></span>
-            <br>
-        </div>
-        <div class="contenido_proyecto">
+    <a
+      href="../intranet/formubic_intranet.html"
+      class="btn_ubicacion"
+      id="agregar"
+      ><i class="bx bx-plus" style="color: #ffffff"></i><span>Agregar</span></a
+    >
+    <h2 class="titulo">Ubicaciones del polo de salud</h2>
 
-        </div>
-        <br>
-        <img src="" alt="" class="imagen_proyecto">
+    <div class="container_ubicacion1">
+      <table id="tabla">
+        <thead>
+          <tr class="encabezados">
+            <th><h3>Nro Ubicacion</h3></th>
+            <th><h3>Nombre</h3></th>
+            <th><h3>Direccion</h3></th>
+            <th><h3>Coordenadas</h3></th>
+            <th><h3>Contacto</h3></th>
+            <th><h3>Descripción</h3></th>
+            <th><h3>Editar</h3></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </div>
-    <div class="separador">
 
-    </div>
     <footer>
-        <div class="footer-container">
-          <div class="footer-left"> 
+      <div class="footer-container">
+        <div class="footer-left">
+          <img
+            src="/Sprint2/Images/footer_images/logos-face-ubb-02 1.png"
+            alt="Logo Facultad"
+            class="footer-logo"
+          />
+        </div>
+        <div class="footer-right">
+          <div class="social-icons">
+            <a href="#"
+              ><img
+                src="/Sprint2/Images/footer_images/linkedin-square-logo-24 1.png"
+                alt="LinkedIn"
+            /></a>
 
-            <img
-              src="/Sprint2/Images/footer_images/logos-face-ubb-02 1.png"
-              alt="Logo Facultad"
-              class="footer-logo"
-            />
+            <a href="#"
+              ><img
+                src="/Sprint2/Images/footer_images/bxl-instagram 1.png"
+                alt="Instagram"
+            /></a>
           </div>
-          <div class="footer-right">
-            <div class="social-icons">
-              <a href="#"
-                ><img
-                  src="/Sprint2/Images/footer_images/linkedin-square-logo-24 1.png"
-                  alt="LinkedIn"
-              /></a>
-  
-              <a href="#"
-                ><img
-                  src="/Sprint2/Images/footer_images/bxl-instagram 1.png"
-                  alt="Instagram"
-              /></a>
-            </div>
-            <img
-              src="/Sprint2/Images/footer_images/Logo (1).png"
-              alt="Gobierno de Ñuble"
-              class="footer-gobierno-logo"
-            />
-          </div>
+          <img
+            src="/Sprint2/Images/footer_images/Logo (1).png"
+            alt="Gobierno de Ñuble"
+            class="footer-gobierno-logo"
+          />
         </div>
-        <div class="footer-bottom">
-          <p>&copy;2024 Todos los Derechos Reservados</p>
-        </div>
-      </footer>
-</body>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy;2024 Todos los Derechos Reservados</p>
+      </div>
+    </footer>
+
+    <script src="../../Js/menu.js"></script>
+    <script src="../../Js/logout.js"></script>
+  </body>
 </html>

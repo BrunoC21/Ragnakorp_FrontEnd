@@ -514,7 +514,7 @@ tbody tr:hover {
   background-color: #45a049;
 }
 
-/* footer {
+footer {
   position: absolute;
   bottom: 0;
   background-color: #27485e; 
@@ -522,7 +522,7 @@ tbody tr:hover {
   padding: 20px 0;
   text-align: center;
   width: 100%;
-} */
+}
 
 /* footer {
    position: relative; 

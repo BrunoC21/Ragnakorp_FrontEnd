@@ -598,7 +598,7 @@ button:hover {
 }
  
 
-  /* footer {
+  footer {
     position: absolute;
     bottom: 0;
     background-color: #27485e; 
@@ -606,7 +606,7 @@ button:hover {
     padding: 20px 0;
     text-align: center;
     width: 100%;
-  } */
+  }
   
   .footer-container {
     position: bottom;
