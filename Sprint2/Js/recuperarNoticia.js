@@ -24,8 +24,8 @@ function cargarNoticia() {
     const noticia = JSON.parse(noticiaGuardada);
 
     // Llenar los datos en el HTML
-    document.querySelector('.titulo_proyecto').innerText = `Titulo: ${noticia.newsTitle}`;
-    document.querySelector('.detalles_proyecto').innerHTML = `
+    document.querySelector('.titulo_noticia').innerText = `Titulo: ${noticia.newsTitle}`;
+    document.querySelector('.detalles_noticia').innerHTML = `
         <span><strong>Numero de noticia:</strong> ${noticia.id}</span>
         <br>
         <span><strong>Autor/a:</strong> ${noticia.newsWriter}</span>
@@ -35,7 +35,8 @@ function cargarNoticia() {
         <span><strong>Fecha:</strong> ${formatDate(noticia.newsDateTime)}</span>
         <br>
     `;
-    document.querySelector('.contenido_proyecto').innerHTML = `<p>${noticia.newsContent}</p>`;
-    document.querySelector('.imagen_proyecto').src = `http://localhost:8080/proyecto/images/${noticia.primaryImage}`;
-    document.querySelector('.imagen_proyecto').alt = noticia.newsTitle;
+    document.querySelector('.contenido_noticia').innerHTML = `<p>${noticia.newsContent}</p>`;
+    const img = document.querySelector('.imagen_noticia');
+    img.src = `http://localhost:8080/proyecto/images/${noticia.primaryImage}`;
+    img.alt = noticia.newsTitle;
 }
