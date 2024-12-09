@@ -14,7 +14,7 @@
     <script src="/Sprint2/splide-4.1.3/dist/js/splide.min.js"></script>
     <link rel="stylesheet" href="/Sprint2/Css/noticia.css">
 
-    <title>Document</title>
+    <title>Polo de Salud</title>
     <script src="access.js" defer></script>
 
 </head>
@@ -54,7 +54,7 @@
   <input type="checkbox" id="btn-oscuro">
   <label for="btn-oscuro"><i class='bx bx-moon' id="oscuro"></i></label>
 
-    <div class="container">
+    <div class="container" id = "cont">
         <h1 class="news-title"></h1>
         <div class="news-meta">
             <span><strong>Fecha de inicio:</strong></span>
@@ -81,20 +81,69 @@
         </div>
     </footer>
     <script>
-      // Seleccionar el input y el ícono
-      const checkbox2 = document.getElementById('btn-oscuro');
-      const iconElement2 = document.getElementById('oscuro');
-  
-      // Agregar evento al checkbox para detectar cambios
-      checkbox2.addEventListener('change', () => {
-          if (checkbox2.checked) {
-              iconElement2.classList.remove('bx-moon');
-              iconElement2.classList.add('bx-sun');
-          } else {
-              iconElement2.classList.remove('bx-sun');
-              iconElement2.classList.add('bx-moon');
-          }
-      });
+      document.addEventListener('DOMContentLoaded', () => {
+    const checkbox = document.getElementById('btn-oscuro');
+    const iconElement = document.getElementById('oscuro');
+    const bodyElement = document.body;
+    const navContElement = document.querySelectorAll('.container_nav');
+    const navElement = document.getElementById('nav');
+    const logoElement = document.getElementById('logoA');
+    const rsElemento = document.getElementById('RS')
+    const botones = document.querySelectorAll('#RS i');
+    const navLinks = document.querySelectorAll('nav span');
+    const cont = document.getElementById("cont");
+
+    // Sincronizar el estado inicial
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    checkbox.checked = isDarkMode;
+    toggleDarkMode(isDarkMode);
+
+    // Cambiar tema y guardar el estado en localStorage
+    checkbox.addEventListener('change', () => {
+        const darkMode = checkbox.checked;
+        toggleDarkMode(darkMode);
+        localStorage.setItem('darkMode', darkMode);
+    });
+
+    function toggleDarkMode(enable) {
+        if (enable) {
+            iconElement.classList.remove('bx-moon');
+            iconElement.classList.add('bx-sun');
+            bodyElement.classList.add('dark-mode');
+            navElement.classList.add('dark-mode');
+            logoElement.classList.add('dark-mode');
+            rsElemento.classList.add('dark-mode');
+            cont.classList.add('dark-mode');
+            navContElement.forEach(nav => {
+              nav.classList.add('dark-mode');
+            });
+            navLinks.forEach(link => {
+                link.classList.add('dark-mode');
+            });
+            botones.forEach(boton => {
+                boton.classList.add('dark-mode');
+            });
+        } else {
+            iconElement.classList.remove('bx-sun');
+            iconElement.classList.add('bx-moon');
+            bodyElement.classList.remove('dark-mode');
+            navElement.classList.remove('dark-mode');
+            logoElement.classList.remove('dark-mode');
+            rsElemento.classList.remove('dark-mode');
+            cont.classList.remove('dark-mode');
+            navContElement.forEach(nav => {
+              nav.classList.remove('dark-mode');
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('dark-mode');
+            });
+            botones.forEach(boton => {
+                boton.classList.remove('dark-mode');
+            });
+        }
+    }
+});
+
   </script>
     <script src="../Js/cliente/presntarProyectoIndividual.js"></script>
     
