@@ -441,7 +441,7 @@ nav span.dark-mode{
 }
 
 .botones_noticias {
-  width: 70vw;
+  width: 90vw;
   height: 6vh;
   background-color: transparent;
 }
@@ -460,7 +460,7 @@ nav span.dark-mode{
 .suscripcion {
   width: 10vw;
   height: 5vh;
-  margin-left: 21vw;
+  margin-left: 58vw;
   border-radius: 3em;
   font-size: 1.8vh;
   color: white;

@@ -349,13 +349,14 @@
 
   .contenido_noticia{
       width: 80vw;
-      height: 20vw;
+      height: 5vw;
    }
 
    .imagen_noticia{
-      width: 70vw;
+      width: 30vw;
       height: auto;
-      margin-left: 15vw;
+      justify-content: center;
+      align-items: center;
    }
 
   .separador{

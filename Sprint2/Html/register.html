@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Sprint2/Css/register.css">
+    <link rel="stylesheet" href="/Sprint2/Css/intranet/general.css">
+    <script src="access.js" defer></script>
     <title>Polo de salud</title>
 </head>
 <body>
     <div class="form-container">
-        <h2>Actualizar Perfil</h2>
+        <h2>Agregar Nuevo Usuario</h2>
         <form id="userForm" method="POST">
           <label for="firstname">Nombre:</label>
           <input
@@ -54,19 +56,29 @@
             placeholder="Teléfono"
             required
           />
-
-        <label for="descripcion">Biografía</label>
-        <textarea
-            id="descripcion"
-            class="input-descripcion-actividad"
-        ></textarea>
-
-          </textarea>
   
-          <button type="button" id="btnRegistrar">Actualizar perfil</button>
+          <label for="password">Contraseña:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Contraseña"
+            required
+          />
+  
+          <label for="role">Rol:</label>
+          <select id="role" name="role" required>
+            <option value="ADMIN">Administrador</option>
+            <option value="ADMINISTRATIVE">Administrativo</option>
+            <option value="INVESTIGADOR">Investigador</option>
+            <option value="ESTUDIANTE">Estudiante</option>
+            <option value="DESARROLLADOR">Desarrollador</option>
+          </select>
+  
+          <button type="button" id="btnRegistrar">Agregar Usuario</button>
         </form>
       </div>
-
-      <script src="../../Js/formActualizarPerfil.js"></script>
+      <script src="../Js/formRegister.js"></script>
+      <script src="../Js/formEditUser.js"></script>
 </body>
 </html>

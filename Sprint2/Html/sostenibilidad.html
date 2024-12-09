@@ -65,7 +65,7 @@
     <label for="btn-oscuro"><i class='bx bx-moon' id="oscuro"></i></label>
 
     <div class="titulo" id="cont_titulo">
-      <div class="linea1"></div>
+      <div class="linea1" id="line1"></div>
       <h2 id="h2_titulo"><span id="titulo_span">Sostenibilidad</span></h2>
       <div class="linea2" id="line2"></div>
     </div>
@@ -110,7 +110,6 @@
     const h2 = document.getElementById('h2_titulo');
     const linea1 = document.getElementById('line1');
     const linea2 = document.getElementById('line2');
-    const span = document.getElementById('titulo_span');
 
     // Sincronizar el estado inicial
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
@@ -136,7 +135,6 @@
             h2.classList.add('dark-mode');
             linea1.classList.add('dark-mode');
             linea2.classList.add('dark-mode');
-            span.classList.add('dark-mode');
             navContElement.forEach(nav => {
               nav.classList.add('dark-mode');
             });
@@ -157,7 +155,6 @@
             h2.classList.remove('dark-mode');
             linea1.classList.remove('dark-mode');
             linea2.classList.remove('dark-mode');
-            span.classList.remove('dark-mode');
             navContElement.forEach(nav => {
               nav.classList.remove('dark-mode');
             });

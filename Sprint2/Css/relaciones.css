@@ -222,8 +222,8 @@ nav span.dark-mode{
   
   .titulo h2 {
     width: 15vw;
-    height: 12vh;
-    font-size: 2vw;
+    height: 9vh;
+    font-size: 1.5vw;
     text-align: center;
     border-bottom: solid #1b2e51 0.5vw;
   }
@@ -343,14 +343,14 @@ nav span.dark-mode{
   }
 
   .separador{
-    height: 10vh;
+    height: 15vh;
     background-color: transparent;
   }
 
   footer {
     position: relative; /* Cambiar de absolute a relative */
     bottom: 0;
-    top: 15px;
+    top: 5vh;
     background-color: #27485e;
     color: white;
     padding: 20px 0;

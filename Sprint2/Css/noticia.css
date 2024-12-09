@@ -25,6 +25,10 @@ html{
     box-sizing: border-box;
 }
 
+#cont.dark-mode{
+    background-color: #c9c9c9;
+}
+
 .news-title {
     font-size: 2rem;
     color: #000;
