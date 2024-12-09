@@ -58,7 +58,7 @@ let listarProyectos = async () => {
                 <td>${proyecto.projStartDate}</td>
                 <td>${proyecto.projRequirementsPostulation}</td>
                 <td>
-                    <button class="btnEditar" data-proyecto='${JSON.stringify(proyecto)}'>Ver</button>
+                    <button class="btnVer" data-proyecto='${JSON.stringify(proyecto)}'>Ver</button>
                 </td>
                 ${sessionData.role === "ESTUDIANTE" ? "" : `
                 <td>
@@ -78,6 +78,14 @@ let listarProyectos = async () => {
             localStorage.setItem("proyectoEdit", JSON.stringify(proyecto));
             window.location.href = `make_proyect.html?id=${proyecto.id}`;
         }
+    });
+
+    document.querySelectorAll(".btnVer").forEach(button => {
+        button.addEventListener("click", () => {
+            const proyecto = JSON.parse(button.dataset.proyecto);
+            localStorage.setItem("proyectoEdit", JSON.stringify(proyecto));
+            window.location.href = `detalles_proyectos.html?id=${proyecto.id}`;
+        });
     });
 }
 
