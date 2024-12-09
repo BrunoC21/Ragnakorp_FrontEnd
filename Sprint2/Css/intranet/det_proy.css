@@ -349,13 +349,12 @@
 
   .contenido_proyecto{
       width: 80vw;
-      height: 20vw;
+      height: auto;
   }
 
   .imagen_proyecto{
-   width: 50vw;
+   width: 30vw;
    height: auto;
-   margin-left: 15vw;
    justify-content: center;
    align-items: center;
   }
