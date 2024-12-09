@@ -27,13 +27,9 @@ function cargarNoticia() {
     document.querySelector('.titulo_noticia').innerText = `Titulo: ${noticia.newsTitle}`;
     document.querySelector('.detalles_noticia').innerHTML = `
         <span><strong>Numero de noticia:</strong> ${noticia.id}</span>
-        <br>
         <span><strong>Autor/a:</strong> ${noticia.newsWriter}</span>
-        <br>
         <span><strong>Categoria:</strong> ${noticia.newsCategory}</span>
-        <br>
         <span><strong>Fecha:</strong> ${formatDate(noticia.newsDateTime)}</span>
-        <br>
     `;
     document.querySelector('.contenido_noticia').innerHTML = `<p>${noticia.newsContent}</p>`;
     const img = document.querySelector('.imagen_noticia');
