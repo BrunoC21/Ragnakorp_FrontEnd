@@ -78,7 +78,8 @@ nav span.dark-mode{
 }
 
 #span_titulo2.dark-mode,
-#cont_titulo2.dark-mode{
+#cont_titulo2.dark-mode,
+#news_more.dark-mode{
   background-color: #3c3c3c;
   color: white;
 }
@@ -88,10 +89,22 @@ nav span.dark-mode{
   border-bottom: solid white 0.5vw;
 }
 
-#line1.dark-mode,
-#line2.dark-mode,
-#line3.dark-mode{
+#line1.dark-mode{
   background-color: white;
+}
+
+#icons_titulo.dark-mode{
+  background-color: #3c3c3c;
+}
+
+#text_titulos.dark-mode{
+  background-color: #3c3c3c;
+  border-left: solid white 0.8vw;
+}
+
+#text_more.dark-mode{
+  background-color: #3c3c3c;
+  border-bottom: solid white 0.5vw;
 }
 
 #cont_all.dark-mode{
@@ -218,15 +231,17 @@ nav span.dark-mode{
       background-color: transparent;
     }
     
+    .linea1 {
+      height: 0.25vh;
+      width: 80vw;
+      margin-top: 0.5vh;
+      margin-left: 1.5vh;
+      background-color: black;
+    }
+
     .iconos {
       margin-top: 1.7vh;
-    }
-  
-    .lineas {
-      margin-top: 0.5vh;
-      margin-left: 2.5vh;
-      width: 83%; /* Estira la imagen a lo largo de todo el contenedor */
-      height: auto;
+
     }
     
     /*Seccion ¿Quienes Somos*/
@@ -239,20 +254,24 @@ nav span.dark-mode{
       display: flex;
       justify-content: flex-start;
       font-size: 1.5vw;
+      margin-top: 1.7vh;
+      margin-bottom: 2vh;
+      margin-left: 0.75vw;
+      height: 5vh;
       background-color: transparent;
-    }
-
-    .container_contenido_quienes_somos_titulo img{
-      background-color: transparent;
+      border-left: solid #1b2e51 0.8vw;
     }
     
     .container_contenido_quienes_somos_titulo p{
       background-color: transparent;
+      margin-left: 0.25vw;
+      width: 12vw;
     }
 
     .container_contenido_quienes_somos_titulo i{
+      margin-left: 0.65vw;
       font-size: 1.5vw;
-      background-color: transparent;
+      background-color: #eef1f4;
     }
   
     .container_contenido_quienes_somos_texto {
@@ -273,6 +292,7 @@ nav span.dark-mode{
     .container_contenido_donde_estamos{
         display: flex;
         height: 65vh;
+        margin-top: 1.25vh;
         overflow-x: hidden;
         overflow-y: hidden;
         background-color: transparent;
@@ -283,17 +303,24 @@ nav span.dark-mode{
       display: flex;
       justify-content: flex-start;
       font-size: 1.5vw;
+      margin-top: 1.7vh;
+      margin-bottom: 2vh;
+      margin-left: 0.75vw;
+      height: 5vh;
       background-color: transparent;
+      border-left: solid #1b2e51 0.8vw;
     }
   
     .container_contenido_donde_estamos_titulo i{
+      margin-left: 0.65vw;
       font-size: 1.5vw;
-      background-color: transparent;
+      background-color: #eef1f4;
     }
 
-    .container_contenido_donde_estamos_titulo p,
-    .container_contenido_donde_estamos_titulo img{
+    .container_contenido_donde_estamos_titulo p{
       background-color: transparent;
+      margin-left: 0.25vw;
+      width: 12vw;
     }
   
     .container_all{
@@ -524,21 +551,25 @@ nav span.dark-mode{
       display: flex;
       justify-content: flex-start;
       font-size: 1.5vw;
+      margin-top: 1.7vh;
+      margin-bottom: 2vh;
+      margin-left: 0.75vw;
+      height: 5vh;
+      background-color: transparent;
+      border-left: solid #1b2e51 0.8vw;
     }
   
     .container_contenido_gestion_del_conocimiento_titulo i{
-      font-size: 2.5vw;
+      margin-left: 0.65vw;
+      font-size: 1.5vw;
+      background-color: #eef1f4;
     }
     
-    .container_contenido_gestion_del_conocimiento_titulo .iconos{
-      height: 10vh;
-      padding-top: 2vh;
-      width: 2vw;
-    }
-  
     .container_contenifo_gestion_del_conocimiento_imagen {
       margin-left: 10vw;
+      margin-top: 2vh;
       width: 80vw;
+      background-color: transparent;
     }
   
     .container_persona a{
@@ -546,13 +577,13 @@ nav span.dark-mode{
     }
   
     /*Seccion Quieres saber mas*/
-    .container_contenifo_gestion_del_conocimiento,
-    .container_contenido_gestion_del_conocimiento_titulo,
-    .container_contenido_gestion_del_conocimiento_titulo img,
-    .container_contenido_gestion_del_conocimiento_titulo p,
-    .container_contenido_gestion_del_conocimiento_titulo i,
-    .container_contenifo_gestion_del_conocimiento_imagen{
+    .container_contenifo_gestion_del_conocimiento{
       background-color: transparent;
+    }
+    .container_contenido_gestion_del_conocimiento_titulo p{
+      background-color: transparent;
+      margin-left: 0.25vw;
+      width: 50vw;
     }
   
     .container_contenido_quieres_saber_mas_titulo {
@@ -574,9 +605,21 @@ nav span.dark-mode{
       background-color: transparent;
     }
   
-    .lineas_fondo {
-      width: 42vw;
-      margin-left: 5vw;
+    .lineas_fondo1 {
+      height: 0.25vh;
+      width: 35.5vw;
+      margin-top: 1.5vh;
+      margin-left: 2.5vw;
+      margin-right: 1vw;
+      background-color: black;
+    }
+
+    .lineas_fondo2{
+      height: 0.25vh;
+      width: 34.5vw;
+      margin-left: 23vw;
+      margin-top: 1.5vh;
+      background-color: black;
     }
   
     .container_contenido_quieres_saber_mas_contenido {

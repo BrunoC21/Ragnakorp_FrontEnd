@@ -6,15 +6,11 @@
     <title>Intranet</title>
     <link rel="stylesheet" href="/Sprint2/Css/intranet/general.css">
 
-    <link
-      rel="stylesheet"
-      href="/Sprint2/Css/intranet/estadisticas_intranet.css"
-    />
+    <link rel="stylesheet" href="/Sprint2/Css/intranet/ubicacion_intranet.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <input type="checkbox" id="btn_menu" />
@@ -65,7 +61,7 @@
                   <a href="vinculaciones_intranet.html"><span>Vinculaciones al medio</span></a>
               </li>
               <li id="ubicaciones-item">
-                <a href="ubicacion_intranet.html"><span>Ubicaciones del Polo</span></a>
+                    <a href="ubicacion_intranet.html"><span>Ubicaciones del Polo</span></a>
               </li>
               <li id="historial-item" class="submenu-parent">
                 <a href="#"><span>Historial de cambios</span></a>
@@ -82,84 +78,30 @@
     </div>
     <!-- fin menu lateral intranet -->
 
-    <h2 id="titulo_stats"><span>Visitas Diarias</span></h2>
+    <a
+      href="../intranet/formubic_intranet.html"
+      class="btn_ubicacion"
+      id="agregar"
+      ><i class="bx bx-plus" style="color: #ffffff"></i><span>Agregar</span></a
+    >
+    <h2 class="titulo">Ubicaciones del polo de salud</h2>
 
-    <div class="container">
-      <div class="chart-container">
-        <canvas id="visitasChart" height="227.2" width="594.88"></canvas>
-      </div>
+    <div class="container_ubicacion1">
+      <table id="tabla">
+        <thead>
+          <tr class="encabezados">
+            <th><h3>Nro Ubicacion</h3></th>
+            <th><h3>Nombre</h3></th>
+            <th><h3>Direccion</h3></th>
+            <th><h3>Coordenadas</h3></th>
+            <th><h3>Contacto</h3></th>
+            <th><h3>Descripción</h3></th>
+            <th><h3>Editar</h3></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </div>
-    <script>
-      // Configuración de ejemplo del gráfico
-      const ctx = document.getElementById("visitasChart").getContext("2d");
-      const visitasChart = new Chart(ctx, {
-        type: "line",
-        data: {
-          labels: [
-            "00:00",
-            "01:00",
-            "02:00",
-            "03:00",
-            "04:00",
-            "05:00",
-            "06:00",
-            "07:00",
-            "08:00",
-            "09:00",
-            "10:00",
-            "11:00",
-            "12:00",
-            "13:00",
-            "14:00",
-            "15:00",
-            "16:00",
-            "17:00",
-            "18:00",
-            "19:00",
-            "20:00",
-            "21:00",
-            "22:00",
-            "23:00",
-          ], // Etiquetas de ejemplo
-          datasets: [
-            {
-              label: "Visitas por hora",
-              data: [
-                10, 15, 12, 8, 20, 18, 12, 41, 5, 51, 12, 54, 4, 12, 51, 63, 19,
-                38, 21, 69, 100, 2, 12, 58,
-              ], // Datos de ejemplo
-              backgroundColor: "rgba(75, 192, 192, 0.2)",
-              borderColor: "rgba(75, 192, 192, 1)",
-              borderWidth: 2,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          scales: {
-            y: {
-              beginAtZero: true,
-            },
-          },
-          plugins: {
-            title: {
-              display: true, // Mostrar el título
-              text: "Gráfico de visitas diarias", // Texto del título
-              font: {
-                size: 20, // Tamaño de la fuente
-              },
-              padding: {
-                top: 10,
-                bottom: 10,
-              },
-            },
-          },
-        },
-      });
-    </script>
-
-    <div class="separador"></div>
 
     <footer>
       <div class="footer-container">
@@ -195,8 +137,8 @@
         <p>&copy;2024 Todos los Derechos Reservados</p>
       </div>
     </footer>
+
     <script src="../../Js/menu.js"></script>
-    <script src="../../Js/projectData.js"></script>
     <script src="../../Js/logout.js"></script>
   </body>
 </html>

@@ -4,16 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Intranet</title>
+    <link rel="stylesheet" href="/Sprint2/Css/intranet/formubic_intranet.css">
     <link rel="stylesheet" href="/Sprint2/Css/intranet/general.css">
-
-    <link
-      rel="stylesheet"
-      href="/Sprint2/Css/intranet/formularioPostulacionIntranet.css"
-    />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    
   </head>
   <body>
     <input type="checkbox" id="btn_menu" />
@@ -81,30 +78,69 @@
   </div>
   <!-- fin menu lateral intranet -->
 
+    <h2 class="titulo_editor">Agregar Ubicación Polo</h2>
     <div class="form-container">
-      <h1>Formulario de Postulación</h1>
-      <form action="submit_postulacion.html" method="POST">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" required />
+      <form
+        id="makeNewsForm"
+        action="#"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <!-- Nombre de la noticia -->
+        <div class="form-group">
+          <label for="name">Nombre de la Ubicación</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="input-contenido-nombre-ubicacion"
+            required
+          />
+        </div>
 
-        <label for="rut">RUT</label>
-        <input type="text" id="rut" name="rut" required />
+        <div class="form-group">
+          <label for="direccion">Dirección</label>
+          <input
+            type="text"
+            id="direccion"
+            name="direccion"
+            class="input-contenido-direccion-ubicacion"
+            required
+          />
+        </div>
 
-        <label for="proyecto">Proyecto al que desea postular</label>
-        <select id="proyecto" name="proyecto" required></select>
+        <div class="form-group">
+          <label for="ubicacion">Localización</label>
+          <input
+            type="text"
+            id="ubicacion"
+            name="localizacion"
+            class="input-contenido-localizacion-ubicacion"
+            required
+          />
+        </div>
 
-        <label for="motivo">Motivo de postulación</label>
-        <textarea
-          id="motivo"
-          name="motivo"
-          rows="4"
-          placeholder="Explique brevemente su motivo para postular"
-          required
-        ></textarea>
+        <div class="form-group">
+          <label for="contacto">Contacto</label>
+          <input
+            type="number"
+            id="contact"
+            name="contacto"
+            class="input-contenido-contacto-ubicacion"
+            required
+          />
+        </div>
 
-        <button type="submit" class="submit-btn" id="botonPostular">
-          Enviar Postulación
-        </button>
+        <!-- Contenido de la noticia -->
+        <div class="form-group">
+          <label for="contenido">Descripción</label>
+          <textarea id="contenido" class="input-contenido-ubicacion"></textarea>
+        </div>
+
+        <!-- Botón de enviar y actualizar -->
+        <div class="form-group">
+          <button type="submit">Agregar Ubicación</button>
+        </div>
       </form>
     </div>
 
@@ -144,8 +180,9 @@
         <p>&copy;2024 Todos los Derechos Reservados</p>
       </div>
     </footer>
+
     <script src="../../Js/menu.js"></script>
-    <script src="../../Js/formPostulation.js"></script>
     <script src="../../Js/logout.js"></script>
   </body>
 </html>
+
